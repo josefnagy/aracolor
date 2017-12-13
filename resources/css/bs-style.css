@@ -1,0 +1,762 @@
+/*
+main color: #2980B9
+*/
+
+/*------------------------ Basic setup ----------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #f6f6f6;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+
+}
+
+.clearfix { zoom: 1}
+.clearfix:after {
+  content: '.';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*------------------------ Reusable comp ----------------------- */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*------------------------ Headings ----------------------- */
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 55px;
+  font-size: 180%;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  color: #555;
+  text-align: center;
+
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* line after h2 */
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #2980B9;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* line after h3 */
+h3:after {
+  display: block;
+  height: 1px;
+  background-color: #2980B9;
+  content: " ";
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/*------------------------ Header ----------------------- */
+
+header {
+  background-image: url(img/home-betonove-sterky-1b.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  transition: background-image 0.5s;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: auto;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text-box h1 span {
+  padding: 8px 30px;
+  background-color: #24BAD0;
+}
+
+.hero-text-box p {
+  text-align: justify;
+  background-color: rgba(54, 108, 208, 0.9);
+  padding: 20px 40px;
+  margin-top: 20px;
+  line-height: 1.3;
+  word-spacing: 2px;
+  font-weight: 100;
+}
+
+.hero-text-box p span,
+.hero-text-box p a
+{
+  z-index: 10;
+  font-size: 100%;
+  color: #fff;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.hero-text-box p a:link,
+.hero-text-box p a:visited {
+  color: #22C6AC;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.hero-text-box p a:hover,
+.hero-text-box p a:active {
+  color: #222CC6;
+  text-decoration: underline;
+}
+
+/*------------------------ Links ----------------------- */
+
+a:link,
+a:visited {
+  color: #2980B9;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #2980B9;
+  transition: border-bottom 0.2s color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/*------------------------ Main Navigation ----------------------- */
+
+/* nav {
+  background-color:#2980B9;
+}
+
+nav .row {
+  padding: 5px 0;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin: 20px 0;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  padding: 20px 0;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 5px solid #24BAD0;
+}
+/*-------------------------------------------------------------------------------- */
+
+nav {
+  background-color:#fff;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(70, 69, 69, 0.507);
+}
+
+nav a:link {
+  border: none;
+}
+
+.main-nav {
+  float: right;
+  margin: 0 0 0 0;
+}
+
+/*Strip the ul of padding and list styling*/
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+/*Create a horizontal list with spacing*/
+.main-nav li {
+  display:inline-block;
+  float: left;
+}
+
+/*Style for menu links*/
+.main-nav li a {
+  display:block;
+  min-width: 120px;
+  text-align: center;
+  line-height: 85px;
+  color: #000;
+  text-decoration: none;
+}
+
+/*Hover state for top level links*/
+.main-nav li  a:hover {
+  background-color: #24BAD0;
+}
+
+/*Style for dropdown links*/
+.main-nav li:hover ul a {
+  background: #f3f3f3;
+  color: #2f3036;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+.main-nav li:hover ul a:hover {
+  background-color: #24BAD0;
+  color: #fff;
+}
+
+/* hide dropdown links until they are needed  */
+.main-nav li ul {
+  display: none;
+}
+
+/*Make dropdown links vertical*/
+.main-nav li ul li {
+  display: block;
+  float: none;
+}
+
+/*Prevent text wrapping*/
+.main-nav li ul li a {
+  width: auto;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+  display: block;
+}
+
+
+
+/*------------------------ logo ----------------------- */
+
+.logo {
+  display: inline;
+}
+
+.logo-img {
+  margin-top: 12px;
+  width: 4.5%;
+  height: auto;
+
+}
+.logo-text {
+  width: 8%;
+  height: auto;
+  margin-left: 5px;
+  margin-bottom: 17px;
+}
+
+/*------------------------ arrows ----------------------- */
+
+.arrows span {
+  height: 85vh;
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrows a
+{
+  border: 0;
+}
+
+.arrows i {
+  color: #fff;
+  font-size: 350%;
+}
+
+.arrow-left {
+  margin-left: 20px;
+}
+
+.arrow-right {
+  margin-right: 20px;
+  float: right;
+}
+
+/*------------------------ icons ----------------------- */
+
+.icon-big {
+  font-size: 350%;
+  display: block;
+  color: #2980B9;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.icon-small {
+  font-size: 130%;
+  margin-right: 10px;
+  color: #2980B9;
+}
+
+.svg-icon {
+  display: block;
+  margin: auto;
+  padding: 15px 0 25px 0;
+  width: auto;
+  height: 45px;
+}
+
+.icon-contacts {
+  font-size: 130%;
+  color: #2980B9;
+  padding-right: 15px;
+}
+
+/*------------------------ paragraphs ----------------------- */
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+  text-align: center;
+  padding: 0 5px;
+}
+
+/*------------------------ section decor types ----------------------- */
+
+.section-decor-types {
+  padding: -100px;
+}
+
+/* .section-decor-types .row:nth-child(2+n) {
+  margin-top: 45px;
+} */
+
+.section-decor-types .row:not(:first-child) {
+  margin-top: 55px;
+}
+
+.section-decor-types .row:nth-child(even) {
+  background-color: #fff;
+}
+
+.section-decor-types .row:last-child {
+  margin-bottom: 65px;
+}
+
+.section-decor-types p {
+  text-align: justify;
+  padding: 0 20px 0 0;
+}
+
+.section-decor-types img {
+  width: 100%;
+  height: 100%;
+}
+
+.button-bar {
+  text-align: center;
+}
+
+.button-bar img {
+  width: 5%;
+
+}
+.button-bar a {
+  border: none;
+}
+.button-bar a svg {
+  width: 5%;
+  fill: #2980B9;
+  padding: 15px 20px 0 20px;
+
+}
+
+.button-bar a svg:hover {
+  fill: #24BAD0
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  flex: 1;
+}
+
+.flex-col:first-child {
+  padding-right: 20px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+
+}
+
+/*------------------------ section our services ----------------------- */
+
+
+.section-our-services .col {
+  transition: background-color 0.3s;
+}
+
+.section-our-services .box {
+  padding-top: 10px;
+  padding-bottom: 35px;
+}
+
+.section-our-services .col:hover {
+  background-color: #f6f6f6;
+}
+/*
+.section-our-services {
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/our-services-back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.section-our-services .col {
+  transition: background-color 0.3s;
+}
+
+.section-our-services .box {
+  padding-top: 10px;
+  padding-bottom: 35px;
+}
+
+.section-our-services .col:hover {
+  background-color: #00000085;
+}
+.section-our-services h2,
+.section-our-services p,
+.section-our-services h3
+{
+  color: #fff;
+} */
+
+/*------------------------ section references ----------------------- */
+
+.section-references {
+  background-color: #f6f6f6;
+}
+
+.section-references .row:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 75px;
+}
+
+.ref-logo {
+  height: 55px;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.ref-logo:hover {
+  opacity: 1;
+}
+
+/* --- Ref Gallery --- */
+
+.section-references .row:nth-child(3) {
+  padding: 0;
+}
+
+.ref-showcase {
+  list-style-type: none;
+  width: 100%;
+}
+
+.ref-showcase li {
+  display: block;
+  float: left;
+  width: 33.3%;
+
+}
+
+.ref-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.ref-photo img {
+  opacity: 0.7;
+  width: 100%;
+  min-height: 330px;
+  max-height: 330px;
+  transform: scale(1.15);
+  transition: opacity 0.5s;
+  transition: transform 0.5s
+}
+
+.ref-photo img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/*------------------------ section price list ----------------------- */
+
+.section-price-list {
+  min-height: 500px;
+}
+
+.section-price-list .row:nth-of-type(2){
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.section-price-list .col:nth-of-type(2) div,
+.paint div
+{
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grow {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  transition: height 0.5s;
+  /* text-align: center; */
+  overflow: hidden;
+}
+
+.grow:nth-of-type(2) {
+  background-color: #f6f6f6;
+}
+
+.grow:hover {
+  height: 300px;
+}
+
+.grow img {
+  display: block;
+  clear: both;
+  height: 125px;
+  text-align: center;
+}
+
+.price-list-task {
+  float: left;
+  padding: 5px 0 5px 10px;
+}
+
+.price-list-price {
+  float: right;
+  padding: 5px 10px 5px 0;
+}
+
+.price-list-parameters {
+  clear: both;
+}
+
+table {
+  font-size: 80%;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: right;
+  padding-right: 10px;
+  vertical-align: top;
+}
+
+tr {
+  border-bottom: 0.5px solid #555;
+  line-height: 30px;
+}
+
+.price-list-parameters tr td:first-child,
+.price-list-parameters tr:first-child td:nth-of-type(2)
+{
+  text-align: left;
+  font-weight: 700;
+}
+
+/*------------------------ section contacts ----------------------- */
+/* AIzaSyBNGV3l1VY2VgCa65oFRLkugBgLAJy3olI */
+#map {
+  width: 100%;
+  height: 450px;
+  background-color: #555;
+}
+
+.section-contacts {
+  background-color: #f6f6f6;
+}
+
+.section-contacts h2 {
+  margin-bottom: 35px;
+}
+
+.section-contacts p {
+  margin: 15px;
+  text-align: left;
+}
+
+.section-contacts span {
+  font-weight: 800;
+  margin-right: 15px;
+}
+
+.section-contacts span:nth-of-type(3) {
+  margin-left: 30px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 450px;
+}
+
+/*------------------------ footer ----------------------- */
+
+footer {
+  background-color: rgb(61, 61, 61);
+  padding: 40px;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+  font-size: 80%;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin-right: 0 px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #a0a0a0;
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+    text-decoration: none;
+    border: 0;
+    color: rgb(192, 192, 192);
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 140%;
+}
+
+.ion-social-facebook,
+.ion-social-instagram {
+  transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+  color: #3b5998;
+}
+
+.ion-social-instagram:hover {
+  color: #e95950;
+}
+
+footer p {
+  color: #a0a0a0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer p a:link,
+footer p a:visited {
+  text-decoration: none;
+  border-bottom: 1px dotted rgb(37, 37, 37);
+  color: rgb(37, 37, 37);
+  transition: color 0.2s;
+}
+
+footer p a:hover,
+footer p a:active {
+  color: #f6f6f6;
+}
