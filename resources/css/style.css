@@ -83,13 +83,13 @@ h2:after {
   z-index: 100;
   display: none;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   border-radius: 4px;
   background-color: #2980B9;
   text-align: center; }
 
 .btn--back-to-top:hover {
-  background-color: rgba(54, 108, 208, 0.9); }
+  background-color: rgba(41, 128, 185, 0.9); }
 
 .ion-ios-arrow-up {
   color: #fff;
@@ -104,11 +104,11 @@ h2:after {
 
 .hero-box__heading {
   padding: 8px 30px;
-  background-color: rgba(36, 188, 208, 0.897); }
+  background-color: rgba(34, 198, 47, 0.897); }
 
 .hero-box__text {
   text-align: justify;
-  background-color: rgba(54, 108, 208, 0.9);
+  background-color: rgba(208, 77, 36, 0.9);
   padding: 20px 20px;
   margin-top: 20px;
   line-height: 1.3;
@@ -117,20 +117,19 @@ h2:after {
 
 .hero-box__text--inner, .hero-box__text--link {
   padding: 2px 15px;
-  background-color: #366AD0;
   font-size: 150%;
   color: #fff;
   letter-spacing: 1px;
   word-spacing: 4px; }
 
 .hero-box__text--link:link, .hero-box__text--link:visited {
-  color: #22C6AC;
-  text-decoration: none;
-  text-transform: none; }
+  color: #22C62F;
+  text-transform: none;
+  border-bottom: 0; }
 
 .hero-box__text--link:hover, .hero-box__text--link:active {
-  color: #222CC6;
-  text-decoration: underline; }
+  color: #9022C6;
+  border-bottom: 1px solid #9022C6; }
 
 .scrolldown-anim__link {
   position: absolute;
@@ -191,12 +190,12 @@ a:link, a:visited {
   color: #2980B9;
   text-decoration: none;
   padding-bottom: 1px;
-  border-bottom: 1px solid #2980B9;
+  border-bottom: 0;
   transition: border-bottom 0.2s color 0.2s; }
 
 a:hover, a:active {
   color: #555;
-  border-bottom: 1px solid transparent; }
+  border-bottom: 1px solid #2980B9; }
 
 /*------------------------ Main Navigation ----------------------- */
 .header__nav--sticky {
@@ -238,18 +237,18 @@ a:hover, a:active {
 
 /*Hover state for top level links*/
 .main-nav__link:hover {
-  background-color: #24BAD0; }
+  background-color: #2980B9; }
 
 /*Style for dropdown links*/
 .main-nav__item:hover .main-nav__list--hidden .main-nav__link {
   background: #fff;
-  color: #2f3036;
+  color: #555;
   height: 40px;
   line-height: 40px; }
 
 /*Hover state for dropdown links*/
 .main-nav__item:hover .main-nav__link:hover {
-  background-color: #24BAD0;
+  background-color: #2980B9;
   color: #fff; }
 
 /* hide dropdown links until they are needed  */
@@ -532,7 +531,7 @@ a:hover, a:active {
 
 /*------------------------ footer ----------------------- */
 .footer {
-  background-color: #3d3d3d;
+  background-color: #464545;
   padding: 40px; }
 
 .footer__nav--list {

@@ -9,7 +9,18 @@
 @import "layout/header"
 
 
-// main color: #2980B9
+$primary-color: #2980B9
+$secondary-color: #D04D24
+$tertiary-color: #22C62F
+$quaternary-color: #D0B32C
+$quinary-color: #9022C6
+
+$font-color-main: #555
+$color-white: #fff
+$color-black: #000
+
+$shadow-color: #464545
+$light-gray: #f6f6f6
 
 
 /*------------------------ Basic setup ----------------------- */
@@ -20,8 +31,8 @@
 
 
 html, body
-  background-color: #fff
-  color: #555
+  background-color: $color-white
+  color: $font-color-main
   font-family: 'Roboto', sans-serif
   font-size: 20px
   font-weight: 300
@@ -61,7 +72,7 @@ h1, h2, h3
 h1
   margin-top: 0px
   margin-bottom: 10px
-  color: #fff
+  color: $color-white
   font-size: 240%
   word-spacing: 4px
   letter-spacing: 1px
@@ -71,7 +82,7 @@ h2
   font-size: 180%
   word-spacing: 4px
   letter-spacing: 2px
-  color: #555
+  color: $font-color-main
   text-align: center
 
 
@@ -86,7 +97,7 @@ h3
 h2:after
   display: block
   height: 2px
-  background-color: #2980B9
+  background-color: $primary-color
   content: " "
   width: 100px
   margin: 0 auto
@@ -114,16 +125,16 @@ h2:after
   z-index: 100
   display: none
   text-decoration: none
-  color: #ffffff
+  color: $color-white
   border-radius: 4px
-  background-color: #2980B9
+  background-color: $primary-color
   text-align: center
 
 .btn--back-to-top:hover
-  background-color: rgba(54, 108, 208, 0.9)
+  background-color: rgba($primary-color, 0.9)
 
 .ion-ios-arrow-up
-  color: #fff
+  color: $color-white
   font-size: 50px
 
 .header__hero-box
@@ -135,11 +146,11 @@ h2:after
 
 .hero-box__heading
   padding: 8px 30px
-  background-color: rgba(36, 188, 208, 0.897)
+  background-color: rgba($tertiary-color, 0.897)
 
 .hero-box__text
   text-align: justify
-  background-color: rgba(54, 108, 208, 0.9)
+  background-color: rgba($secondary-color, 0.9)
   padding: 20px 20px
   margin-top: 20px
   line-height: 1.3
@@ -148,20 +159,20 @@ h2:after
 
 .hero-box__text--inner, .hero-box__text--link
   padding: 2px 15px
-  background-color: #366AD0
+  // background-color: #366AD0
   font-size: 150%
-  color: #fff
+  color: $color-white
   letter-spacing: 1px
   word-spacing: 4px
 
 .hero-box__text--link:link, .hero-box__text--link:visited
-  color: #22C6AC
-  text-decoration: none
+  color: $tertiary-color
   text-transform: none
+  border-bottom: 0
 
 .hero-box__text--link:hover, .hero-box__text--link:active
-  color: #222CC6
-  text-decoration: underline
+  color: $quinary-color
+  border-bottom: 1px solid $quinary-color
 
 .scrolldown-anim__link
   position: absolute
@@ -171,7 +182,7 @@ h2:after
   display: inline-block
   -webkit-transform: translate(0, -50%)
   transform: translate(0, -50%)
-  color: #fff
+  color: $color-white
   font : normal 400 20px/1 'Josefin Sans', sans-serif
   letter-spacing: .1em
   text-decoration: none
@@ -187,7 +198,7 @@ h2:after
   width: 30px
   height: 50px
   margin-left: -15px
-  border: 2px solid #fff
+  border: 2px solid $color-white
   border-radius: 50px
   box-sizing: border-box
 
@@ -199,7 +210,7 @@ h2:after
   width: 6px
   height: 6px
   margin-left: -3px
-  background-color: #fff
+  background-color: $color-white
   border-radius: 100%
   -webkit-animation: scrollDown 2s infinite
   animation: scrollDown 2s infinite
@@ -224,27 +235,27 @@ h2:after
 /*------------------------ Links ----------------------- */
 
 a:link, a:visited
-  color: #2980B9
+  color: $primary-color
   text-decoration: none
   padding-bottom: 1px
-  border-bottom: 1px solid #2980B9
+  border-bottom: 0
   transition: border-bottom 0.2s color 0.2s
 
 a:hover, a:active
-  color: #555
-  border-bottom: 1px solid transparent
+  color: $font-color-main
+  border-bottom: 1px solid $primary-color
 
 /*------------------------ Main Navigation ----------------------- */
 
 
 .header__nav--sticky
-  background-color: #fff
+  background-color: $color-white
   position: fixed
   top: 0
   left: 0
   width: 100%
   z-index: 100
-  box-shadow: 0 2px 2px rgba(70, 69, 69, 0.507)
+  box-shadow: 0 2px 2px rgba($shadow-color, 0.507)
 
 .header__nav--sticky a:link
   border: none
@@ -276,19 +287,19 @@ a:hover, a:active
 
 /*Hover state for top level links*/
 .main-nav__link:hover
-  background-color: #24BAD0
+  background-color: $primary-color
 
 /*Style for dropdown links*/
 .main-nav__item:hover .main-nav__list--hidden .main-nav__link
-  background: #fff
-  color: #2f3036
+  background: $color-white
+  color: $font-color-main
   height: 40px
   line-height: 40px
 
 /*Hover state for dropdown links*/
 .main-nav__item:hover .main-nav__link:hover
-  background-color: #24BAD0
-  color: #fff
+  background-color: $primary-color
+  color: $color-white
 
 /* hide dropdown links until they are needed  */
 .main-nav__list--hidden
@@ -337,7 +348,7 @@ a:hover, a:active
   border: 0
 
 .arrows--icon
-  color: #fff
+  color: $color-white
   font-size: 350%
 
 .header__arrows--left
@@ -352,14 +363,14 @@ a:hover, a:active
 .icon-big
   font-size: 350%
   display: block
-  color: #2980B9
+  color: $primary-color
   margin-bottom: 10px
   text-align: center
 
 .icon-small
   font-size: 130%
   margin-right: 10px
-  color: #2980B9
+  color: $primary-color
 
 .service--icon
   display: block
@@ -370,7 +381,7 @@ a:hover, a:active
 
 .icon-contacts
   font-size: 130%
-  color: #2980B9
+  color: $primary-color
   padding-right: 35px
 
 /*------------------------ paragraphs ----------------------- */
@@ -384,7 +395,7 @@ a:hover, a:active
 /*------------------------ section why us ----------------------- */
 
 .why-us__heading
-  color: #555
+  color: $font-color-main
   text-align: center
 
 .long-copy
@@ -433,13 +444,13 @@ a:hover, a:active
   padding-bottom: 35px
 
 .services__service:hover
-  background-color: #f6f6f6
+  background-color: $light-gray
 
 
 /*------------------------ section references ----------------------- */
 
 .section-references
-  background-color: #f6f6f6
+  background-color: $light-gray
 
 .section-references .row:nth-child(2)
   display: flex
@@ -508,7 +519,7 @@ a:hover, a:active
   transition: height 0.5s
 
 .pl__category--item:nth-of-type(even)
-  background-color: #f6f6f6
+  background-color: $light-gray
 
 .grow:hover
   height: 300px
@@ -538,7 +549,7 @@ a:hover, a:active
   border-collapse: collapse
 
 .pl--params__row
-  border-bottom: 0.5px solid #555
+  border-bottom: 0.5px solid $font-color-main
   line-height: 30px
 
 .pl--params__column
@@ -555,10 +566,10 @@ a:hover, a:active
 #map
   width: 100%
   height: 450px
-  background-color: #555
+  background-color: $font-color-main
 
 .section-contacts
-  background-color: #f6f6f6
+  background-color: $light-gray
 
 .contacts__heading
   margin-bottom: 35px
@@ -586,7 +597,7 @@ a:hover, a:active
 /*------------------------ footer ----------------------- */
 
 .footer
-  background-color: rgb(61, 61, 61)
+  background-color: $shadow-color
   padding: 40px
 
 .footer__nav--list
@@ -641,4 +652,4 @@ a:hover, a:active
   transition: color 0.2s
 
 .footer__copy--link:hover, .footer__copy--link:active
-  color: #f6f6f6
+  color: $light-gray
