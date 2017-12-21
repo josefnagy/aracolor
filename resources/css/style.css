@@ -335,17 +335,6 @@ a:active {
   display: block;
 }
 
-
-/*------------------------ sticky navigation ----------------------- */
-
-/* .sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.781);
-} */
-
 /*------------------------ logo ----------------------- */
 
 .logo {
@@ -373,12 +362,11 @@ a:active {
   align-items: center;
 }
 
-.header__arrows a
-{
+.header__arrows .arrows__link {
   border: 0;
 }
 
-.header__arrows i {
+.arrows--icon {
   color: #fff;
   font-size: 350%;
 }
@@ -433,7 +421,7 @@ a:active {
 
 /*------------------------ section why us ----------------------- */
 
-.section-why-us h2 {
+.why-us__heading {
   color: #555;
   text-align: center;
 }
@@ -498,32 +486,7 @@ a:active {
 .section-our-services .col:hover {
   background-color: #f6f6f6;
 }
-/*
-.section-our-services {
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/our-services-back.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
 
-.section-our-services .col {
-  transition: background-color 0.3s;
-}
-
-.section-our-services .box {
-  padding-top: 10px;
-  padding-bottom: 35px;
-}
-
-.section-our-services .col:hover {
-  background-color: #00000085;
-}
-.section-our-services h2,
-.section-our-services p,
-.section-our-services h3
-{
-  color: #fff;
-} */
 
 /*------------------------ section references ----------------------- */
 
