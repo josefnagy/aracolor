@@ -8,101 +8,41 @@
 
 @import "layout/header"
 
-
-$primary-color: #2980B9
-$secondary-color: #D04D24
-$tertiary-color: #22C62F
-$quaternary-color: #D0B32C
-$quinary-color: #9022C6
-
-$font-color-main: #555
-$color-white: #fff
-$color-black: #000
-
-$shadow-color: #464545
-$light-gray: #f6f6f6
-
-
-/*------------------------ Basic setup ----------------------- */
-
-*
-  margin: 0
-  padding: 0
-
-
-html, body
-  background-color: $color-white
-  color: $font-color-main
-  font-family: 'Roboto', sans-serif
-  font-size: 20px
-  font-weight: 300
-  text-rendering: optimizeLegibility
-  overflow-x:hidden
-
-
-.clearfix
-  zoom: 1
-
-.clearfix:after
-  content: '.'
-  clear: both
-  display: block
-  height: 0
-  visibility: hidden
-
-
-/*------------------------ Reusable comp ----------------------- */
-
-.row
-  max-width: 1140px
-  margin: 0 auto
-
-
-section
-  padding: 80px 0
-
-
 /*------------------------ Headings ----------------------- */
 
 h1, h2, h3
   font-weight: 300
   text-transform: uppercase
 
-
 h1
-  margin-top: 0px
-  margin-bottom: 10px
+  margin-top: 0rem
+  margin-bottom: 1rem
   color: $color-white
-  font-size: 240%
-  word-spacing: 4px
-  letter-spacing: 1px
-
+  font-size: 4.8rem
+  word-spacing: .4rem
+  letter-spacing: .1rem
 
 h2
-  font-size: 180%
-  word-spacing: 4px
-  letter-spacing: 2px
+  font-size: 3.6rem
+  word-spacing: .4rem
+  letter-spacing: .2rem
   color: $font-color-main
   text-align: center
 
-
-
 h3
-  font-size: 110%
-  margin-bottom: 15px
+  font-size: 2.2rem
+  margin-bottom: 1.5rem
   text-align: center
-
 
 /* line after h2 */
 h2:after
   display: block
-  height: 2px
+  height: .2rem
   background-color: $primary-color
   content: " "
-  width: 100px
+  width: 10rem
   margin: 0 auto
-  margin-top: 30px
-
+  margin-top: .3rem
 
 /*------------------------ Header ----------------------- */
 
@@ -110,23 +50,22 @@ h2:after
   background-image: url(img/home-betonove-sterky-2.jpg)
   background-attachment: fixed
   height: 80vh
-  transition: background-image 0.5s
-
+  transition: background-image .5s
 
 /*--- back to top button ---  */
 .btn--back-to-top
   background: none
   margin: 0
   position: fixed
-  bottom: 6%
-  right: 6%
-  width: 50px
-  height: 50px
+  bottom: 5%
+  right: 3%
+  width: 5rem
+  height: 5rem
   z-index: 100
   display: none
   text-decoration: none
   color: $color-white
-  border-radius: 4px
+  border-radius: 0.4rem
   background-color: $primary-color
   text-align: center
 
@@ -135,7 +74,7 @@ h2:after
 
 .ion-ios-arrow-up
   color: $color-white
-  font-size: 50px
+  font-size: 5rem
 
 .header__hero-box
   position: absolute
@@ -145,25 +84,25 @@ h2:after
   transform: translate(-50%, -50%)
 
 .hero-box__heading
-  padding: 8px 30px
+  padding: .8rem 3rem
   background-color: rgba($tertiary-color, 0.897)
 
 .hero-box__text
   text-align: justify
   background-color: rgba($secondary-color, 0.9)
-  padding: 20px 20px
-  margin-top: 20px
+  padding: 2rem 2rem
+  margin-top: 2rem
   line-height: 1.3
-  word-spacing: 2px
+  word-spacing: .2rem
   font-weight: 100
 
 .hero-box__text--inner, .hero-box__text--link
-  padding: 2px 15px
+  padding: .2rem 1.5rem
   // background-color: #366AD0
-  font-size: 150%
+  font-size: 3rem
   color: $color-white
-  letter-spacing: 1px
-  word-spacing: 4px
+  letter-spacing: .1rem
+  word-spacing: .4rem
 
 .hero-box__text--link:link, .hero-box__text--link:visited
   color: $tertiary-color
@@ -172,7 +111,7 @@ h2:after
 
 .hero-box__text--link:hover, .hero-box__text--link:active
   color: $quinary-color
-  border-bottom: 1px solid $quinary-color
+  border-bottom: .1rem solid $quinary-color
 
 .scrolldown-anim__link
   position: absolute
@@ -184,7 +123,7 @@ h2:after
   transform: translate(0, -50%)
   color: $color-white
   font : normal 400 20px/1 'Josefin Sans', sans-serif
-  letter-spacing: .1em
+  letter-spacing: .1rem
   text-decoration: none
   transition: opacity .3s
 
@@ -193,23 +132,23 @@ h2:after
 
 .scrolldown-anim__link--inner
   position: absolute
-  top: 0px
+  top: 0
   left: 50%
-  width: 30px
-  height: 50px
-  margin-left: -15px
-  border: 2px solid $color-white
-  border-radius: 50px
+  width: 3rem
+  height: 5rem
+  margin-left: -1.5rem
+  border: .2rem solid $color-white
+  border-radius: 5rem
   box-sizing: border-box
 
 .scrolldown-anim__link--inner::before
   position: absolute
-  top: 10px
+  top: 1rem
   left: 50%
   content: ''
-  width: 6px
-  height: 6px
-  margin-left: -3px
+  width: .6rem
+  height: .6rem
+  margin-left: -.3rem
   background-color: $color-white
   border-radius: 100%
   -webkit-animation: scrollDown 2s infinite
@@ -225,7 +164,7 @@ h2:after
     opacity: 1
 
   80%
-    transform: translate(0, 20px)
+    transform: translate(0, 2rem)
     opacity: 0
 
   100%
@@ -237,13 +176,13 @@ h2:after
 a:link, a:visited
   color: $primary-color
   text-decoration: none
-  padding-bottom: 1px
+  padding-bottom: .1rem
   border-bottom: 0
   transition: border-bottom 0.2s color 0.2s
 
 a:hover, a:active
   color: $font-color-main
-  border-bottom: 1px solid $primary-color
+  border-bottom: .1rem solid $primary-color
 
 /*------------------------ Main Navigation ----------------------- */
 
@@ -255,7 +194,7 @@ a:hover, a:active
   left: 0
   width: 100%
   z-index: 100
-  box-shadow: 0 2px 2px rgba($shadow-color, 0.507)
+  box-shadow: 0 .2rem .2rem rgba($shadow-color, 0.507)
 
 .header__nav--sticky a:link
   border: none
@@ -279,9 +218,10 @@ a:hover, a:active
 /*Style for menu links*/
 .main-nav__link
   display: block
-  min-width: 120px
+  font-size: 2rem
+  min-width: 12rem
   text-align: center
-  line-height: 85px
+  line-height: 8.5rem
   color: #000
   text-decoration: none
 
@@ -293,8 +233,8 @@ a:hover, a:active
 .main-nav__item:hover .main-nav__list--hidden .main-nav__link
   background: $color-white
   color: $font-color-main
-  height: 40px
-  line-height: 40px
+  height: 4rem
+  line-height: 4rem
 
 /*Hover state for dropdown links*/
 .main-nav__item:hover .main-nav__link:hover
@@ -313,8 +253,8 @@ a:hover, a:active
 /*Prevent text wrapping*/
 .main-nav__link
   width: auto
-  min-width: 100px
-  padding: 0 20px
+  min-width: 10rem
+  padding: 0 2rem
 
 /*Display the dropdown on hover*/
 .main-nav__item .main-nav__link:hover + .main-nav__list--hidden, .main-nav__list--hidden:hover
@@ -326,15 +266,15 @@ a:hover, a:active
   display: inline
 
 .logo--img
-  margin-top: 12px
+  margin-top: 1.2rem
   width: 4.5%
   height: auto
 
 .logo--text
   width: 8%
   height: auto
-  margin-left: 5px
-  margin-bottom: 17px
+  margin-left: .5rem
+  margin-bottom: 1.7rem
 
 
 /*------------------------ arrows ----------------------- */
@@ -349,48 +289,47 @@ a:hover, a:active
 
 .arrows--icon
   color: $color-white
-  font-size: 350%
+  font-size: 7rem
 
 .header__arrows--left
-  margin-left: 20px
+  margin-left: 2rem
 
 .header__arrows--right
-  margin-right: 20px
+  margin-right: 2rem
   float: right
 
 /*------------------------ icons ----------------------- */
 
 .icon-big
-  font-size: 350%
+  font-size: 7rem
   display: block
   color: $primary-color
-  margin-bottom: 10px
+  margin-bottom: 1rem
   text-align: center
 
 .icon-small
-  font-size: 130%
-  margin-right: 10px
+  font-size: 2.6rem
+  margin-right: 1rem
   color: $primary-color
 
 .service--icon
   display: block
   margin: auto
-  padding: 15px 0 25px 0
-  width: auto
-  height: 45px
+  padding: 1.5rem 0 2.5rem 0
+  height: 8rem
 
 .icon-contacts
-  font-size: 130%
+  font-size: 2.6rem
   color: $primary-color
-  padding-right: 35px
+  padding-right: 3.5rem
 
 /*------------------------ paragraphs ----------------------- */
 
 .box p
-  font-size: 90%
-  line-height: 145%
+  font-size: 1.8rem
+  line-height: 2.9rem
   text-align: center
-  padding: 0 5px
+  padding: 0 .5rem
 
 /*------------------------ section why us ----------------------- */
 
@@ -402,8 +341,10 @@ a:hover, a:active
   width: 70%
   margin-left: 15%
   line-height: 145%
-  margin-top: 30px
-  margin-bottom: 30px
+  margin-top: 3rem
+  margin-bottom: 3rem
+  font-size: 2rem
+  text-align: center
 
 /*------------------------ section gallery ----------------------- */
 
@@ -440,8 +381,8 @@ a:hover, a:active
 
 .services__service
   transition: background-color 0.3s
-  padding-top: 10px
-  padding-bottom: 35px
+  padding-top: 1rem
+  padding-bottom: 3.5rem
 
 .services__service:hover
   background-color: $light-gray
@@ -455,11 +396,11 @@ a:hover, a:active
 .section-references .row:nth-child(2)
   display: flex
   justify-content: space-between
-  margin-top: 30px
-  margin-bottom: 75px
+  margin-top: 3rem
+  margin-bottom: 7.5rem
 
 .ref__logos--img
-  height: 55px
+  height: 5.5rem
   opacity: 0.7
   transition: opacity 0.3s
 
@@ -490,8 +431,8 @@ a:hover, a:active
 .ref__showcase--img
   opacity: 0.7
   width: 100%
-  min-height: 330px
-  max-height: 330px
+  min-height: 33rem
+  max-height: 33rem
   transform: scale(1.15)
   transition: opacity 0.5s
   transition: transform 0.5s
@@ -504,15 +445,16 @@ a:hover, a:active
 /*------------------------ section price list ----------------------- */
 
 .section-price-list
-  min-height: 500px
+  min-height: 50rem
 
 .pl
-  margin-top: 35px
+  margin-top: 3.5rem
 
 .pl__category--item
-  height: 30px
+  height: 3rem
   width: 100%
   overflow: hidden
+  font-size: 2rem
 
 .grow
   position: relative
@@ -522,21 +464,22 @@ a:hover, a:active
   background-color: $light-gray
 
 .grow:hover
-  height: 300px
+  height: 30rem
 
 .grow img
   display: block
   clear: both
-  height: 125px
+  height: 12.5rem
   text-align: center
 
 .pl--type
   float: left
-  padding: 5px 0 5px 10px
+  padding: .5rem 0 .5rem 1rem
+
 
 .pl--price
   float: right
-  padding: 5px 10px 5px 0
+  padding: .5rem 1rem .5rem 0
 
 .pl--params
   clear: both
@@ -544,17 +487,17 @@ a:hover, a:active
 .pl--params
   font-size: 80%
   margin: 0
-  padding: 10px 0
+  padding: 1rem 0
   width: 100%
   border-collapse: collapse
 
 .pl--params__row
-  border-bottom: 0.5px solid $font-color-main
-  line-height: 30px
+  border-bottom: .1rem solid $font-color-main
+  line-height: 3rem
 
 .pl--params__column
   text-align: right
-  padding-right: 10px
+  padding-right: 1rem
   vertical-align: top
 
 .pl--params__column:first-child, .pl--params__row:first-child td:nth-of-type(2)
@@ -565,55 +508,55 @@ a:hover, a:active
 
 #map
   width: 100%
-  height: 450px
+  height: 45rem
   background-color: $font-color-main
 
 .section-contacts
   background-color: $light-gray
 
 .contacts__heading
-  margin-bottom: 35px
+  margin-bottom: 3.5rem
 
 .address--text
   display: block
 
 .section-contacts .address--group
-  margin: 15px
+  margin: 1.5rem
   text-align: left
 
 .section-contacts b
   font-weight: 800
-  margin-right: 15px
+  margin-right: 1.5rem
 
 .address--text + .marg
-  margin-left: 49px
+  margin-left: 4.9rem
 
 .contacts__address
   display: flex
   flex-direction: column
   justify-content: space-around
-  height: 450px
+  height: 45rem
 
 /*------------------------ footer ----------------------- */
 
 .footer
   background-color: $shadow-color
-  padding: 40px
+  padding: 4rem
 
 .footer__nav--list
   list-style: none
   float: left
-  font-size: 80%
+  font-size: 1.6rem
 
 .social-links
   float: right
 
 .footer__nav--item
   display: inline-block
-  margin-right: 20px
+  margin-right: 2rem
 
 .footer-nav li:last-child, .social-links li:last-child
-  margin-right: 0 px
+  margin-right: 0
 
 .footer__nav--link:link, .footer__nav--link:visited
   text-decoration: none
@@ -627,7 +570,7 @@ a:hover, a:active
   color: rgb(192, 192, 192)
 
 .social-links .footer__nav--link:link, .social-links .footer__nav--link:visited
-  font-size: 140%
+  font-size: 2.8rem
 
 .ion-social-facebook, .ion-social-instagram
   transition: color 0.2s
@@ -641,13 +584,13 @@ a:hover, a:active
 .footer__copy
   color: #a0a0a0
   text-align: center
-  margin-top: 20px
-  font-size: 60%
+  margin-top: 2rem
+  font-size: 1.2rem
 
 .footer__copy--link:link, .footer__copy--link:visited
   text-decoration: none
-  padding-bottom: 2px
-  border-bottom: 1px dotted rgb(37, 37, 37)
+  padding-bottom: .2rem
+  border-bottom: .1rem dotted rgb(37, 37, 37)
   color: rgb(37, 37, 37)
   transition: color 0.2s
 

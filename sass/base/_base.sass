@@ -1,0 +1,33 @@
+/*------------------------ Basic setup ----------------------- */
+
+*, *:after, *:before
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+html
+  font-size: 62.5%
+
+body
+  box-sizing: border-box
+  overflow-x: hidden
+
+.clearfix
+  zoom: 1
+
+.clearfix:after
+  content: '.'
+  clear: both
+  display: block
+  height: 0
+  visibility: hidden
+
+
+  /*------------------------ Reusable comp ----------------------- */
+
+.row
+  max-width: 1140px
+  margin: 0 auto
+
+section
+  padding: 8rem 0
