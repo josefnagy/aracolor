@@ -553,29 +553,22 @@ a:active {
   min-height: 500px;
 }
 
-.section-price-list .row:nth-of-type(2){
+.pl {
   margin-top: 35px;
-  margin-bottom: 35px;
 }
 
-.section-price-list .col:nth-of-type(2) div,
-.paint div
-{
+.pl__category--item {
   height: 30px;
   width: 100%;
   overflow: hidden;
 }
 
 .grow {
-  height: 30px;
-  width: 100%;
   position: relative;
   transition: height 0.5s;
-  /* text-align: center; */
-  overflow: hidden;
 }
 
-.grow:nth-of-type(2) {
+.pl__category--item:nth-of-type(even) {
   background-color: #f6f6f6;
 }
 
@@ -590,21 +583,21 @@ a:active {
   text-align: center;
 }
 
-.price-list-task {
+.pl--type{
   float: left;
   padding: 5px 0 5px 10px;
 }
 
-.price-list-price {
+.pl--price {
   float: right;
   padding: 5px 10px 5px 0;
 }
 
-.price-list-parameters {
+.pl--params {
   clear: both;
 }
 
-table {
+.pl--params {
   font-size: 80%;
   margin: 0;
   padding: 10px 0;
@@ -612,26 +605,26 @@ table {
   border-collapse: collapse;
 }
 
-td {
+.pl--params__row {
+  border-bottom: 0.5px solid #555;
+  line-height: 30px;
+}
+
+.pl--params__column {
   text-align: right;
   padding-right: 10px;
   vertical-align: top;
 }
 
-tr {
-  border-bottom: 0.5px solid #555;
-  line-height: 30px;
-}
-
-.price-list-parameters tr td:first-child,
-.price-list-parameters tr:first-child td:nth-of-type(2)
+.pl--params__column:first-child,
+.pl--params__row:first-child td:nth-of-type(2)
 {
   text-align: left;
   font-weight: 700;
 }
 
 /*------------------------ section contacts ----------------------- */
-/* AIzaSyBNGV3l1VY2VgCa65oFRLkugBgLAJy3olI */
+
 #map {
   width: 100%;
   height: 450px;
