@@ -84,7 +84,7 @@ h2:after {
 
 /*------------------------ Header ----------------------- */
 
-header {
+.header {
   background-image: url(img/home-betonove-sterky-2.jpg);
   background-attachment: fixed;
   height: 80vh;
@@ -92,7 +92,7 @@ header {
 }
 
 /*--- back to top button ---  */
-.back-to-top {
+.btn--back-to-top {
   background: none;
   margin: 0;
   position: fixed;
@@ -108,7 +108,7 @@ header {
   background-color: #2980B9;
   text-align: center;
 }
-.back-to-top:hover {
+.btn--back-to-top:hover {
   background-color: rgba(54, 108, 208, 0.9);
 }
 
@@ -117,7 +117,7 @@ header {
   font-size: 50px;
 }
 
-.hero-text-box {
+.header__hero-box {
   position: absolute;
   width: auto;
   top: 55%;
@@ -125,12 +125,12 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.hero-text-box h1 span {
+.hero-box__heading {
   padding: 8px 30px;
   background-color: rgba(36, 188, 208, 0.897);
 }
 
-.hero-text-box p {
+.hero-box__text {
   text-align: justify;
   background-color: rgba(54, 108, 208, 0.9);
   padding: 20px 20px;
@@ -140,8 +140,8 @@ header {
   font-weight: 100;
 }
 
-.hero-text-box p span,
-.hero-text-box p a
+.hero-box__text--inner,
+.hero-box__text--link
 {
   padding: 2px 15px;
   background-color: #366AD0;
@@ -151,22 +151,21 @@ header {
   word-spacing: 4px;
 }
 
-.hero-text-box p a:link,
-.hero-text-box p a:visited {
+.hero-box__text--link:link,
+.hero-box__text--link:visited {
   color: #22C6AC;
   text-decoration: none;
   text-transform: none;
 }
 
-.hero-text-box p a:hover,
-.hero-text-box p a:active {
+.hero-box__text--link:hover,
+.hero-box__text--link:active {
   color: #222CC6;
   text-decoration: underline;
 }
 
-.demo a {
+.scrolldown-anim__link {
   position: absolute;
-  /* bottom: 275px; */
   top: 72%;
   left: 50%;
   z-index: 2;
@@ -180,11 +179,11 @@ header {
   transition: opacity .3s;
 }
 
-.demo a:hover {
+.header__scrolldown-anim:hover {
   opacity: .5;
 }
 
-#scrolldown-button a span {
+.scrolldown-anim__link--inner {
   position: absolute;
   top: 0px;;
   left: 50%;
@@ -196,7 +195,7 @@ header {
   box-sizing: border-box;
 }
 
-#scrolldown-button a span::before {
+.scrolldown-anim__link--inner::before {
   position: absolute;
   top: 10px;
   left: 50%;
@@ -206,28 +205,12 @@ header {
   margin-left: -3px;
   background-color: #fff;
   border-radius: 100%;
-  -webkit-animation: sdb10 2s infinite;
-  animation: sdb10 2s infinite;
+  -webkit-animation: scrollDown 2s infinite;
+  animation: scrollDown 2s infinite;
   box-sizing: border-box;
 }
 
-@-webkit-keyframes sdb10 {
-  0% {
-    -webkit-transform: translate(0, 0);
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  80% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes sdb10 {
+@keyframes scrollDown {
   0% {
     transform: translate(0, 0);
     opacity: 0;
@@ -263,42 +246,8 @@ a:active {
 
 /*------------------------ Main Navigation ----------------------- */
 
-/* nav {
-  background-color:#2980B9;
-}
 
-nav .row {
-  padding: 5px 0;
-}
-
-.main-nav {
-  float: right;
-  list-style: none;
-  margin: 20px 0;
-}
-.main-nav li {
-  display: inline-block;
-  margin-left: 40px;
-
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 90%;
-  padding: 20px 0;
-  transition: border-bottom 0.2s;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 5px solid #24BAD0;
-}
-/*-------------------------------------------------------------------------------- */
-
-nav {
+.header__nav--sticky {
   /* background-color:#2980B9; */
   background-color:#fff;
   position: fixed;
@@ -309,7 +258,7 @@ nav {
   box-shadow: 0 2px 2px rgba(70, 69, 69, 0.507);
 }
 
-nav a:link {
+.header__nav--sticky a:link {
   border: none;
 }
 
@@ -319,7 +268,7 @@ nav a:link {
 }
 
 /*Strip the ul of padding and list styling*/
-.main-nav ul {
+.main-nav__list--hidden {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -327,13 +276,13 @@ nav a:link {
 }
 
 /*Create a horizontal list with spacing*/
-.main-nav li {
+.main-nav__item {
   display:inline-block;
   float: left;
 }
 
 /*Style for menu links*/
-.main-nav li a {
+.main-nav__link{
   display:block;
   min-width: 120px;
   text-align: center;
@@ -343,44 +292,46 @@ nav a:link {
 }
 
 /*Hover state for top level links*/
-.main-nav li  a:hover {
+.main-nav__link:hover {
   background-color: #24BAD0;
 }
 
 /*Style for dropdown links*/
-.main-nav li:hover ul a {
-  background: #f3f3f3;
+.main-nav__item:hover .main-nav__list--hidden .main-nav__link {
+  background: #fff;
   color: #2f3036;
   height: 40px;
   line-height: 40px;
 }
 
 /*Hover state for dropdown links*/
-.main-nav li:hover ul a:hover {
+.main-nav__item:hover .main-nav__link:hover {
   background-color: #24BAD0;
   color: #fff;
 }
 
 /* hide dropdown links until they are needed  */
-.main-nav li ul {
+.main-nav__list--hidden {
   display: none;
 }
 
 /*Make dropdown links vertical*/
-.main-nav li ul li {
+.main-nav__list--hidden .main-nav__item {
   display: block;
   float: none;
 }
 
 /*Prevent text wrapping*/
-.main-nav li ul li a {
+.main-nav__link {
   width: auto;
   min-width: 100px;
   padding: 0 20px;
 }
 
 /*Display the dropdown on hover*/
-ul li a:hover + .hidden, .hidden:hover {
+.main-nav__item .main-nav__link:hover +
+.main-nav__list--hidden,
+.main-nav__list--hidden:hover {
   display: block;
 }
 
@@ -401,13 +352,13 @@ ul li a:hover + .hidden, .hidden:hover {
   display: inline;
 }
 
-.logo-img {
+.logo--img {
   margin-top: 12px;
   width: 4.5%;
   height: auto;
 
 }
-.logo-text {
+.logo--text {
   width: 8%;
   height: auto;
   margin-left: 5px;
@@ -416,27 +367,27 @@ ul li a:hover + .hidden, .hidden:hover {
 
 /*------------------------ arrows ----------------------- */
 
-.arrows span {
+.header__arrows span {
   height: 85vh;
   display: inline-flex;
   align-items: center;
 }
 
-.arrows a
+.header__arrows a
 {
   border: 0;
 }
 
-.arrows i {
+.header__arrows i {
   color: #fff;
   font-size: 350%;
 }
 
-.arrow-left {
+.header__arrows--left {
   margin-left: 20px;
 }
 
-.arrow-right {
+.header__arrows--right {
   margin-right: 20px;
   float: right;
 }

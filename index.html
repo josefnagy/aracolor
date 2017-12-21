@@ -14,50 +14,55 @@
     <title>Aracolor</title>
   </head>
   <body>
-    <header>
-      <nav class="sticky">
+    <header class="header" id="header">
+      <nav class="header__nav--sticky">
         <div class="row">
             <div class="logo">
               <a href="index.html">
-                <img src="resources/img/logo-bird-v4.svg" alt="aracolor" class="logo-img">
-                <img src="resources/img/logo-text-v6.svg" alt="logo" class="logo-text">
+                <img src="resources/img/logo-bird-v4.svg" alt="aracolor" class="logo--img">
+                <img src="resources/img/logo-text-v6.svg" alt="logo" class="logo--text">
               </a>
             </div>
             <ul class="main-nav">
-              <li><a href="index.html">Úvod</a></li>
-              <li>
-                <a class="scroll" href="#sluzby">Služby &nbsp;˅</a>
-                <ul class="hidden">
-                  <li><a href="betonove-sterky.html">Betonové stěrky</a></li>
-                  <li><a href="#">Malování</a></li>
-                  <li><a href="#">Natírání</a></li>
-                  <li><a href="#">Tapetování</a></li>
-                  <li><a href="#">Nástřiky</a></li>
-                  <li><a href="#">Čištění</a></li>
+              <li class="main-nav__item"><a class="main-nav__link scroll-js" href="index.html">Úvod</a></li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#sluzby">Služby &nbsp;˅</a>
+                <ul class="main-nav__list--hidden">
+                  <li class="main-nav__item"><a class="main-nav__link" href="betonove-sterky.html">Betonové stěrky</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Malování</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Natírání</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Tapetování</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Nástřiky</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Čištění</a></li>
                 </ul>
               </li>
-              <li><a class="scroll" href="#cenik">Ceník</a></li>
-              <li><a class="scroll" href="#reference">Reference</a></li>
-              <li><a class="scroll" href="#kontakty">Kontakty</a></li>
+              <li class="main-nav__item"><a class="main-nav__link scroll-js" href="#cenik">Ceník</a></li>
+              <li class="main-nav__item"><a class="main-nav__link scroll-js" href="#reference">Reference</a></li>
+              <li class="main-nav__item"><a class="main-nav__link scroll-js" href="#kontakty">Kontakty</a></li>
             </ul>
         </div>
       </nav>
-      <div class="hero-text-box">
-        <h1 class="animated bounceInLeft"><span>Betonové stěrky</span></h1>
-        <p class="animated bounceInRight"><span>Setřeme Váš beton uplně nejlíp jak to jde,</span><a href="betonove-sterky.html">více></a></p>
+      <div class="header__hero-box">
+        <h1 class="animated bounceInLeft"><span class="hero-box__heading">Betonové stěrky</span></h1>
+        <p class="hero-box__text animated bounceInRight">
+          <span class="hero-box__text--inner">Setřeme Váš beton uplně nejlíp jak to jde,</span>
+          <a class="hero-box__text--link" href="betonove-sterky.html">více></a>
+        </p>
       </div>
-      <div class="arrows">
-        <span class="arrow-left">
+      <div class="header__arrows">
+        <span class="header__arrows--left">
           <a href="#"><i class="ion-ios-arrow-left"></i></a>
         </span>
-        <span class="arrow-right">
+        <span class="header__arrows--right">
             <a href="#"><i class="ion-ios-arrow-right"></i></a>
         </span>
       </div>
-      <div id="scrolldown-button" class="demo">
-        <a href="#"><span></span></a>
+      <div class="header__scrolldown-anim">
+        <a class="scrolldown-anim__link" href="#">
+          <span class="scrolldown-anim__link--inner"></span>
+        </a>
       </div>
-      <a href="#" class="back-to-top">
+      <a href="#" class="btn--back-to-top">
         <i class="ion-ios-arrow-up"></i>
       </a>
     </header>
