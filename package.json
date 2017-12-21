@@ -4,7 +4,7 @@
   "description": "aracolor static website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass sass/main.sass resources/css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/josefnagy/aracolor/issues"
   },
-  "homepage": "https://github.com/josefnagy/aracolor#readme"
+  "homepage": "https://github.com/josefnagy/aracolor#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
