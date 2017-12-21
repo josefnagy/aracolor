@@ -1,0 +1,22 @@
+{
+  "name": "aracolor",
+  "version": "1.0.0",
+  "description": "aracolor static website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josefnagy/aracolor.git"
+  },
+  "keywords": [
+    "aracolor"
+  ],
+  "author": "Josef Nagy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josefnagy/aracolor/issues"
+  },
+  "homepage": "https://github.com/josefnagy/aracolor#readme"
+}
