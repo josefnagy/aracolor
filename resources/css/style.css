@@ -440,25 +440,25 @@ a:active {
   padding:0;
 }
 
-.gallery-showcase {
+.gallery__showcase {
   list-style: none;
   width: 100%;
 }
 
-.gallery-showcase li {
+.gallery__list {
   display: block;
   float: left;
   width: 25%;
 }
 
-.gallery-photo {
+.gallery__photo {
   width: 100%;
   margin: 0;
   overflow: hidden;
   background-color: #000;
 }
 
-.gallery-photo img {
+.gallery__photo--img {
   opacity: 0.7;
   width: 100%;
   transform: scale(1.15);
@@ -466,7 +466,7 @@ a:active {
   transition: transform 0.5s
 }
 
-.gallery-photo img:hover {
+.gallery__photo--img:hover {
   opacity: 1;
   transform: scale(1.03);
 }
