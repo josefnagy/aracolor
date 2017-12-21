@@ -666,24 +666,22 @@ a:active {
 
 /*------------------------ footer ----------------------- */
 
-footer {
+.footer {
   background-color: rgb(61, 61, 61);
   padding: 40px;
 }
 
-.footer-nav {
+.footer__nav--list {
   list-style: none;
   float: left;
   font-size: 80%;
 }
 
 .social-links {
-  list-style: none;
   float: right;
 }
 
-.footer-nav li,
-.social-links li {
+.footer__nav--item {
   display: inline-block;
   margin-right: 20px;
 }
@@ -693,27 +691,23 @@ footer {
   margin-right: 0 px;
 }
 
-.footer-nav li a:link,
-.footer-nav li a:visited,
-.social-links li a:link,
-.social-links li a:visited {
+.footer__nav--link:link,
+.footer__nav--link:visited {
   text-decoration: none;
   border: 0;
   color: #a0a0a0;
   transition: color 0.2s;
 }
 
-.footer-nav li a:hover,
-.footer-nav li a:active,
-.social-links li a:hover,
-.social-links li a:active {
+.footer__nav--link:hover,
+.footer__nav--link:active {
     text-decoration: none;
     border: 0;
     color: rgb(192, 192, 192);
 }
 
-.social-links li a:link,
-.social-links li a:visited {
+.social-links .footer__nav--link:link,
+.social-links .footer__nav--link:visited {
     font-size: 140%;
 }
 
@@ -730,21 +724,23 @@ footer {
   color: #e95950;
 }
 
-footer p {
+.footer__copy {
   color: #a0a0a0;
   text-align: center;
   margin-top: 20px;
+  font-size: 60%;
 }
 
-footer p a:link,
-footer p a:visited {
+.footer__copy--link:link,
+.footer__copy--link:visited {
   text-decoration: none;
+  padding-bottom: 2px;
   border-bottom: 1px dotted rgb(37, 37, 37);
   color: rgb(37, 37, 37);
   transition: color 0.2s;
 }
 
-footer p a:hover,
-footer p a:active {
+.footer__copy--link:hover,
+.footer__copy--link:active {
   color: #f6f6f6;
 }
