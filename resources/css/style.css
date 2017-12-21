@@ -396,7 +396,7 @@ a:active {
   color: #2980B9;
 }
 
-.svg-icon {
+.service--icon {
   display: block;
   margin: auto;
   padding: 15px 0 25px 0;
@@ -474,16 +474,13 @@ a:active {
 /*------------------------ section our services ----------------------- */
 
 
-.section-our-services .col {
+.services__service {
   transition: background-color 0.3s;
-}
-
-.section-our-services .box {
   padding-top: 10px;
   padding-bottom: 35px;
 }
 
-.section-our-services .col:hover {
+.services__service:hover {
   background-color: #f6f6f6;
 }
 
