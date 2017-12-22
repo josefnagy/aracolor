@@ -4,81 +4,71 @@
   @include fixed(top 0 left 0);
 
   background-color: $color-white;
-  box-shadow: 0 0.2rem 0.2rem rgba($shadow-color, 0.5);
+  box-shadow: 0 .2rem .2rem rgba($shadow-color, .5);
   width: 100%;
   z-index: 100;
-
-  &__link:link {
-    border: 0;
-  }
 
   &__list {
     float: right;
     margin: 0;
+
+    //Strip the ul of padding and list styling
+    &--hidden {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+    }
+
+    //Make dropdown links vertical
+    &--hidden .nav__item {
+      display: block;
+      float: none;
+    }
   }
-}
 
-//Strip the ul of padding and list styling
 
-.nav__list--hidden {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-}
+  //Create a horizontal list with spacing
+  &__item {
+    display: inline-block;
+    float: left;
 
-//Create a horizontal list with spacing
-.nav__item {
-  display: inline-block;
-  float: left;
-}
+    //Style for dropdown links
+    &:hover .nav__list--hidden .nav__link {
+      background: $color-white;
+      color: $primary-color;
+      height: 4rem;
+      line-height: 4rem;
+    }
 
-//Style for menu links
-.nav__link {
-  display: block;
-  font-size: 2rem;
-  min-width: 12rem;
-  text-align: center;
-  line-height: 8.5rem;
-  color: #000;
-  text-decoration: none;
-}
+    //hover style for dropdown links
+    &:hover .nav__list--hidden .nav__link:hover {
+      background: $primary-color;
+      color: $color-white;
+    }
+  }
 
-//Hover state for top level links
-.nav__link:hover {
-  background-color: $primary-color;
-}
+  //Style for menu links
+  &__link {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8.5rem;
+    padding: 0 2.5rem;
+    transition: background-color, color .2s;
 
-//Style for dropdown links
-.nav__item:hover .nav__list--hidden .nav__link {
-  background: $color-white;
-  color: $font-color-main;
-  height: 4rem;
-  line-height: 4rem;
-}
+    &:link {
+      border: 0;
+    }
 
-//Hover state for dropdown links/
-.nav__item:hover .nav__link:hover {
-  background-color: $primary-color;
-  color: $color-white;
-}
+    //hover state for top level links
+    &:hover {
+      background-color: $primary-color;
+      color: $color-white;
+    }
 
-// hide dropdown links until they are needed
-.nav__list--hidden {
-  display: none;
-}
-
-//Make dropdown links vertical
-.nav__list--hidden .nav__item {
-  display: block;
-  float: none;
-}
-
-//Prevent text wrapping
-.nav__link {
-  width: auto;
-  min-width: 10rem;
-  padding: 0 2rem;
+  }
 }
 
 //Display the dropdown on hover
@@ -88,18 +78,22 @@
 
 //------------------------ logo -----------------------
 .logo {
-  display: inline;
-}
+  display: inline-block;
+  height: 100%;
 
-.logo--img {
-  margin-top: 1.2rem;
-  width: 4.5%;
-  height: auto;
-}
+  &__link:hover {
+    border: 0;
+  }
 
-.logo--text {
-  width: 8%;
-  height: auto;
-  margin-left: 0.5rem;
-  margin-bottom: 1.7rem;
+  &__img {
+    margin-top: 1.2rem;
+    width: auto;
+    height: 6rem;
+  }
+
+  &__text {
+    height: 2rem;
+    margin-left: .5rem;
+    margin-bottom: 1.7rem;
+  }
 }

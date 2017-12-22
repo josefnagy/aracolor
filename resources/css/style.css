@@ -47,7 +47,7 @@ a:link, a:visited {
   text-decoration: none;
   padding-bottom: 0.1rem;
   border-bottom: 0;
-  transition: border-bottom 0.2s color 0.2s; }
+  transition: border-bottom, color .2s; }
 
 a:hover, a:active {
   color: #555;
@@ -227,72 +227,58 @@ h2:after {
   box-shadow: 0 0.2rem 0.2rem rgba(70, 69, 69, 0.5);
   width: 100%;
   z-index: 100; }
-  .nav__link:link {
-    border: 0; }
   .nav__list {
     float: right;
     margin: 0; }
-
-.nav__list--hidden {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: absolute; }
-
-.nav__item {
-  display: inline-block;
-  float: left; }
-
-.nav__link {
-  display: block;
-  font-size: 2rem;
-  min-width: 12rem;
-  text-align: center;
-  line-height: 8.5rem;
-  color: #000;
-  text-decoration: none; }
-
-.nav__link:hover {
-  background-color: #2980B9; }
-
-.nav__item:hover .nav__list--hidden .nav__link {
-  background: #fff;
-  color: #555;
-  height: 4rem;
-  line-height: 4rem; }
-
-.nav__item:hover .nav__link:hover {
-  background-color: #2980B9;
-  color: #fff; }
-
-.nav__list--hidden {
-  display: none; }
-
-.nav__list--hidden .nav__item {
-  display: block;
-  float: none; }
-
-.nav__link {
-  width: auto;
-  min-width: 10rem;
-  padding: 0 2rem; }
+    .nav__list--hidden {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute; }
+    .nav__list--hidden .nav__item {
+      display: block;
+      float: none; }
+  .nav__item {
+    display: inline-block;
+    float: left; }
+    .nav__item:hover .nav__list--hidden .nav__link {
+      background: #fff;
+      color: #2980B9;
+      height: 4rem;
+      line-height: 4rem; }
+    .nav__item:hover .nav__list--hidden .nav__link:hover {
+      background: #2980B9;
+      color: #fff; }
+  .nav__link {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 8.5rem;
+    padding: 0 2.5rem;
+    transition: background-color, color .2s; }
+    .nav__link:link {
+      border: 0; }
+    .nav__link:hover {
+      background-color: #2980B9;
+      color: #fff; }
 
 .nav__item .nav__link:hover + .nav__list--hidden, .nav__list--hidden:hover {
   display: block; }
 
 .logo {
-  display: inline; }
-
-.logo--img {
-  margin-top: 1.2rem;
-  width: 4.5%;
-  height: auto; }
-
-.logo--text {
-  width: 8%;
-  height: auto;
-  margin-left: 0.5rem;
-  margin-bottom: 1.7rem; }
+  display: inline-block;
+  height: 100%; }
+  .logo__link:hover {
+    border: 0; }
+  .logo__img {
+    margin-top: 1.2rem;
+    width: auto;
+    height: 6rem; }
+  .logo__text {
+    height: 2rem;
+    margin-left: .5rem;
+    margin-bottom: 1.7rem; }
 
 /*------------------------ footer ----------------------- */
 .footer {

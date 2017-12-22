@@ -47,12 +47,12 @@ a:link, a:visited {
   text-decoration: none;
   padding-bottom: 0.1rem;
   border-bottom: 0;
-  transition: border-bottom 0.2s color 0.2s;
+  transition: border-bottom, color .2s;
 }
 
 a:hover, a:active {
   color: $font-color-main;
-  border-bottom: 0.1rem solid $primary-color;
+  border-bottom: .1rem solid $primary-color;
 }
 
 /*------------------------ paragraphs ----------------------- */
