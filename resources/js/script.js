@@ -1,9 +1,11 @@
 const headerBckImg = document.querySelector('header');
 const headerH1 = document.querySelector('h1');
 const headerHeroText = document.querySelector('.header__text');
+const prevArrow = document.querySelector('.header__arrows--prev img');
+const nextArrow = document.querySelector('.header__arrows--next img');
 
-const arrowLeft = document.querySelector('.header__arrows--left');
-const arrowRight = document.querySelector('.header__arrows--right');
+const arrowLeft = document.querySelector('.header__arrows--prev');
+const arrowRight = document.querySelector('.header__arrows--next');
 const imgS = ['url(resources/css/img/home-betonove-sterky-2.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
 const h1 = ['Betonové stěrky', 'Malování Interiérů a Exteriérů', 'Nátěry všech povrchů'];
 const heroText = [
@@ -11,6 +13,13 @@ const heroText = [
   "Namalujem uplne všechno, <a class='header__link' href='betonove-sterky.html'>více></a>",
   "Natřem vám prdel, <a class='header__link' href='betonove-sterky.html'>více></a>",
 ];
+
+const arrowImg = [
+  'resources/img/arrow-betonove-sterky.png',
+  'resources/img/arrow-malby.png',
+  'resources/img/arrow-natery.png',
+]
+
 let counter = 0;
 
 arrowRight.addEventListener('click', function(e) {
@@ -22,6 +31,8 @@ arrowRight.addEventListener('click', function(e) {
   headerH1.innerText = h1[ counter ];
   headerHeroText.innerHTML = heroText[ counter ];
 
+  prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
+  nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
 })
 
 arrowLeft.addEventListener('click', function(e) {
@@ -32,6 +43,9 @@ arrowLeft.addEventListener('click', function(e) {
   headerBckImg.style.backgroundImage = imgS[ counter ];
   headerH1.innerText = h1[ counter ];
   headerHeroText.innerHTML = heroText[ counter ];
+
+  prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
+  nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
 })
 
 $(document).ready(function() {
