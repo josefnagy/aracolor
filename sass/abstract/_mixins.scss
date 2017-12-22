@@ -1,5 +1,5 @@
 // for pseudo classes
-@mixin pseudo($display: block, $pos: basolute, $content: "") {
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
   display: $display;
   position: $pos;
