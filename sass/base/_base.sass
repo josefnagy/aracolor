@@ -7,6 +7,7 @@
 
 html
   font-size: 62.5%
+  // font-size: 32.5%
 
 body
   box-sizing: border-box
@@ -31,3 +32,33 @@ body
 
 section
   padding: 8rem 0
+
+/*------------------------ Links ----------------------- */
+
+a:link, a:visited
+  color: $primary-color
+  text-decoration: none
+  padding-bottom: .1rem
+  border-bottom: 0
+  transition: border-bottom 0.2s color 0.2s
+
+a:hover, a:active
+  color: $font-color-main
+  border-bottom: .1rem solid $primary-color
+
+/*------------------------ paragraphs ----------------------- */
+
+.box p
+  font-size: 1.8rem
+  line-height: 2.9rem
+  text-align: center
+  padding: 0 .5rem
+
+.long-copy
+  width: 70%
+  margin-left: 15%
+  line-height: 145%
+  margin-top: 3rem
+  margin-bottom: 3rem
+  font-size: 2rem
+  text-align: center
