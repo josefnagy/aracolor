@@ -11,7 +11,7 @@ const h1 = ['Betonové stěrky', 'Malování Interiérů a Exteriérů', 'Nátě
 const heroText = [
   "Setřeme Váš beton uplně nejlíp jak to jde, <a class='header__link' href='betonove-sterky.html'>více></a>",
   "Namalujem uplne všechno, <a class='header__link' href='betonove-sterky.html'>více></a>",
-  "Natřem vám prdel, <a class='header__link' href='betonove-sterky.html'>více></a>",
+  "Natřem vám prdel na bílo, <a class='header__link' href='betonove-sterky.html'>více></a>",
 ];
 
 const arrowImg = [

@@ -21,7 +21,7 @@ body {
   zoom: 1;
 }
 
-.clearfix:after {
+.clearfix::after {
   content: ".";
   clear: both;
   display: block;

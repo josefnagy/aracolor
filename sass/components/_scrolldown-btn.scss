@@ -1,12 +1,12 @@
 .scrolldown-anim__link {
   position: absolute;
-  top: 72%;
+  top: 75%;
   left: 50%;
   z-index: 2;
   display: inline-block;
   transform: translate(0, -50%);
   text-decoration: none;
-  transition: opacity 0.3s;
+  transition: opacity .3s;
 }
 
 .header__scrolldown-anim:hover {

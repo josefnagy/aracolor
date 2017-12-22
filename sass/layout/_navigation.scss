@@ -47,14 +47,15 @@
       background: $primary-color;
       color: $color-white;
     }
+
   }
 
   //Style for menu links
   &__link {
     display: block;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
-    line-height: 8.5rem;
+    line-height: 7rem;
     padding: 0 2.5rem;
     transition: background-color, color .2s;
 
@@ -67,7 +68,6 @@
       background-color: $primary-color;
       color: $color-white;
     }
-
   }
 }
 
@@ -86,7 +86,7 @@
   }
 
   &__img {
-    margin-top: 1.2rem;
+    margin-top: .6rem;
     width: auto;
     height: 6rem;
   }
