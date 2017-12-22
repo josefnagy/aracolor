@@ -7,9 +7,10 @@ const arrowRight = document.querySelector('.header__arrows--right');
 const imgS = ['url(resources/css/img/home-betonove-sterky-2.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
 const h1 = ['Betonové stěrky', 'Malování Interiérů a Exteriérů', 'Nátěry všech povrchů'];
 const heroText = [
-  'Setřeme Váš beton uplně nejlíp jak to jde,',
-  'Namalujem uplne všechno,',
-  'Natřem vám prdel,'];
+  "Setřeme Váš beton uplně nejlíp jak to jde, <a class='header__link' href='betonove-sterky.html'>více></a>",
+  "Namalujem uplne všechno, <a class='header__link' href='betonove-sterky.html'>více></a>",
+  "Natřem vám prdel, <a class='header__link' href='betonove-sterky.html'>více></a>",
+];
 let counter = 0;
 
 arrowRight.addEventListener('click', function(e) {
@@ -19,7 +20,8 @@ arrowRight.addEventListener('click', function(e) {
   }
   headerBckImg.style.backgroundImage = imgS[ counter ];
   headerH1.innerText = h1[ counter ];
-  headerHeroText.innerText = heroText[ counter ];
+  headerHeroText.innerHTML = heroText[ counter ];
+
 })
 
 arrowLeft.addEventListener('click', function(e) {
@@ -29,7 +31,7 @@ arrowLeft.addEventListener('click', function(e) {
   }
   headerBckImg.style.backgroundImage = imgS[ counter ];
   headerH1.innerText = h1[ counter ];
-  headerHeroText.innerText = heroText[ counter ];
+  headerHeroText.innerHTML = heroText[ counter ];
 })
 
 $(document).ready(function() {
