@@ -1,6 +1,6 @@
 const headerBckImg = document.querySelector('header');
-const headerH1 = document.querySelector('h1 span');
-const headerHeroText = document.querySelector('header p span');
+const headerH1 = document.querySelector('h1');
+const headerHeroText = document.querySelector('.header__text');
 
 const arrowLeft = document.querySelector('.header__arrows--left');
 const arrowRight = document.querySelector('.header__arrows--right');

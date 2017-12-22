@@ -4,8 +4,8 @@
   "description": "aracolor static website",
   "main": "index.html",
   "scripts": {
-    "css": "node-sass sass/main.sass resources/css/style.css",
-    "css:watch": "npm run css && node-sass sass/main.sass resources/css/style.css -w"
+    "css": "node-sass sass/main.scss resources/css/style.css",
+    "css:watch": "npm run css && node-sass sass/main.scss resources/css/style.css -w"
   },
   "repository": {
     "type": "git",
