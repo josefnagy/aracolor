@@ -312,7 +312,7 @@ h2:after {
       padding: 0;
       position: absolute; }
     .nav__list--hidden .nav__item {
-      width: 17rem; }
+      width: 20rem; }
   .nav__item {
     display: inline-block;
     position: relative; }
@@ -323,6 +323,10 @@ h2:after {
       .nav__item:hover .nav__list--hidden .nav__link:hover {
         background-color: rgba(255, 255, 255, 0.9);
         color: #2980B9; }
+      .nav__item:hover .nav__list--hidden .nav__link:hover .dropdown-icon,
+      .nav__item:hover .nav__list--hidden .nav__link:hover .dropdown-icon__frame {
+        border-color: #2980B9;
+        fill: #2980B9; }
     .nav__item::after {
       cursor: pointer;
       position: absolute;
@@ -341,9 +345,9 @@ h2:after {
   .nav__link {
     display: block;
     font-size: 1.7rem;
-    text-align: center;
+    text-align: justify;
     line-height: 7rem;
-    padding: 0 2.5rem; }
+    padding: 0 2rem 0 1rem; }
     .nav__link:link {
       border: 0; }
 
@@ -364,6 +368,22 @@ h2:after {
     height: 2rem;
     margin-left: .5rem;
     margin-bottom: 1.7rem; }
+
+.dropdown-icon__frame {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: .3rem;
+  border: 0.1rem solid #fff;
+  margin-right: 1rem;
+  opacity: .7; }
+
+.dropdown-icon {
+  height: 100%;
+  padding: .3rem;
+  fill: #fff; }
 
 .footer {
   background-color: #464545;
