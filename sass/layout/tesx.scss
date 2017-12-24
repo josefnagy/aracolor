@@ -1,0 +1,152 @@
+
+$animate: all 0.2s ease-in-out;
+
+
+section {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  float: left;
+  min-height: 100%;
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 0 $gutter $gutter*2;
+  background-color: white;
+  h3 {
+    background-color: #000;
+    color: white;
+    float: left;
+    clear: both;
+    border-top-left-radius: $rounded;
+    border-top-right-radius: $rounded;
+    position: relative;
+    text-shadow: 2px 3px 0px rgba(0, 0, 0, .2);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -4px;
+      top: 4px;
+      z-index: -1;
+      border-radius: inherit;
+      opacity: 0.5;
+    }
+    &.varient-1 {
+      background-color: $col1;
+      &:after {
+        background-color: darken($col1, 10%);
+      }
+    }
+    &.varient-2 {
+      background-color: $col2;
+      &:after {
+        background-color: darken($col2, 10%);
+      }
+    }
+    &.varient-3 {
+      background-color: $col3;
+      &:after {
+        background-color: darken($col3, 10%);
+      }
+    }
+    &.varient-4 {
+      background-color: $col4;
+      &:after {
+        background-color: darken($col4, 10%);
+      }
+    }
+    & + div {
+      width: 100%;
+      height: 250px;
+      float: left;
+      margin: 0 0 $gutter;
+      background-color: darken(white, 10%);
+      border-top-right-radius: $rounded;
+      border-bottom-right-radius: $rounded;
+      border-bottom-left-radius: $rounded;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      span {
+        font-size: 5vw;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: darken(white, 10%);
+        transition: $animate;
+        position: relative;
+        @media screen and (min-width: 992px) {
+          font-size: 36px;
+        }
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          width: 0px;
+          height: 5px;
+          margin: 5px 0 0;
+          transition: $animate;
+          transition-duration: 0.75s;
+          opacity: 0;
+        }
+        &.hover-1 {
+          &:after {
+            left: 0;
+            background-color: $col1;
+          }
+        }
+        &.hover-2 {
+          &:after {
+            right: 0;
+            background-color: $col2;
+          }
+        }
+        &.hover-3 {
+          &:before {
+            left: calc(50%);
+            //width: 50%;
+            background-color: $col3;
+          }
+          &:after {
+            right: calc(50%);
+            //width: 50%;
+            background-color: $col3;
+          }
+        }
+        &.hover-4 {
+          &:before {
+            left: 0;
+            //width: 50%;
+            background-color: $col4;
+          }
+          &:after {
+            right: 0;
+            //width: 50%;
+            background-color: $col4;
+          }
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        span {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+          &.hover-3,
+          &.hover-4 {
+            &:before,
+            &:after {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

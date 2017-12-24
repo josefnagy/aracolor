@@ -10,6 +10,14 @@
   100% {
     opacity: 0; } }
 
+@keyframes underline {
+  0% {
+    transform: ease-in-out(0, 0);
+    opacity: 0; }
+  100% {
+    transform: ease-in-out(0, 0);
+    opacity: 1; } }
+
 /*------------------------ Basic setup ----------------------- */
 *, *:after, *:before {
   margin: 0;
@@ -308,27 +316,32 @@ h2:after {
       float: none; }
   .nav__item {
     display: inline-block;
-    float: left; }
+    position: relative; }
     .nav__item:hover .nav__list--hidden .nav__link {
       background: #fff;
-      color: #2980B9;
       height: 4rem;
       line-height: 4rem; }
-    .nav__item:hover .nav__list--hidden .nav__link:hover {
-      background: #2980B9;
-      color: #fff; }
+    .nav__item::after {
+      position: absolute;
+      content: "";
+      bottom: -.1px;
+      width: 0;
+      height: .4rem;
+      transition: all .3s ease-in-out;
+      opacity: 0; }
+    .nav__item:hover::after {
+      left: 0;
+      background-color: #2980B9;
+      width: 100%;
+      opacity: 1; }
   .nav__link {
     display: block;
     font-size: 1.7rem;
     text-align: center;
     line-height: 7rem;
-    padding: 0 2.5rem;
-    transition: background-color, color .2s; }
+    padding: 0 2.5rem; }
     .nav__link:link {
       border: 0; }
-    .nav__link:hover {
-      background-color: #2980B9;
-      color: #fff; }
 
 .nav__item .nav__link:hover + .nav__list--hidden, .nav__list--hidden:hover {
   display: block; }

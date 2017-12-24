@@ -17,3 +17,16 @@
     opacity: 0;
   }
 }
+
+@keyframes underline {
+  0% {
+    transform: ease-in-out(0, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: ease-in-out(0, 0);
+    opacity: 1;
+  }
+
+}

@@ -32,20 +32,40 @@
   //Create a horizontal list with spacing
   &__item {
     display: inline-block;
-    float: left;
+    position: relative;
 
     //Style for dropdown links
     &:hover .nav__list--hidden .nav__link {
       background: $color-white;
-      color: $primary-color;
+      // color: $primary-color;
       height: 4rem;
       line-height: 4rem;
     }
 
     //hover style for dropdown links
     &:hover .nav__list--hidden .nav__link:hover {
-      background: $primary-color;
-      color: $color-white;
+      // border-bottom: 2px solid $primary-color;
+    }
+
+    // underline hover effect for top link menu
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -.1px;
+      width: 0;
+      height: .4rem;
+
+      transition: all .3s ease-in-out;
+      opacity: 0;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+        background-color: $primary-color;
+        width: 100%;
+        opacity: 1;
+      }
     }
 
   }
@@ -57,7 +77,6 @@
     text-align: center;
     line-height: 7rem;
     padding: 0 2.5rem;
-    transition: background-color, color .2s;
 
     &:link {
       border: 0;
@@ -65,8 +84,7 @@
 
     //hover state for top level links
     &:hover {
-      background-color: $primary-color;
-      color: $color-white;
+      // color: $color-white;
     }
   }
 }
