@@ -312,21 +312,25 @@ h2:after {
       padding: 0;
       position: absolute; }
     .nav__list--hidden .nav__item {
-      display: block;
-      float: none; }
+      width: 17rem; }
   .nav__item {
     display: inline-block;
     position: relative; }
     .nav__item:hover .nav__list--hidden .nav__link {
-      background: #fff;
-      height: 4rem;
+      background-color: rgba(41, 128, 185, 0.9);
+      color: #fff;
       line-height: 4rem; }
+      .nav__item:hover .nav__list--hidden .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #2980B9; }
     .nav__item::after {
+      cursor: pointer;
       position: absolute;
-      content: "";
-      bottom: -.1px;
+      content: '';
+      bottom: 0;
       width: 0;
       height: .4rem;
+      z-index: -1;
       transition: all .3s ease-in-out;
       opacity: 0; }
     .nav__item:hover::after {
@@ -343,7 +347,8 @@ h2:after {
     .nav__link:link {
       border: 0; }
 
-.nav__item .nav__link:hover + .nav__list--hidden, .nav__list--hidden:hover {
+.nav__item .nav__link:hover + .nav__list--hidden,
+.nav__list--hidden:hover {
   display: block; }
 
 .logo {
