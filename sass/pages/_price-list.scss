@@ -17,7 +17,7 @@
 
 .grow {
   position: relative;
-  transition: height 0.5s;
+  transition: height .5s;
 }
 
 .pl__category--item:nth-of-type(even) {
@@ -25,7 +25,7 @@
 }
 
 .grow:hover {
-  height: 30rem;
+  height: 25rem;
 }
 
 .grow img {
@@ -58,15 +58,34 @@
 }
 
 .pl--params__row {
-  border-bottom: 0.1rem solid $font-color-main;
+  border-bottom: .1rem solid rgba($font-color-main, .2);
   line-height: 3rem;
+  &:last-of-type {
+    border-bottom: .1rem solid transparent;
+  }
 }
 
 .pl--params__column {
   text-align: right;
   padding-right: 1rem;
-  vertical-align: top;
+  vertical-align: middle;
+  & .paint-can {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+  }
 }
+
+.no-border {
+  border-bottom: .1rem solid transparent;
+}
+// .paint-can {
+//   display: flex;
+//   justify-content: center;
+//   align-content: center;
+//   height: 1rem;
+// }
 
 .pl--params__column:first-child, .pl--params__row:first-child td:nth-of-type(2) {
   text-align: left;
