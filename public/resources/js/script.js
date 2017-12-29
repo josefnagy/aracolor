@@ -6,7 +6,7 @@ const nextArrow = document.querySelector('.header__arrows--next img');
 
 const arrowLeft = document.querySelector('.header__arrows--prev');
 const arrowRight = document.querySelector('.header__arrows--next');
-const imgS = ['url(css/img/home-betonove-sterky-2.jpg)', 'url(css/img/home-malby.jpg)', 'url(css/img/home-natery.jpg)'];
+const imgS = ['url(resources/css/img/home-betonove-sterky-2.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
 const h1 = ['Betonové stěrky', 'Malování Interiérů a Exteriérů', 'Nátěry všech povrchů'];
 const heroText = [
   "Setřeme Váš beton uplně nejlíp jak to jde, <a class='header__link' href='betonove-sterky.html'>více></a>",
