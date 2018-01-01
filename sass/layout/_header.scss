@@ -6,11 +6,26 @@
   height: 85vh;
   transition: background-image .5s;
 
+  // styles for Betonove sterky
+  &.bs {
+    background-image: url(img/home-betonove-sterky-1b.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: initial;
+    height: 60vh;
+  }
+
+
   &__heading {
     padding: 1.5rem 4rem;
     background-color: rgba($tertiary-color, .9);
     display: inline-block;
     margin: 0;
+  }
+
+  &__heading.bs{
+    display: block;
+    text-align: center;
   }
 
   &__text {
@@ -25,9 +40,21 @@
     font-weight: 100;
   }
 
+  &__text.bs {
+    text-align: justify;
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+  }
+
   &__hero-box {
     @include absolute(top 55% left 45%);
 
+    width: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  &__hero-box.bs {
+    @include absolute(top 38% left 50%);
     width: auto;
     transform: translate(-50%, -50%);
   }

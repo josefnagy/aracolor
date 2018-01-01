@@ -44,3 +44,14 @@ h2:after {
   margin: 0 auto;
   margin-top: 2rem;
 }
+
+/* line after h3 v betonovych sterkach */
+h3.bs:after {
+  display: block;
+  height: 1px;
+  background-color: #2980B9;
+  content: " ";
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+}

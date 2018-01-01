@@ -1,0 +1,71 @@
+body {
+  background-color: $light-gray;
+}
+
+.section-decor-types {
+  padding: -10rem;
+}
+
+.section-decor-types .row:not(:first-child) {
+  margin-top: 5.5rem;
+}
+
+.section-decor-types .row:nth-child(even) {
+  background-color: $color-white;
+}
+
+.section-decor-types .row:last-child {
+  margin-bottom: 6.5rem;
+}
+
+.section-decor-types p {
+  text-align: justify;
+  padding: 0 2rem 0 0;
+}
+
+.section-decor-types img {
+  width: 100%;
+  height: 100%;
+}
+
+.button-bar {
+  text-align: center;
+}
+
+.button-bar img {
+  width: 5%;
+
+}
+.button-bar a {
+  border: none;
+}
+.button-bar a svg {
+  width: 5%;
+  fill: #2980B9;
+  padding: 1.5rem 2rem 0 2rem;
+
+}
+
+.button-bar a svg:hover {
+  fill: #24BAD0
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  flex: 1;
+}
+
+.flex-col:first-child {
+  padding-right: 2rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+
+}
