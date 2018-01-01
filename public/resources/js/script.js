@@ -15,9 +15,9 @@ const heroText = [
 ];
 
 const arrowImg = [
-  'img/arrow-betonove-sterky.png',
-  'img/arrow-malby.png',
-  'img/arrow-natery.png',
+  'resources/img/arrow-betonove-sterky.png',
+  'resources/img/arrow-malby.png',
+  'resources/img/arrow-natery.png',
 ]
 
 let counter = 0;
