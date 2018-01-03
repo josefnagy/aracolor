@@ -22,31 +22,33 @@ const arrowImg = [
 
 let counter = 0;
 
-arrowRight.addEventListener('click', function(e) {
-  counter++;
-  if( counter > imgS.length - 1 ) {
-    counter = 0;
-  }
-  headerBckImg.style.backgroundImage = imgS[ counter ];
-  headerH1.innerText = h1[ counter ];
-  headerHeroText.innerHTML = heroText[ counter ];
+if( arrowRight !== null && arrowLeft !== null ) {
+  arrowRight.addEventListener('click', function(e) {
+    counter++;
+    if( counter > imgS.length - 1 ) {
+      counter = 0;
+    }
+    headerBckImg.style.backgroundImage = imgS[ counter ];
+    headerH1.innerText = h1[ counter ];
+    headerHeroText.innerHTML = heroText[ counter ];
 
-  prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
-  nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
-})
+    prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
+    nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
+  })
 
-arrowLeft.addEventListener('click', function(e) {
-  counter--;
-  if( counter < 0 ) {
-    counter = imgS.length - 1;
-  }
-  headerBckImg.style.backgroundImage = imgS[ counter ];
-  headerH1.innerText = h1[ counter ];
-  headerHeroText.innerHTML = heroText[ counter ];
+  arrowLeft.addEventListener('click', function(e) {
+    counter--;
+    if( counter < 0 ) {
+      counter = imgS.length - 1;
+    }
+    headerBckImg.style.backgroundImage = imgS[ counter ];
+    headerH1.innerText = h1[ counter ];
+    headerHeroText.innerHTML = heroText[ counter ];
 
-  prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
-  nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
-})
+    prevArrow.src = arrowImg[ counter===0 ? 2 : counter-1 ];
+    nextArrow.src = arrowImg[ counter===2 ? 0 : counter+1 ];
+  })
+}
 
 $(document).ready(function() {
   var offset = 250;

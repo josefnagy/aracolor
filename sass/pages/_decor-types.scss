@@ -1,5 +1,4 @@
 .section-decor-types {
-  // padding: -10rem;
   background-color: $light-gray;
   box-sizing: initial;
 
@@ -8,6 +7,8 @@
 .decor__text {
   font-size: 2rem;
   font-weight: 300;
+  text-align: justify;
+  padding: 0 2rem 0 0;
 }
 
 .section-decor-types .row:not(:first-child) {
@@ -22,34 +23,26 @@
   margin-bottom: 6.5rem;
 }
 
-.section-decor-types p {
-  text-align: justify;
-  padding: 0 2rem 0 0;
-}
-
-.section-decor-types img {
+.decor__img {
   width: 100%;
   height: 100%;
 }
 
-.button-bar {
+.decor__icons {
   text-align: center;
 }
 
-.button-bar img {
-  width: 5%;
-
-}
-.button-bar a {
+.decor__icons a {
   border: none;
 }
-.button-bar a svg {
+
+.link__icon {
   width: 5%;
   fill: #2980B9;
   padding: 1.5rem 2rem 0 2rem;
 }
 
-.button-bar a svg:hover {
+.link__icon:hover {
   fill: #24BAD0
 }
 
