@@ -29,7 +29,8 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: #fff; }
 
 .clearfix {
   zoom: 1; }
@@ -499,11 +500,13 @@ h3.bs:after {
   justify-content: space-around;
   height: 45rem; }
 
-body {
-  background-color: #f6f6f6; }
-
 .section-decor-types {
-  padding: -10rem; }
+  background-color: #f6f6f6;
+  box-sizing: initial; }
+
+.decor__text {
+  font-size: 2rem;
+  font-weight: 300; }
 
 .section-decor-types .row:not(:first-child) {
   margin-top: 5.5rem; }
