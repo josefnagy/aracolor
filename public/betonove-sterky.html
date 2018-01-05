@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="vendors/css/grid.css">
     <link rel="stylesheet" href="vendors/css/ionicons.min.css">
     <link rel="stylesheet" href="vendors/css/normalize.css">
+    <link rel="stylesheet" href="vendors/css/featherlight.min.css">
+    <link rel="stylesheet" href="vendors/css/featherlight.gallery.min.css">
 
     <link rel="stylesheet" href="resources/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
@@ -14,6 +16,7 @@
     <title>Aracolor</title>
   </head>
   <body>
+    <!-- <div id="preloader">a</div> -->
     <div class="svg-wrap">
       <svg width="64" height="64" viewBox="0 0 64 64">
         <path id="arrow-left-5" d="M48 10.667q1.104 0 1.885 0.781t0.781 1.885-0.792 1.896l-16.771 16.771 16.771 16.771q0.792 0.792 0.792 1.896t-0.781 1.885-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.771-0.771-1.896t0.771-1.896l18.667-18.667q0.771-0.771 1.896-0.771zM32 10.667q1.104 0 1.885 0.781t0.781 1.885-0.792 1.896l-16.771 16.771 16.771 16.771q0.792 0.792 0.792 1.896t-0.781 1.885-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.771-0.771-1.896t0.771-1.896l18.667-18.667q0.771-0.771 1.896-0.771z" />
@@ -107,7 +110,16 @@
       <div class="row">
         <div class="flex-row">
           <div class="flex-col">
-            <img class="decor__img" src=" resources/img/betonove-sterky-aureum-img-2.jpg" alt="aureum">
+            <a href="resources/img/bs/aureum-8.jpg" class="gallery"><img class="decor__img" src="resources/img/bs/aureum-8.jpg" alt="aureum"></a>
+            <a href="resources/img/bs/aureum-1.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-2.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-3.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-4.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-5.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-6.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-7.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-9.jpg" class="gallery"></a>
+            <a href="resources/img/bs/aureum-10.jpg" class="gallery"></a>
           </div>
           <div class="flex-col">
             <div class="description">
@@ -138,10 +150,10 @@
           <div class="color-alternatives">
             <h3 class="bs">Barevné varianty</h3>
             <div class="colors">
-              <img class="color__img" src="resources/img/color-au-16-melia.jpg" alt="melia">
-              <img class="color__img" src="resources/img/color-au-24-gea.jpg" alt="gea">
-              <img class="color__img" src="resources/img/color-au-32-arcadia.jpg" alt="arcadia">
-              <img class="color__img" src="resources/img/color-au-40-rea.jpg" alt="rea">
+              <img data-featherlight="resources/img/color-au-16-melia.jpg" class="color__img" src="resources/img/color-au-16-melia.jpg" alt="melia">
+              <img data-featherlight="resources/img/color-au-24-gea.jpg" class="color__img" src="resources/img/color-au-24-gea.jpg" alt="gea">
+              <img data-featherlight="resources/img/color-au-32-arcadia.jpg" class="color__img" src="resources/img/color-au-32-arcadia.jpg" alt="arcadia">
+              <img data-featherlight="resources/img/color-au-40-rea.jpg" class="color__img" src="resources/img/color-au-40-rea.jpg" alt="rea">
             </div>
           </div>
         </div>
@@ -272,6 +284,8 @@
     </footer>
 
   <script src="vendors/js/jquery-3.2.1.min.js"></script>
+  <script src="vendors/js/featherlight.min.js"></script>
+  <script src="vendors/js/featherlight.gallery.min.js"></script>
   <script src="resources/js/script.js"></script>
   </body>
 </html>
