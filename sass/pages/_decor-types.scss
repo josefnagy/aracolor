@@ -9,9 +9,56 @@
   .gallery {
     border: none;
   }
+
+  .decor-img__wrap {
+    position: relative;
+    display: block;
+
+    .decor-img__overlay {
+      position: absolute;
+      background-color: $color-black;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity .5s;
+
+      p {
+        color: $color-white;
+        line-height: 35rem;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        // border: 1.5rem solid $color-white;
+      }
+
+    }
+
+    &:hover {
+      .decor-img__overlay {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity .5s;
+      }
+    }
+
+
+
 }
 
-.js div#preloader { position: fixed; left: 0; top: 0; z-index: 999; width: 100%; height: 100%; overflow: visible; background: #333 url('http://files.mimoymima.com/images/loading.gif') no-repeat center center; }
+
+
+
+  // .qq:hover {
+  //   background-color: $color-black;
+  //   opacity: 0.5;
+  //   z-index: 150;
+  //   overflow: hidden;
+  //   height: 100%;
+  // }
+
+}
 
 .decor__text {
   font-size: 2rem;
@@ -88,14 +135,21 @@
   flex-wrap: nowrap;
   justify-content: space-around;
   width: 100%;
+
+  figcaption {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    font-weight: 300;
+  }
 }
 
 .color__img {
-  width: 15%;
-  height: 15%;
+  width: 100%;
+  height: auto;
   border-radius: 0.5rem;
-}
-
-.color__img {
   cursor: pointer;
 }
+
+

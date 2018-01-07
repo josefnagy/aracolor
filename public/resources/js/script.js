@@ -4,6 +4,9 @@ const headerHeroText = document.querySelector('.header__text');
 const prevArrow = document.querySelector('.header__arrows--prev img');
 const nextArrow = document.querySelector('.header__arrows--next img');
 
+const gallery = document.querySelector('.gallery-js');
+const thumbGallery = document.querySelector('.decor-img__wrap');
+
 const arrowLeft = document.querySelector('.header__arrows--prev');
 const arrowRight = document.querySelector('.header__arrows--next');
 const imgS = ['url(resources/css/img/home-betonove-sterky-2.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
@@ -92,6 +95,29 @@ $(document).ready(function() {
     openSpeed: 300
   });
 
+  gallery.addEventListener('click', function(e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    });
+  });
+
+  thumbGallery.addEventListener('click', function (e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    })
+  })
 });
 
 
