@@ -95,7 +95,7 @@ h1 {
   font-size: 5.5rem;
   word-spacing: 0.4rem;
   letter-spacing: 0.1rem;
-  text-transform: none; }
+  text-transform: uppercase; }
 
 h2 {
   color: #555;
@@ -207,9 +207,8 @@ h3.bs:after {
     padding: 1.5rem 4rem;
     background-color: rgba(34, 198, 47, 0.9);
     display: inline-block;
-    margin: 0; }
-  .header__heading.bs {
-    display: block;
+    margin: 0 auto; }
+  .header .heading__wrap {
     text-align: center; }
   .header__text {
     display: inline-block;
@@ -506,7 +505,9 @@ h3.bs:after {
 
 .section-decor-types {
   background-color: #f6f6f6;
-  box-sizing: initial; }
+  box-sizing: initial;
+  padding-top: 5rem;
+  padding-bottom: 3rem; }
   .section-decor-types .bs {
     margin-bottom: 3rem; }
   .section-decor-types .gallery {
@@ -543,17 +544,17 @@ h3.bs:after {
 .section-decor-types .row:not(:first-child) {
   margin-top: 5.5rem; }
 
-.section-decor-types .row:nth-child(even) {
-  background-color: #fff; }
+.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano {
+  padding: 0; }
 
-.section-decor-types .row:last-child {
-  margin-bottom: 6.5rem; }
+.section-aureum, .section-ottocento {
+  background-color: white; }
 
 .decor__img {
   width: 100%;
   height: 100%; }
 
-.row:nth-child(even) .decor__icons {
+section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   text-align: right; }
 
 .decor__icons a {
@@ -583,7 +584,8 @@ h3.bs:after {
   height: 100%; }
 
 .decor__line {
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  border: 1px solid #2980B9; }
 
 .color-alternatives {
   margin: 3rem 0; }
@@ -592,8 +594,12 @@ h3.bs:after {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
   width: 100%; }
+  .colors figure {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    text-align: center; }
   .colors figcaption {
     text-transform: uppercase;
     text-align: center;
@@ -602,7 +608,7 @@ h3.bs:after {
     font-weight: 300; }
 
 .color__img {
-  width: 100%;
+  width: 75%;
   height: auto;
   border-radius: 0.5rem;
   cursor: pointer; }

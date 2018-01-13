@@ -20,12 +20,17 @@
     padding: 1.5rem 4rem;
     background-color: rgba($tertiary-color, .9);
     display: inline-block;
-    margin: 0;
+    margin: 0 auto;
+  }
+
+  .heading__wrap {
+    // width: 100%;
+    text-align: center;
   }
 
   &__heading.bs{
-    display: block;
-    text-align: center;
+    // display: block;
+    // text-align: center;
   }
 
   &__text {

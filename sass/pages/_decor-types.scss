@@ -1,6 +1,8 @@
 .section-decor-types {
   background-color: $light-gray;
   box-sizing: initial;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 
   .bs {
     margin-bottom: 3rem;
@@ -42,22 +44,7 @@
         transition: opacity .5s;
       }
     }
-
-
-
-}
-
-
-
-
-  // .qq:hover {
-  //   background-color: $color-black;
-  //   opacity: 0.5;
-  //   z-index: 150;
-  //   overflow: hidden;
-  //   height: 100%;
-  // }
-
+  }
 }
 
 .decor__text {
@@ -71,12 +58,17 @@
   margin-top: 5.5rem;
 }
 
-.section-decor-types .row:nth-child(even) {
-  background-color: $color-white;
+.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano {
+  padding: 0;
+  // background-color: white;
+}
+
+.section-aureum, .section-ottocento {
+  background-color: white;
 }
 
 .section-decor-types .row:last-child {
-  margin-bottom: 6.5rem;
+  // margin-bottom: 6.5rem;
 }
 
 .decor__img {
@@ -84,7 +76,7 @@
   height: 100%;
 }
 
-.row:nth-child(even) .decor__icons {
+section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   text-align: right;
 }
 
@@ -123,6 +115,7 @@
 
 .decor__line {
   margin-top: 4rem;
+  border: 1px solid $primary-color;
 }
 
 .color-alternatives {
@@ -133,8 +126,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  // justify-content: flex-end;
   width: 100%;
+
+  figure {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    text-align: center;
+  }
 
   figcaption {
     text-transform: uppercase;
@@ -146,7 +146,7 @@
 }
 
 .color__img {
-  width: 100%;
+  width: 75%;
   height: auto;
   border-radius: 0.5rem;
   cursor: pointer;
