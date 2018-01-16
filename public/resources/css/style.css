@@ -192,7 +192,7 @@ h3.bs:after {
   animation: scrollDown 2s infinite; }
 
 .header {
-  background-image: url(img/home-betonove-sterky-2.jpg);
+  background-image: url(img/home-betonove-sterky-3.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 85vh;
@@ -723,19 +723,34 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
 /*------------------------ section references ----------------------- */
 .section-references {
   background-color: #f6f6f6; }
+  .section-references .ref__links {
+    border: none; }
+  .section-references figcaption {
+    display: none;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: .5rem 0;
+    text-align: center;
+    color: #fff;
+    opacity: .7; }
 
 .section-references .row:nth-child(2) {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  margin-bottom: 7.5rem; }
+  margin-bottom: 5.5rem; }
 
 .ref__logos--img {
   height: 5.5rem;
   opacity: 0.7;
   transition: opacity 0.3s; }
 
-.ref-logo:hover {
+.ref__logos--img:hover {
   opacity: 1; }
 
 /* --- Ref Gallery --- */
@@ -752,10 +767,14 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   width: 33.3%; }
 
 .ref__showcase--photo {
+  position: relative;
   width: 100%;
   margin: 0;
   overflow: hidden;
   background-color: #000; }
+
+.ref__showcase--photo:hover figcaption {
+  display: block; }
 
 .ref__showcase--img {
   opacity: .7;
@@ -769,6 +788,9 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
 .ref__showcase--img:hover {
   opacity: 1;
   transform: scale(1.05); }
+
+.ref__showcase--img:hover figcaption {
+  display: block; }
 
 /*------------------------ icons ----------------------- */
 .icon-big {
