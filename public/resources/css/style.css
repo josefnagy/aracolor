@@ -165,6 +165,8 @@ h3.bs:after {
   transform: translate(0, -50%);
   text-decoration: none;
   transition: opacity .3s; }
+  .scrolldown-anim__link:hover {
+    border: 0; }
 
 .header__scrolldown-anim:hover {
   opacity: 0.5; }
@@ -241,7 +243,6 @@ h3.bs:after {
   .header__link:hover, .header__link:active {
     border-bottom: 0.1rem solid #22C62F; }
 
-/*------------------------ arrows ----------------------- */
 .header__arrows a {
   position: absolute;
   top: 45%;

@@ -7,6 +7,10 @@
   transform: translate(0, -50%);
   text-decoration: none;
   transition: opacity .3s;
+
+  &:hover {
+    border: 0;
+  }
 }
 
 .header__scrolldown-anim:hover {
@@ -30,7 +34,7 @@
   position: absolute;
   top: 1rem;
   left: 50%;
-  content: "";
+  content:"";
   width: 0.6rem;
   height: 0.6rem;
   margin-left: -0.3rem;

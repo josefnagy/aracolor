@@ -64,6 +64,10 @@ if( arrowRight !== null && arrowLeft !== null ) {
 
 $(document).ready(function() {
 
+  $(".scrolldown-anim__link").click(function(event){
+    event.preventDefault();
+  });
+
   var offset = 250;
   var duration = 300;
   $(window).scroll(function() {
