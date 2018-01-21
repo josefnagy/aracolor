@@ -27,7 +27,7 @@ const heroText = [
 ];
 
 const arrowImg = [
-  'resources/img/arrow-betonove-sterky.png',
+  'resources/img/arrow-betonove-sterky-2.jpg',
   'resources/img/arrow-malby.png',
   'resources/img/arrow-natery.png',
 ]
