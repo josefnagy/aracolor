@@ -118,6 +118,30 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   border: 1px solid $primary-color;
 }
 
+.decor__link {
+  position: relative;
+
+  &:hover .decor__tooltip-text {
+    visibility: visible;
+  }
+}
+
+.decor__tooltip-text {
+  visibility: hidden;
+  width: 8rem;
+  background-color: $shadow-color;
+  color: $color-white;
+  text-align: center;
+  padding: .5rem 0;
+  border-radius: .6rem;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 350%;
+  left: 50%;
+  margin-left: -4rem;
+}
+
 .color-alternatives {
   margin: 3rem 0;
 }

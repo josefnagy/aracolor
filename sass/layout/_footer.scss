@@ -2,12 +2,13 @@
 
 .footer {
   background-color: $shadow-color;
-  padding: 4rem;
+  padding: 3rem 0 4rem 0;
 
   &-nav__list {
     list-style: none;
     float: left;
     font-size: 1.6rem;
+    padding: .8rem 0;
   }
 
   &-nav__social-list {
