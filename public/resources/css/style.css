@@ -1,3 +1,7 @@
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50.5%; } }
+
 @keyframes scrollDown {
   0% {
     transform: translate(0, 0);
