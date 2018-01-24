@@ -2,6 +2,12 @@
   html {
     font-size: 50.5%; } }
 
+.span-1-of-6 {
+  width: 33%; }
+
+.col {
+  margin: 1% 0 1% 0%; }
+
 @keyframes scrollDown {
   0% {
     transform: translate(0, 0);
@@ -764,7 +770,7 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
     color: #fff;
     opacity: .7; }
 
-.section-references .row:nth-child(2) {
+.ref__logos {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
@@ -804,8 +810,6 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
 .ref__showcase--img {
   opacity: .7;
   width: 100%;
-  min-height: 33rem;
-  max-height: 33rem;
   transform: scale(1.15);
   transition: opacity .5s;
   transition: transform .5s; }
