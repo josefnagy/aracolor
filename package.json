@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "css": "node-sass sass/main.scss public/resources/css/style.css",
-    "css:watch": "npm run css && node-sass sass/main.scss public/resources/css/style.css -w"
+    "css:watch": "npm run css && node-sass sass/main.scss public/resources/css/style.css -w",
+    "html": "pug templates/main --out public -w -P"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,6 @@
   "homepage": "https://github.com/josefnagy/aracolor#readme",
   "devDependencies": {
     "node-sass": "^4.7.2"
-  }
+  },
+  "dependencies": {}
 }

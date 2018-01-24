@@ -1,0 +1,739 @@
+extends ../layout.pug
+
+block index
+
+  header#header.header
+    nav.nav
+      .row
+        .logo
+          a.logo__link(href="index.html")
+            img.logo__img(src="resources/img/logo-bird-v4.svg" alt="aracolor")
+            img.logo__text(src="resources/img/logo-text-v6.svg" alt="logo")
+        ul.nav__list
+          li.nav__item
+            a.nav__link.scroll-js(href="#header") Úvod
+          li.nav__item
+            a.nav__link.scroll-js(href="#sluzby") Služby  ˅
+            ul.nav__list--hidden
+              li.nav__item
+                a.nav__link(href="betonove-sterky.html")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 274 490")
+                      use(xlink:href="#spatula-icon")
+                  | Betonové stěrky
+              li.nav__item
+                a.nav__link(href="#")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 458 551")
+                      use(xlink:href="#paint-roller-icon")
+                  | Malování
+              li.nav__item
+                a.nav__link(href="#")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 465 530")
+                      use(xlink:href="#brush-icon")
+                  | Natírání
+              li.nav__item
+                a.nav__link(href="#")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 456 352")
+                      use(xlink:href="#paper-roll-icon")
+                  | Tapetování
+              li.nav__item
+                a.nav__link(href="#")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 413 384")
+                      use(xlink:href="#airbrush-icon")
+                  | Nástřiky
+              li.nav__item
+                a.nav__link(href="#")
+                  span.dropdown-icon__frame
+                    svg.dropdown-icon(viewbox="0 0 429 527")
+                      use(xlink:href="#broom-icon")
+                  | čištění
+          li.nav__item
+            a.nav__link.scroll-js(href="#cenik") Ceník
+          li.nav__item
+            a.nav__link.scroll-js(href="#reference") Reference
+          li.nav__item
+            a.nav__link.scroll-js(href="#kontakty") Kontakty
+    .header__hero-box
+      h1.header__heading.animated.bounceInLeft Betonové stěrky
+      p.header__text.animated.bounceInRight
+        | Setřeme Váš beton uplně nejlíp jak to jde,
+        a.header__link(href="betonove-sterky.html") více>
+    .header__arrows
+      a.header__arrows--prev(href="#")
+        span.header__icon-wrap
+          svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+            use(xlink:href="#arrow-left-5")
+        img(src="resources/img/arrow-natery.png" alt="Previous thumb")
+      a.header__arrows--next(href="#")
+        span.header__icon-wrap
+          svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+            use(xlink:href="#arrow-right-5")
+        img(src="resources/img/arrow-malby.png" alt="Next thumb")
+    .header__scrolldown-anim
+      a.scrolldown-anim__link(href="#")
+        span.scrolldown-anim__link--inner
+    a.btn--back-to-top(href="#")
+      i.ion-ios-arrow-up
+  section#features.section-why-us
+    .row
+      h2.why-us__heading Svěřte malování profesionálům
+      p.long-copy
+        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia itaque temporibus quasi quos praesentium architecto laudantium natus asperiores rerum pariatur quisquam ex commodi, numquam minima dolores necessitatibus amet doloribus perferendis.
+    .row
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-checkmark-empty
+        h3 Zkušenost
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, dignissimos.
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-star-outline
+        h3 Kvalita
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique commodi voluptas autem debitis! Commodi, quisquam.
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-speedometer-outline
+        h3 Rychlost
+        p
+          | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis cum ex libero fugiat sed at?
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-trash-outline
+        h3 Čistota
+        p
+          | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus similique minima libero repellat?
+  section.section-gallery
+    ul.gallery__showcase.clearfix
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-1.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-2.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-3.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-4.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-5.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-6.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-7.jpg" alt="")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-8.jpg" alt="")
+  section#sluzby.section-our-services
+    .row
+      h2 Naše služby
+      p.long-copy
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam vero autem inventore deserunt recusandae esse odio repellendus natus quis ipsa aspernatur, necessitatibus eligendi, officiis mollitia enim ea distinctio blanditiis nemo incidunt ex delectus fugit, accusamus commodi. Vero maxime, quibusdam maiores id doloribus eveniet magnam ea doloremque molestiae delectus qui dolorum.
+    .row
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/spatula.svg" alt="spatula")
+        h3 Betonové stěrky
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, autem! Cumque, necessitatibus aliquam.
+          a(href="#") více >
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/paint-roller.svg" alt="paint-roller")
+        h3 Interiérové a exteriérové malířské práce
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum repudiandae neque a aut consequuntur!
+          a(href="#") více >
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/brush.svg" alt="brush")
+        h3 Nátěry všech povrchů
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt cumque eum rem cum, sequi qui!
+          a(href="#") více >
+    .row
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/paper-roll.svg" alt="paper-roll")
+        h3 Tapetování
+        p
+          | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae ea dolore nisi non!
+          a(href="#") více >
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/airbrush.svg" alt="airbrush")
+        h3 Nástřiky
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing.
+          a(href="#") více >
+      .services__service.col.span-1-of-3.box
+        img.service--icon(src="resources/icons/broom.svg" alt="broom")
+        h3 Úklid
+        p
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. At dignissimos alias similique iusto.
+          a(href="#") více >
+  section#reference.section-references
+    .row
+      h2 Reference
+      p.long-copy
+        | Máme stovky nespokojených zákazníků. Přidejte se k nim i VY! Garance nejvyšší ceny! Podívejte se na ostatní hlupáky, co se nechaly napálit.
+    .ref__logos.row
+      a.ref__links(href="http://www.rdstyl.cz/" target="_blank")
+        img.ref__logos--img(src="resources/img/ref-logo-rdstyl.png" alt="rdstyl-logo")
+      a.ref__links(href="https://www.palladiumpraha.cz/" target="_blank")
+        img.ref__logos--img(src="resources/img/ref-logo-palladium.svg" alt="palladium-logo")
+      a.ref__links(href="http://www.bandi.cz/" target="_blank")
+        img.ref__logos--img(src="resources/img/ref-logo-bandivamos.png" alt="bandi-logo")
+      a.ref__links(href="http://www.eurobit.cz/" target="_blank")
+        img.ref__logos--img(src="resources/img/ref-logo-eurobit.svg" alt="eurobit-logo")
+      a.ref__links(href="http://www.mei.cz/" target="_blank")
+        img.ref__logos--img(src="resources/img/ref-logo-mei.png" alt="mei-logo")
+    .row
+      ul.ref__showcase--list.clearfix
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/Třinec reference IVC_.jpg" alt="")
+            figcaption Třinec IVC
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/IMG_0722.jpg" alt="")
+            figcaption Betonová stěrka
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/tapeta-1.jpg" alt="")
+            figcaption Shopping Park - Tapeta
+      ul.ref__showcase--list.clearfix
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/Malba barevná.jpg" alt="")
+            figcaption Barevná Malba
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/IMG_3549.jpg" alt="")
+            figcaption Mytí fasády
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/Traventino Romano(1).jpg" alt="")
+            figcaption Travertino Romano
+  section#cenik.section-price-list
+    .row
+      h2 Ceník
+    .pl.row
+      .pl__category.pl__category--painting.col.span-1-of-2.box
+        h3
+          i.icon-small.ion-ios-calculator
+          | Malby - interiérové
+        .pl__category--item
+          span.pl--type Penetrace
+          span.pl--price
+            | 10-15 kč / m
+            sup 2
+        .pl__category--item.grow
+          span.pl--type Jupol Brilliant
+          span.pl--price
+            | 60 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-jupol-brilliant.png" alt="Jupol Brilliant")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ano
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Jupol Gold
+          span.pl--price
+            | 55 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(td="" rowspan="6")
+                img.paint-can(src="resources/img/cenik-jupol-gold.png" alt="Jupol Gold")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 5%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Jupol Citro
+          span.pl--price
+            | 45 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-jupol-citro.png" alt="Jupol Citro")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Jupol Classic
+          span.pl--price
+            | 40 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-jupol-classic.png" alt="Jupol Classic")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Jupol Latex
+          span.pl--price
+            | 65 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-jupol-latex.png" alt="Jupol Latex")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ano
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Het Brillant
+          span.pl--price
+            | 50 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-het-brillant.png" alt="Het Brillant")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4 hodiny
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column strukturálním válcem
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Het Klasik
+          span.pl--price
+            | 40 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(td="" rowspan="6")
+                img.paint-can(src="resources/img/cenik-het-klasik.png" alt="Het Klasik")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column nejméně 4 hodiny
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column vodou max 0,1 l/kg
+            tr.pl--params__row
+              td.pl--params__column Bělost
+              td.pl--params__column 95%
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Hetmal
+          span.pl--price
+            | 35 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-het-hetmal.png" alt="Het Hetmal")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column nejméně 4 hodiny
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Primalex Standard
+          span.pl--price
+            | 30 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-primalex-standard.png" alt="Primalex Standard")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 2-4 hodiny
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Primalex Plus
+          span.pl--price
+            | 35 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-primalex-plus.png" alt="Primalex Plus")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 2-4 hodiny
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type DOVA perfekt
+          span.pl--price
+            | 50 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-kabefarben-DOVA perfekt.png" alt="DOVA perfekt")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ano
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Prolatex
+          span.pl--price
+            | 70 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-kabefarben-prolatex.png" alt="Prolatex")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ne
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        .pl__category--item.grow
+          span.pl--type Aquatex
+          span.pl--price
+            | 60 kč / m
+            sup 2
+          table.pl--params
+            tr.pl--params__row
+              td.pl--params__column.no-border(rowspan="6")
+                img.paint-can(src="resources/img/cenik-kabefarben-aquatex.png" alt="Aquatex")
+              td.pl--params__column Barva
+              td.pl--params__column bílá
+            tr.pl--params__row
+              td.pl--params__column Doba schnutí
+              td.pl--params__column 4-6 hodin
+            tr.pl--params__row
+              td.pl--params__column Mísící poměr
+              td.pl--params__column ředění vodou do 10%
+            tr.pl--params__row
+              td.pl--params__column Nanášení
+              td.pl--params__column štětcem, válečkem, nebo stříkáním
+            tr.pl--params__row
+              td.pl--params__column Omyvatelnost
+              td.pl--params__column ano
+            tr.pl--params__row
+              td.pl--params__column Vzhled
+              td.pl--params__column matný
+        //
+          <div class="pl__category--item grow">
+          <span class="pl--type">Jupol Classic</span>
+          <span class="pl--price">25 kč / m
+          <sup>2</sup>
+          </span>
+          <table class="pl--params">
+          <tr class="pl--params__row">
+          <td class="pl--params__column no-border" rowspan="6">
+          <img class="paint-can" src="resources/img/cenik-jupol-classic.png" alt="Jupol Classic">
+          </td>
+          <td class="pl--params__column">Barva</td>
+          <td class="pl--params__column">bílá</td>
+          </tr>
+          <tr class="pl--params__row">
+          <td class="pl--params__column">Doba schnutí</td>
+          <td class="pl--params__column">4-6 hodin</td>
+          </tr>
+          <tr class="pl--params__row">
+          <td class="pl--params__column">Mísící poměr</td>
+          <td class="pl--params__column">ředění vodou do 10%</td>
+          </tr>
+          <tr class="pl--params__row">
+          <td class="pl--params__column">Nanášení</td>
+          <td class="pl--params__column">štětcem, válečkem, nebo stříkáním</td>
+          </tr>
+          <tr class="pl--params__row">
+          <td class="pl--params__column">Omyvatelnost</td>
+          <td class="pl--params__column">ne</td>
+          </tr>
+          <tr class="pl--params__row">
+          <td class="pl--params__column">Vzhled</td>
+          <td class="pl--params__column">matný</td>
+          </tr>
+          </table>
+          </div>
+      .pl__category.pl__category--concrete.col.span-1-of-2.box
+        h3
+          i.ion-ios-calculator.icon-small
+          | Fasádní barvy
+        .pl__category--item
+          span.pl--type Nanoporcolor
+          span.pl--price
+            | 200 kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Akrylcolor
+          span.pl--price
+            | 150 kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Nanoxilcolor
+          span.pl--price
+            | 200 kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jubizol
+          span.pl--price
+            | 180 kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Revitalcolor AG
+          span.pl--price
+            | 180 kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Penetrace Jukol Primer
+          span.pl--price
+            | 25 kč / m
+            sup 2
+      //
+        </div>
+        <div class="pl row">
+        <div class="pl__category pl__category--coating col span-1-of-2 box">
+        <h3><i class="ion-ios-calculator icon-small"></i>Nátěry</h3>
+        <div class="pl__category--item">
+        <span class="pl--type">Aureum</span><span class="pl--price">300 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Encanto</span><span class="pl--price">275 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Ottocento</span><span class="pl--price">449 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Romano</span><span class="pl--price">600 kč / m<sup>2</sup></span>
+        </div>
+        </div>
+        <div class="pl__category pl__category--tapestry col span-1-of-2 box">
+        <h3><i class="ion-ios-calculator icon-small"></i>Tapetování</h3>
+        <div class="pl__category--item">
+        <span class="pl--type">Aureum</span><span class="pl--price">300 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Encanto</span><span class="pl--price">275 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Ottocento</span><span class="pl--price">449 kč / m<sup>2</sup></span>
+        </div>
+        <div class="pl__category--item">
+        <span class="pl--type">Romano</span><span class="pl--price">600 kč / m<sup>2</sup></span>
+        </div>
+        </div>
+        </div>
+  section#kontakty.section-contacts
+    .row
+      h2.contacts__heading Kontakty
+    .row
+      .contacts__address.col.span-1-of-3.box
+        p.address--group
+          span.address--text
+            i.ion-ios-person.icon-contacts
+            | Radek Tlach
+          span.address--text
+            i.ion-ios-location.icon-contacts
+            | Opavská 386/24
+          span.address--text.marg Bolatice 74 723
+        p.address--group
+          span.address--text
+            i.ion-ios-email.icon-contacts
+            | tlachr@seznam.cz
+          span.address--text
+            i.ion-ios-telephone.icon-contacts
+            | +420 608 741 218
+        p.address--group
+          span.address--text
+            b IČO:
+            |  67319556
+          span.address--text
+            b DIČ:
+            |  CZ7412185572
+        p.address--group
+          span.address--text
+            b Bankovní spojení:
+          span.address--text Raiffeisen Bank
+          span.address--text 597779001 / 5500
+      .col.span-2-of-3.box
+        #map
+          iframe.map__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4449.331647760543!2d18.189274250612428!3d49.893666069486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e1e8c5814793%3A0x5b676070894693a9!2zRHVrZWxza8OhIDE3OTYvMTAsIDc0OCAwMSBIbHXEjcOtbg!5e0!3m2!1scs!2scz!4v1512328356356" frameborder="0" style="border:0" allowfullscreen="")
+  footer.footer
+    .row
+      .col.span-1-of-2
+        ul.footer-nav__list
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Úvod
+          li.footer-nav__item
+            a.footer-nav__link(href="#") O nás
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Služby
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Reference
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Ceník
+          li.footer-nav__item
+            a.footer-nav__link(href="#") Kontakty
+      .col.span-1-of-2
+        ul.footer-nav__social-list
+          li.footer-nav__item
+            a.footer-nav__link(href="#")
+              i.ion-social-facebook
+          li.footer-nav__item
+            a.footer-nav__link(href="#")
+              i.ion-social-instagram
+    .row
+      p.footer__copy
+        | Copyright © 2017 by Aracolor. Created by
+        a.footer__copy--link(href="#" target="_blank") Josef Nagy
+        | . All rights reserved.
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="resources/js/script.js")
