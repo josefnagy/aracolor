@@ -288,8 +288,8 @@ h3.bs:after {
 
 .header__icon-wrap {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   background-color: #2980B9;
   -webkit-transition: background-color .3s;
   transition: background-color .3s; }
@@ -305,6 +305,8 @@ h3.bs:after {
 
 .header__arrows img {
   position: absolute;
+  height: 10rem;
+  width: 10rem;
   top: 0;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform .3s;
