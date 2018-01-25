@@ -3,60 +3,7 @@ extends ../layout.pug
 block index
 
   header#header.header
-    nav.nav
-      .row
-        .logo
-          a.logo__link(href="index.html")
-            img.logo__img(src="resources/img/logo-bird-v4.svg" alt="aracolor")
-            img.logo__text(src="resources/img/logo-text-v6.svg" alt="logo")
-        ul.nav__list
-          li.nav__item
-            a.nav__link.scroll-js(href="#header") Úvod
-          li.nav__item
-            a.nav__link.scroll-js(href="#sluzby") Služby  ˅
-            ul.nav__list--hidden
-              li.nav__item
-                a.nav__link(href="betonove-sterky.html")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 274 490")
-                      use(xlink:href="#spatula-icon")
-                  | Betonové stěrky
-              li.nav__item
-                a.nav__link(href="#")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 458 551")
-                      use(xlink:href="#paint-roller-icon")
-                  | Malování
-              li.nav__item
-                a.nav__link(href="#")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 465 530")
-                      use(xlink:href="#brush-icon")
-                  | Natírání
-              li.nav__item
-                a.nav__link(href="#")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 456 352")
-                      use(xlink:href="#paper-roll-icon")
-                  | Tapetování
-              li.nav__item
-                a.nav__link(href="#")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 413 384")
-                      use(xlink:href="#airbrush-icon")
-                  | Nástřiky
-              li.nav__item
-                a.nav__link(href="#")
-                  span.dropdown-icon__frame
-                    svg.dropdown-icon(viewbox="0 0 429 527")
-                      use(xlink:href="#broom-icon")
-                  | čištění
-          li.nav__item
-            a.nav__link.scroll-js(href="#cenik") Ceník
-          li.nav__item
-            a.nav__link.scroll-js(href="#reference") Reference
-          li.nav__item
-            a.nav__link.scroll-js(href="#kontakty") Kontakty
+    include ../navigation.pug
     .header__hero-box
       h1.header__heading.animated.bounceInLeft Betonové stěrky
       p.header__text.animated.bounceInRight
