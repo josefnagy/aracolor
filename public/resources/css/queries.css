@@ -4,6 +4,10 @@
     font-size: 58%;
   }
 
+  .nav__list {
+    display: block;
+  }
+
   .map__iframe {
     width: 70rem;
   }
@@ -39,6 +43,34 @@
   html {
     font-size: 45%;
   }
+
+  /* responsive nav */
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+
+  .nav__list {
+    display: none;
+    float: left;
+    padding-top: 2rem;
+  }
+
+  .nav__item {
+    display: block;
+  }
+
+  .nav__item:hover::after {
+    display: none;
+  }
+
+
+  .nav__link {
+    padding-left: 5rem;
+    line-height: 5rem;
+    display: block;
+  }
+
+  .logo { float: left }
 
   .col {  margin: 1% 0 1% 0%; }
   .span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 48% }

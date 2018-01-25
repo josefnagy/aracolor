@@ -347,6 +347,7 @@ h3.bs:after {
   width: 100%;
   z-index: 100; }
   .nav__list {
+    display: block;
     float: right;
     margin: 0; }
   .nav__item {
@@ -372,9 +373,24 @@ h3.bs:after {
     font-size: 1.7rem;
     text-align: justify;
     line-height: 7rem;
-    padding: 0 2rem 0 1rem; }
+    padding: 0 2rem 0 1rem;
+    text-transform: uppercase; }
     .nav__link:link {
       border: 0; }
+
+.mobile-nav-icon {
+  display: none;
+  float: right;
+  margin-top: 1.8rem;
+  margin-right: 2.5rem;
+  cursor: pointer; }
+
+.mobile-nav-icon:hover {
+  border: none; }
+
+.mobile-nav-icon i {
+  font-size: 3rem;
+  color: #2980B9; }
 
 .logo {
   display: inline-block;

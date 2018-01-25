@@ -68,6 +68,21 @@ $(document).ready(function() {
   //   event.preventDefault();
   // });
 
+  $('.js--nav-icon').click(function(event) {
+    var nav = $('.js--nav__list');
+    var icon = $('.js--nav-icon i');
+
+    nav.slideToggle(200);
+
+    if( icon.hasClass('ion-navicon-round') ) {
+      icon.addClass('ion-close-round');
+      icon.removeClass('ion-navicon-round');
+    } else {
+      icon.addClass('ion-navicon-round');
+      icon.removeClass('ion-close-round');
+    }
+  })
+
   var offset = 250;
   var duration = 300;
   $(window).scroll(function() {
