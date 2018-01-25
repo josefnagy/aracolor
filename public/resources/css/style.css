@@ -349,28 +349,9 @@ h3.bs:after {
   .nav__list {
     float: right;
     margin: 0; }
-    .nav__list--hidden {
-      display: none;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      position: absolute; }
-    .nav__list--hidden .nav__item {
-      width: 20rem; }
   .nav__item {
     display: inline-block;
     position: relative; }
-    .nav__item:hover .nav__list--hidden .nav__link {
-      background-color: rgba(41, 128, 185, 0.9);
-      color: #fff;
-      line-height: 4rem; }
-      .nav__item:hover .nav__list--hidden .nav__link:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        color: #2980B9; }
-      .nav__item:hover .nav__list--hidden .nav__link:hover .dropdown-icon,
-      .nav__item:hover .nav__list--hidden .nav__link:hover .dropdown-icon__frame {
-        border-color: #2980B9;
-        fill: #2980B9; }
     .nav__item::after {
       cursor: pointer;
       position: absolute;
@@ -394,10 +375,6 @@ h3.bs:after {
     padding: 0 2rem 0 1rem; }
     .nav__link:link {
       border: 0; }
-
-.nav__item .nav__link:hover + .nav__list--hidden,
-.nav__list--hidden:hover {
-  display: block; }
 
 .logo {
   display: inline-block;

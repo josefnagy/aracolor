@@ -11,23 +11,6 @@
   &__list {
     float: right;
     margin: 0;
-
-    //Strip the ul of padding and list styling
-    &--hidden {
-      display: none;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-    }
-
-    //Make dropdown links vertical
-    &--hidden .nav__item {
-      // display: block;
-      // float: none;
-      // line-break: none;
-      width: 20rem;
-    }
   }
 
   //Create a horizontal list with spacing
@@ -35,30 +18,6 @@
     display: inline-block;
     position: relative;
 
-    //Style for dropdown links
-    &:hover .nav__list--hidden .nav__link {
-      background-color: rgba($primary-color, .9);
-      color: $color-white;
-
-      // color: $primary-color;
-      // height: 46rem;
-      line-height: 4rem;
-      // width: 100%;
-      &:hover {
-        background-color: rgba($color-white, .9);
-        color: $primary-color;
-      }
-      &:hover .dropdown-icon,
-      &:hover .dropdown-icon__frame {
-        border-color: $primary-color;
-        fill: $primary-color;
-      }
-    }
-
-    //hover style for dropdown links
-    &:hover .nav__list--hidden .nav__link:hover {
-      // border-bottom: 2px solid $primary-color;
-    }
 
     // underline hover effect for top link menu
     &::after {
@@ -94,21 +53,8 @@
     &:link {
       border: 0;
     }
-
-    //hover state for top level links
-    &:hover {
-      // color: $color-white;
-    }
   }
 }
-
-//Display the dropdown on hover
-.nav__item .nav__link:hover + .nav__list--hidden,
-.nav__list--hidden:hover,
-{
-  display: block;
-}
-
 
 
 //------------------------ logo -----------------------
