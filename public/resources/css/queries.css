@@ -32,10 +32,13 @@
     width: 100%;
   }
 
+  .header__hero-box {
+    top: 50%;
+    left: 50%;
+  }
+
   .gallery__list { width: 33.3% }
-/*
-  .col {  margin: 1% 0 1% 0%; }
-  .span-1-of-4, .span-2-of-4, .span-3-of-4, .span-4-of-4 { width: 48% } */
+
 }
 
 /*  Small phones to small tablets: from 481 to 767 */
@@ -91,6 +94,17 @@
 
   html {
     font-size: 40%;
+  }
+
+  .header__hero-box {
+    top: 25%;
+    left: 50%;
+    width: 70%;
+  }
+
+  .header__heading {
+    font-size: 5rem;
+    padding: 1rem 2rem;
   }
 
   .ref__logos {
