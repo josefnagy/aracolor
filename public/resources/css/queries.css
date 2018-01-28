@@ -47,6 +47,18 @@
     font-size: 45%;
   }
 
+  h3.bs {
+    padding-top: 1rem;
+  }
+
+  .link__icon {
+    width: 4rem;;
+  }
+
+  .decor__icons, section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
+    text-align: center;
+  }
+
   /* responsive nav */
   .mobile-nav-icon {
     display: inline-block;
@@ -64,6 +76,11 @@
 
   .nav__item:hover::after {
     display: none;
+  }
+
+  .flex-col {
+    display: flex;
+    align-items: center;
   }
 
 
@@ -96,10 +113,16 @@
     font-size: 40%;
   }
 
-  .header__hero-box {
+
+  .header__hero-box, .header__hero-box.bs{
     top: 25%;
     left: 50%;
     width: 70%;
+  }
+
+  .flex-col {
+    display: flex;
+    align-items: center;
   }
 
   .header__heading {
