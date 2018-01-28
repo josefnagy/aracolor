@@ -4,27 +4,28 @@ block index
 
   header#header.header
     include ../navigation.pug
-    .header__hero-box
-      h1.header__heading.animated.bounceInLeft Betonové stěrky
-      p.header__text.animated.bounceInRight
-        | Setřeme Váš beton uplně nejlíp jak to jde,
-        a.header__link(href="betonove-sterky.html") více>
-    .header__arrows
-      a.header__arrows--prev(href="#")
-        span.header__icon-wrap
-          svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
-            use(xlink:href="#arrow-left-5")
-        img(src="resources/img/arrow-natery.png" alt="Previous thumb")
-      a.header__arrows--next(href="#")
-        span.header__icon-wrap
-          svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
-            use(xlink:href="#arrow-right-5")
-        img(src="resources/img/arrow-malby.png" alt="Next thumb")
-    .header__scrolldown-anim
-      a.scrolldown-anim__link(href="#")
-        span.scrolldown-anim__link--inner
-    a.btn--back-to-top(href="#")
-      i.ion-ios-arrow-up
+    .hero
+      .header__hero-box
+        h1.header__heading.animated.bounceInLeft Betonové stěrky
+        p.header__text.animated.bounceInRight
+          | Setřeme Váš beton uplně nejlíp jak to jde,
+          a.header__link(href="betonove-sterky.html") více>
+      .header__arrows
+        a.header__arrows--prev(href="#")
+          span.header__icon-wrap
+            svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+              use(xlink:href="#arrow-left-5")
+          img(src="resources/img/arrow-natery.png" alt="Previous thumb")
+        a.header__arrows--next(href="#")
+          span.header__icon-wrap
+            svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+              use(xlink:href="#arrow-right-5")
+          img(src="resources/img/arrow-malby.png" alt="Next thumb")
+      .header__scrolldown-anim
+        a.scrolldown-anim__link(href="#")
+          span.scrolldown-anim__link--inner
+      a.btn--back-to-top(href="#")
+        i.ion-ios-arrow-up
 
   section#features.section-why-us
     .row

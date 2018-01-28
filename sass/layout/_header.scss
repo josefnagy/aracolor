@@ -1,11 +1,16 @@
 .header {
-  background-image: url(img/home-betonove-sterky-3.jpg);
-  background-attachment: fixed;
-  // background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
-  height: 85vh;
+  & .hero {
+    background-image: url(img/home-betonove-sterky-3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: top center;
+    height: 85vh;
+  }
+
+
+
   transition: background-image .5s;
 
   // styles for Betonove sterky

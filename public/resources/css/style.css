@@ -61,6 +61,9 @@ body {
 section {
   padding: 8rem 0; }
 
+.span-1-of-6 {
+  padding: 0 .5%; }
+
 /*------------------------ Links ----------------------- */
 a:link, a:visited {
   color: #2980B9;
@@ -76,9 +79,9 @@ a:hover, a:active {
 /*------------------------ paragraphs ----------------------- */
 .box p {
   font-size: 1.8rem;
-  line-height: 2.9rem;
+  line-height: 2rem;
   text-align: center;
-  padding: 0 0.5rem; }
+  padding: 0 -1rem; }
 
 .long-copy {
   width: 70%;
@@ -204,12 +207,13 @@ h3.bs:after {
   animation: scrollDown 2s infinite; }
 
 .header {
-  background-image: url(img/home-betonove-sterky-3.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  height: 85vh;
   transition: background-image .5s; }
+  .header .hero {
+    background-image: url(img/home-betonove-sterky-3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 85vh; }
   .header.bs {
     background-image: url(img/home-betonove-sterky-1b.jpg);
     background-size: cover;

@@ -1,4 +1,4 @@
-const headerBckImg = document.querySelector('header');
+const headerBckImg = document.querySelector('header .hero');
 const headerH1 = document.querySelector('h1');
 const headerHeroText = document.querySelector('.header__text');
 const prevArrow = document.querySelector('.header__arrows--prev img');
