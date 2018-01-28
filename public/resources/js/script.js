@@ -26,6 +26,7 @@ const heroText = [
   "Natřem vám prdel na bílo, <a class='header__link' href='betonove-sterky.html'>více></a>",
 ];
 
+
 const arrowImg = [
   'resources/img/arrow-betonove-sterky-2.jpg',
   'resources/img/arrow-malby.png',
@@ -101,7 +102,7 @@ $(document).ready(function() {
   });
 
   $(".scroll-js").click(function(event){
-    event.preventDefault();
+    //event.preventDefault();
     //calculate destination place
     var dest=0;
     if($(this.hash).offset().top > $(document).height()-$(window).height()){
