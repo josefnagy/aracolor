@@ -537,10 +537,13 @@ h3.bs:after {
       height: 100%;
       width: 100%;
       opacity: 0;
-      transition: opacity .5s; }
-      .section-decor-types .decor-img__wrap .decor-img__overlay p {
+      transition: opacity .5s;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-decor-types .decor-img__wrap .decor-img__overlay .decor-img__text {
+        max-height: 10rem;
         color: #fff;
-        line-height: 35rem;
         font-size: 2rem;
         font-weight: 700;
         text-align: center; }

@@ -68,6 +68,7 @@ $(document).ready(function() {
   //   event.preventDefault();
   // });
 
+  /// responsive navigation
   $('.js--nav-icon').click(function(event) {
     var nav = $('.js--nav__list');
     var icon = $('.js--nav-icon i');
@@ -82,7 +83,7 @@ $(document).ready(function() {
       icon.removeClass('ion-close-round');
     }
   })
-
+  // back to top button
   var offset = 250;
   var duration = 300;
   $(window).scroll(function() {
@@ -130,7 +131,7 @@ $(document).ready(function() {
   //clicking on the thumbnail
   thumbGalleryAureum.addEventListener('click', function (e) {
     e.preventDefault();
-    $.featherlightGallery($('a.gallery-ottocento-js'), {
+    $.featherlightGallery($('a.gallery-aureum-js'), {
       previousIcon: '«',
       nextIcon: '»',
       galleryFadeIn: 300,
