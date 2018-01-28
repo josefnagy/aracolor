@@ -242,35 +242,8 @@ block index
               figure
                 img.color__img(data-featherlight="resources/img/color-tr-red.jpg" src="resources/img/color-tr-red.jpg" alt="red")
                 figcaption Red
-  footer.footer
-    .row
-      .col.span-1-of-2
-        ul.footer-nav__list
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Úvod
-          li.footer-nav__item
-            a.footer-nav__link(href="#") O nás
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Služby
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Reference
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Ceník
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Kontakty
-      .col.span-1-of-2
-        ul.footer-nav__social-list
-          li.footer-nav__item
-            a.footer-nav__link(href="#")
-              i.ion-social-facebook
-          li.footer-nav__item
-            a.footer-nav__link(href="#")
-              i.ion-social-instagram
-    .row
-      p.footer__copy
-        | Copyright © 2017 by Aracolor. Created by
-        a.footer__copy--link(href="#" target="_blank") Josef Nagy
-        | . All rights reserved.
+  include ../footer.pug
+
   script(src="vendors/js/jquery-3.2.1.min.js")
   script(src="vendors/js/featherlight.min.js")
   script(src="vendors/js/featherlight.gallery.min.js")

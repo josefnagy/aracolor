@@ -596,34 +596,8 @@ block index
       .col.span-2-of-3.box
         #map
           iframe.map__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4449.331647760543!2d18.189274250612428!3d49.893666069486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e1e8c5814793%3A0x5b676070894693a9!2zRHVrZWxza8OhIDE3OTYvMTAsIDc0OCAwMSBIbHXEjcOtbg!5e0!3m2!1scs!2scz!4v1512328356356" frameborder="0" style="border:0" allowfullscreen="")
-  footer.footer
-    .row
-      .col.span-2-of-3
-        ul.footer-nav__list
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Úvod
-          li.footer-nav__item
-            a.footer-nav__link(href="#") O nás
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Služby
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Reference
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Ceník
-          li.footer-nav__item
-            a.footer-nav__link(href="#") Kontakty
-      .col.span-1-of-3
-        ul.footer-nav__social-list
-          li.footer-nav__item
-            a.footer-nav__link(href="#")
-              i.ion-social-facebook
-          li.footer-nav__item
-            a.footer-nav__link(href="#")
-              i.ion-social-instagram
-    .row
-      p.footer__copy
-        | Copyright © 2017 by Aracolor. Created by
-        a.footer__copy--link(href="#" target="_blank") Josef Nagy
-        | . All rights reserved.
+
+  include ../footer.pug
+
   script(src="vendors/js/jquery-3.2.1.min.js")
   script(src="resources/js/script.js")
