@@ -220,6 +220,12 @@ h3.bs:after {
     background-position: center;
     background-attachment: initial;
     height: 67vh; }
+  .header.rg {
+    background-image: url(img/ref-gallery-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: initial;
+    height: 67vh; }
   .header__heading {
     padding: 1.5rem 4rem;
     background-color: rgba(34, 198, 47, 0.9);
@@ -791,6 +797,15 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   opacity: 0.7;
   transition: opacity 0.3s; }
 
+.ref__gallery-link {
+  display: block;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 3rem; }
+
+.ref__gallery-link:hover {
+  border: none; }
+
 .ref__logos--img:hover {
   opacity: 1; }
 
@@ -830,6 +845,35 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
 
 .ref__showcase--img:hover figcaption {
   display: block; }
+
+.ref-gallery__showcase {
+  list-style: none;
+  width: 100%; }
+
+.ref-gallery__list {
+  display: block;
+  float: left;
+  width: 16.6%;
+  height: auto;
+  overflow: hidden; }
+
+.ref-gallery__photo {
+  width: 32rem;
+  height: 22rem;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000; }
+
+.ref-gallery__photo--img {
+  opacity: 0.7;
+  width: 100%;
+  transform: scale(1.15);
+  transition: opacity 0.5s;
+  transition: transform 0.5s; }
+
+.ref-gallery__photo--img:hover {
+  opacity: 1;
+  transform: scale(1.03); }
 
 /*------------------------ icons ----------------------- */
 .icon-big {

@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block index
+
+  header#header.header.rg
+    include ../navigation.pug
+
+    // hero box
+    .header__hero-box.rg
+      .heading__wrap
+        h1.header__heading.bs Galerie Referencí
+
+    a.decor__link(href="#")
+      i.ion-ios-arrow-up
+
+  section.references-gallery
+
+    - var n = 105
+    - var counter = 1
+
+    ul.ref-gallery__showcase.clearfix
+
+      while counter <= n
+
+        li.ref-gallery__list
+          figure.ref-gallery__photo
+            a(class="ref-gallery__link-js" href="resources/img/ref/ref-" + counter + ".jpg")
+              img(class="ref-gallery__photo--img" src="resources/img/ref/thumbs/ref-" + counter++ + "-thumb.jpg" alt="Reference " + counter)
+
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="vendors/js/featherlight.gallery.min.js")
+  script(src="resources/js/script.js")

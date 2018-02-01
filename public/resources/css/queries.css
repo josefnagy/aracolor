@@ -19,6 +19,14 @@
   .nav__list, .footer-nav__social-list {
     margin-right: 5rem;
   }
+
+  .ref-gallery__list {
+    width: 20%;
+  }
+  .ref-gallery__photo {
+    /* width: 38rem; */
+    height: 16rem;
+  }
 }
 
 
@@ -26,6 +34,14 @@
 @media only screen and (max-width: 1023px) {
   html {
     font-size: 50%;
+  }
+
+  .ref-gallery__list {
+    width: 25%;
+  }
+
+  .ref-gallery__photo {
+    height: 20rem;
   }
 
   .map__iframe {
@@ -45,6 +61,15 @@
 @media only screen and (max-width: 767px) {
   html {
     font-size: 45%;
+  }
+
+  .ref-gallery__list {
+    width: 33.3%;
+  }
+
+  .ref-gallery__photo {
+    width: 35rem;
+    /* height: 18rem; */
   }
 
   h3.bs {
@@ -113,6 +138,14 @@
     font-size: 40%;
   }
 
+  .ref-gallery__list {
+    width: 50%;
+  }
+
+  .ref-gallery__photo {
+    width: 38rem;
+    /* height: 18rem; */
+  }
 
   .header__hero-box, .header__hero-box.bs{
     top: 25%;

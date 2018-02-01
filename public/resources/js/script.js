@@ -22,6 +22,8 @@ const thumbGalleryArteviva = document.querySelector('.thumb-arteviva-js');
 const galleryZero = document.querySelector('.galleryButton-zero-js');
 const thumbGalleryZero = document.querySelector('.thumb-zero-js');
 
+const thumb = document.querySelectorAll('.ref-gallery__link-js');
+
 const arrowLeft = document.querySelector('.header__arrows--prev');
 const arrowRight = document.querySelector('.header__arrows--next');
 const imgS = ['url(resources/css/img/home-betonove-sterky-3.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
@@ -89,7 +91,17 @@ $(document).ready(function() {
       icon.addClass('ion-navicon-round');
       icon.removeClass('ion-close-round');
     }
-  })
+  });
+
+  $('.ref-gallery__link-js').featherlightGallery({
+    previousIcon: '«',
+    nextIcon: '»',
+    galleryFadeIn: 300,
+    closeOnEsc: false,
+
+    openSpeed: 300,
+  });
+  console.log('qq');
   // back to top button
   var offset = 250;
   var duration = 300;
@@ -272,6 +284,9 @@ $(document).ready(function() {
       openSpeed: 300,
     });
   });
+
+
+
 });
 
 

@@ -41,6 +41,16 @@
   transition: opacity 0.3s;
 }
 
+.ref__gallery-link {
+  display: block;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 3rem;
+}
+.ref__gallery-link:hover {
+  border: none;
+}
+
 .ref__logos--img:hover {
   opacity: 1;
 }
