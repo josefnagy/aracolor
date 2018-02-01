@@ -16,6 +16,12 @@ const thumbGalleryOttocento = document.querySelector('.thumb-ottocento-js');
 const galleryRomano = document.querySelector('.galleryButton-romano-js');
 const thumbGalleryRomano = document.querySelector('.thumb-romano-js');
 
+const galleryArteviva = document.querySelector('.galleryButton-arteviva-js');
+const thumbGalleryArteviva = document.querySelector('.thumb-arteviva-js');
+
+const galleryZero = document.querySelector('.galleryButton-zero-js');
+const thumbGalleryZero = document.querySelector('.thumb-zero-js');
+
 const arrowLeft = document.querySelector('.header__arrows--prev');
 const arrowRight = document.querySelector('.header__arrows--next');
 const imgS = ['url(resources/css/img/home-betonove-sterky-3.jpg)', 'url(resources/css/img/home-malby.jpg)', 'url(resources/css/img/home-natery.jpg)'];
@@ -208,6 +214,56 @@ $(document).ready(function() {
   thumbGalleryRomano.addEventListener('click', function (e) {
     e.preventDefault();
     $.featherlightGallery($('a.gallery-romano-js'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    });
+  });
+
+  galleryArteviva.addEventListener('click', function (e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery-arteviva-js'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    });
+  });
+
+  //clicking on the thumbnail
+  thumbGalleryArteviva.addEventListener('click', function (e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery-arteviva-js'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    });
+  });
+
+  galleryZero.addEventListener('click', function (e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery-zero-js'), {
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
+
+      openSpeed: 300,
+    });
+  });
+
+  //clicking on the thumbnail
+  thumbGalleryZero.addEventListener('click', function (e) {
+    e.preventDefault();
+    $.featherlightGallery($('a.gallery-zero-js'), {
       previousIcon: '«',
       nextIcon: '»',
       galleryFadeIn: 300,

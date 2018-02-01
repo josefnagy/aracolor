@@ -561,10 +561,13 @@ h3.bs:after {
 .section-decor-types .row:not(:first-child) {
   margin-top: 5.5rem; }
 
-.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano {
+.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano, .section-arteviva, .section-zero {
   padding: 0; }
 
-.section-aureum, .section-ottocento {
+.section-arteviva {
+  padding-bottom: 4rem; }
+
+.section-aureum, .section-ottocento, .section-arteviva {
   background-color: white; }
 
 .decor__img {

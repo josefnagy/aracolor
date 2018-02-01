@@ -48,10 +48,6 @@
   }
 }
 
-.gallery__text {
-
-}
-
 .decor__text {
   font-size: 2rem;
   font-weight: 300;
@@ -63,12 +59,16 @@
   margin-top: 5.5rem;
 }
 
-.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano {
+.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano, .section-arteviva, .section-zero {
   padding: 0;
   // background-color: white;
 }
 
-.section-aureum, .section-ottocento {
+.section-arteviva {
+  padding-bottom: 4rem;
+}
+
+.section-aureum, .section-ottocento, .section-arteviva {
   background-color: white;
 }
 
