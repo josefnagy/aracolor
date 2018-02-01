@@ -52,7 +52,7 @@
   font-size: 2rem;
   font-weight: 300;
   text-align: justify;
-  padding: 0 2rem 0 0;
+  padding: 0 2rem;
 }
 
 .section-decor-types .row:not(:first-child) {
@@ -69,6 +69,11 @@
 }
 
 .section-aureum, .section-ottocento, .section-arteviva {
+
+  .decor__text {
+    padding: 0 2rem 0 0;
+  }
+
   background-color: white;
 }
 

@@ -556,7 +556,7 @@ h3.bs:after {
   font-size: 2rem;
   font-weight: 300;
   text-align: justify;
-  padding: 0 2rem 0 0; }
+  padding: 0 2rem; }
 
 .section-decor-types .row:not(:first-child) {
   margin-top: 5.5rem; }
@@ -569,6 +569,8 @@ h3.bs:after {
 
 .section-aureum, .section-ottocento, .section-arteviva {
   background-color: white; }
+  .section-aureum .decor__text, .section-ottocento .decor__text, .section-arteviva .decor__text {
+    padding: 0 2rem 0 0; }
 
 .decor__img {
   width: 100%;
