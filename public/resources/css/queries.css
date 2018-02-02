@@ -72,6 +72,10 @@
     /* height: 18rem; */
   }
 
+  .gotele-gallery__list {
+    width: 33.3%;
+  }
+
   h3.bs {
     padding-top: 1rem;
   }
@@ -144,6 +148,10 @@
   .ref-gallery__photo {
     width: 38rem;
     height: 24rem;
+  }
+
+  .gotele-gallery__list {
+    width: 50%;
   }
 
   .header__hero-box, .header__hero-box.bs{
