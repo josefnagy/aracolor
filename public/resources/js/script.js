@@ -93,15 +93,173 @@ $(document).ready(function() {
     }
   });
 
-  $('.ref-gallery__link-js').featherlightGallery({
-    previousIcon: '«',
-    nextIcon: '»',
-    galleryFadeIn: 300,
-    closeOnEsc: false,
+  // check if loaded page is index.html
+  // console.log(location.pathname.substr(-10, 5));
+  if (location.pathname.substr(-10, 5) !== "index") {
+    console.log('qq');
+    $('.ref-gallery__link-js').featherlightGallery({
+      previousIcon: '«',
+      nextIcon: '»',
+      galleryFadeIn: 300,
+      closeOnEsc: false,
 
-    openSpeed: 300,
-  });
-  console.log('qq');
+      openSpeed: 300,
+    });
+
+    // Clicking on the gallery button
+    galleryAureum.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-aureum-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryAureum.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-aureum-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryEncanto.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-encanto-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryEncanto.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-encanto-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryOttocento.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-ottocento-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryOttocento.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-ottocento-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryRomano.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-romano-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryRomano.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-romano-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryArteviva.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-arteviva-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryArteviva.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-arteviva-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryZero.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-zero-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryZero.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-zero-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+  }//----------- end IF
+
+
   // back to top button
   var offset = 250;
   var duration = 300;
@@ -113,180 +271,26 @@ $(document).ready(function() {
     }
   });
 
-  $('.btn--back-to-top').click(function(event) {
+  $( '.btn--back-to-top' ).click(function( event ) {
     event.preventDefault();
     $('html, body').animate({scrollTop: 0}, duration);
     return false;
   });
 
-  $(".scroll-js").click(function(event){
+  $(".scroll-js").click(function( event ){
     //event.preventDefault();
     //calculate destination place
     var dest=0;
-    if($(this.hash).offset().top > $(document).height()-$(window).height()){
+    if ($(this.hash).offset().top > $(document).height()-$(window).height()){
       dest=$(document).height()-$(window).height();
-      console.log(dest);
-    }else{
+      // console.log(dest);
+    } else {
       dest=$(this.hash).offset().top-50;
-      console.log(dest);
+      // console.log(dest);
     }
     //go to destination
     $('html,body').animate({scrollTop:dest}, 1000,'swing');
   });
-
-  // Clicking on the gallery button
-  galleryAureum.addEventListener('click', function(e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-aureum-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryAureum.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-aureum-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  galleryEncanto.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-encanto-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryEncanto.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-encanto-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  galleryOttocento.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-ottocento-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryOttocento.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-ottocento-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  galleryRomano.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-romano-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryRomano.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-romano-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  galleryArteviva.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-arteviva-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryArteviva.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-arteviva-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  galleryZero.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-zero-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-  //clicking on the thumbnail
-  thumbGalleryZero.addEventListener('click', function (e) {
-    e.preventDefault();
-    $.featherlightGallery($('a.gallery-zero-js'), {
-      previousIcon: '«',
-      nextIcon: '»',
-      galleryFadeIn: 300,
-      closeOnEsc: false,
-
-      openSpeed: 300,
-    });
-  });
-
-
-
 });
 
 
