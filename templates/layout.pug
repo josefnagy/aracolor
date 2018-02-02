@@ -1,5 +1,6 @@
 doctype html
 html(lang="cs")
+  block vars
   head
     meta(name="viewport" content="width=device-width", initial-scale="1.0")
     meta(charset="utf-8")
@@ -24,7 +25,9 @@ html(lang="cs")
     link(rel="stylesheet" href="resources/css/queries.css")
     link(href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet")
 
-    title Aracolor
+
+    title #{title}
+
   body
     .svg-wrap
       svg(width='64', height='64', viewbox='0 0 64 64')

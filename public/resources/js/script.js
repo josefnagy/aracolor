@@ -34,7 +34,6 @@ const heroText = [
   "Natřem vám prdel na bílo, <a class='header__link' href='betonove-sterky.html'>více></a>",
 ];
 
-
 const arrowImg = [
   'resources/img/arrow-betonove-sterky-2.jpg',
   'resources/img/arrow-malby.png',
@@ -73,11 +72,7 @@ if( arrowRight !== null && arrowLeft !== null ) {
 
 $(document).ready(function() {
 
-  // $(".scrolldown-anim__link").click(function(event){
-  //   event.preventDefault();
-  // });
-
-  /// responsive navigation
+  //-----  responsive navigation
   $('.js--nav-icon').click(function(event) {
     var nav = $('.js--nav__list');
     var icon = $('.js--nav-icon i');
@@ -96,7 +91,6 @@ $(document).ready(function() {
   // check if loaded page is index.html
   // console.log(location.pathname.substr(-10, 5));
   if (location.pathname.substr(-10, 5) !== "index") {
-    console.log('qq');
     $('.ref-gallery__link-js').featherlightGallery({
       previousIcon: '«',
       nextIcon: '»',
@@ -257,7 +251,7 @@ $(document).ready(function() {
       });
     });
 
-  }//----------- end IF
+  }// end IF
 
 
   // back to top button
