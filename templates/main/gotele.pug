@@ -1,0 +1,40 @@
+extends ../layout.pug
+
+block index
+
+  header#header.header.rg
+    include ../navigation.pug
+
+    // hero box
+    .header__hero-box.rg
+      .heading__wrap
+        h1.header__heading Nástřiky GOTELE
+
+    a.decor__link(href="#")
+      i.ion-ios-arrow-up
+
+
+  section.gotele-gallery
+
+    .row
+      h2.bs Ukázky Španělského nástřiku GOTELE
+
+    - var n = 8
+    - var counter = 1
+
+    .row
+      ul.gotele-gallery__showcase.clearfix
+
+        while counter <= n
+
+          li.gotele-gallery__list
+            figure.gotele-gallery__photo
+              a(data-featherlight="resources/img/gotele/gotele-" + counter + ".jpg")
+                img(class="gotele-gallery__photo--img" src="resources/img/gotele/gotele-" + counter++ + ".jpg" alt="Gotele vzor " + counter)
+
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="resources/js/script.js")
