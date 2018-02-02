@@ -74,6 +74,12 @@
     transform: translate(-50%, -50%);
   }
 
+  &__hero-box.rg {
+    @include absolute(top 38% left 50%);
+    width: auto;
+    transform: translate(-50%, -50%);
+  }
+
   &__link:link, &__link:visited {
     color: $tertiary-color;
   }

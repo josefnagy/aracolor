@@ -259,6 +259,12 @@ h3.bs:after {
     position: absolute;
     width: auto;
     transform: translate(-50%, -50%); }
+  .header__hero-box.rg {
+    top: 38%;
+    left: 50%;
+    position: absolute;
+    width: auto;
+    transform: translate(-50%, -50%); }
   .header__link:link, .header__link:visited {
     color: #22C62F; }
   .header__link:hover, .header__link:active {
