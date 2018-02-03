@@ -672,6 +672,10 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   border-radius: 0.5rem;
   cursor: pointer; }
 
+.error404 {
+  margin-top: 35vh;
+  margin-bottom: 41vh; }
+
 .section-gallery {
   padding: 0; }
 

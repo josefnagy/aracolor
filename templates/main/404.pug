@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block vars
+  -var title = "Radek Tlach | 404 - Nemůžeme zobrazit stránku :( | Aracolor.cz"
+
+block index
+
+  header#header.header.error404
+    include ../navigation.pug
+    h2 404 - Pardon, požadovaná stránka nebyla nalezena.
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="resources/js/script.js")
