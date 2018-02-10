@@ -539,13 +539,23 @@ h3.bs:after {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 45rem; }
+  height: 45rem;
+  background-image: url(../img/tlach-foto.png);
+  background-size: auto auto;
+  background-position: right top;
+  background-repeat: no-repeat; }
+
+.section-cleaning-types {
+  padding-bottom: 0; }
+
+section {
+  padding: 5rem 0; }
 
 .section-decor-types {
   background-color: #f6f6f6;
   box-sizing: initial;
   padding-top: 5rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 0; }
   .section-decor-types .bs {
     margin-bottom: 3rem; }
   .section-decor-types .gallery {
@@ -585,15 +595,9 @@ h3.bs:after {
 .section-decor-types .row:not(:first-child) {
   margin-top: 5.5rem; }
 
-.section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano, .section-arteviva, .section-zero {
-  padding: 0; }
-
-.section-arteviva {
-  padding-bottom: 4rem; }
-
-.section-aureum, .section-ottocento, .section-arteviva {
+.section-aureum, .section-ottocento, .section-concrete, .section-zero {
   background-color: white; }
-  .section-aureum .decor__text, .section-ottocento .decor__text, .section-arteviva .decor__text {
+  .section-aureum .decor__text, .section-ottocento .decor__text, .section-concrete .decor__text, .section-zero .decor__text {
     padding: 0 2rem 0 0; }
 
 .decor__img {

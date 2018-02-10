@@ -126,7 +126,8 @@
 
   .gallery__list { width: 50% }
 
-  .section-our-services .clearfix {
+  .section-our-services .clearfix,
+  .section-cleaning-types .clearfix {
     display: none;
   }
 

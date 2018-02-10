@@ -4,6 +4,9 @@ const headerHeroText = document.querySelector('.header__text');
 const prevArrow = document.querySelector('.header__arrows--prev img');
 const nextArrow = document.querySelector('.header__arrows--next img');
 
+const galleryConcrete = document.querySelector('.galleryButton-concrete-js');
+const thumbGalleryConcrete = document.querySelector('.thumb-concrete-js');
+
 const galleryAureum = document.querySelector('.galleryButton-aureum-js');
 const thumbGalleryAureum = document.querySelector('.thumb-aureum-js');
 
@@ -30,8 +33,8 @@ const imgS = ['url(resources/css/img/home-betonove-sterky-3.jpg)', 'url(resource
 const h1 = ['Dekorační stěrky', 'Malování Interiérů a Exteriérů', 'Nátěry všech povrchů'];
 const heroText = [
   "Luxusní interiérové stěrky, originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací, <a class='header__link' href='betonove-sterky.html'>více></a>",
-  "Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd, <a class='header__link' href='betonove-sterky.html'>více></a>",
-  "Natřem vám prdel na bílo, <a class='header__link' href='betonove-sterky.html'>více></a>",
+  "Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd.</a>",
+  "Provádíme veškeré natěračské práce a malířské práce na stavbách, v interiérech, bytech, ocelových a dřevěných konstrukcích, budovách, výrobních halách i v terénu.</a>",
 ];
 
 const arrowImg = [
@@ -242,6 +245,31 @@ $(document).ready(function() {
     thumbGalleryZero.addEventListener('click', function (e) {
       e.preventDefault();
       $.featherlightGallery($('a.gallery-zero-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    galleryConcrete.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-concrete-js'), {
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        closeOnEsc: false,
+
+        openSpeed: 300,
+      });
+    });
+
+    //clicking on the thumbnail
+    thumbGalleryConcrete.addEventListener('click', function (e) {
+      e.preventDefault();
+      $.featherlightGallery($('a.gallery-concrete-js'), {
         previousIcon: '«',
         nextIcon: '»',
         galleryFadeIn: 300,

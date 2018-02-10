@@ -1,8 +1,11 @@
+section {
+  padding: 5rem 0;
+}
 .section-decor-types {
   background-color: $light-gray;
   box-sizing: initial;
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0;
 
   .bs {
     margin-bottom: 3rem;
@@ -60,15 +63,15 @@
 }
 
 .section-aureum, .section-encanto, .section-ottocento, .section-travertino-romano, .section-arteviva, .section-zero {
-  padding: 0;
+  // padding: 0;
   // background-color: white;
 }
 
-.section-arteviva {
-  padding-bottom: 4rem;
-}
+// .section-arteviva {
+//   padding-bottom: 4rem;
+// }
 
-.section-aureum, .section-ottocento, .section-arteviva {
+.section-aureum, .section-ottocento,  .section-concrete, .section-zero {
 
   .decor__text {
     padding: 0 2rem 0 0;
