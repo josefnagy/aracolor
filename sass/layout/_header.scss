@@ -40,6 +40,15 @@
     height: 67vh;
   }
 
+    // styles for cleaning header
+  &.cl {
+    background-image: url(img/cleaning-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: initial;
+    height: 67vh;
+  }
+
   &__heading {
     padding: 1.5rem 4rem;
     background-color: rgba($tertiary-color, .9);

@@ -232,6 +232,12 @@ h3.bs:after {
     background-position: center;
     background-attachment: initial;
     height: 67vh; }
+  .header.cl {
+    background-image: url(img/cleaning-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: initial;
+    height: 67vh; }
   .header__heading {
     padding: 1.5rem 4rem;
     background-color: rgba(34, 198, 47, 0.9);

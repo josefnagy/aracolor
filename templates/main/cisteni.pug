@@ -1,0 +1,91 @@
+extends ../layout.pug
+
+block vars
+  -var title = "Radek Tlach | Mytí a Čištění fasád | Aracolor.cz"
+  -var description = "contentzsdfsdf"
+
+block index
+
+  header#header.header.cl
+    include ../navigation.pug
+
+    // hero box
+    .header__hero-box.bs
+      .heading__wrap
+        h1.header__heading.bs Mytí a Čištění fasád
+      p.header__text.bs
+        | Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků
+    a.decor__link(href="#")
+      i.ion-ios-arrow-up
+
+  section.section-our-services
+    .row
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/house.svg" alt="Ikona špachtle")
+        h3 Mytí a čištění fasád
+        p
+          | Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků.
+
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/house-roof.svg" alt="Ikona válečku")
+        h3 Čištění střech
+        p
+          | Čištění BRAMAC střech, čištění plechových střech, čištění eternitových střech.
+
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/brush.svg" alt="Ikona štětce")
+        h3 Nátěr střech
+        p
+          | Nátěr plechových střech, nátěr eternitových střech a nátěr KM Beta střech.
+      .clearfix
+
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/airbrush.svg" alt="Ikona stříkací pistole")
+        h3 Nástřik plechového opláštění
+
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/tiles.svg" alt="Ikona stříkací pistole")
+        h3 Čištění zámkové dlažby
+        p
+          | Od mechů, řas, lišejníků a běžných nečistot.
+
+      .services__service.col.span-1-of-6.box
+        img.service--icon(src="resources/icons/graffiti.svg" alt="Ikona smetáku")
+        h3 Odstraňování graffiti
+
+    .row
+      ul.ref__showcase--list.clearfix
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-1-thumb.jpg" alt="Reference Třinec IVC")
+            figcaption Třinec IVC
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-2-thumb.jpg" alt="Reference koupelnové dekorační stěrky")
+            figcaption Dekorační stěrka
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-3-thumb.jpg" alt="Reference realizace tapetování v Shopping Parku")
+            figcaption Shopping Park - Tapeta
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-4-thumb.jpg" alt="Reference barevné malby")
+            figcaption Barevná Malba
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-5-thumb.jpg" alt="Reference mytí fasády")
+            figcaption Mytí fasády
+        li.ref__showcase--item
+          figure.ref__showcase--photo
+            img.ref__showcase--img(src="resources/img/ref/thumbs/ref-6-thumb.jpg" alt="Dekorační stěrka Travertino Romano")
+            figcaption Travertino Romano
+    .row
+      p
+        a.ref__gallery-link(href="reference.html") Otevřít galerii referencí...
+
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="resources/js/script.js")
