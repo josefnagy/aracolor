@@ -93,7 +93,7 @@ $(document).ready(function() {
 
   // check if loaded page is index.html
   // console.log(location.pathname.substr(-10, 5));
-  if (location.pathname.substr(-10, 5) !== "index") {
+  if (!$('#features')) {
     $('.ref-gallery__link-js').featherlightGallery({
       previousIcon: '«',
       nextIcon: '»',
