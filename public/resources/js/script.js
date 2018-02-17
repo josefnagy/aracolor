@@ -130,7 +130,7 @@ $(document).ready(function() {
 
   // check if loaded page is index.html
   // console.log(location.pathname.substr(-10, 5));
-  if (!$('#features')) {
+  if (!document.getElementById('features')) {
     $('.ref-gallery__link-js').featherlightGallery({
       previousIcon: '«',
       nextIcon: '»',
@@ -316,7 +316,23 @@ $(document).ready(function() {
       });
     });
 
-  }// end IF
+  } else {
+    console.log('qq');
+    $(".scroll-js").click(function (event) {
+      event.preventDefault();
+      //calculate destination place
+      var dest = 0;
+      if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+        dest = $(document).height() - $(window).height();
+        // console.log(dest);
+      } else {
+        dest = $(this.hash).offset().top - 50;
+        // console.log(dest);
+      }
+      //go to destination
+      $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
+    });
+  }
 
 
   // back to top button
@@ -336,20 +352,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $(".scroll-js").click(function( event ){
-    //event.preventDefault();
-    //calculate destination place
-    var dest=0;
-    if ($(this.hash).offset().top > $(document).height()-$(window).height()){
-      dest=$(document).height()-$(window).height();
-      // console.log(dest);
-    } else {
-      dest=$(this.hash).offset().top-50;
-      // console.log(dest);
-    }
-    //go to destination
-    $('html,body').animate({scrollTop:dest}, 1000,'swing');
-  });
+
 });
 
 
