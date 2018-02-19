@@ -5,7 +5,15 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
-    ]
+      "**/node_modules/**",
+      "**/sass/**",
+      "**/templates/**",
+      "**/.vscode/**"
+    ],
+    "redirects": [ {
+      "source" : "/betonove-sterky",
+      "destination" : "/dekoracni-sterky",
+      "type": 301
+    }]
   }
 }
