@@ -63,6 +63,10 @@
     font-size: 45%;
   }
 
+  .services__service {
+    width: 49%;
+  }
+
   .ref-gallery__list {
     width: 33.3%;
   }
@@ -140,6 +144,11 @@
 
   html {
     font-size: 40%;
+  }
+
+  .services__service {
+    width: 100%;
+    padding: 1rem 4rem 3.5rem 4rem;
   }
 
   .flex-row {
