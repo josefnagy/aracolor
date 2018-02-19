@@ -142,6 +142,33 @@
     font-size: 40%;
   }
 
+  .flex-row {
+    flex-direction: column;
+  }
+  .flex-col:first-child {
+    padding-right: 0;
+  }
+
+  .section-decor-types section {
+    padding-top: 0;
+  }
+
+  .section-aureum .flex-row, .section-ottocento .flex-row,  .section-concrete .flex-row, .section-zero .flew-row {
+    flex-direction: column-reverse;
+  }
+
+  .section-aureum .decor__text, .section-ottocento .decor__text, .section-concrete .decor__text, .section-zero .decor__text {
+    padding: 0 2rem;
+  }
+
+  .link__icon {
+    padding: 1rem 1rem 3rem 1rem;
+  }
+
+  .decor__line {
+    display: none;
+  }
+
   .ref-gallery__list {
     width: 50%;
   }
