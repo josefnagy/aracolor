@@ -12,14 +12,14 @@ block index
     // hero box
     .header__hero-box.rg
       .heading__wrap
-        h1.header__heading Galerie Referencí Dekoračních Stěrek
+        h1.header__heading Reference Maleb a Nátěrů
 
     a.decor__link(href="#")
       i.ion-ios-arrow-up
 
   section.references-gallery
 
-    - var n = 55
+    - var n = 21
     - var counter = 1
 
     ul.ref-gallery__showcase.clearfix
@@ -28,8 +28,8 @@ block index
 
         li.ref-gallery__list
           figure.ref-gallery__photo
-            a(class="ref-gallery__link-js" href="resources/img/ref/sterky/ref-sterky-" + counter + ".jpg")
-              img(class="ref-gallery__photo--img" src="resources/img/ref/sterky/thumbs/min-ref-sterky-" + counter++ + ".jpg" alt="Reference Dekoračních Stěrek" + counter)
+            a(class="ref-gallery__link-js" href="resources/img/ref/malby/ref-malby-" + counter + ".jpg")
+              img(class="ref-gallery__photo--img" src="resources/img/ref/malby/thumbs/min-ref-malby-" + counter++ + ".jpg" alt="Reference Maleb a Nátěrů " + counter)
 
 
   include ../footer.pug
