@@ -20,12 +20,10 @@
     margin-right: 5rem;
   }
 
-  .ref-gallery__list {
-    width: 20%;
-  }
   .ref-gallery__photo {
-    /* width: 38rem; */
-    height: 16rem;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
   }
 }
 
@@ -36,12 +34,10 @@
     font-size: 50%;
   }
 
-  .ref-gallery__list {
-    width: 25%;
-  }
-
   .ref-gallery__photo {
-    height: 20rem;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
   }
 
   .map__iframe {
@@ -52,8 +48,6 @@
     top: 50%;
     left: 50%;
   }
-
-  .gallery__list { width: 33.3% }
 
 }
 
@@ -67,13 +61,10 @@
     width: 49%;
   }
 
-  .ref-gallery__list {
-    width: 33.3%;
-  }
-
   .ref-gallery__photo {
-    width: 35rem;
-    /* height: 18rem; */
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
   }
 
   .gotele-gallery__list {
@@ -178,13 +169,10 @@
     display: none;
   }
 
-  .ref-gallery__list {
-    width: 50%;
-  }
-
   .ref-gallery__photo {
-    width: 38rem;
-    height: 24rem;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
   }
 
   .gotele-gallery__list {
