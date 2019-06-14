@@ -952,6 +952,8 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   -moz-column-gap: 0px;
   column-count: 5;
   column-gap: 0rem; }
+  .ref-gallery__photo a:hover {
+    border-bottom: 0; }
 
 .ref-gallery__photo--img {
   opacity: 1;
