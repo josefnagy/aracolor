@@ -17,19 +17,14 @@ block index
     a.decor__link(href="#")
       i.ion-ios-arrow-up
 
-  section.references-gallery
+  section.ref-gallery__photo
 
     - var n = 3
     - var counter = 1
 
-    ul.ref-gallery__showcase.clearfix
-
-      while counter <= n
-
-        li.ref-gallery__list
-          figure.ref-gallery__photo
-            a(class="ref-gallery__link-js" href="resources/img/ref/fasady/ref-fasady-" + counter + ".jpg")
-              img(class="ref-gallery__photo--img" src="resources/img/ref/fasady/thumbs/min-ref-fasady-" + counter++ + ".jpg" alt="Reference fasád " + counter)
+    while counter <= n
+      a(class="ref-gallery__link-js" href="resources/img/ref/fasady/ref-fasady-" + counter + ".jpg")
+        img(class="ref-gallery__photo--img" src="resources/img/ref/fasady/thumbs/min-ref-fasady-" + counter++ + ".jpg" alt="Reference fasád " + counter)
 
 
   include ../footer.pug

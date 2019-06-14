@@ -75,6 +75,16 @@ if( arrowRight !== null && arrowLeft !== null ) {
 
 $(document).ready(function() {
 
+  // const imagesCounter = $('.ref-gallery__photo').length;
+  // console.log(imagesCounter);
+  // if(imagesCounter < 5) {
+  //   // $('.ref-gallery__photo--img').each(function () {
+  //   //   this.style.setProperty('column-count', '3', 'important');
+  //   // });
+  //   $('.ref-gallery__photo').css('column-count', "3");
+  // }
+
+
   //-----  responsive navigation
   $('.js--nav-icon').click(function(event) {
     var nav = $('.js--nav__list');
@@ -317,6 +327,7 @@ $(document).ready(function() {
 
 
 });
+
 
 
 
