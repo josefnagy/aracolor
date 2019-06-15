@@ -1,0 +1,4 @@
+Galerie referenci
+  * v tom scriptu to vykutit tak at se otoci vsechny fotky tak jak maji byt
+  * zmenit output folder na realnou slozku
+  * dodelat ostatni referencni sekce

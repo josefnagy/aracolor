@@ -17,19 +17,14 @@ block index
     a.decor__link(href="#")
       i.ion-ios-arrow-up
 
-  section.references-gallery
+  section.ref-gallery__photo
 
-    - var n = 21
+    - var n = 20
     - var counter = 1
 
-    ul.ref-gallery__showcase.clearfix
-
       while counter <= n
-
-        li.ref-gallery__list
-          figure.ref-gallery__photo
-            a(class="ref-gallery__link-js" href="resources/img/ref/malby/ref-malby-" + counter + ".jpg")
-              img(class="ref-gallery__photo--img" src="resources/img/ref/malby/thumbs/min-ref-malby-" + counter++ + ".jpg" alt="Reference Maleb a Nátěrů " + counter)
+        a(class="ref-gallery__link-js" href="resources/img/ref/malby/" + counter + ".jpg")
+          img(class="ref-gallery__photo--img" src="resources/img/ref/malby/" + counter++ + ".jpg" alt="Reference Maleb a Nátěrů " + counter)
 
 
   include ../footer.pug

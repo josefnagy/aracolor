@@ -17,19 +17,14 @@ block index
     a.decor__link(href="#")
       i.ion-ios-arrow-up
 
-  section.references-gallery
+  section.ref-gallery__photo
 
-    - var n = 55
+    - var n = 52
     - var counter = 1
 
-    ul.ref-gallery__showcase.clearfix
-
-      while counter <= n
-
-        li.ref-gallery__list
-          figure.ref-gallery__photo
-            a(class="ref-gallery__link-js" href="resources/img/ref/sterky/ref-sterky-" + counter + ".jpg")
-              img(class="ref-gallery__photo--img" src="resources/img/ref/sterky/thumbs/min-ref-sterky-" + counter++ + ".jpg" alt="Reference Dekoračních Stěrek " + counter)
+    while counter <= n
+      a(class="ref-gallery__link-js" href="resources/img/ref/sterky/" + counter + ".jpg")
+        img(class="ref-gallery__photo--img" src="resources/img/ref/sterky/" + counter++ + ".jpg" alt="Reference Dekoračních Stěrek " + counter)
 
 
   include ../footer.pug
