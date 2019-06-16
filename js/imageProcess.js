@@ -86,6 +86,7 @@ fs.readdir(outputFolder)
                           sharp(inputFolder + '/' + items[i] + '/' + images[j])
                             // .resize(100)
                             .rotate()
+                            // .resize(480)
                             .toFile(outputFolder + items[i] + '/' + (j + 1) + outputExtension, function (err, info) {
                               if (err) throw err;
                               // console.log('Creating image ' + chalk.green.inverse((j + 1) + outputExtension) + ', size... ' +  chalk.green(roundUp (info.size / 1000, 0)) + ' KB');
