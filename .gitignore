@@ -1,3 +1,5 @@
 # Dependency directories
 node_modules/
-img/
+
+# forward slash / means its root directory
+/img/
