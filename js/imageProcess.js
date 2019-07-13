@@ -3,7 +3,8 @@ const fs = require('fs').promises;
 const chalk = require('chalk');
 
 const inputFolder = 'img/';
-const outputFolder = 'public/resources/img/ref/';
+// const outputFolder = 'public/resources/img/ref/';
+const outputFolder = 'test/';
 const outputExtension = '.jpg';
 
 let inputImgFolderSize = 0;
@@ -18,31 +19,9 @@ function roundUp(num, precision) {
 // Clean up outputFolder
 fs.readdir(outputFolder)
   .then( function (items) {
-    // console.log(items);
 
-    if (items.length > 1) {
-      // console.log('.'.charCodeAt(0));
-      items.forEach(function (folder) {
-        if (folder.charCodeAt(0) !== 46) {
-          // console.log(folder);
-          fs.readdir(outputFolder + folder + '/')
-            .then(function (image) {
+    erase(items);
 
-              image.forEach(function (i) {
-                let path = outputFolder + folder + '/' + i;
-                fs.unlink(path, function (error) {
-                  console.log(err);
-                });
-                // console.log(path);
-              })
-            })
-            .then (function () {
-              // console.log(folder);
-              fs.rmdir(outputFolder + folder);
-            })
-        }
-      })
-    }
   })
   .then (function () {
     // When cleanup is finished
@@ -64,7 +43,7 @@ fs.readdir(outputFolder)
                   .then(function (images) {
 
                     //recreating folder structure of input folder
-                    fs.mkdir(outputFolder + items[i] + '/')
+                    fs.mkdir(outputFolder + items[i] + '/thumbs')
                       .then(function () {
                         // console.log('Creating folder..' + outputFolder + items[i] + '/');
 
@@ -86,9 +65,10 @@ fs.readdir(outputFolder)
                           sharp(inputFolder + '/' + items[i] + '/' + images[j])
                             // .resize(100)
                             .rotate()
-                            // .resize(480)
-                            .toFile(outputFolder + items[i] + '/' + (j + 1) + outputExtension, function (err, info) {
+                            .resize(480)
+                            .toFile(outputFolder + items[i] + '/thumbs' + (j + 1) + outputExtension, function (err, info) {
                               if (err) throw err;
+                              console.log(outputFolder + items[i] + '/thumbs/' + (j + 1) + outputExtension);
                               // console.log('Creating image ' + chalk.green.inverse((j + 1) + outputExtension) + ', size... ' +  chalk.green(roundUp (info.size / 1000, 0)) + ' KB');
                               outputImgFolderSize += (info.size / 1000000);
                               if (j === images.length - 1) {
