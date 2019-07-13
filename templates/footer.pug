@@ -24,6 +24,9 @@ footer.footer
             i.ion-social-instagram
   .row
     p.footer__copy
-      | Copyright © 2018 by Aracolor. Created by &nbsp;
+      | Copyright © <span id="year"></span> by Aracolor. Created by &nbsp;
       a.footer__copy--link(href="#" target="_blank") Josef Nagy &nbsp;
       | . All rights reserved.
+
+script.
+  document.getElementById("year").innerText = new Date().getFullYear();
