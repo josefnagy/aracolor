@@ -1,11 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+const chalk = require('chalk');
 
 const inputFolder = "img";
 const outputFolder = "public/resources/img/ref";
 
 const fileExtension = 'jpg';
+
+const createThumbs = true;
 
 
 let rmdir = dirPath => {
@@ -63,12 +66,16 @@ let convert = (dirPath, outputP = outputFolder) => {
         if (notSysFolder) {
           counter += 1;
           let thumbs = outputP + '/thumbs';
-          if (!fs.existsSync(thumbs)) {
+
+          if (!fs.existsSync(thumbs) && createThumbs) {
             fs.mkdirSync(thumbs);
+
           }
           createImg( filePath, outputP, counter);
-          createImgThumb( filePath, thumbs, counter);
 
+          if (createThumbs) {
+            createImgThumb( filePath, thumbs, counter);
+          }
         }
       }
     })
@@ -76,6 +83,7 @@ let convert = (dirPath, outputP = outputFolder) => {
 }
 
 let createImg = ( filePath, outputP, counter) => {
+
   sharp(filePath)
   .rotate()
   .toFile(`${outputP}/${counter}.${fileExtension}`, (err, info) => {
@@ -90,6 +98,11 @@ let createImgThumb = ( filePath, outputP, counter) => {
   .toFile(`${outputP}/${counter}.${fileExtension}`, (err, info) => {
     if (err) throw err;
   })
+}
+
+function roundUp(num, precision) {
+  precision = Math.pow(10, precision);
+  return Math.ceil(num * precision) / precision;
 }
 
 
