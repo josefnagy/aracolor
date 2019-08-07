@@ -131,7 +131,12 @@
         </div>
       </div><a class="decor__link" href="#"><i class="ion-ios-arrow-up"></i></a>
     </header>
-    <section class="ref-gallery__photo"><a class="ref-gallery__link-js" href="resources/img/ref/tapety/1.jpg"><img class="ref-gallery__photo--img" src="resources/img/ref/tapety/thumbs/1.jpg" alt="Reference Tapetování 2"></a><a class="ref-gallery__link-js" href="resources/img/ref/tapety/2.jpg"><img class="ref-gallery__photo--img" src="resources/img/ref/tapety/thumbs/2.jpg" alt="Reference Tapetování 3"></a>
+    <section class="ref-gallery__photo">
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item"><a class="ref-gallery__link-js" href="resources/img/ref/tapety/1.jpg"><img class="ref-gallery__photo--img" src="resources/img/ref/tapety/thumbs/1.jpg" alt="Reference Tapetování 2"></a></div>
+        <div class="grid-item"><a class="ref-gallery__link-js" href="resources/img/ref/tapety/2.jpg"><img class="ref-gallery__photo--img" src="resources/img/ref/tapety/thumbs/2.jpg" alt="Reference Tapetování 3"></a></div>
+      </div>
     </section>
     <footer class="footer">
       <div class="row">
@@ -160,6 +165,21 @@
     <script src="vendors/js/jquery-3.2.1.min.js"></script>
     <script src="vendors/js/featherlight.min.js"></script>
     <script src="vendors/js/featherlight.gallery.min.js"></script>
+    <script src="vendors/js/masonry.pkgd.min.js"></script>
+    <script src="vendors/js/imagesloaded.pkgd.min.js"></script>
     <script src="resources/js/script.js"></script>
+    <script>
+      var grid = document.querySelector('.grid');
+      var msnry;
+      
+      imagesLoaded( grid, function() {
+        // init Isotope after all images have loaded
+        msnry = new Masonry( grid, {
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          percentPosition: true,
+        });
+      });
+    </script>
   </body>
 </html>

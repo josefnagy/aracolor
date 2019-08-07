@@ -944,21 +944,22 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   height: auto;
   overflow: hidden; }
 
-.ref-gallery__photo {
-  line-height: 0;
-  -webkit-column-count: 5;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 5;
-  -moz-column-gap: 0px;
-  column-count: 5;
-  column-gap: 0rem; }
-  .ref-gallery__photo a:hover {
-    border-bottom: 0; }
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
 
-.ref-gallery__photo--img {
-  opacity: 1;
-  width: 100% !important;
-  height: auto !important; }
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 25%; }
+
+.grid-item {
+  float: left; }
+
+.grid-item img {
+  display: block;
+  max-width: 100%; }
 
 .ref-gallery__photo--img:hover {
   opacity: 0.7; }

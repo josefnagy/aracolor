@@ -30,6 +30,7 @@
     "sharp": "^0.22.1"
   },
   "dependencies": {
-    "@babel/node": "^7.4.5"
+    "@babel/node": "^7.4.5",
+    "masonry": "0.0.2"
   }
 }

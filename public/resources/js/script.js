@@ -45,6 +45,7 @@ const arrowImg = [
 
 let counter = 0;
 
+
 if( arrowRight !== null && arrowLeft !== null ) {
   arrowRight.addEventListener('click', function(e) {
     counter++;

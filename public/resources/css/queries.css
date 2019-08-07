@@ -20,10 +20,9 @@
     margin-right: 5rem;
   }
 
-  .ref-gallery__photo {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
+  .grid-sizer,
+  .grid-item {
+    width: 33%;
   }
 }
 
@@ -34,10 +33,9 @@
     font-size: 50%;
   }
 
-  .ref-gallery__photo {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3;
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
   }
 
   .map__iframe {
@@ -61,10 +59,9 @@
     width: 49%;
   }
 
-  .ref-gallery__photo {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2;
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
   }
 
   .gotele-gallery__list {

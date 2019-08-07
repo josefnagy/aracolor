@@ -22,9 +22,12 @@ block index
     - var n = 95
     - var counter = 1
 
-    while counter <= n
-      a(class="ref-gallery__link-js" href="resources/img/ref/sterky/" + counter + ".jpg")
-        img(class="ref-gallery__photo--img" src="resources/img/ref/sterky/thumbs/" + counter++ + ".jpg" alt="Reference Dekoračních Stěrek " + counter)
+    .grid
+      .grid-sizer
+      while counter <= n
+        .grid-item
+          a(class="ref-gallery__link-js" href="resources/img/ref/sterky/" + counter + ".jpg")
+            img(class="ref-gallery__photo--img" src="resources/img/ref/sterky/thumbs/" + counter++ + ".jpg" alt="Reference Dekoračních Stěrek " + counter)
 
 
   include ../footer.pug
@@ -32,4 +35,19 @@ block index
   script(src="vendors/js/jquery-3.2.1.min.js")
   script(src="vendors/js/featherlight.min.js")
   script(src="vendors/js/featherlight.gallery.min.js")
+  script(src="vendors/js/masonry.pkgd.min.js")
+  script(src="vendors/js/imagesloaded.pkgd.min.js")
   script(src="resources/js/script.js")
+
+  script.
+    var grid = document.querySelector('.grid');
+    var msnry;
+
+    imagesLoaded( grid, function() {
+      // init Isotope after all images have loaded
+      msnry = new Masonry( grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+      });
+    });
