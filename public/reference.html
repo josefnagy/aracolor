@@ -464,12 +464,14 @@
         </div>
       </div>
       <div class="row">
-        <p class="footer__copy">Copyright © 2018 by Aracolor. Created by &nbsp;<a class="footer__copy--link" href="#" target="_blank">Josef Nagy &nbsp;</a>. All rights reserved.</p>
+        <p class="footer__copy">Copyright © <span id="year"></span> by Aracolor. Created by &nbsp;<a class="footer__copy--link" href="#" target="_blank">Josef Nagy &nbsp;</a>. All rights reserved.</p>
       </div>
     </footer>
     <script src="vendors/js/jquery-3.2.1.min.js"></script>
     <script src="vendors/js/featherlight.min.js"></script>
     <script src="vendors/js/featherlight.gallery.min.js"></script>
     <script src="resources/js/script.js"></script>
+    <script>document.getElementById("year").innerText = new Date().getFullYear();</script>
+    <!-- deployment test -->
   </body>
 </html>
