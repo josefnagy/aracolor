@@ -48,6 +48,7 @@ npm run deploy
 - Masonry (grid layout)
 - Ionicons (icon font)
 - Animate.css
+- Node 12 for builds and development
 
 ## Deployment
 
