@@ -1,0 +1,345 @@
+extends ../layout.pug
+
+block vars
+  -var title = "Malířské práce | Radek Tlach | Aracolor.cz"
+  -var description = "To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky, ať už se jedná o natření plotu nebo o vymalování výrobní haly."
+
+block index
+  header#header.header
+
+    include ../navigation.pug
+    .hero
+      .header__hero-box
+        h1.header__heading.animated.bounceInLeft Malířské práce
+        p.header__text.animated.bounceInRight
+          | Kompletní malířské a natěračské práce v interiéru i exteriéru, profesionální přístup a špičková kvalita.
+      .header__arrows
+        a.header__arrows--prev(href="#")
+          span.header__icon-wrap
+            svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+              use(xlink:href="#arrow-left-5")
+          img(src="resources/img/arrow-natery.png" alt="Sekce nátěry")
+        a.header__arrows--next(href="#")
+          span.header__icon-wrap
+            svg.header__icon(width="32" height="32" viewbox="0 0 64 64")
+              use(xlink:href="#arrow-right-5")
+          img(src="resources/img/arrow-malby.png" alt="Sekce malby")
+      .header__scrolldown-anim
+        a.scrolldown-anim__link(href="#")
+          span.scrolldown-anim__link--inner
+      a.btn--back-to-top(href="#")
+        i.ion-ios-arrow-up
+
+  section#features.section-why-us
+    .row
+      h2.why-us__heading Svěřte interiér i exteriér profesionálům
+      p.long-copy
+        | To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky, ať už se jedná o natření plotu nebo o vymalování výrobní haly.
+    .row
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-checkmark-empty
+        h3 Zkušenost
+        p
+          | Více než 22 let v oboru.
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-star-outline
+        h3 Kvalita
+        p
+          | Za Naší prací si stojíme, proto se nebojíme dávat 24 - měsíční záruku na dílo.
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-speedometer-outline
+        h3 Rychlost
+        p
+          | Jsme placeni od metrů, ne od hodiny a proto se můžete spolehnout, že práce bude odsýpat.
+      .col.span-1-of-4.box
+        i.icon-big.ion-ios-trash-outline
+        h3 Čistota
+        p
+          | Úklid po malování je pro Nás samozřejmostí.
+
+  section.section-gallery
+    ul.gallery__showcase.clearfix
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby")
+
+  section#sluzby.section-our-services
+    .row
+      h2 Naše služby
+      p.long-copy
+        | Specializujeme se na Dekorační - Betonové stěrky, malby, nátěry, šablony a nástřiky interiéru a exteriéru. Pracujeme s kvalitními produkty (Jupol Gold, Dulux, Primalex, Het, Capalor atd.) Bezplatně Vám poradíme s návrhem Vašeho interiéru a exteriéru. Realizujeme malé a velké zakázky po celé České Republice.
+    .row.flex-services
+      .services__service.box
+        img.service--icon(src="resources/icons/spatula.svg" alt="Ikona špachtle")
+        h3 Dekorační stěrky
+        p
+          | Originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací. &nbsp;
+          a(href="index.html#header") více >
+
+      .services__service.box
+        img.service--icon(src="resources/icons/paint-roller.svg" alt="Ikona válečku")
+        h3 Interiérové a exteriérové malířské práce
+        p
+          | Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd.
+
+      .services__service.box
+        img.service--icon(src="resources/icons/brush.svg" alt="Ikona štětce")
+        h3 Nátěry všech povrchů
+        p
+          | Provádíme veškeré natěračské práce a malířské práce na stavbách, v interiérech, bytech, ocelových a dřevěných konstrukcích, budovách, výrobních halách i v terénu.
+      .clearfix
+
+      .services__service.box
+        img.service--icon(src="resources/icons/paper-roll.svg" alt="Ikona tapetového papíru")
+        h3 Tapetování
+        p
+          | Pracujeme s vinylovými, vliesovými, reliéfními, textilními i sklovláknitými tapetami značky VAVEX.
+
+      .services__service.box
+        img.service--icon(src="resources/icons/airbrush.svg" alt="Ikona stříkací pistole")
+        h3 Nástřiky Gotele
+        p
+          | Plastické nástřiky Gotele dodávají interiéru mimořádný a elegantní vzhled. &nbsp;
+          a(href="gotele.html") více >
+
+      .services__service.box
+        img.service--icon(src="resources/icons/broom.svg" alt="Ikona smetáku")
+        h3 Mytí Fasád a chodníků
+        p
+          | Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků &nbsp;
+          a(href="cisteni.html") více >
+
+  section.section-gallery
+    ul.gallery__showcase.clearfix
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby")
+      li.gallery__list
+        figure.gallery__photo
+          img.gallery__photo--img(src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby")
+
+  section#cenik.section-price-list
+    .row
+      h2 Ceník
+    .pl.row
+      .pl__category.col.span-1-of-2.box
+        h3
+          i.icon-small.ion-ios-calculator
+          | Standardní interiérové barvy
+        .pl__category--item
+          span.pl--type Jupol Classic
+          span.pl--price
+            | 35–45 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jupol Citro
+          span.pl--price
+            | 40–50 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jupol Gold
+          span.pl--price
+            | 50–100 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jupol Brilliant
+          span.pl--price
+            | 70–120 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jupol Latex
+          span.pl--price
+            | 120 Kč / m
+            sup 2
+          span.pl--note (omyvatelná)
+        .pl__category--item
+          span.pl--type Hetmal
+          span.pl--price
+            | 30–40 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Het Klasik
+          span.pl--price
+            | 50 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Het Brillant
+          span.pl--price
+            | 90 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Primalex Standard
+          span.pl--price
+            | 30–40 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Primalex Plus
+          span.pl--price
+            | 50 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Primalex Polar
+          span.pl--price
+            | 45–60 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Dulux Classic White
+          span.pl--price
+            | 50–75 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Dulux Trade Vinyl Matt
+          span.pl--price
+            | 120 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Dulux EasyCare
+          span.pl--price
+            | 65–100 Kč / m
+            sup 2
+          span.pl--note (omyvatelná)
+      .pl__category.col.span-1-of-2.box
+        h3
+          i.icon-small.ion-ios-calculator
+          | Fasádní barvy
+        .pl__category--item
+          span.pl--type Caparol Muresko
+          span.pl--price
+            | 110–150 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Caparol Amphisilan
+          span.pl--price
+            | 100–140 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Caparol Sylitol Fassadenfarbe
+          span.pl--price
+            | 120–160 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Akrylcolor
+          span.pl--price
+            | 120–150 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Jubizol
+          span.pl--price
+            | 160–190 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Tikkurila Silicone Protect
+          span.pl--price
+            | 200–300 Kč / m
+            sup 2
+        .pl__category--item
+          span.pl--type Nanoporcolor
+          span.pl--price
+            | 180–220 Kč / m
+            sup 2
+    .pl.row
+      .pl__category.col.span-1-of-2.box
+        h3
+          i.icon-small.ion-ios-calculator
+          | Penetrace
+        .pl__category--item
+          span.pl--type Penetrace běžná (Primalex / Jukol apod.)
+          span.pl--price
+            | 20 Kč / m
+            sup 2
+      .pl__category.col.span-1-of-2.box
+        h3
+          i.icon-small.ion-ios-calculator
+          | Prémiové interiérové barvy
+        .pl__category--item
+          span.pl--type Tikkurila OPTIVA 3 CERAMIC
+          span.pl--price
+            | 100–130 Kč / m
+            sup 2
+          span.pl--note jemná, super matná, odolná
+        .pl__category--item
+          span.pl--type Flügger Dekso 20 H2O
+          span.pl--price
+            | 100–150 Kč / m
+            sup 2
+          span.pl--note vysoce omyvatelná
+
+  section#kontakty.section-contacts
+    .row
+      h2.contacts__heading Kontakty
+    .row
+      .contacts__address.col.span-1-of-3.box
+        .address--group
+          span.address--text
+            i.ion-ios-person.icon-contacts
+            | Radek Tlach
+          span.address--text
+            i.ion-ios-location.icon-contacts
+            | Opavská 386/24
+          span.address--text.marg Bolatice 74 723
+        .address--group
+          span.address--text
+            i.ion-ios-email.icon-contacts
+            | tlachr@seznam.cz
+          span.address--text
+            i.ion-ios-telephone.icon-contacts
+            | +420 608 741 218
+        .address--group
+          span.address--text
+            b IČO:
+            |  67319556
+          span.address--text
+            b DIČ:
+            |  CZ7412185572
+        .address--group
+          span.address--text
+            b Bankovní spojení:
+          span.address--text Raiffeisen Bank
+          span.address--text 597779001 / 5500
+      .col.span-2-of-3.box
+        #map
+          iframe.map__iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.2029281295327!2d18.073287015919217!3d49.95129573108536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711604bf16ccb1b%3A0xca3dcbadef7bc98!2sOpavsk%C3%A1+386%2F24%2C+747+23+Bolatice!5e0!3m2!1scs!2scz!4v1517995038862" frameborder="0" style="border:0" allowfullscreen="")
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="resources/js/script.js")
