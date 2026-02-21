@@ -4,6 +4,7 @@ node_modules/
 
 # forward slash / means its root directory
 /img/
+source_images/
 
 # Generated files - HTML from Pug, CSS from Sass
 public/*.html
