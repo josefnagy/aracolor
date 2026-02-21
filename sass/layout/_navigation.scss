@@ -235,3 +235,54 @@
   padding: .3rem;
   fill: $color-white;
 }
+
+// ---- Responsive floating nav ----
+@media (max-width: 767px) {
+  .nav--floating {
+    width: calc(100% - 4rem);
+    padding: 0 2rem;
+  }
+
+  .nav--floating .nav__list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.8rem;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.6rem;
+    padding: 1.2rem 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav--floating .nav__item {
+    display: block;
+  }
+
+  .nav--floating .nav__link {
+    display: block;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.5rem;
+  }
+
+  .nav__social {
+    display: none;
+  }
+
+  .mobile-nav-icon {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav--floating {
+    width: calc(100% - 2.4rem);
+    padding: 0 1.6rem;
+    height: 5rem;
+  }
+}

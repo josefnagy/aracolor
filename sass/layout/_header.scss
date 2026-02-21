@@ -238,8 +238,9 @@
   text-transform: uppercase;
 }
 
-// Hero carousel arrows
+// Hero carousel arrows (temporarily hidden)
 .hero__arrow {
+  display: none !important;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -311,6 +312,83 @@
     width: 2.4rem;
     border-radius: 0.4rem;
     background-color: $color-gold;
+  }
+}
+
+// ---- Responsive hero ----
+@media (max-width: 1023px) {
+  .hero__content {
+    left: 6rem;
+    max-width: 60rem;
+  }
+
+  .hero__stats {
+    right: 6rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: 60rem;
+  }
+
+  .hero__content {
+    left: 4rem;
+    right: 4rem;
+    max-width: none;
+  }
+
+  .hero__headline {
+    font-size: 4.8rem;
+  }
+
+  .hero__subtext br {
+    display: none;
+  }
+
+  .hero__accent-line {
+    display: none;
+  }
+
+  .hero__stats {
+    right: auto;
+    left: 4rem;
+    gap: 3.2rem;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__btn {
+    padding: 1.4rem 2.8rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 55rem;
+  }
+
+  .hero__content {
+    left: 2.4rem;
+    right: 2.4rem;
+    top: 22rem;
+  }
+
+  .hero__headline {
+    font-size: 3.8rem;
+  }
+
+  .hero__stats {
+    left: 2.4rem;
+    gap: 2.4rem;
   }
 }
 
@@ -386,7 +464,7 @@
 .header__arrows a {
   position: absolute;
   top: 45%;
-  display: block;
+  display: none; // temporarily hidden
   outline: none;
   text-align: left;
   z-index: 5;

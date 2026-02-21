@@ -77,3 +77,18 @@ a:hover, a:active {
   font-size: 2rem;
   text-align: center;
 }
+
+// ---- Responsive row padding ----
+@media (max-width: 1200px) {
+  .row {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

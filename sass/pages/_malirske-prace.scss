@@ -293,3 +293,157 @@
   white-space: nowrap;
   margin-left: 0.8rem;
 }
+
+// ---- Responsive ----
+
+@media (max-width: 1023px) {
+  .mp-section {
+    padding: 8rem 0;
+  }
+
+  .mp-section__inner {
+    padding: 0 3rem;
+  }
+
+  .mp-section-title {
+    font-size: 3.8rem;
+  }
+
+  .mp-features {
+    flex-wrap: wrap;
+  }
+
+  .mp-feature-card {
+    flex: 1 1 calc(50% - 1.2rem);
+  }
+
+  .mp-gallery__item img {
+    height: 16rem;
+  }
+
+  .mp-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mp-price-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .mp-section {
+    padding: 6rem 0;
+  }
+
+  .mp-section__inner {
+    padding: 0 2rem;
+  }
+
+  .mp-section-title {
+    font-size: 3.4rem;
+  }
+
+  .mp-features {
+    flex-direction: column;
+  }
+
+  .mp-feature-card {
+    width: 100%;
+    padding: 2.8rem 2.4rem;
+  }
+
+  .mp-gallery__row {
+    flex-wrap: wrap;
+  }
+
+  .mp-gallery__item {
+    flex: 1 1 calc(50% - 0.2rem);
+  }
+
+  .mp-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mp-price-grid {
+    flex-direction: column;
+  }
+
+  .mp-price-grid__left,
+  .mp-price-grid__right {
+    width: 100%;
+  }
+
+  .mp-price-item {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mp-section {
+    padding: 4.8rem 0;
+  }
+
+  .mp-section__inner {
+    padding: 0 1.6rem;
+  }
+
+  .mp-section-title {
+    font-size: 2.8rem;
+  }
+
+  .mp-tag__text {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .mp-feature-card__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .mp-feature-card__title {
+    font-size: 1.8rem;
+  }
+
+  .mp-feature-card__desc {
+    font-size: 1.3rem;
+  }
+
+  .mp-gallery__item img {
+    height: 12rem;
+  }
+
+  .mp-service-card__icon-wrap {
+    width: 5.2rem;
+    height: 5.2rem;
+  }
+
+  .mp-service-card__icon {
+    height: 2.6rem;
+  }
+
+  .mp-service-card__title {
+    font-size: 1.8rem;
+  }
+
+  .mp-service-card__desc {
+    font-size: 1.3rem;
+  }
+
+  .mp-price-item {
+    padding: 1rem 1.6rem;
+  }
+
+  .mp-price-item__name {
+    font-size: 1.3rem;
+  }
+
+  .mp-price-item__price {
+    font-size: 1.3rem;
+  }
+}

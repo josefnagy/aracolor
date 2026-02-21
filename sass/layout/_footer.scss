@@ -93,3 +93,31 @@
     color: $color-gold;
   }
 }
+
+// ---- Responsive footer ----
+@media (max-width: 767px) {
+  .footer__content {
+    flex-direction: column;
+    padding: 3.2rem 4rem;
+    gap: 3.2rem;
+  }
+
+  .footer-nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__copyright {
+    padding: 2rem 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__content {
+    padding: 2.4rem;
+  }
+
+  .footer__copyright {
+    padding: 2rem 2.4rem;
+  }
+}
