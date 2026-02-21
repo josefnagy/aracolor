@@ -273,7 +273,6 @@
   font-size: 1.4rem;
   font-weight: 400;
   color: rgba($color-offwhite, 0.8);
-  flex: 1;
 }
 
 .mp-price-item__price {
@@ -282,7 +281,8 @@
   font-weight: 600;
   color: $color-gold;
   white-space: nowrap;
-  margin-left: 1.6rem;
+  margin-left: auto;
+  padding-left: 1.6rem;
 }
 
 .mp-price-item__note {
@@ -290,6 +290,6 @@
   font-size: 1.2rem;
   font-weight: 400;
   color: rgba($color-offwhite, 0.4);
-  margin-left: 0.8rem;
   white-space: nowrap;
+  margin-left: 0.8rem;
 }

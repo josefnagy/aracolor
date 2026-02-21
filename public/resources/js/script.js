@@ -318,28 +318,27 @@ $(document).ready(function() {
       });
     }
 
-  } else {
-
-    $(".scroll-js").click(function (event) {
-      var href = $(this).attr('href');
-      var currentPage = location.pathname.split('/').pop() || 'index.html';
-      var linkPage = href.split('#')[0] || currentPage;
-
-      // Only smooth-scroll if target is on the current page
-      if (linkPage === currentPage || linkPage === '') {
-        event.preventDefault();
-        //calculate destination place
-        var dest = 0;
-        if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-          dest = $(document).height() - $(window).height();
-        } else {
-          dest = $(this.hash).offset().top - 50;
-        }
-        //go to destination
-        $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
-      }
-    });
   }
+
+  $(".scroll-js").click(function (event) {
+    var href = $(this).attr('href');
+    var currentPage = location.pathname.split('/').pop() || 'index.html';
+    var linkPage = href.split('#')[0] || currentPage;
+
+    // Only smooth-scroll if target is on the current page
+    if (linkPage === currentPage || linkPage === '') {
+      event.preventDefault();
+      //calculate destination place
+      var dest = 0;
+      if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+        dest = $(document).height() - $(window).height();
+      } else {
+        dest = $(this.hash).offset().top - 50;
+      }
+      //go to destination
+      $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
+    }
+  });
 
 
   // back to top button

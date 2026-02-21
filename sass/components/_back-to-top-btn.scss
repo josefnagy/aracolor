@@ -3,25 +3,30 @@
   background: none;
   margin: 0;
   position: fixed;
-  bottom: 5%;
-  right: 3%;
-  width: 5rem;
-  height: 5rem;
+  bottom: 3.2rem;
+  right: 3.2rem;
+  width: 4.8rem;
+  height: 4.8rem;
   z-index: 100;
   display: none;
   text-decoration: none;
-  color: $color-white;
-  border-radius: 0.4rem;
-  background-color: $primary-color;
+  color: $color-bg-dark;
+  border-radius: 50%;
+  background-color: $color-gold;
   text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .btn--back-to-top:hover {
-  background-color: rgba($primary-color, 0.9);
+  background-color: lighten($color-gold, 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 // scroll to top button icon
 .ion-ios-arrow-up {
-  color: $color-white;
-  font-size: 5rem;
+  color: $color-bg-dark;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
 }
