@@ -10,7 +10,8 @@
     "build:html:once": "pug templates/main --out public -P",
     "dev": "concurrently --kill-others \"npm run build:html\" \"npm run build:css\" \"browser-sync start --server public --files 'public/**/*'\"",
     "build": "npm run build:css:once && npm run build:html:once",
-    "deploy": "npx firebase-tools deploy --only hosting"
+    "deploy": "npx firebase-tools deploy --only hosting",
+    "process:images": "node js/processImages.js"
   },
   "repository": {
     "type": "git",
