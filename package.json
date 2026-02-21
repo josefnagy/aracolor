@@ -4,10 +4,12 @@
   "description": "aracolor static website",
   "main": "index.html",
   "scripts": {
-    "build:css": "node-sass sass/main.scss public/resources/css/style.css -w",
+    "build:css": "sass sass/main.scss:public/resources/css/style.css --watch --no-source-map --silence-deprecation=import",
+    "build:css:once": "sass sass/main.scss:public/resources/css/style.css --no-source-map --silence-deprecation=import",
     "build:html": "pug templates/main --out public -w -P",
-    "css:watch": "npm run css && node-sass sass/main.scss public/resources/css/style.css -w",
+    "build:html:once": "pug templates/main --out public -P",
     "dev": "concurrently --kill-others \"npm run build:html\" \"npm run build:css\" \"browser-sync start --server public --files 'public/**/*'\"",
+    "build": "npm run build:css:once && npm run build:html:once",
     "deploy": "npx firebase-tools deploy --only hosting"
   },
   "repository": {
@@ -25,16 +27,12 @@
   "homepage": "https://github.com/josefnagy/aracolor#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3",
-    "concurrently": "^4.1.1",
-    "node-sass": "^4.12.0",
+    "chalk": "^4.1.2",
+    "concurrently": "^9.1.0",
     "npm-run-all": "^4.1.5",
-    "pug": "^2.0.3",
-    "sharp": "^0.27.2"
-  },
-  "dependencies": {
-    "@babel/node": "^7.4.5",
-    "g": "^2.0.1",
-    "masonry": "0.0.2",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.83.0",
+    "sharp": "^0.34.0"
   }
 }
