@@ -1,26 +1,167 @@
-//------------------------ Main Navigation -----------------------
+//------------------------ Floating Navigation -----------------------
 
-.nav {
-  @include fixed(top 0 left 0);
+.nav--floating {
+  position: absolute;
+  top: 2.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 10rem);
+  max-width: 134rem;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 2.8rem;
+  padding: 0 3.2rem;
+  height: 5.6rem;
+}
 
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+
+  .logo__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 0;
+
+    &:hover {
+      border: 0;
+    }
+  }
+}
+
+.nav__logo-icon {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: $color-gold;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.nav__logo-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-offwhite;
+  letter-spacing: 0.1rem;
+  text-transform: none;
+}
+
+.nav--floating .nav__list {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  list-style: none;
+  margin: 0;
+}
+
+.nav--floating .nav__item {
+  display: inline-block;
+}
+
+.nav--floating .nav__link {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: rgba($color-offwhite, 0.8);
+  text-transform: none;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  transition: color 0.3s;
+
+  &:link, &:visited {
+    color: rgba($color-offwhite, 0.8);
+    border: 0;
+  }
+
+  &:hover, &:active {
+    color: $color-gold;
+    border: 0;
+  }
+
+  &--active,
+  &--active:link,
+  &--active:visited {
+    color: $color-gold;
+  }
+}
+
+.nav__social {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:link, &:visited {
+    color: rgba($color-offwhite, 0.67);
+    border: 0;
+  }
+
+  &:hover, &:active {
+    color: $color-offwhite;
+    border: 0;
+  }
+
+  i {
+    font-size: 1.8rem;
+  }
+}
+
+.mobile-nav-icon {
+  display: none;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+  }
+
+  i {
+    font-size: 3rem;
+    color: $color-offwhite;
+  }
+}
+
+// Legacy fixed nav (for other pages like malirske-prace)
+.nav:not(.nav--floating) {
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: $color-white;
   box-shadow: 0 .2rem .2rem rgba($shadow-color, .5);
   width: 100%;
   z-index: 100;
 
-  &__list {
+  .nav__list {
     display: block;
     float: right;
     margin: 0;
   }
 
-  //Create a horizontal list with spacing
-  &__item {
+  .nav__item {
     display: inline-block;
     position: relative;
 
-
-    // underline hover effect for top link menu
     &::after {
       cursor: pointer;
       position: absolute;
@@ -33,23 +174,20 @@
       opacity: 0;
     }
 
-    &:hover {
-      &::after {
-        left: 0;
-        background-color: $primary-color;
-        width: 100%;
-        opacity: 1;
-      }
+    &:hover::after {
+      left: 0;
+      background-color: $primary-color;
+      width: 100%;
+      opacity: 1;
     }
   }
 
-  //Style for menu links
-  &__link {
+  .nav__link {
     display: block;
     font-size: 1.7rem;
     text-align: justify;
     line-height: 7rem;
-    padding: 0 2rem 0 2rem ;
+    padding: 0 2rem;
     text-transform: uppercase;
 
     &:link {
@@ -58,25 +196,7 @@
   }
 }
 
-.mobile-nav-icon {
-  display: none;
-  float: right;
-  margin-top: 1.8rem;
-  margin-right: 2.5rem;
-  cursor: pointer;
-}
-
-.mobile-nav-icon:hover {
-  border: none;
-}
-
-.mobile-nav-icon i {
-  font-size: 3rem;
-  color: $primary-color;
-}
-
-
-//------------------------ logo -----------------------
+//------------------------ logo (legacy for other pages) -----------------------
 .logo {
   display: inline-block;
   height: 100%;
@@ -112,7 +232,6 @@
 
 .dropdown-icon {
   height: 100%;
-  // height: 1.7rem;
   padding: .3rem;
   fill: $color-white;
 }

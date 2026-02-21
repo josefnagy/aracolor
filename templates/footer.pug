@@ -1,27 +1,19 @@
 footer.footer
-  .row
-    .col.span-2-of-3
-      ul.footer-nav__list
-        li.footer-nav__item
-          a.footer-nav__link.scroll-js(href="index.html#header") Úvod
-        li.footer-nav__item
-          a.footer-nav__link(href="malirske-prace.html") Malířské práce
-        li.footer-nav__item
-          a.footer-nav__link(href="reference.html") Reference
-        li.footer-nav__item
-          a.footer-nav__link.scroll-js(href="index.html#kontakty") Kontakty
-    .col.span-1-of-3
-      ul.footer-nav__social-list
-        li.footer-nav__item
-          a.footer-nav__link(href="https://www.facebook.com/radek.tlach.9" target="_blank")
-            i.ion-social-facebook
-        li.footer-nav__item
-          a.footer-nav__link(href="https://www.instagram.com/tlachradek/" target="_blank")
-            i.ion-social-instagram
-  .row
+  .footer__divider
+  .footer__content
+    ul.footer-nav__list
+      li.footer-nav__item: a.footer-nav__link.scroll-js(href="index.html#header") Úvod
+      li.footer-nav__item: a.footer-nav__link(href="malirske-prace.html") Malířské práce
+      li.footer-nav__item: a.footer-nav__link(href="reference.html") Reference
+      li.footer-nav__item: a.footer-nav__link.scroll-js(href="index.html#kontakty") Kontakty
+    ul.footer-nav__social-list
+      li.footer-nav__item: a.footer-nav__link(href="https://www.facebook.com/radek.tlach.9" target="_blank"): i.ion-social-facebook
+      li.footer-nav__item: a.footer-nav__link(href="https://www.instagram.com/tlachradek/" target="_blank"): i.ion-social-instagram
+  .footer__divider
+  .footer__copyright
     p.footer__copy
       | Copyright © <span id="year"></span> by Aracolor. Created by &nbsp;
-      a.footer__copy--link(href="https://josefnagy.cz" target="_blank") Josef Nagy &nbsp;
+      a.footer__copy--link(href="https://josefnagy.cz" target="_blank") Josef Nagy
       | . All rights reserved.
 
 script.

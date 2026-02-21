@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0F0D0A">
     <link rel="stylesheet" href="vendors/css/animate.css">
     <link rel="stylesheet" href="vendors/css/grid.css">
     <link rel="stylesheet" href="vendors/css/ionicons.min.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="vendors/css/featherlight.gallery.min.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/queries.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:wght@300;400;500;600&amp;family=Roboto:wght@100;300;700&amp;display=swap" rel="stylesheet">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -108,230 +108,259 @@
         </g>
       </svg>
     </div>
-    <header class="header" id="header">
-      <nav class="nav">
-        <div class="row">
-          <div class="logo"><a class="logo__link" href="/"><img class="logo__img" src="resources/img/logo-bird-v4.svg" alt="Aracolor logo"><img class="logo__text" src="resources/img/logo-text-v6.svg" alt="Aracolor logo"></a></div>
+    <section class="hero-section" id="header">
+      <nav class="nav nav--floating">
+        <div class="nav__inner">
+          <div class="nav__logo"><a class="logo__link" href="/"><i class="nav__logo-icon"></i><span class="nav__logo-text">aracolor</span></a></div>
           <ul class="nav__list js--nav__list">
-            <li class="nav__item"><a class="nav__link scroll-js" href="index.html#header">Úvod</a></li>
-            <li class="nav__item"><a class="nav__link" href="malirske-prace.html">Malířské práce</a></li>
+            <li class="nav__item"><a class="nav__link  scroll-js" href="index.html#header">Úvod</a></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="malirske-prace.html">Malířské práce</a></li>
             <li class="nav__item"><a class="nav__link" href="reference.html">Reference</a></li>
-            <li class="nav__item"><a class="nav__link scroll-js" href="index.html#kontakty">Kontakty</a></li>
-            <li class="nav__item"><a class="nav__link" href="https://www.facebook.com/radek.tlach.9" target="_blank"><i class="ion-social-facebook"></i></a></li>
-            <li class="nav__item"><a class="nav__link" href="https://www.instagram.com/tlachradek/" target="_blank"><i class="ion-social-instagram"></i></a></li>
-          </ul><a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
+            <li class="nav__item"><a class="nav__link" href="index.html#kontakty">Kontakty</a></li>
+          </ul>
+          <div class="nav__social"><a class="nav__social-link" href="https://www.facebook.com/radek.tlach.9" target="_blank"><i class="ion-social-facebook"></i></a><a class="nav__social-link" href="https://www.instagram.com/tlachradek/" target="_blank"><i class="ion-social-instagram"></i></a></div><a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
         </div>
       </nav>
-      <div class="hero">
-        <div class="header__hero-box">
-          <h1 class="header__heading animated bounceInLeft">Malířské práce</h1>
-          <p class="header__text animated bounceInRight">Kompletní malířské a natěračské práce v interiéru i exteriéru, profesionální přístup a špičková kvalita.</p>
-        </div>
-        <div class="header__arrows"><a class="header__arrows--prev" href="#"><span class="header__icon-wrap">
-              <svg class="header__icon" width="32" height="32" viewbox="0 0 64 64">
-                <use xlink:href="#arrow-left-5"></use>
-              </svg></span><img src="resources/img/arrow-natery.png" alt="Sekce nátěry"></a><a class="header__arrows--next" href="#"><span class="header__icon-wrap">
-              <svg class="header__icon" width="32" height="32" viewbox="0 0 64 64">
-                <use xlink:href="#arrow-right-5"></use>
-              </svg></span><img src="resources/img/arrow-malby.png" alt="Sekce malby"></a></div>
-        <div class="header__scrolldown-anim"><a class="scrolldown-anim__link" href="#"><span class="scrolldown-anim__link--inner"></span></a></div><a class="btn--back-to-top" href="#"><i class="ion-ios-arrow-up"></i></a>
+      <div class="hero__bg" style="background-image: url('resources/img/hero-malirske-prace-2.jpg')"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__bottom-gradient"></div>
+      <div class="hero__accent-line"></div>
+      <div class="hero__content">
+        <div class="hero__tagline"><span class="hero__tagline-dash"></span><span class="hero__tagline-text">MALÍŘSKÉ PRÁCE</span></div>
+        <h1 class="hero__headline">Malování Interiérů<br>a Exteriérů</h1>
+        <p class="hero__subtext">Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě.<br>Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd.</p>
+        <div class="hero__cta"><a class="hero__btn hero__btn--primary" href="#kontakty"><i class="ion-ios-email-outline hero__btn-icon"></i>Kontaktujte nás</a><a class="hero__btn hero__btn--secondary" href="#cenik"><i class="ion-ios-list-outline hero__btn-icon"></i>Ceník služeb</a></div>
+      </div><a class="hero__arrow hero__arrow--left" href="index.html#header" title="Dekorační stěrky">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg></a><a class="hero__arrow hero__arrow--right" href="gotele.html" title="Nástřiky Gotele">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg></a>
+      <div class="hero__dots"><span class="hero__dot"></span><span class="hero__dot hero__dot--active"></span><span class="hero__dot"></span></div>
+      <div class="hero__scroll">
+        <div class="hero__scroll-line"></div><span class="hero__scroll-text">scroll</span>
       </div>
-    </header>
-    <section class="section-why-us" id="features">
-      <div class="row">
-        <h2 class="why-us__heading">Svěřte interiér i exteriér profesionálům</h2>
-        <p class="long-copy">To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky, ať už se jedná o natření plotu nebo o vymalování výrobní haly.</p>
-      </div>
-      <div class="row">
-        <div class="col span-1-of-4 box"><i class="icon-big ion-ios-checkmark-empty"></i>
-          <h3>Zkušenost</h3>
-          <p>Více než 22 let v oboru.</p>
+    </section>
+    <section class="mp-section" id="features">
+      <div class="mp-section__inner">
+        <div class="mp-section-header">
+          <div class="mp-tag"><span class="mp-tag__dash"></span><span class="mp-tag__text">PROČ PRÁVĚ MY</span><span class="mp-tag__dash"></span></div>
+          <h2 class="mp-section-title">Svěřte interiér i exteriér profesionálům</h2>
+          <p class="mp-section-subtitle">To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky, ať už se jedná o natření plotu nebo o vymalování výrobní haly.</p>
         </div>
-        <div class="col span-1-of-4 box"><i class="icon-big ion-ios-star-outline"></i>
-          <h3>Kvalita</h3>
-          <p>Za Naší prací si stojíme, proto se nebojíme dávat 24 - měsíční záruku na dílo.</p>
-        </div>
-        <div class="col span-1-of-4 box"><i class="icon-big ion-ios-speedometer-outline"></i>
-          <h3>Rychlost</h3>
-          <p>Jsme placeni od metrů, ne od hodiny a proto se můžete spolehnout, že práce bude odsýpat.</p>
-        </div>
-        <div class="col span-1-of-4 box"><i class="icon-big ion-ios-trash-outline"></i>
-          <h3>Čistota</h3>
-          <p>Úklid po malování je pro Nás samozřejmostí.</p>
+        <div class="mp-features">
+          <div class="mp-feature-card">
+            <div class="mp-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="mp-feature-card__title">Zkušenost</h3>
+            <p class="mp-feature-card__desc">Více než 22 let v oboru.</p>
+          </div>
+          <div class="mp-feature-card">
+            <div class="mp-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="mp-feature-card__title">Kvalita</h3>
+            <p class="mp-feature-card__desc">Za Naší prací si stojíme, proto se nebojíme dávat 24 - měsíční záruku na dílo.</p>
+          </div>
+          <div class="mp-feature-card">
+            <div class="mp-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </div>
+            <h3 class="mp-feature-card__title">Rychlost</h3>
+            <p class="mp-feature-card__desc">Jsme placeni od metrů, ne od hodiny a proto se můžete spolehnout, že práce bude odsýpat.</p>
+          </div>
+          <div class="mp-feature-card">
+            <div class="mp-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+                <path d="M5 3v4"></path>
+                <path d="M19 17v4"></path>
+                <path d="M3 5h4"></path>
+                <path d="M17 19h4"></path>
+              </svg>
+            </div>
+            <h3 class="mp-feature-card__title">Čistota</h3>
+            <p class="mp-feature-card__desc">Úklid po malování je pro Nás samozřejmostí.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section-gallery">
-      <ul class="gallery__showcase clearfix">
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-      </ul>
-    </section>
-    <section class="section-our-services" id="sluzby">
-      <div class="row">
-        <h2>Naše služby</h2>
-        <p class="long-copy">Specializujeme se na Dekorační - Betonové stěrky, malby, nátěry, šablony a nástřiky interiéru a exteriéru. Pracujeme s kvalitními produkty (Jupol Gold, Dulux, Primalex, Het, Capalor atd.) Bezplatně Vám poradíme s návrhem Vašeho interiéru a exteriéru. Realizujeme malé a velké zakázky po celé České Republice.</p>
-      </div>
-      <div class="row flex-services">
-        <div class="services__service box"><img class="service--icon" src="resources/icons/spatula.svg" alt="Ikona špachtle">
-          <h3>Dekorační stěrky</h3>
-          <p>Originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací. &nbsp;<a href="index.html#header">více ></a></p>
+    <section class="mp-section mp-section--no-padding">
+      <div class="mp-gallery">
+        <div class="mp-gallery__row">
+          <div class="mp-gallery__item"><img src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje"></div>
         </div>
-        <div class="services__service box"><img class="service--icon" src="resources/icons/paint-roller.svg" alt="Ikona válečku">
-          <h3>Interiérové a exteriérové malířské práce</h3>
-          <p>Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd.</p>
-        </div>
-        <div class="services__service box"><img class="service--icon" src="resources/icons/brush.svg" alt="Ikona štětce">
-          <h3>Nátěry všech povrchů</h3>
-          <p>Provádíme veškeré natěračské práce a malířské práce na stavbách, v interiérech, bytech, ocelových a dřevěných konstrukcích, budovách, výrobních halách i v terénu.</p>
-        </div>
-        <div class="clearfix"></div>
-        <div class="services__service box"><img class="service--icon" src="resources/icons/paper-roll.svg" alt="Ikona tapetového papíru">
-          <h3>Tapetování</h3>
-          <p>Pracujeme s vinylovými, vliesovými, reliéfními, textilními i sklovláknitými tapetami značky VAVEX.</p>
-        </div>
-        <div class="services__service box"><img class="service--icon" src="resources/icons/airbrush.svg" alt="Ikona stříkací pistole">
-          <h3>Nástřiky Gotele</h3>
-          <p>Plastické nástřiky Gotele dodávají interiéru mimořádný a elegantní vzhled. &nbsp;<a href="gotele.html">více ></a></p>
-        </div>
-        <div class="services__service box"><img class="service--icon" src="resources/icons/broom.svg" alt="Ikona smetáku">
-          <h3>Mytí Fasád a chodníků</h3>
-          <p>Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků &nbsp;<a href="cisteni.html">více ></a></p>
+        <div class="mp-gallery__row">
+          <div class="mp-gallery__item"><img src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby"></div>
+          <div class="mp-gallery__item"><img src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby"></div>
         </div>
       </div>
     </section>
-    <section class="section-gallery">
-      <ul class="gallery__showcase clearfix">
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-        <li class="gallery__list">
-          <figure class="gallery__photo"><img class="gallery__photo--img" src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby"></figure>
-        </li>
-      </ul>
+    <section class="mp-section" id="sluzby">
+      <div class="mp-section__inner">
+        <div class="mp-section-header">
+          <div class="mp-tag"><span class="mp-tag__dash"></span><span class="mp-tag__text">CO NABÍZÍME</span><span class="mp-tag__dash"></span></div>
+          <h2 class="mp-section-title">Naše služby</h2>
+          <p class="mp-section-subtitle">Specializujeme se na Dekorační - Betonové stěrky, malby, nátěry, šablony a nástřiky interiéru a exteriéru. Pracujeme s kvalitními produkty (Jupol Gold, Dulux, Primalex, Het, Capalor atd.) Bezplatně Vám poradíme s návrhem Vašeho interiéru a exteriéru. Realizujeme malé a velké zakázky po celé České Republice.</p>
+        </div>
+        <div class="mp-services-grid">
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/spatula.svg" alt="Ikona špachtle"></div>
+            <h3 class="mp-service-card__title">Dekorační stěrky</h3>
+            <p class="mp-service-card__desc">Originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací.</p><a class="mp-service-card__link" href="index.html#header">Více informací →</a>
+          </div>
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/paint-roller.svg" alt="Ikona válečku"></div>
+            <h3 class="mp-service-card__title">Interiérové a exteriérové malířské práce</h3>
+            <p class="mp-service-card__desc">Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace vnitřních i vnějších barev na stěny, stropy, fasády atd.</p>
+          </div>
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/brush.svg" alt="Ikona štětce"></div>
+            <h3 class="mp-service-card__title">Nátěry všech povrchů</h3>
+            <p class="mp-service-card__desc">Provádíme veškeré natěračské práce a malířské práce na stavbách, v interiérech, bytech, ocelových a dřevěných konstrukcích, budovách, výrobních halách i v terénu.</p>
+          </div>
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/paper-roll.svg" alt="Ikona tapetového papíru"></div>
+            <h3 class="mp-service-card__title">Tapetování</h3>
+            <p class="mp-service-card__desc">Pracujeme s vinylovými, vliesovými, reliéfními, textilními i sklovláknitými tapetami značky VAVEX.</p>
+          </div>
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/airbrush.svg" alt="Ikona stříkací pistole"></div>
+            <h3 class="mp-service-card__title">Nástřiky Gotele</h3>
+            <p class="mp-service-card__desc">Plastické nástřiky Gotele dodávají interiéru mimořádný a elegantní vzhled.</p><a class="mp-service-card__link" href="gotele.html">Více informací →</a>
+          </div>
+          <div class="mp-service-card">
+            <div class="mp-service-card__icon-wrap"><img class="mp-service-card__icon" src="resources/icons/broom.svg" alt="Ikona smetáku"></div>
+            <h3 class="mp-service-card__title">Mytí Fasád a chodníků</h3>
+            <p class="mp-service-card__desc">Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků.</p><a class="mp-service-card__link" href="cisteni.html">Více informací →</a>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="section-price-list" id="cenik">
-      <div class="row">
-        <h2>Ceník</h2>
-      </div>
-      <div class="pl row">
-        <div class="pl__category col span-1-of-2 box">
-          <h3><i class="icon-small ion-ios-calculator"></i>Standardní interiérové barvy</h3>
-          <div class="pl__category--item"><span class="pl--type">Jupol Classic</span><span class="pl--price">35–45 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Jupol Citro</span><span class="pl--price">40–50 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Jupol Gold</span><span class="pl--price">50–100 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Jupol Brilliant</span><span class="pl--price">70–120 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Jupol Latex</span><span class="pl--price">120 Kč / m<sup>2</sup></span><span class="pl--note">(omyvatelná)</span></div>
-          <div class="pl__category--item"><span class="pl--type">Hetmal</span><span class="pl--price">30–40 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Het Klasik</span><span class="pl--price">50 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Het Brillant</span><span class="pl--price">90 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Primalex Standard</span><span class="pl--price">30–40 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Primalex Plus</span><span class="pl--price">50 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Primalex Polar</span><span class="pl--price">45–60 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Dulux Classic White</span><span class="pl--price">50–75 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Dulux Trade Vinyl Matt</span><span class="pl--price">120 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Dulux EasyCare</span><span class="pl--price">65–100 Kč / m<sup>2</sup></span><span class="pl--note">(omyvatelná)</span></div>
+    <section class="mp-section" id="cenik">
+      <div class="mp-section__inner">
+        <div class="mp-section-header">
+          <div class="mp-tag"><span class="mp-tag__dash"></span><span class="mp-tag__text">CENÍK</span><span class="mp-tag__dash"></span></div>
+          <h2 class="mp-section-title">Ceník služeb</h2>
         </div>
-        <div class="pl__category col span-1-of-2 box">
-          <h3><i class="icon-small ion-ios-calculator"></i>Fasádní barvy</h3>
-          <div class="pl__category--item"><span class="pl--type">Caparol Muresko</span><span class="pl--price">110–150 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Caparol Amphisilan</span><span class="pl--price">100–140 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Caparol Sylitol Fassadenfarbe</span><span class="pl--price">120–160 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Akrylcolor</span><span class="pl--price">120–150 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Jubizol</span><span class="pl--price">160–190 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Tikkurila Silicone Protect</span><span class="pl--price">200–300 Kč / m<sup>2</sup></span></div>
-          <div class="pl__category--item"><span class="pl--type">Nanoporcolor</span><span class="pl--price">180–220 Kč / m<sup>2</sup></span></div>
-        </div>
-      </div>
-      <div class="pl row">
-        <div class="pl__category col span-1-of-2 box">
-          <h3><i class="icon-small ion-ios-calculator"></i>Penetrace</h3>
-          <div class="pl__category--item"><span class="pl--type">Penetrace běžná (Primalex / Jukol apod.)</span><span class="pl--price">20 Kč / m<sup>2</sup></span></div>
-        </div>
-        <div class="pl__category col span-1-of-2 box">
-          <h3><i class="icon-small ion-ios-calculator"></i>Prémiové interiérové barvy</h3>
-          <div class="pl__category--item"><span class="pl--type">Tikkurila OPTIVA 3 CERAMIC</span><span class="pl--price">100–130 Kč / m<sup>2</sup></span><span class="pl--note">jemná, super matná, odolná</span></div>
-          <div class="pl__category--item"><span class="pl--type">Flügger Dekso 20 H2O</span><span class="pl--price">100–150 Kč / m<sup>2</sup></span><span class="pl--note">vysoce omyvatelná</span></div>
+        <div class="mp-price-grid">
+          <div class="mp-price-grid__left">
+            <div class="mp-price-card">
+              <div class="mp-price-header">
+                <h3 class="mp-price-header__title">Standardní interiérové barvy</h3>
+              </div>
+              <div class="mp-price-card__body">
+                <div class="mp-price-item"><span class="mp-price-item__name">Jupol Classic</span><span class="mp-price-item__price">35–45 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Jupol Citro</span><span class="mp-price-item__price">40–50 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Jupol Gold</span><span class="mp-price-item__price">50–100 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Jupol Brilliant</span><span class="mp-price-item__price">70–120 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Jupol Latex</span><span class="mp-price-item__price">120 Kč / m<sup>2</sup></span><span class="mp-price-item__note">(omyvatelná)</span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Hetmal</span><span class="mp-price-item__price">30–40 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Het Klasik</span><span class="mp-price-item__price">50 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Het Brillant</span><span class="mp-price-item__price">90 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Primalex Standard</span><span class="mp-price-item__price">30–40 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Primalex Plus</span><span class="mp-price-item__price">50 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Primalex Polar</span><span class="mp-price-item__price">45–60 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Dulux Classic White</span><span class="mp-price-item__price">50–75 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Dulux Trade Vinyl Matt</span><span class="mp-price-item__price">120 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Dulux EasyCare</span><span class="mp-price-item__price">65–100 Kč / m<sup>2</sup></span><span class="mp-price-item__note">(omyvatelná)</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mp-price-grid__right">
+            <div class="mp-price-card">
+              <div class="mp-price-header">
+                <h3 class="mp-price-header__title">Fasádní barvy</h3>
+              </div>
+              <div class="mp-price-card__body">
+                <div class="mp-price-item"><span class="mp-price-item__name">Caparol Muresko</span><span class="mp-price-item__price">110–150 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Caparol Amphisilan</span><span class="mp-price-item__price">100–140 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Caparol Sylitol Fassadenfarbe</span><span class="mp-price-item__price">120–160 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Akrylcolor</span><span class="mp-price-item__price">120–150 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Jubizol</span><span class="mp-price-item__price">160–190 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Tikkurila Silicone Protect</span><span class="mp-price-item__price">200–300 Kč / m<sup>2</sup></span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Nanoporcolor</span><span class="mp-price-item__price">180–220 Kč / m<sup>2</sup></span></div>
+              </div>
+            </div>
+            <div class="mp-price-card">
+              <div class="mp-price-header">
+                <h3 class="mp-price-header__title">Penetrace</h3>
+              </div>
+              <div class="mp-price-card__body">
+                <div class="mp-price-item"><span class="mp-price-item__name">Penetrace běžná (Primalex / Jukol apod.)</span><span class="mp-price-item__price">20 Kč / m<sup>2</sup></span></div>
+              </div>
+            </div>
+            <div class="mp-price-card">
+              <div class="mp-price-header">
+                <h3 class="mp-price-header__title">Prémiové interiérové barvy</h3>
+              </div>
+              <div class="mp-price-card__body">
+                <div class="mp-price-item"><span class="mp-price-item__name">Tikkurila OPTIVA 3 CERAMIC</span><span class="mp-price-item__price">100–130 Kč / m<sup>2</sup></span><span class="mp-price-item__note">jemná, super matná, odolná</span></div>
+                <div class="mp-price-item"><span class="mp-price-item__name">Flügger Dekso 20 H2O</span><span class="mp-price-item__price">100–150 Kč / m<sup>2</sup></span><span class="mp-price-item__note">vysoce omyvatelná</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section-contacts" id="kontakty">
-      <div class="row">
-        <h2 class="contacts__heading">Kontakty</h2>
-      </div>
-      <div class="row">
-        <div class="contacts__address col span-1-of-3 box">
-          <div class="address--group"><span class="address--text"><i class="ion-ios-person icon-contacts"></i>Radek Tlach</span><span class="address--text"><i class="ion-ios-location icon-contacts"></i>Opavská 386/24</span><span class="address--text marg">Bolatice 74 723</span></div>
-          <div class="address--group"><span class="address--text"><i class="ion-ios-email icon-contacts"></i>tlachr@seznam.cz</span><span class="address--text"><i class="ion-ios-telephone icon-contacts"></i>+420 608 741 218</span></div>
-          <div class="address--group"><span class="address--text"><b>IČO:</b> 67319556</span><span class="address--text"><b>DIČ:</b> CZ7412185572</span></div>
-          <div class="address--group"><span class="address--text"><b>Bankovní spojení:</b></span><span class="address--text">Raiffeisen Bank</span><span class="address--text">597779001 / 5500</span></div>
+      <div class="contacts__wrapper">
+        <div class="contacts__header">
+          <div class="contacts__tagline"><span class="contacts__tagline-dash"></span><span class="contacts__tagline-text">SPOJTE SE S NÁMI</span></div>
+          <h2 class="contacts__heading">Kontakty</h2>
+          <p class="contacts__subheading">Rádi vám poradíme s výběrem povrchové úpravy pro váš projekt</p>
         </div>
-        <div class="col span-2-of-3 box">
-          <div id="map">
-            <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.2029281295327!2d18.073287015919217!3d49.95129573108536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711604bf16ccb1b%3A0xca3dcbadef7bc98!2sOpavsk%C3%A1+386%2F24%2C+747+23+Bolatice!5e0!3m2!1scs!2scz!4v1517995038862" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+        <div class="contacts__content">
+          <div class="contacts__info">
+            <div class="contacts__details">
+              <div class="contacts__name-block"><span class="contacts__name">Radek Tlach</span><span class="contacts__address">Opavská 386/24 | Bolatice 747 23</span></div>
+              <div class="contacts__contact-block"><span class="contacts__contact-row"><i class="ion-ios-email contacts__icon"></i>tlachr@seznam.cz</span><span class="contacts__contact-row"><i class="ion-ios-telephone contacts__icon"></i>+420 608 741 218</span></div>
+              <hr class="contacts__divider">
+              <div class="contacts__business-block"><span class="contacts__business-row"><b>IČO:</b> 67319556</span><span class="contacts__business-row"><b>DIČ:</b> CZ7412185572</span></div>
+              <hr class="contacts__divider">
+              <div class="contacts__bank-block"><span class="contacts__bank-label">Bankovní spojení</span><span class="contacts__bank-text">Raiffeisen Bank</span><span class="contacts__bank-text">597779001 / 5500</span></div>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <div class="contacts__map-header"><i class="ion-ios-location contacts__map-icon"></i><span class="contacts__map-title">Opavská 386/24</span><span class="contacts__map-subtitle">Bolatice, 747 23</span></div>
+            <div class="contacts__map-body">
+              <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2567.2029281295327!2d18.073287015919217!3d49.95129573108536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4711604bf16ccb1b%3A0xca3dcbadef7bc98!2sOpavsk%C3%A1+386%2F24%2C+747+23+Bolatice!5e0!3m2!1scs!2scz!4v1517995038862" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <footer class="footer">
-      <div class="row">
-        <div class="col span-2-of-3">
-          <ul class="footer-nav__list">
-            <li class="footer-nav__item"><a class="footer-nav__link scroll-js" href="index.html#header">Úvod</a></li>
-            <li class="footer-nav__item"><a class="footer-nav__link" href="malirske-prace.html">Malířské práce</a></li>
-            <li class="footer-nav__item"><a class="footer-nav__link" href="reference.html">Reference</a></li>
-            <li class="footer-nav__item"><a class="footer-nav__link scroll-js" href="index.html#kontakty">Kontakty</a></li>
-          </ul>
-        </div>
-        <div class="col span-1-of-3">
-          <ul class="footer-nav__social-list">
-            <li class="footer-nav__item"><a class="footer-nav__link" href="https://www.facebook.com/radek.tlach.9" target="_blank"><i class="ion-social-facebook"></i></a></li>
-            <li class="footer-nav__item"><a class="footer-nav__link" href="https://www.instagram.com/tlachradek/" target="_blank"><i class="ion-social-instagram"></i></a></li>
-          </ul>
-        </div>
+      <div class="footer__divider"></div>
+      <div class="footer__content">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item"><a class="footer-nav__link scroll-js" href="index.html#header">Úvod</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="malirske-prace.html">Malířské práce</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="reference.html">Reference</a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link scroll-js" href="index.html#kontakty">Kontakty</a></li>
+        </ul>
+        <ul class="footer-nav__social-list">
+          <li class="footer-nav__item"><a class="footer-nav__link" href="https://www.facebook.com/radek.tlach.9" target="_blank"><i class="ion-social-facebook"></i></a></li>
+          <li class="footer-nav__item"><a class="footer-nav__link" href="https://www.instagram.com/tlachradek/" target="_blank"><i class="ion-social-instagram"></i></a></li>
+        </ul>
       </div>
-      <div class="row">
-        <p class="footer__copy">Copyright © <span id="year"></span> by Aracolor. Created by &nbsp;<a class="footer__copy--link" href="https://josefnagy.cz" target="_blank">Josef Nagy &nbsp;</a>. All rights reserved.</p>
+      <div class="footer__divider"></div>
+      <div class="footer__copyright">
+        <p class="footer__copy">Copyright © <span id="year"></span> by Aracolor. Created by &nbsp;<a class="footer__copy--link" href="https://josefnagy.cz" target="_blank">Josef Nagy</a>. All rights reserved.</p>
       </div>
     </footer>
     <script>document.getElementById("year").innerText = new Date().getFullYear();</script>

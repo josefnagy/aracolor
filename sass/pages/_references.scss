@@ -103,4 +103,131 @@
   display: block;
 }
 
+/*------------------------ Reference Overview Page ----------------------- */
 
+.ref-overview {
+  background-color: $color-bg-dark;
+  padding: 8rem 0;
+}
+
+.ref-overview__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ref-overview__header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.ref-overview__title {
+  font-family: "Fraunces", serif;
+  font-size: 4.4rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  letter-spacing: -0.05rem;
+  text-transform: none;
+  margin-bottom: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.ref-overview__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.ref-overview__card {
+  display: block;
+  text-decoration: none;
+  border: none;
+  transition: transform 0.3s;
+
+  &:link, &:visited {
+    border: none;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    border: none;
+  }
+}
+
+.ref-overview__card-img {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  .ref-overview__card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.ref-overview__card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ref-overview__card:hover & {
+    opacity: 1;
+  }
+}
+
+.ref-overview__card-count {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $color-offwhite;
+  letter-spacing: 0.1rem;
+}
+
+.ref-overview__card-name {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  text-align: center;
+  margin-top: 1.6rem;
+  text-transform: none;
+  letter-spacing: -0.02rem;
+
+  &:after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ref-overview__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ref-overview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ref-overview__title {
+    font-size: 3.2rem;
+  }
+}

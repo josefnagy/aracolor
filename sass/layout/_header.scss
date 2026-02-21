@@ -1,37 +1,332 @@
-.header {
+//------------------------ Hero Section (Redesigned) -----------------------
 
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 70rem;
+  max-height: 90rem;
+  overflow: hidden;
+  background-color: $color-bg-hero;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba($color-bg-hero, 0.8) 0%,
+    rgba($color-bg-hero, 0.4) 50%,
+    rgba($color-bg-hero, 0.6) 100%
+  );
+}
+
+.hero__bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+  background: linear-gradient(
+    180deg,
+    rgba($color-bg-hero, 0) 0%,
+    rgba($color-bg-hero, 0.8) 100%
+  );
+}
+
+.hero__accent-line {
+  position: absolute;
+  right: 6rem;
+  top: 40rem;
+  width: 0.3rem;
+  height: 8rem;
+  background-color: $color-gold;
+  border-radius: 0.2rem;
+}
+
+.hero__content {
+  position: absolute;
+  top: 28rem;
+  left: 8rem;
+  max-width: 70rem;
+  z-index: 2;
+}
+
+.hero__tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2.8rem;
+}
+
+.hero__tagline-dash {
+  display: inline-block;
+  width: 3.2rem;
+  height: 0.2rem;
+  background-color: $color-gold;
+}
+
+.hero__tagline-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $color-gold;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.hero__headline {
+  font-family: "Fraunces", serif;
+  font-size: 6.4rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  line-height: 1.1;
+  letter-spacing: -0.15rem;
+  text-transform: none;
+  margin-bottom: 2.8rem;
+}
+
+.hero__subtext {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgba($color-offwhite, 0.67);
+  line-height: 1.6;
+  margin-bottom: 2.8rem;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2.8rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+
+  &--primary {
+    background-color: $color-gold;
+    color: $color-bg-hero;
+
+    &:link, &:visited {
+      color: $color-bg-hero;
+      border: 0;
+      padding-bottom: 1.6rem;
+    }
+
+    &:hover, &:active {
+      background-color: lighten($color-gold, 8%);
+      color: $color-bg-hero;
+      border: 0;
+      padding-bottom: 1.6rem;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $color-offwhite;
+    border: 1.5px solid rgba($color-offwhite, 0.67);
+
+    &:link, &:visited {
+      color: $color-offwhite;
+      border: 1.5px solid rgba($color-offwhite, 0.67);
+      padding-bottom: 1.6rem;
+    }
+
+    &:hover, &:active {
+      background-color: rgba($color-offwhite, 0.1);
+      border: 1.5px solid rgba($color-offwhite, 0.9);
+      color: $color-offwhite;
+      padding-bottom: 1.6rem;
+    }
+  }
+}
+
+.hero__btn-icon {
+  font-size: 1.8rem;
+}
+
+// Stats area
+.hero__stats {
+  position: absolute;
+  bottom: 4rem;
+  right: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  z-index: 2;
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero__stat-value {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: $color-gold;
+}
+
+.hero__stat-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba($color-offwhite, 0.5);
+  letter-spacing: 0.1rem;
+}
+
+.hero__stat-divider {
+  width: 0.1rem;
+  height: 4rem;
+  background-color: rgba($color-offwhite, 0.12);
+}
+
+// Scroll indicator
+.hero__scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 2;
+}
+
+.hero__scroll-line {
+  width: 0.1rem;
+  height: 3.2rem;
+  background-color: rgba($color-offwhite, 0.37);
+}
+
+.hero__scroll-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba($color-offwhite, 0.37);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+// Hero carousel arrows
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 3;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  &:link, &:visited {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba($color-offwhite, 0.7);
+  }
+
+  &:hover, &:active {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: $color-offwhite;
+  }
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    stroke: rgba($color-offwhite, 0.7);
+    transition: stroke 0.3s;
+  }
+
+  &:hover svg {
+    stroke: $color-offwhite;
+  }
+
+  &--left {
+    left: 3rem;
+  }
+
+  &--right {
+    right: 3rem;
+  }
+}
+
+// Hero carousel dots
+.hero__dots {
+  position: absolute;
+  bottom: 3rem;
+  right: 6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 3;
+}
+
+.hero__dot {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: rgba($color-offwhite, 0.25);
+  transition: all 0.3s;
+
+  &--active {
+    width: 2.4rem;
+    border-radius: 0.4rem;
+    background-color: $color-gold;
+  }
+}
+
+//------------------------ Legacy header styles (for other pages) -----------------------
+
+.header {
   & .hero {
-    background-image: url(img/home-betonove-sterky-3.jpg);
+    background-image: url(img/home-malby.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    // background-size: cover;
     background-position: top center;
     height: 85vh;
   }
 
-
-
   transition: background-image .5s;
 
-  // styles for Betonove sterky
-  &.bs {
-    background-image: url(img/home-betonove-sterky-1b.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: initial;
-    height: 67vh;
-  }
-
-  // styles for reference galerii
-  &.rg {
-    background-image: url(img/ref-gallery-hero.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: initial;
-    height: 67vh;
-  }
-
-  // styles for gotele header
   &.rg {
     background-image: url(img/gotele-hero.jpg);
     background-size: cover;
@@ -40,7 +335,6 @@
     height: 67vh;
   }
 
-    // styles for cleaning header
   &.cl {
     background-image: url(img/cleaning-hero.jpg);
     background-size: cover;
@@ -57,7 +351,6 @@
   }
 
   .heading__wrap {
-    // width: 100%;
     text-align: center;
   }
 
@@ -73,100 +366,73 @@
     font-weight: 100;
   }
 
-  &__text.bs {
-    text-align: justify;
-    padding: 2rem 4rem;
-    margin-top: 2rem;
-  }
-
   &__hero-box {
-    @include absolute(top 55% left 45%);
-
-    width: auto;
-    transform: translate(-50%, -50%);
-  }
-
-  &__hero-box.bs {
-    @include absolute(top 38% left 50%);
+    position: absolute;
+    top: 55%;
+    left: 45%;
     width: auto;
     transform: translate(-50%, -50%);
   }
 
   &__hero-box.rg {
-    @include absolute(top 38% left 50%);
+    position: absolute;
+    top: 38%;
+    left: 50%;
     width: auto;
     transform: translate(-50%, -50%);
   }
-
-  &__link:link, &__link:visited {
-    color: $tertiary-color;
-  }
-
-  &__link:hover, &__link:active {
-    // color: $quinary-color;
-    border-bottom: .1rem solid $tertiary-color;
-  }
 }
 
 .header__arrows a {
-	position: absolute;
-	top: 45%;
-	display: block;
-	outline: none;
-	text-align: left;
-	z-index: 5;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+  position: absolute;
+  top: 45%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 5;
+  transform: translateY(-50%);
 }
 
 .header__arrows .header__arrows--prev {
-	left: 0;
+  left: 0;
 }
 
 .header__arrows .header__arrows--next {
-	right: 0;
+  right: 0;
 }
 
 .header__arrows a svg {
-	display: block;
-	margin: 0 auto;
-	padding: 0;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
 }
 
-//a-------------------------------------------
-
 .header__arrows a {
-	-webkit-perspective: 1000px;
-	perspective: 1000px;
+  perspective: 1000px;
 }
 
 .header__arrows--prev {
-	-webkit-perspective-origin: 100% 50%;
-	perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
 }
 
 .header__arrows--next {
-	-webkit-perspective-origin: 0% 50%;
-	perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
 }
 
 .header__icon-wrap {
-	display: block;
-	width: 10rem;
-	height: 10rem;
-	background-color: $primary-color;
-	-webkit-transition: background-color .3s;
-	transition: background-color .3s;
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  background-color: $primary-color;
+  transition: background-color .3s;
 }
 
 .header__icon {
-	position: relative;
-	top: 50%;
-	-webkit-transition: fill .3s;
-	transition: fill .3s;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	fill: #fff;
+  position: relative;
+  top: 50%;
+  transition: fill .3s;
+  transform: translateY(-50%);
+  fill: #fff;
 }
 
 .header__arrows img {
@@ -174,39 +440,32 @@
   height: 10rem;
   width: 10rem;
   top: 0;
-  -webkit-transition: -webkit-transform 0.3s;
   transition: transform .3s;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .header__arrows .header__arrows--prev img {
-	left: 100%;
-	-webkit-transform: rotateY(90deg);
-	transform: rotateY(90deg);
-	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
+  left: 100%;
+  transform: rotateY(90deg);
+  transform-origin: 0% 50%;
 }
 
 .header__arrows .header__arrows--next img {
-	right: 100%;
-	-webkit-transform: rotateY(-90deg);
-	transform: rotateY(-90deg);
-	-webkit-transform-origin: 100% 50%;
-	transform-origin: 100% 50%;
+  right: 100%;
+  transform: rotateY(-90deg);
+  transform-origin: 100% 50%;
 }
 
 .header__arrows a:hover .header__icon-wrap {
-	background-color: $color-white;
+  background-color: $color-white;
 }
 
 .header__arrows a:hover .header__icon {
-	fill: $primary-color;
+  fill: $primary-color;
 }
 
 .header__arrows a:hover img {
-	-webkit-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .svg-wrap {

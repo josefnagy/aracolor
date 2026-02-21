@@ -1,6 +1,290 @@
+//------------------------ Dark product cards section -----------------------
+
+.section-products {
+  background-color: $color-bg-dark;
+  padding: 8rem 0 0 0;
+}
+
+// Section header
+.products__header {
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.products__tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.products__tag-dash {
+  display: inline-block;
+  width: 4rem;
+  height: 0.1rem;
+  background-color: rgba($color-gold, 0.37);
+}
+
+.products__tag-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $color-gold;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+.products__title {
+  font-family: "Fraunces", serif;
+  font-size: 4.4rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  letter-spacing: -0.05rem;
+  text-transform: none;
+  margin-bottom: 2rem;
+
+  &:after {
+    display: none;
+  }
+}
+
+.products__subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgba($color-offwhite, 0.5);
+  text-align: center;
+}
+
+// Product card
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  padding: 4rem 0;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.product-card__image-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 56rem;
+  height: 42rem;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  .decor-img__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .decor-img__text {
+      color: $color-offwhite;
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &:hover .decor-img__overlay {
+    opacity: 1;
+  }
+}
+
+.product-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.product-card__number {
+  font-family: "Fraunces", serif;
+  font-size: 4.8rem;
+  font-weight: 300;
+  color: rgba($color-gold, 0.19);
+}
+
+.product-card__name {
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  letter-spacing: -0.03rem;
+  text-transform: none;
+  text-align: left;
+  margin-bottom: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.product-card__desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba($color-offwhite, 0.67);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.product-card__accent {
+  width: 4.8rem;
+  height: 0.2rem;
+  background-color: $color-gold;
+}
+
+// Icons row
+.product-card__icons {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.product-card__icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba($color-offwhite, 0.06);
+  transition: background-color 0.3s;
+
+  &:link, &:visited {
+    border: 0;
+    color: rgba($color-offwhite, 0.67);
+  }
+
+  &:hover, &:active {
+    background-color: rgba($color-gold, 0.2);
+    border: 0;
+    color: $color-gold;
+  }
+
+  svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: rgba($color-offwhite, 0.67);
+    transition: fill 0.3s;
+  }
+
+  &:hover svg {
+    fill: $color-gold;
+  }
+}
+
+// Color swatches
+.product-card__swatches {
+  display: flex;
+  gap: 1rem;
+}
+
+.product-card__swatch {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+// Color variant image thumbnails
+.product-card__variants {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.6rem;
+
+  figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.8rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  figcaption {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba($color-offwhite, 0.5);
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 0.6rem;
+  }
+
+  a {
+    &:link, &:visited, &:hover, &:active {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Divider between cards
+.product-divider {
+  padding: 0;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba($color-offwhite, 0.06);
+  }
+}
+
+// Legacy styles kept for backwards compatibility with other pages
 .section-decor-types section {
   padding: 5rem 0;
 }
+
 .section-decor-types {
   background-color: $light-gray;
   box-sizing: initial;
@@ -41,12 +325,9 @@
       }
     }
 
-    &:hover {
-      .decor-img__overlay {
-        opacity: 0.7;
-        cursor: pointer;
-        transition: opacity .5s;
-      }
+    &:hover .decor-img__overlay {
+      opacity: 0.7;
+      cursor: pointer;
     }
   }
 }
@@ -62,15 +343,12 @@
   margin-top: 5.5rem;
 }
 
-.section-aureum, .section-ottocento,  .section-concrete, .section-zero {
-
+.section-aureum, .section-ottocento, .section-concrete, .section-zero {
   .decor__text {
     padding: 0 2rem 0 0;
   }
-
   background-color: white;
 }
-
 
 .decor__img {
   width: 100%;
@@ -92,7 +370,7 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
 }
 
 .link__icon:hover {
-  fill: #24BAD0
+  fill: #24BAD0;
 }
 
 .flex-row {
@@ -135,7 +413,6 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   text-align: center;
   padding: .5rem 0;
   border-radius: .6rem;
-
   position: absolute;
   z-index: 1;
   bottom: 350%;
@@ -151,7 +428,6 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  // justify-content: flex-end;
   width: 100%;
 
   figure {
@@ -176,5 +452,3 @@ section:nth-of-type(2n+1):not(.section-decor-types) .decor__icons {
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
-

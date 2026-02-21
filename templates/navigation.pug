@@ -1,26 +1,25 @@
-nav.nav
-  .row
-    .logo
+nav.nav.nav--floating
+  .nav__inner
+    .nav__logo
       a.logo__link(href="/")
-        img.logo__img(src="resources/img/logo-bird-v4.svg" alt="Aracolor logo")
-        img.logo__text(src="resources/img/logo-text-v6.svg" alt="Aracolor logo")
+        i.nav__logo-icon
+        span.nav__logo-text aracolor
 
     ul.nav__list.js--nav__list
       li.nav__item
-        a.nav__link.scroll-js(href="index.html#header") Úvod
+        a.nav__link(href="index.html#header" class=(activePage === 'index' || !activePage ? 'nav__link--active' : '') + ' scroll-js') Úvod
       li.nav__item
-        a.nav__link(href="malirske-prace.html") Malířské práce
+        a.nav__link(href="malirske-prace.html" class=(activePage === 'malirske-prace' ? 'nav__link--active' : '')) Malířské práce
       li.nav__item
-        a.nav__link(href="reference.html") Reference
+        a.nav__link(href="reference.html" class=(activePage === 'reference' ? 'nav__link--active' : '')) Reference
       li.nav__item
-        a.nav__link.scroll-js(href="index.html#kontakty") Kontakty
+        a.nav__link(href="index.html#kontakty" class=(!activePage || activePage === 'index' ? 'scroll-js' : '')) Kontakty
 
-      li.nav__item
-        a.nav__link(href="https://www.facebook.com/radek.tlach.9" target="_blank")
-          i.ion-social-facebook
-      li.nav__item
-        a.nav__link(href="https://www.instagram.com/tlachradek/" target="_blank")
-            i.ion-social-instagram
+    .nav__social
+      a.nav__social-link(href="https://www.facebook.com/radek.tlach.9" target="_blank")
+        i.ion-social-facebook
+      a.nav__social-link(href="https://www.instagram.com/tlachradek/" target="_blank")
+        i.ion-social-instagram
 
     a.mobile-nav-icon.js--nav-icon
       i.ion-navicon-round

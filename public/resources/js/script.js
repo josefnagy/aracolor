@@ -43,7 +43,7 @@ const arrowImg = [
   'resources/img/arrow-natery.png',
 ]
 
-let counter = 0;
+let counter = 1;
 
 
 if( arrowRight !== null && arrowLeft !== null ) {
@@ -115,196 +115,229 @@ $(document).ready(function() {
     });
 
     // Clicking on the gallery button
-    galleryAureum.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-aureum-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryAureum) {
+      galleryAureum.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-aureum-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryAureum.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-aureum-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryAureum) {
+      thumbGalleryAureum.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-aureum-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryEncanto.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-encanto-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryEncanto) {
+      galleryEncanto.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-encanto-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryEncanto.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-encanto-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryEncanto) {
+      thumbGalleryEncanto.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-encanto-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryOttocento.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-ottocento-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryOttocento) {
+      galleryOttocento.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-ottocento-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryOttocento.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-ottocento-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryOttocento) {
+      thumbGalleryOttocento.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-ottocento-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryRomano.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-romano-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryRomano) {
+      galleryRomano.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-romano-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryRomano.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-romano-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryRomano) {
+      thumbGalleryRomano.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-romano-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryArteviva.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-arteviva-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryArteviva) {
+      galleryArteviva.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-arteviva-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryArteviva.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-arteviva-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryArteviva) {
+      thumbGalleryArteviva.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-arteviva-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryZero.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-zero-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryZero) {
+      galleryZero.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-zero-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryZero.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-zero-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryZero) {
+      thumbGalleryZero.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-zero-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
-    galleryConcrete.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-concrete-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (galleryConcrete) {
+      galleryConcrete.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-concrete-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
     //clicking on the thumbnail
-    thumbGalleryConcrete.addEventListener('click', function (e) {
-      e.preventDefault();
-      $.featherlightGallery($('a.gallery-concrete-js'), {
-        previousIcon: '«',
-        nextIcon: '»',
-        galleryFadeIn: 300,
-        closeOnEsc: false,
+    if (thumbGalleryConcrete) {
+      thumbGalleryConcrete.addEventListener('click', function (e) {
+        e.preventDefault();
+        $.featherlightGallery($('a.gallery-concrete-js'), {
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
 
-        openSpeed: 300,
+          openSpeed: 300,
+        });
       });
-    });
+    }
 
   } else {
 
     $(".scroll-js").click(function (event) {
-      event.preventDefault();
-      //calculate destination place
-      var dest = 0;
-      if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-        dest = $(document).height() - $(window).height();
-        // console.log(dest);
-      } else {
-        dest = $(this.hash).offset().top - 50;
-        // console.log(dest);
+      var href = $(this).attr('href');
+      var currentPage = location.pathname.split('/').pop() || 'index.html';
+      var linkPage = href.split('#')[0] || currentPage;
+
+      // Only smooth-scroll if target is on the current page
+      if (linkPage === currentPage || linkPage === '') {
+        event.preventDefault();
+        //calculate destination place
+        var dest = 0;
+        if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+          dest = $(document).height() - $(window).height();
+        } else {
+          dest = $(this.hash).offset().top - 50;
+        }
+        //go to destination
+        $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
       }
-      //go to destination
-      $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
     });
   }
 
