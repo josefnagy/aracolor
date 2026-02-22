@@ -11,7 +11,8 @@
     "dev": "concurrently --kill-others \"npm run build:html\" \"npm run build:css\" \"browser-sync start --server public --files 'public/**/*'\"",
     "build": "npm run build:css:once && npm run build:html:once",
     "deploy": "npx firebase-tools deploy --only hosting",
-    "process:images": "node js/processImages.js"
+    "process:images": "node js/processImages.js",
+    "deploy-vm": "rsync -avz --delete public/ jnagy@84.247.162.208:/var/www/aracolor/"
   },
   "repository": {
     "type": "git",

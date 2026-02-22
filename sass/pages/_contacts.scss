@@ -234,6 +234,10 @@
     font-size: 3.4rem;
   }
 
+  .contacts__subheading {
+    font-size: 2rem;
+  }
+
   .contacts__map-body {
     min-height: 26rem;
   }
@@ -248,8 +252,37 @@
     font-size: 2.8rem;
   }
 
+  .contacts__details:first-child {
+    text-align: left;
+    align-items: flex-start;
+  }
+
   .contacts__name {
-    font-size: 2rem;
+    font-size: 2.8rem;
+  }
+
+  .contacts__subheading {
+    font-size: 2.2rem;
+  }
+
+  .contacts__contact-row {
+    font-size: 1.8rem;
+  }
+
+  .contacts__business-row {
+    font-size: 1.8rem;
+  }
+
+  .contacts__bank-label {
+    font-size: 1.8rem;
+  }
+
+  .contacts__bank-text {
+    font-size: 1.8rem;
+  }
+
+  .contacts__address {
+    font-size: 1.8rem;
   }
 
   .contacts__info {

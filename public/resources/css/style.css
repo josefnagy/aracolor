@@ -596,10 +596,16 @@ h3.bs:after {
     max-width: none;
   }
   .hero__headline {
-    font-size: 4.8rem;
+    font-size: 5.6rem;
+  }
+  .hero__subtext {
+    font-size: 2.2rem;
   }
   .hero__subtext br {
     display: none;
+  }
+  .hero__tagline-text {
+    font-size: 1.5rem;
   }
   .hero__accent-line {
     display: none;
@@ -631,7 +637,19 @@ h3.bs:after {
     top: 22rem;
   }
   .hero__headline {
-    font-size: 3.8rem;
+    font-size: 5.6rem;
+  }
+  .hero__subtext {
+    font-size: 2.4rem;
+  }
+  .hero__tagline-text {
+    font-size: 1.6rem;
+  }
+  .hero__stat-value {
+    font-size: 3.6rem;
+  }
+  .hero__stat-label {
+    font-size: 1.6rem;
   }
   .hero__stats {
     left: 2.4rem;
@@ -1378,6 +1396,9 @@ h3.bs:after {
   .contacts__heading {
     font-size: 3.4rem;
   }
+  .contacts__subheading {
+    font-size: 2rem;
+  }
   .contacts__map-body {
     min-height: 26rem;
   }
@@ -1389,8 +1410,30 @@ h3.bs:after {
   .contacts__heading {
     font-size: 2.8rem;
   }
+  .contacts__details:first-child {
+    text-align: left;
+    align-items: flex-start;
+  }
   .contacts__name {
-    font-size: 2rem;
+    font-size: 2.8rem;
+  }
+  .contacts__subheading {
+    font-size: 2.2rem;
+  }
+  .contacts__contact-row {
+    font-size: 1.8rem;
+  }
+  .contacts__business-row {
+    font-size: 1.8rem;
+  }
+  .contacts__bank-label {
+    font-size: 1.8rem;
+  }
+  .contacts__bank-text {
+    font-size: 1.8rem;
+  }
+  .contacts__address {
+    font-size: 1.8rem;
   }
   .contacts__info {
     flex-direction: column;
@@ -1845,10 +1888,16 @@ h3.bs:after {
     aspect-ratio: 4/3;
   }
   .product-card__name {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
+  }
+  .product-card__desc {
+    font-size: 2rem;
   }
   .products__title {
-    font-size: 3.4rem;
+    font-size: 4.2rem;
+  }
+  .products__subtitle {
+    font-size: 2.2rem;
   }
   .product-card__thumb {
     width: 5.5rem;
@@ -1877,13 +1926,19 @@ h3.bs:after {
     gap: 2.4rem;
   }
   .product-card__name {
-    font-size: 2.2rem;
+    font-size: 3.4rem;
   }
   .product-card__desc {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
   }
   .products__title {
-    font-size: 2.8rem;
+    font-size: 4.2rem;
+  }
+  .products__subtitle {
+    font-size: 2.4rem;
+  }
+  .product-card__number {
+    font-size: 6rem;
   }
   .product-card__thumb {
     width: 4.5rem;
