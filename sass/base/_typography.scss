@@ -1,0 +1,61 @@
+body {
+  color: $font-color-main;
+  font-family: "DM Sans", "Roboto", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+/*------------------------ Headings ----------------------- */
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: $color-white;
+  font-size: 5.5rem;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $font-color-main;
+  font-size: 3.6rem;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* line after h2 */
+h2:after {
+  display: block;
+  height: 0.3rem;
+  background-color: $primary-color;
+  content: " ";
+  width: 10rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+h1.bs {
+  font-size: 3.5rem;
+}
+
+/* line after h3 v betonovych sterkach */
+h3.bs:after {
+  display: block;
+  height: 1px;
+  background-color: #2980B9;
+  content: " ";
+  width: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+}

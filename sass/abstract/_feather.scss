@@ -1,0 +1,37 @@
+.featherlight .featherlight-content {
+  // background-color: black;
+  padding: 0;
+  border: 0;
+}
+
+.featherlight .featherlight-close-icon {
+  font-size: 3rem;
+  width: 5rem;
+  line-height: 5rem;
+  color: white;
+  background: none;
+}
+
+.featherlight-previous {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  // top: 45%;
+  // bottom: 45%;
+  left: 0;
+  right: 90%;
+}
+
+.featherlight-next {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  // top: 45%;
+  // bottom: 45%;
+  left: 90%;
+  right: 0;
+}
+
+.featherlight-previous:hover, .featherlight-next:hover {
+  background: none;
+}

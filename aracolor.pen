@@ -1,0 +1,5662 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "rectangle",
+      "id": "uheWz",
+      "x": 0,
+      "y": 0,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "images/image.png",
+        "mode": "fill"
+      },
+      "width": 3814,
+      "height": 1240
+    },
+    {
+      "type": "rectangle",
+      "id": "dHrEp",
+      "x": 4363,
+      "y": -148,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "images/unwatermarked_Gemini_Generated_Image_pevnzypevnzypevn.png",
+        "mode": "fill"
+      },
+      "width": 3162,
+      "height": 1765
+    },
+    {
+      "type": "frame",
+      "id": "t6oML",
+      "x": 0,
+      "y": 1717,
+      "name": "Hero Section - Redesigned",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#1A1714",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "tftAn",
+          "x": 0,
+          "y": 0,
+          "name": "Hero Background",
+          "width": 1440,
+          "height": 900,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1771344054033.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "ZPlhz",
+          "x": 0,
+          "y": 0,
+          "name": "Dark Overlay",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A1714CC",
+                "position": 0
+              },
+              {
+                "color": "#1A171466",
+                "position": 0.5
+              },
+              {
+                "color": "#1A171499",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "type": "frame",
+          "id": "K5Lbu",
+          "x": 50,
+          "y": 24,
+          "name": "Floating Nav",
+          "width": 1340,
+          "height": 56,
+          "fill": "#FFFFFF18",
+          "cornerRadius": 28,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#FFFFFF20"
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20
+          },
+          "padding": [
+            0,
+            32
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "NzMeE",
+              "name": "logoArea",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "Mu4Hy",
+                  "name": "logoIcon",
+                  "width": 28,
+                  "height": 28,
+                  "iconFontName": "hexagon",
+                  "iconFontFamily": "lucide",
+                  "fill": "#C9A96E"
+                },
+                {
+                  "type": "text",
+                  "id": "ITVx1",
+                  "name": "logoText",
+                  "fill": "#FAFAF5",
+                  "content": "aracolor",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 20,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "LlJKK",
+              "name": "navLinks",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kA9ZB",
+                  "name": "link1",
+                  "fill": "#C9A96E",
+                  "content": "Úvod",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "BHJVl",
+                  "name": "link2",
+                  "fill": "#FAFAF5CC",
+                  "content": "Malířské práce",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "0mpX7",
+                  "name": "link3",
+                  "fill": "#FAFAF5CC",
+                  "content": "Reference",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "DNbAY",
+                  "name": "link4",
+                  "fill": "#FAFAF5CC",
+                  "content": "Kontakty",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "6mkM4",
+              "name": "navRight",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "icgpB",
+                  "name": "fbIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "facebook",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "sKRIM",
+                  "name": "igIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "instagram",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Xn07D",
+          "x": 80,
+          "y": 280,
+          "name": "Hero Content",
+          "width": 700,
+          "layout": "vertical",
+          "gap": 28,
+          "children": [
+            {
+              "type": "frame",
+              "id": "zRzVj",
+              "name": "tagline",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "oKR9V",
+                  "name": "tagDash",
+                  "fill": "#C9A96E",
+                  "width": 32,
+                  "height": 2
+                },
+                {
+                  "type": "text",
+                  "id": "9A90a",
+                  "name": "tagText",
+                  "fill": "#C9A96E",
+                  "content": "DEKORAČNÍ STĚRKY & MALÍŘSKÉ PRÁCE",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "orsDW",
+              "name": "headline",
+              "fill": "#FAFAF5",
+              "content": "Luxusní povrchy,\nkteré inspirují",
+              "lineHeight": 1.1,
+              "fontFamily": "Fraunces",
+              "fontSize": 64,
+              "fontWeight": "500",
+              "letterSpacing": -1.5
+            },
+            {
+              "type": "text",
+              "id": "ecjCt",
+              "name": "subtext",
+              "fill": "#FAFAF5AA",
+              "content": "Originální design a řemeslná preciznost. Dekorační stěrky,\nbenátské štuky a unikátní povrchové úpravy pro váš interiér.",
+              "lineHeight": 1.6,
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "BR4fu",
+              "name": "CTA Buttons",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "004E2",
+                  "name": "Contact Button",
+                  "fill": "#C9A96E",
+                  "cornerRadius": 28,
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "oT9Kb",
+                      "name": "btn1Icon",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1A1714"
+                    },
+                    {
+                      "type": "text",
+                      "id": "9rifk",
+                      "name": "btn1Text",
+                      "fill": "#1A1714",
+                      "content": "Kontaktujte nás",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KyNYW",
+                  "name": "References Button",
+                  "fill": "#FFFFFF00",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1.5,
+                    "fill": "#FAFAF5AA"
+                  },
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "ooYnI",
+                      "name": "btn2Icon",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "images",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF5"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oxFFX",
+                      "name": "btn2Text",
+                      "fill": "#FAFAF5",
+                      "content": "Naše reference",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "smO4s",
+          "x": 710,
+          "y": 820,
+          "name": "Scroll Indicator",
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "jjoFH",
+              "name": "scrollLine",
+              "fill": "#FAFAF560",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "text",
+              "id": "Xx0bz",
+              "name": "scrollText",
+              "fill": "#FAFAF560",
+              "content": "scroll",
+              "fontFamily": "DM Sans",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "JDOLS",
+          "x": 0,
+          "y": 780,
+          "name": "Bottom Gradient",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A171400",
+                "position": 0
+              },
+              {
+                "color": "#1A1714CC",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 120
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "zMLfD",
+          "x": 1380,
+          "y": 400,
+          "name": "Accent Line",
+          "fill": "#C9A96E",
+          "width": 3,
+          "height": 80
+        },
+        {
+          "type": "frame",
+          "id": "trkUE",
+          "x": 900,
+          "y": 740,
+          "name": "Stats Area",
+          "gap": 48,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "QuVBM",
+              "name": "stat1",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ig0of",
+                  "name": "stat1val",
+                  "fill": "#C9A96E",
+                  "content": "15+",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "aud1G",
+                  "name": "stat1label",
+                  "fill": "#FAFAF580",
+                  "content": "let zkušeností",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "KjW2e",
+              "name": "divider1",
+              "fill": "#FAFAF520",
+              "width": 1,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "5PbBA",
+              "name": "stat2",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "shMc4",
+                  "name": "stat2val",
+                  "fill": "#C9A96E",
+                  "content": "500+",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "rGbWY",
+                  "name": "stat2label",
+                  "fill": "#FAFAF580",
+                  "content": "realizací",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "jLYDg",
+              "name": "divider2",
+              "fill": "#FAFAF520",
+              "width": 1,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "j4kkj",
+              "name": "stat3",
+              "layout": "vertical",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kd1rE",
+                  "name": "stat3val",
+                  "fill": "#C9A96E",
+                  "content": "100%",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "pfVa9",
+                  "name": "stat3label",
+                  "fill": "#FAFAF580",
+                  "content": "spokojenost",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lSHz5",
+      "x": 0,
+      "y": 2617,
+      "name": "Content Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "padding": [
+        80,
+        0
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "iayGB",
+          "name": "Section Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            0,
+            60,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "dOrc3",
+              "name": "headerTag",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "INP8s",
+                  "name": "dashL",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "x56rJ",
+                  "name": "tagTxt",
+                  "fill": "#C9A96E",
+                  "content": "NAŠE SPECIALIZACE",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "rectangle",
+                  "id": "cQNiP",
+                  "name": "dashR",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "JtOrj",
+              "name": "headerTitle",
+              "fill": "#FAFAF5",
+              "content": "Druhy povrchů, které umíme",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "EfgRN",
+              "name": "headerSub",
+              "fill": "#FAFAF580",
+              "content": "Každý povrch je originál — vytvořený s precizností a vášní pro detail",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Hlegv",
+          "name": "Betonove Sterky Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Amget",
+              "name": "Card1 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344794653.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            },
+            {
+              "type": "frame",
+              "id": "lzGE3",
+              "name": "Card1 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "thSAJ",
+                  "name": "card1num",
+                  "fill": "#C9A96E30",
+                  "content": "01",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "IMEAV",
+                  "name": "card1title",
+                  "fill": "#FAFAF5",
+                  "content": "Betonové stěrky",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "ZZe21",
+                  "name": "card1desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Betonová stěrka neboli imitace pohledového betonu, se postupně stala nepostradatelným prvkem moderní architektury. Dá se nanést na stěnu, podlahu i strop. Použití je možné i do koupelny či na fasády budov.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "hRnek",
+                  "name": "card1line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1LRBQ",
+          "name": "div1",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "I4LVf",
+              "name": "div1line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "rvOdV",
+          "name": "Arte Viva Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "RqATy",
+              "name": "Card2 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "an2B1",
+                  "name": "card2num",
+                  "fill": "#C9A96E30",
+                  "content": "02",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "XbLjr",
+                  "name": "card2title",
+                  "fill": "#FAFAF5",
+                  "content": "Arte Viva",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "bHrc4",
+                  "name": "card2desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Systém ARTE VIVA představuje dokonalé spojení všestrannosti a přizpůsobitelnosti povrchů jakémukoliv prostředí, vyjadřuje a nabízí množství uměleckých a dekorativních efektů. Využití pro povrchy stěn, podlah i stropů.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "F9Hrs",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "tvLx8",
+                      "name": "sw2a",
+                      "fill": "#D4C5A9",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "soK3v",
+                      "name": "sw2b",
+                      "fill": "#C4A87C",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "x6Gmk",
+                      "name": "sw2c",
+                      "fill": "#8B7355",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "zwi7x",
+                      "name": "sw2d",
+                      "fill": "#E8D5B7",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "AIVp4",
+                  "name": "card2line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CH4tX",
+              "name": "Card2 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344815438.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LYrPF",
+          "name": "div2",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "V20A6",
+              "name": "div2line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "o5mNk",
+          "name": "Aureum Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "GODWQ",
+              "name": "Card3 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344828812.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            },
+            {
+              "type": "frame",
+              "id": "k9Hh7",
+              "name": "Card3 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rOWJx",
+                  "name": "card3num",
+                  "fill": "#C9A96E30",
+                  "content": "03",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "kJEUP",
+                  "name": "card3title",
+                  "fill": "#FAFAF5",
+                  "content": "Aureum",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "1uC5z",
+                  "name": "card3desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "AUREUM je prestižní dekorativní materiál, který vytváří povrchy s luxusním vzhledem pravého zlata a jemných přírodních tónů. Kovový efekt je jemný, elegantní a vytváří atmosféru pocitu individuálního šlechu.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "e7UR1",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "vngtu",
+                      "name": "sw3a",
+                      "fill": "#E8D4A8",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "IVMpW",
+                      "name": "sw3b",
+                      "fill": "#C9B896",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "NBDeN",
+                      "name": "sw3c",
+                      "fill": "#A89070",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "276PG",
+                      "name": "sw3d",
+                      "fill": "#D4B88A",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "beicQ",
+                  "name": "card3line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "avYdL",
+          "name": "div3",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "kURof",
+              "name": "div3line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pH6ek",
+          "name": "Encanto Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "xrjMe",
+              "name": "Card4 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j93gN",
+                  "name": "card4num",
+                  "fill": "#C9A96E30",
+                  "content": "04",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "pslBZ",
+                  "name": "card4title",
+                  "fill": "#FAFAF5",
+                  "content": "Encanto",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "f6LEx",
+                  "name": "card4desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "ENCANTO je dekorativní metalický nátěr, který umožňuje vytvořit fascinující povrchové úpravy. Kreativní materiál vytváří magický efekt hry světla a metalických odlesků v nejrůznějších základních tónech Gold, Silver a Grey.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "RIqyt",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "SwzSg",
+                      "name": "sw4a",
+                      "fill": "#D4AF37",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "MKb3e",
+                      "name": "sw4b",
+                      "fill": "#C0C0C0",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "zSTrJ",
+                      "name": "sw4c",
+                      "fill": "#808080",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "SDzqO",
+                      "name": "sw4d",
+                      "fill": "#1C1C1C",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "tzGqA",
+                  "name": "card4line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uha8q",
+              "name": "Card4 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344865547.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3Uhca",
+          "name": "div4",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "wTSeZ",
+              "name": "div4line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Y82lM",
+          "name": "Ottocento Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "i01ur",
+              "name": "Card5 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344880938.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            },
+            {
+              "type": "frame",
+              "id": "g6P4o",
+              "name": "Card5 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "W6p5S",
+                  "name": "card5num",
+                  "fill": "#C9A96E30",
+                  "content": "05",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "A0vJC",
+                  "name": "card5title",
+                  "fill": "#FAFAF5",
+                  "content": "Ottocento",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "QsTgd",
+                  "name": "card5desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "OTTOCENTO je dekorativní médium umožňující velmi specifický dekorativní efekt, který odráží světlo v různých úhlech a napodobuje sametový vzhled. Vytvořte si komerčních místností a lokálních ploch napodobující vzácné hedvábné materiály.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "uBLU2",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "cx4vc",
+                      "name": "sw5a",
+                      "fill": "#C8A2C8",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "S5j1q",
+                      "name": "sw5b",
+                      "fill": "#D4A0A0",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "d74On",
+                      "name": "sw5c",
+                      "fill": "#A08CB0",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "dfbuw",
+                      "name": "sw5d",
+                      "fill": "#E8C8D8",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "aIDxz",
+                  "name": "card5line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "WVQBw",
+          "name": "div5",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "AXVSu",
+              "name": "div5line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GVfVK",
+          "name": "Travertino Romano Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "hGEz8",
+              "name": "Card6 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5Mzzf",
+                  "name": "card6num",
+                  "fill": "#C9A96E30",
+                  "content": "06",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "uZoEu",
+                  "name": "card6title",
+                  "fill": "#FAFAF5",
+                  "content": "Travertino Romano",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "0deFM",
+                  "name": "card6desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "TRAVERTINO ROMANO v základní podobě nabízí devět exkluzivních typických vzorů přírodního Travertinu. Umožňuje vytvářet rozhorové efekty a gravírování plástve, slavnostní kamenné vzory či prodejní stavebních konstrukcí.",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "NQ1uC",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "XqBvN",
+                      "name": "sw6a",
+                      "fill": "#C8B898",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "Ug81L",
+                      "name": "sw6b",
+                      "fill": "#A89880",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "Aogsw",
+                      "name": "sw6c",
+                      "fill": "#B8A888",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "kc2NI",
+                      "name": "sw6d",
+                      "fill": "#D8C8B0",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "1CVIR",
+                      "name": "sw6e",
+                      "fill": "#988878",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "NWqG2",
+                  "name": "card6line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qzRvP",
+              "name": "Card6 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344904011.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "yFSEy",
+          "name": "div6",
+          "width": "fill_container",
+          "padding": [
+            0,
+            120
+          ],
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "YQ9rk",
+              "name": "div6line",
+              "fill": "#FAFAF510",
+              "width": "fill_container",
+              "height": 1
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aE13N",
+          "name": "Zusci Card",
+          "width": "fill_container",
+          "height": 500,
+          "gap": 60,
+          "padding": [
+            40,
+            80
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "9brcg",
+              "name": "Card7 Image",
+              "clip": true,
+              "width": 560,
+              "height": 420,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771344918867.png",
+                "mode": "fill"
+              },
+              "cornerRadius": 16
+            },
+            {
+              "type": "frame",
+              "id": "SwUBQ",
+              "name": "Card7 Content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jOP7d",
+                  "name": "card7num",
+                  "fill": "#C9A96E30",
+                  "content": "07",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 48,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "text",
+                  "id": "3Uh9Y",
+                  "name": "card7title",
+                  "fill": "#FAFAF5",
+                  "content": "Zero",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "text",
+                  "id": "Dlrf9",
+                  "name": "card7desc",
+                  "fill": "#FAFAF5AA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Výjimečně odolná interiérová a fasádní exkluzivní dekorativní špachtlovací hmota se sametovým povrchem s efekty kovu, perleti nebo zlata. ",
+                  "lineHeight": 1.7,
+                  "fontFamily": "DM Sans",
+                  "fontSize": 15,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "9VPsL",
+                  "name": "Swatches",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "QnDAS",
+                      "name": "sw7a",
+                      "fill": "#E8D8C0",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "dSVUl",
+                      "name": "sw7b",
+                      "fill": "#4A4A4A",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "hkUmB",
+                      "name": "sw7c",
+                      "fill": "#8A8A8A",
+                      "width": 36,
+                      "height": 36
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 8,
+                      "id": "dVxSS",
+                      "name": "sw7d",
+                      "fill": "#C05050",
+                      "width": 36,
+                      "height": 36
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "S4rXm",
+                  "name": "card7line",
+                  "fill": "#C9A96E",
+                  "width": 48,
+                  "height": 2
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "SjBwF",
+      "x": 1613,
+      "y": 1991,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "image.png",
+        "mode": "fill"
+      },
+      "width": 3688,
+      "height": 1788
+    },
+    {
+      "type": "frame",
+      "id": "XFUAc",
+      "x": 0,
+      "y": 6475,
+      "name": "Contact Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "padding": [
+        80,
+        120
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "XzuRZ",
+          "name": "Contact Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            0,
+            60,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ElbGS",
+              "name": "tagline",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "bSUT0",
+                  "name": "tagDash",
+                  "fill": "#C9A96E",
+                  "width": 32,
+                  "height": 2
+                },
+                {
+                  "type": "text",
+                  "id": "bYd9Z",
+                  "name": "tagText",
+                  "fill": "#C9A96E",
+                  "content": "SPOJTE SE S NÁMI",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Y4Og6",
+              "name": "headerTitle",
+              "fill": "#FAFAF5",
+              "content": "Kontakty",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "Xyvrk",
+              "name": "headerSub",
+              "fill": "#FAFAF580",
+              "content": "Rádi vám poradíme s výběrem povrchové úpravy pro váš projekt",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "4ESiH",
+          "name": "Contact Content",
+          "width": "fill_container",
+          "gap": 60,
+          "children": [
+            {
+              "type": "frame",
+              "id": "IZHJx",
+              "name": "Contact Info",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nvUU1",
+                  "name": "Photo Column",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gp0wD",
+                      "name": "Photo",
+                      "clip": true,
+                      "width": 120,
+                      "height": 120,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1771349335460.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 60
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QlBUQ",
+                  "name": "Details Column",
+                  "layout": "vertical",
+                  "gap": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yyU9G",
+                      "name": "Name Block",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "vdglx",
+                          "name": "Name",
+                          "fill": "#FAFAF5",
+                          "content": "Radek Tlach",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 24,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jblzG",
+                          "name": "Address",
+                          "fill": "#FAFAF5AA",
+                          "content": "Opavská 350/59\nBruntal 79 201",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qwfGE",
+                      "name": "Contact Block",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "x3U1t",
+                          "name": "Email Row",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "HdUh0",
+                              "name": "emailIcon",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "mail",
+                              "iconFontFamily": "lucide",
+                              "fill": "#C9A96E"
+                            },
+                            {
+                              "type": "text",
+                              "id": "49zzt",
+                              "name": "emailText",
+                              "fill": "#FAFAF5AA",
+                              "content": "tlachr@seznam.cz",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yRfff",
+                          "name": "Phone Row",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "NzyfH",
+                              "name": "phoneIcon",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "phone",
+                              "iconFontFamily": "lucide",
+                              "fill": "#C9A96E"
+                            },
+                            {
+                              "type": "text",
+                              "id": "zSkeZ",
+                              "name": "phoneText",
+                              "fill": "#FAFAF5AA",
+                              "content": "+420 608 741 219",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "7XpMI",
+                      "name": "Divider",
+                      "fill": "#FAFAF510",
+                      "width": 240,
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iv2wG",
+                      "name": "ICO Block",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "M6Of3",
+                          "name": "ICO Row",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cjr26",
+                              "name": "icoLabel",
+                              "fill": "#FAFAF580",
+                              "content": "IČO:",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "10Hk1",
+                              "name": "icoValue",
+                              "fill": "#FAFAF5AA",
+                              "content": "63998556",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "E4x4t",
+                          "name": "DIC Row",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VQjtw",
+                              "name": "dicLabel",
+                              "fill": "#FAFAF580",
+                              "content": "DIČ:",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "VjV4g",
+                              "name": "dicValue",
+                              "fill": "#FAFAF5AA",
+                              "content": "CZ7412186072",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "HVhNF",
+                      "name": "Divider2",
+                      "fill": "#FAFAF510",
+                      "width": 240,
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mW3SG",
+                      "name": "Bank Block",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "IniOF",
+                          "name": "bankLabel",
+                          "fill": "#FAFAF580",
+                          "content": "Bankovní spojení",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "pJpI4",
+                          "name": "bankName",
+                          "fill": "#FAFAF5AA",
+                          "content": "Raiffeisen Bank",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s9dpO",
+                          "name": "bankNum",
+                          "fill": "#FAFAF5AA",
+                          "content": "5917719001 / 5500",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "5lxh6",
+              "name": "Map Container",
+              "clip": true,
+              "width": "fill_container",
+              "height": 400,
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF510"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pGnjb",
+                  "name": "Map Header",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "OaHCp",
+                      "name": "mapIcon",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UP4yG",
+                      "name": "mapTitle",
+                      "fill": "#FAFAF5",
+                      "content": "Opavská 350/59",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dqfnm",
+                      "name": "mapSubtitle",
+                      "fill": "#FAFAF560",
+                      "content": "Bruntál, 792 01 Bruntál",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RaoCP",
+                  "name": "Map Image",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771349329218.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "6Ab7h",
+      "x": 0,
+      "y": 7227,
+      "name": "Footer",
+      "width": 1440,
+      "fill": "#0A0908",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "idyi5",
+          "name": "Top Divider",
+          "fill": "#FAFAF510",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "sbfvF",
+          "name": "Footer Content",
+          "width": "fill_container",
+          "padding": [
+            32,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "V1r7l",
+              "name": "Footer Nav",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "0akt2",
+                  "name": "fLink1",
+                  "fill": "#FAFAF5AA",
+                  "content": "Úvod",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "6olV8",
+                  "name": "fLink2",
+                  "fill": "#FAFAF5AA",
+                  "content": "Malířské práce",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "AQvmx",
+                  "name": "fLink3",
+                  "fill": "#FAFAF5AA",
+                  "content": "Reference",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "AcP0G",
+                  "name": "fLink4",
+                  "fill": "#FAFAF5AA",
+                  "content": "Kontakty",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "S3LnB",
+              "name": "Footer Social",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "RdSru",
+                  "name": "fbIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "facebook",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "jq6O7",
+                  "name": "igIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "instagram",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "Dyvpz",
+          "name": "Bottom Divider",
+          "fill": "#FAFAF508",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "TOoal",
+          "name": "Copyright Row",
+          "width": "fill_container",
+          "padding": [
+            20,
+            120
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Zok0o",
+              "name": "copyrightText",
+              "fill": "#FAFAF540",
+              "content": "© Built for Aracolor. Created by Josef Nagy.",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "Y8k5R",
+      "x": -5388,
+      "y": -68,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "CleanShot 2026-02-17 at 21.25.59@2x.png",
+        "mode": "fill"
+      },
+      "width": 3678,
+      "height": 11553
+    },
+    {
+      "type": "frame",
+      "id": "4N7It",
+      "x": 7725,
+      "y": 0,
+      "name": "MP - Hero Section",
+      "clip": true,
+      "width": 1440,
+      "height": 900,
+      "fill": "#1A1714",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "qALm7",
+          "x": 0,
+          "y": 0,
+          "name": "Hero Background",
+          "width": 1440,
+          "height": 900,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "./images/generated-1771360297279.png",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "o88hJ",
+          "x": 0,
+          "y": 0,
+          "name": "Dark Overlay",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A1714CC",
+                "position": 0
+              },
+              {
+                "color": "#1A171466",
+                "position": 0.5
+              },
+              {
+                "color": "#1A171499",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "type": "frame",
+          "id": "QYNKt",
+          "x": 50,
+          "y": 24,
+          "name": "Floating Nav",
+          "width": 1340,
+          "height": 56,
+          "fill": "#FFFFFF18",
+          "cornerRadius": 28,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#FFFFFF20"
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20
+          },
+          "padding": [
+            0,
+            32
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "97CP7",
+              "name": "logoArea",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "jUnSH",
+                  "name": "logoIcon",
+                  "width": 28,
+                  "height": 28,
+                  "iconFontName": "hexagon",
+                  "iconFontFamily": "lucide",
+                  "fill": "#C9A96E"
+                },
+                {
+                  "type": "text",
+                  "id": "aodDR",
+                  "name": "logoText",
+                  "fill": "#FAFAF5",
+                  "content": "aracolor",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 20,
+                  "fontWeight": "700",
+                  "letterSpacing": 1
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y2AGL",
+              "name": "navLinks",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZRRhy",
+                  "name": "link1",
+                  "fill": "#FAFAF5CC",
+                  "content": "Úvod",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "8sacR",
+                  "name": "link2",
+                  "fill": "#C9A96E",
+                  "content": "Malířské práce",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "wd5RQ",
+                  "name": "link3",
+                  "fill": "#FAFAF5CC",
+                  "content": "Reference",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "NfPoq",
+                  "name": "link4",
+                  "fill": "#FAFAF5CC",
+                  "content": "Kontakty",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wIXw1",
+              "name": "navRight",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "7v9Ay",
+                  "name": "fbIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "facebook",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "abEhV",
+                  "name": "igIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "instagram",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "m0yCb",
+          "x": 80,
+          "y": 280,
+          "name": "Hero Content",
+          "width": 700,
+          "layout": "vertical",
+          "gap": 28,
+          "children": [
+            {
+              "type": "frame",
+              "id": "845dI",
+              "name": "tagline",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "utib5",
+                  "name": "tagDash",
+                  "fill": "#C9A96E",
+                  "width": 32,
+                  "height": 2
+                },
+                {
+                  "type": "text",
+                  "id": "o81eq",
+                  "name": "tagText",
+                  "fill": "#C9A96E",
+                  "content": "MALÍŘSKÉ PRÁCE",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "xN2YS",
+              "name": "headline",
+              "fill": "#FAFAF5",
+              "content": "Malování Interiérů\na Exteriérů",
+              "lineHeight": 1.1,
+              "fontFamily": "Fraunces",
+              "fontSize": 64,
+              "fontWeight": "500",
+              "letterSpacing": -1.5
+            },
+            {
+              "type": "text",
+              "id": "o8Lf5",
+              "name": "subtext",
+              "fill": "#FAFAF5AA",
+              "content": "Kompletní malířské práce v interiéru a exteriéru ve špičkové\nkvalitě. Odborná aplikace vnitřních i vnějších barev na stěny,\nstropy, fasády a další povrchy.",
+              "lineHeight": 1.6,
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "EmYN4",
+              "name": "CTA Buttons",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pBMS7",
+                  "name": "Contact Button",
+                  "fill": "#C9A96E",
+                  "cornerRadius": 28,
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "JdMTl",
+                      "name": "ctaIcon1",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "mail",
+                      "iconFontFamily": "lucide",
+                      "fill": "#1A1714"
+                    },
+                    {
+                      "type": "text",
+                      "id": "1flHv",
+                      "name": "ctaText1",
+                      "fill": "#1A1714",
+                      "content": "Kontaktujte nás",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T7WXO",
+                  "name": "Cenik Button",
+                  "fill": "#FFFFFF00",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1.5,
+                    "fill": "#FAFAF5AA"
+                  },
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    32
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "cmduu",
+                      "name": "ctaIcon2",
+                      "width": 18,
+                      "height": 18,
+                      "iconFontName": "list",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FAFAF5"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2OyT8",
+                      "name": "ctaText2",
+                      "fill": "#FAFAF5",
+                      "content": "Ceník služeb",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 15,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "iTeKq",
+          "x": 0,
+          "y": 780,
+          "name": "Bottom Gradient",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 0,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1A171400",
+                "position": 0
+              },
+              {
+                "color": "#1A1714CC",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 120
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "2B4pe",
+          "x": 1380,
+          "y": 400,
+          "name": "Accent Line",
+          "fill": "#C9A96E",
+          "width": 3,
+          "height": 80
+        },
+        {
+          "type": "frame",
+          "id": "v39jX",
+          "x": 710,
+          "y": 820,
+          "name": "Scroll Indicator",
+          "layout": "vertical",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "Y6u98",
+              "name": "scrollLine",
+              "fill": "#FAFAF560",
+              "width": 1,
+              "height": 32
+            },
+            {
+              "type": "text",
+              "id": "4oFKg",
+              "name": "scrollText",
+              "fill": "#FAFAF560",
+              "content": "scroll",
+              "fontFamily": "DM Sans",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xJqpE",
+          "x": 24,
+          "y": 422,
+          "name": "Arrow Left",
+          "width": 56,
+          "height": 56,
+          "fill": "#FFFFFF10",
+          "cornerRadius": 28,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#FFFFFF15"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "i65HD",
+              "name": "arrowLIcon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "chevron-left",
+              "iconFontFamily": "lucide",
+              "fill": "#FAFAF5AA"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "y8sC8",
+          "x": 1360,
+          "y": 422,
+          "name": "Arrow Right",
+          "width": 56,
+          "height": 56,
+          "fill": "#FFFFFF10",
+          "cornerRadius": 28,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#FFFFFF15"
+          },
+          "layout": "vertical",
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "VN4zE",
+              "name": "arrowRIcon",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "chevron-right",
+              "iconFontFamily": "lucide",
+              "fill": "#FAFAF5AA"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tWHO4",
+          "x": 680,
+          "y": 860,
+          "name": "Carousel Dots",
+          "gap": 8,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "2VMMn",
+              "name": "dot1",
+              "fill": "#C9A96E",
+              "width": 24,
+              "height": 3
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "RGhA5",
+              "name": "dot2",
+              "fill": "#FAFAF530",
+              "width": 8,
+              "height": 3
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "iyIOQ",
+              "name": "dot3",
+              "fill": "#FAFAF530",
+              "width": 8,
+              "height": 3
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "r05c8",
+              "name": "dot4",
+              "fill": "#FAFAF530",
+              "width": 8,
+              "height": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "cSMXe",
+      "x": 7725,
+      "y": 900,
+      "name": "MP - Why Us Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "gap": 60,
+      "padding": [
+        80,
+        120
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zK4ZG",
+          "name": "Section Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "LyxNv",
+              "name": "tagline",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "tGTBw",
+                  "name": "whyDashL",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "EJzSK",
+                  "name": "whyTagText",
+                  "fill": "#C9A96E",
+                  "content": "PROČ PRÁVĚ MY",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "rectangle",
+                  "id": "kHuHw",
+                  "name": "whyDashR",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ESBOJ",
+              "name": "whyTitle",
+              "fill": "#FAFAF5",
+              "content": "Svěřte interiér i exteriér profesionálům",
+              "textAlign": "center",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "6HR3m",
+              "name": "whySub",
+              "fill": "#FAFAF580",
+              "content": "To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky,\nať už se jedná o natření plotu nebo o vymalování výrobní haly.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z8K4Y",
+          "name": "Features Grid",
+          "width": "fill_container",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "in75E",
+              "name": "Feature 1",
+              "width": "fill_container",
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF508"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                32,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Tivto",
+                  "name": "Icon Wrap",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "#C9A96E15",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Lh9YL",
+                      "name": "iconInner1",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "circle-check",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "aM8gE",
+                  "name": "title1",
+                  "fill": "#FAFAF5",
+                  "content": "Zkušenost",
+                  "textAlign": "center",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "XWf9w",
+                  "name": "desc1",
+                  "fill": "#FAFAF580",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Více než 22 let v oboru.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "EEYA2",
+              "name": "Feature 2",
+              "width": "fill_container",
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF508"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                32,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jICAd",
+                  "name": "Icon Wrap",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "#C9A96E15",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "OVLhi",
+                      "name": "iconInner2",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "star",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Efwj2",
+                  "name": "title2",
+                  "fill": "#FAFAF5",
+                  "content": "Kvalita",
+                  "textAlign": "center",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "EGAMZ",
+                  "name": "desc2",
+                  "fill": "#FAFAF580",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Za Naší prací si stojíme, proto se nebojíme dávat 24-měsíční záruku na dílo.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hTEP6",
+              "name": "Feature 3",
+              "width": "fill_container",
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF508"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                32,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "3jzmm",
+                  "name": "Icon Wrap",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "#C9A96E15",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "jAXTs",
+                      "name": "iconInner3",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "gauge",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "grgB6",
+                  "name": "title3",
+                  "fill": "#FAFAF5",
+                  "content": "Rychlost",
+                  "textAlign": "center",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "cCB2M",
+                  "name": "desc3",
+                  "fill": "#FAFAF580",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Jsme placeni od metrů, ne od hodiny a proto se můžete spolehnout, že práce bude odsýpat.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "4SAbX",
+              "name": "Feature 4",
+              "width": "fill_container",
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF508"
+              },
+              "layout": "vertical",
+              "gap": 20,
+              "padding": [
+                32,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MrvNI",
+                  "name": "Icon Wrap",
+                  "width": 56,
+                  "height": 56,
+                  "fill": "#C9A96E15",
+                  "cornerRadius": 28,
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "Wo4Af",
+                      "name": "iconInner4",
+                      "width": 24,
+                      "height": 24,
+                      "iconFontName": "sparkles",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "pQ7td",
+                  "name": "title4",
+                  "fill": "#FAFAF5",
+                  "content": "Čistota",
+                  "textAlign": "center",
+                  "fontFamily": "Fraunces",
+                  "fontSize": 20,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "8Mnu3",
+                  "name": "desc4",
+                  "fill": "#FAFAF580",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Úklid po malování je pro Nás samozřejmostí.",
+                  "lineHeight": 1.6,
+                  "textAlign": "center",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "WEgE5",
+      "x": 7725,
+      "y": 1557,
+      "name": "MP - Gallery Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "gap": 4,
+      "children": [
+        {
+          "type": "frame",
+          "id": "4rOQs",
+          "name": "Gallery Row 1",
+          "width": "fill_container",
+          "height": 320,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "WvMDB",
+              "name": "Gallery 1",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360420910.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "mL0uI",
+              "name": "Gallery 2",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360427558.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "YFznh",
+              "name": "Gallery 3",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360434621.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "oHgbq",
+              "name": "Gallery 4",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360441597.png",
+                "mode": "fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "u16Kh",
+          "name": "Gallery Row 2",
+          "width": "fill_container",
+          "height": 320,
+          "gap": 4,
+          "children": [
+            {
+              "type": "frame",
+              "id": "eqAMB",
+              "name": "Gallery 5",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360490082.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "iwrXg",
+              "name": "Gallery 6",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360492851.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "OUG17",
+              "name": "Gallery 7",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360502266.png",
+                "mode": "fill"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "2Vme6",
+              "name": "Gallery 8",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "./images/generated-1771360508997.png",
+                "mode": "fill"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "oKBPJ",
+      "x": 7725,
+      "y": 2201,
+      "name": "MP - Services Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "gap": 60,
+      "padding": [
+        80,
+        120
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "S0wLi",
+          "name": "Section Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tZmur",
+              "name": "tagline",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "PX4Sd",
+                  "name": "svcDashL",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "yl2bC",
+                  "name": "svcTagText",
+                  "fill": "#C9A96E",
+                  "content": "CO NABÍZÍME",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Yddgv",
+                  "name": "svcDashR",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "z938G",
+              "name": "svcTitle",
+              "fill": "#FAFAF5",
+              "content": "Naše služby",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "NXSzG",
+              "name": "svcSub",
+              "fill": "#FAFAF580",
+              "content": "Specializujeme se na dekorační stěrky, malby, nátěry, šablony a nástřiky\ninteriéru a exteriéru. Pracujeme s kvalitními produkty.",
+              "lineHeight": 1.6,
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "aZT2d",
+          "name": "Services Grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "IieYd",
+              "name": "Row 1",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "u2Ers",
+                  "name": "Dekoracni sterky",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "18e1n",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "NqCvX",
+                          "name": "svc1iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "palette",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "oTwAD",
+                      "name": "svc1title",
+                      "fill": "#FAFAF5",
+                      "content": "Dekorační stěrky",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y27NO",
+                      "name": "svc1desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "o7KL7",
+                      "name": "svc1link",
+                      "fill": "#C9A96E",
+                      "content": "Více informací →",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Atciq",
+                  "name": "Malirske prace",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gQ6gM",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "IpcPG",
+                          "name": "svc2iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "paint-roller",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ggyVt",
+                      "name": "svc2title",
+                      "fill": "#FAFAF5",
+                      "content": "Interiérové a exteriérové\nmalířské práce",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "DkOHT",
+                      "name": "svc2desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Kompletní malířské práce v interiéru a exteriéru ve špičkové kvalitě. Odborná aplikace barev na stěny, stropy, fasády.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oI7xi",
+                  "name": "Natery",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hLDuK",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "nU1cA",
+                          "name": "svc3iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "paintbrush",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ggNMP",
+                      "name": "svc3title",
+                      "fill": "#FAFAF5",
+                      "content": "Nátěry všech povrchů",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "FYc2g",
+                      "name": "svc3desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Provádíme veškeré natěračské práce na stavbách, v interiérech, ocelových a dřevěných konstrukcích.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Gjbhv",
+              "name": "Row 2",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5rEU0",
+                  "name": "Tapetovani",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Q4anS",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "eRYCG",
+                          "name": "svc4iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "scroll",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "uRXu7",
+                      "name": "svc4title",
+                      "fill": "#FAFAF5",
+                      "content": "Tapetování",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3ILYh",
+                      "name": "svc4desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Pracujeme s vinylovými, vliesovými, reliéfními, textilními i sklovláknitými tapetami značky VAVEX.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B0nYI",
+                  "name": "Nastriky Gotele",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FcaY4",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "eVlno",
+                          "name": "svc5iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "spray-can",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "SJbL6",
+                      "name": "svc5title",
+                      "fill": "#FAFAF5",
+                      "content": "Nástřiky Gotele",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G4Srt",
+                      "name": "svc5desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Plastické nástřiky Gotele dodávají interiéru mimořádný a elegantní vzhled.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "YynuL",
+                      "name": "svc5link",
+                      "fill": "#C9A96E",
+                      "content": "Více informací →",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "O0W9F",
+                  "name": "Myti Fasad",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "gap": 20,
+                  "padding": [
+                    36,
+                    28
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yDwdP",
+                      "name": "Icon Wrap",
+                      "width": 48,
+                      "height": 48,
+                      "fill": "#C9A96E15",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "cYSaT",
+                          "name": "svc6iconI",
+                          "width": 22,
+                          "height": 22,
+                          "iconFontName": "droplets",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Nvms6",
+                      "name": "svc6title",
+                      "fill": "#FAFAF5",
+                      "content": "Mytí fasád a chodníků",
+                      "fontFamily": "Fraunces",
+                      "fontSize": 20,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NaJML",
+                      "name": "svc6desc",
+                      "fill": "#FAFAF580",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků.",
+                      "lineHeight": 1.7,
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OQ8eO",
+                      "name": "svc6link",
+                      "fill": "#C9A96E",
+                      "content": "Více informací →",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mBKwr",
+      "x": 7725,
+      "y": 3163,
+      "name": "MP - Price List Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "gap": 60,
+      "padding": [
+        80,
+        120
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "6Hhg6",
+          "name": "Section Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Dt3Nr",
+              "name": "tagline",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "YoLPX",
+                  "name": "cenikDashL",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Zjnvh",
+                  "name": "cenikTagText",
+                  "fill": "#C9A96E",
+                  "content": "CENÍK",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 4
+                },
+                {
+                  "type": "rectangle",
+                  "id": "8GTmE",
+                  "name": "cenikDashR",
+                  "fill": "#C9A96E60",
+                  "width": 40,
+                  "height": 1
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "j2lYo",
+              "name": "cenikTitle",
+              "fill": "#FAFAF5",
+              "content": "Ceník služeb",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TiS66",
+          "name": "Price Grid",
+          "width": "fill_container",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Kk7Ls",
+              "name": "Left Column",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nxDRR",
+                  "name": "Standardni interierove barvy",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0lx3C",
+                      "name": "Category Header",
+                      "width": "fill_container",
+                      "fill": "#C9A96E10",
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "H48iH",
+                          "name": "cat1icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "calculator",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3zExr",
+                          "name": "cat1title",
+                          "fill": "#FAFAF5",
+                          "content": "Standardní interiérové barvy",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 18,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rUlZx",
+                      "name": "Items",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "EHnr3",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GIrOl",
+                              "name": "r1t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jupol Classic",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "c9zri",
+                              "name": "r1p",
+                              "fill": "#C9A96E",
+                              "content": "35–45 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tzGYe",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uImRh",
+                              "name": "r2t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jupol Citro",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ypWJ6",
+                              "name": "r2p",
+                              "fill": "#C9A96E",
+                              "content": "40–50 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OhPpv",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "a01X5",
+                              "name": "r3t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jupol Gold",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Y0ccv",
+                              "name": "r3p",
+                              "fill": "#C9A96E",
+                              "content": "50–100 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Fl6is",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qaS81",
+                              "name": "r4t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jupol Brilliant",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "kahsn",
+                              "name": "r4p",
+                              "fill": "#C9A96E",
+                              "content": "70–120 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "A5ZGj",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BPTHD",
+                              "name": "r5t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jupol Latex (omyvatelná)",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "5ee8f",
+                              "name": "r5p",
+                              "fill": "#C9A96E",
+                              "content": "120 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "D6DS4",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "AG0oc",
+                              "name": "r6t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Hetmal",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xsvRK",
+                              "name": "r6p",
+                              "fill": "#C9A96E",
+                              "content": "30–40 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gm22u",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "v4cUY",
+                              "name": "r7t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Het Klasik",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "bPa53",
+                              "name": "r7p",
+                              "fill": "#C9A96E",
+                              "content": "50 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "blfMz",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nbk0s",
+                              "name": "r8t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Het Brillant",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ddkQu",
+                              "name": "r8p",
+                              "fill": "#C9A96E",
+                              "content": "90 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jAHTT",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "S1Uor",
+                              "name": "r9t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Primalex Standard",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "z1LKi",
+                              "name": "r9p",
+                              "fill": "#C9A96E",
+                              "content": "30–40 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "1BgO5",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "kcZyT",
+                              "name": "r10t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Primalex Plus",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "rcGL3",
+                              "name": "r10p",
+                              "fill": "#C9A96E",
+                              "content": "50 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RMsS1",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "KAl82",
+                              "name": "r11t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Primalex Polar",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gxZVU",
+                              "name": "r11p",
+                              "fill": "#C9A96E",
+                              "content": "45–60 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "scu2T",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ptpVC",
+                              "name": "r12t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Dulux Classic White",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ILemR",
+                              "name": "r12p",
+                              "fill": "#C9A96E",
+                              "content": "50–75 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IbtjP",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "eU2md",
+                              "name": "r13t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Dulux Trade Vinyl Matt",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nQ6vR",
+                              "name": "r13p",
+                              "fill": "#C9A96E",
+                              "content": "120 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "7rLn7",
+                          "name": "Item",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24,
+                            16,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YS9Hx",
+                              "name": "r14t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Dulux EasyCare (omyvatelná)",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "PEBFJ",
+                              "name": "r14p",
+                              "fill": "#C9A96E",
+                              "content": "65–100 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tglB2",
+              "name": "Right Column",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kONdh",
+                  "name": "Fasadni barvy",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rgaXy",
+                      "name": "Category Header",
+                      "width": "fill_container",
+                      "fill": "#C9A96E10",
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "eJ3eb",
+                          "name": "cat2icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "calculator",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XLSsx",
+                          "name": "cat2title",
+                          "fill": "#FAFAF5",
+                          "content": "Fasádní barvy",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 18,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "3ERUh",
+                      "name": "Items",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xOI5U",
+                          "name": "f1",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "1OLuH",
+                              "name": "f1t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Caparol Muresko",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "JdAxm",
+                              "name": "f1p",
+                              "fill": "#C9A96E",
+                              "content": "110–150 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ntUZF",
+                          "name": "f2",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pTbrQ",
+                              "name": "f2t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Caparol Amphisilan",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "tQTvU",
+                              "name": "f2p",
+                              "fill": "#C9A96E",
+                              "content": "100–140 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8glQE",
+                          "name": "f3",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8J7TN",
+                              "name": "f3t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Caparol Sylitol Fassadenfarbe",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x48d5",
+                              "name": "f3p",
+                              "fill": "#C9A96E",
+                              "content": "120–160 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jeCBe",
+                          "name": "f4",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SZ8Yh",
+                              "name": "f4t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Akrylcolor",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "5alYB",
+                              "name": "f4p",
+                              "fill": "#C9A96E",
+                              "content": "120–150 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Vnee9",
+                          "name": "f5",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "YZgdq",
+                              "name": "f5t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Jubizol",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GlwcP",
+                              "name": "f5p",
+                              "fill": "#C9A96E",
+                              "content": "160–190 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "qlUMj",
+                          "name": "f6",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "knkmw",
+                              "name": "f6t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Tikkurila Silicone Protect",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Al7aZ",
+                              "name": "f6p",
+                              "fill": "#C9A96E",
+                              "content": "200–300 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "k0OX1",
+                          "name": "f7",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24,
+                            16,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WKenW",
+                              "name": "f7t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Nanoporcolor",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "C4lBY",
+                              "name": "f7p",
+                              "fill": "#C9A96E",
+                              "content": "180–220 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "tNRxo",
+                  "name": "Penetrace",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aaEbG",
+                      "name": "Category Header",
+                      "width": "fill_container",
+                      "fill": "#C9A96E10",
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "M1u29",
+                          "name": "cat3icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "calculator",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Kwoaf",
+                          "name": "cat3title",
+                          "fill": "#FAFAF5",
+                          "content": "Penetrace",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 18,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "r47NX",
+                      "name": "Items",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "qQPju",
+                          "name": "p1",
+                          "width": "fill_container",
+                          "padding": [
+                            10,
+                            24,
+                            16,
+                            24
+                          ],
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "3Axon",
+                              "name": "p1t",
+                              "fill": "#FAFAF5AA",
+                              "content": "Penetrace běžná (Primalex / Jupol)",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "cSgDj",
+                              "name": "p1p",
+                              "fill": "#C9A96E",
+                              "content": "20 Kč/m²",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 13,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qNjwN",
+                  "name": "Premiove interierove barvy",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FAFAF508"
+                  },
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "BpmXH",
+                      "name": "Category Header",
+                      "width": "fill_container",
+                      "fill": "#C9A96E10",
+                      "gap": 10,
+                      "padding": [
+                        20,
+                        24
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "WFZCf",
+                          "name": "cat4icon",
+                          "width": 18,
+                          "height": 18,
+                          "iconFontName": "calculator",
+                          "iconFontFamily": "lucide",
+                          "fill": "#C9A96E"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nvaR4",
+                          "name": "cat4title",
+                          "fill": "#FAFAF5",
+                          "content": "Prémiové interiérové barvy",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 18,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NVhBU",
+                      "name": "Items",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "padding": [
+                        8,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "EsZRD",
+                          "name": "pm1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "zy1rR",
+                              "name": "pm1row",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "P7iAU",
+                                  "name": "pm1t",
+                                  "fill": "#FAFAF5AA",
+                                  "content": "Tikkurila OPTIVA 3 CERAMIC",
+                                  "fontFamily": "DM Sans",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "GW74c",
+                                  "name": "pm1p",
+                                  "fill": "#C9A96E",
+                                  "content": "100–130 Kč/m²",
+                                  "fontFamily": "DM Sans",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "0cfzq",
+                              "name": "pm1note",
+                              "fill": "#FAFAF540",
+                              "content": "jemná, super matná, odolná",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "fontStyle": "italic"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xpYQa",
+                          "name": "pm2",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF04",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "padding": [
+                            10,
+                            24,
+                            16,
+                            24
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "xyDZx",
+                              "name": "pm2row",
+                              "width": "fill_container",
+                              "justifyContent": "space_between",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vpXdZ",
+                                  "name": "pm2t",
+                                  "fill": "#FAFAF5AA",
+                                  "content": "Flügger Dekso 20 H2O",
+                                  "fontFamily": "DM Sans",
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "jl6mg",
+                                  "name": "pm2p",
+                                  "fill": "#C9A96E",
+                                  "content": "100–150 Kč/m²",
+                                  "fontFamily": "DM Sans",
+                                  "fontSize": 13,
+                                  "fontWeight": "600"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "kMBXg",
+                              "name": "pm2note",
+                              "fill": "#FAFAF540",
+                              "content": "vysoce omyvatelná",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "fontStyle": "italic"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tRCt6",
+      "x": 7725,
+      "y": 4191,
+      "name": "MP - Contact Section",
+      "width": 1440,
+      "fill": "#0F0D0A",
+      "layout": "vertical",
+      "padding": [
+        80,
+        120
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "5TB7j",
+          "name": "Contact Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            0,
+            0,
+            60,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "st5o7",
+              "name": "tagline",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "et6I7",
+                  "name": "tagDash",
+                  "fill": "#C9A96E",
+                  "width": 32,
+                  "height": 2
+                },
+                {
+                  "type": "text",
+                  "id": "q4osG",
+                  "name": "tagText",
+                  "fill": "#C9A96E",
+                  "content": "SPOJTE SE S NÁMI",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 12,
+                  "fontWeight": "600",
+                  "letterSpacing": 3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "fcm95",
+              "name": "headerTitle",
+              "fill": "#FAFAF5",
+              "content": "Kontakty",
+              "fontFamily": "Fraunces",
+              "fontSize": 44,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "sT8kx",
+              "name": "headerSub",
+              "fill": "#FAFAF580",
+              "content": "Rádi vám poradíme s výběrem povrchové úpravy pro váš projekt",
+              "textAlign": "center",
+              "fontFamily": "DM Sans",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GmGHd",
+          "name": "Contact Content",
+          "width": "fill_container",
+          "gap": 60,
+          "children": [
+            {
+              "type": "frame",
+              "id": "8FKt7",
+              "name": "Contact Info",
+              "width": "fill_container",
+              "gap": 40,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "VhJzk",
+                  "name": "Photo Column",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "VbP9i",
+                      "name": "Photo",
+                      "clip": true,
+                      "width": 120,
+                      "height": 120,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1771349335460.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 60
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ple7f",
+                  "name": "Details Column",
+                  "layout": "vertical",
+                  "gap": 28,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RjSpE",
+                      "name": "Name Block",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dKNFa",
+                          "name": "Name",
+                          "fill": "#FAFAF5",
+                          "content": "Radek Tlach",
+                          "fontFamily": "Fraunces",
+                          "fontSize": 24,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "piq8D",
+                          "name": "Address",
+                          "fill": "#FAFAF5AA",
+                          "content": "Opavská 350/59\nBruntal 79 201",
+                          "lineHeight": 1.6,
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bepVO",
+                      "name": "Contact Block",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "IsgEH",
+                          "name": "Email Row",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "W7XpW",
+                              "name": "emailIcon",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "mail",
+                              "iconFontFamily": "lucide",
+                              "fill": "#C9A96E"
+                            },
+                            {
+                              "type": "text",
+                              "id": "ozR9h",
+                              "name": "emailText",
+                              "fill": "#FAFAF5AA",
+                              "content": "tlachr@seznam.cz",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gTeeX",
+                          "name": "Phone Row",
+                          "gap": 10,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "J3yHw",
+                              "name": "phoneIcon",
+                              "width": 16,
+                              "height": 16,
+                              "iconFontName": "phone",
+                              "iconFontFamily": "lucide",
+                              "fill": "#C9A96E"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QMROF",
+                              "name": "phoneText",
+                              "fill": "#FAFAF5AA",
+                              "content": "+420 608 741 219",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "X0rs4",
+                      "name": "Divider",
+                      "fill": "#FAFAF510",
+                      "width": 240,
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "cMKqp",
+                      "name": "ICO Block",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "sZRUM",
+                          "name": "ICO Row",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CBTrN",
+                              "name": "icoLabel",
+                              "fill": "#FAFAF580",
+                              "content": "IČO:",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "bAeng",
+                              "name": "icoValue",
+                              "fill": "#FAFAF5AA",
+                              "content": "63998556",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "vq2SG",
+                          "name": "DIC Row",
+                          "gap": 8,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "n0tuZ",
+                              "name": "dicLabel",
+                              "fill": "#FAFAF580",
+                              "content": "DIČ:",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "pQknP",
+                              "name": "dicValue",
+                              "fill": "#FAFAF5AA",
+                              "content": "CZ7412186072",
+                              "fontFamily": "DM Sans",
+                              "fontSize": 14,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "id": "HGALu",
+                      "name": "Divider2",
+                      "fill": "#FAFAF510",
+                      "width": 240,
+                      "height": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Uc7bo",
+                      "name": "Bank Block",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yK9VO",
+                          "name": "bankLabel",
+                          "fill": "#FAFAF580",
+                          "content": "Bankovní spojení",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G7DWv",
+                          "name": "bankName",
+                          "fill": "#FAFAF5AA",
+                          "content": "Raiffeisen Bank",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Dx9zJ",
+                          "name": "bankNum",
+                          "fill": "#FAFAF5AA",
+                          "content": "5917719001 / 5500",
+                          "fontFamily": "DM Sans",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CXYWu",
+              "name": "Map Container",
+              "clip": true,
+              "width": "fill_container",
+              "height": 400,
+              "fill": "#1A1714",
+              "cornerRadius": 16,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#FAFAF510"
+              },
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lbUJi",
+                  "name": "Map Header",
+                  "width": "fill_container",
+                  "fill": "#1A1714",
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    20
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "rxREr",
+                      "name": "mapIcon",
+                      "width": 16,
+                      "height": 16,
+                      "iconFontName": "map-pin",
+                      "iconFontFamily": "lucide",
+                      "fill": "#C9A96E"
+                    },
+                    {
+                      "type": "text",
+                      "id": "42hb5",
+                      "name": "mapTitle",
+                      "fill": "#FAFAF5",
+                      "content": "Opavská 350/59",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wsp5O",
+                      "name": "mapSubtitle",
+                      "fill": "#FAFAF560",
+                      "content": "Bruntál, 792 01 Bruntál",
+                      "fontFamily": "DM Sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aws0S",
+                  "name": "Map Image",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "./images/generated-1771349329218.png",
+                    "mode": "fill"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "3edvi",
+      "x": 7725,
+      "y": 4943,
+      "name": "MP - Footer",
+      "width": 1440,
+      "fill": "#0A0908",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "tFnAU",
+          "name": "Top Divider",
+          "fill": "#FAFAF510",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "tBJMw",
+          "name": "Footer Content",
+          "width": "fill_container",
+          "padding": [
+            32,
+            120
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Z7uH1",
+              "name": "Footer Nav",
+              "gap": 36,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "OAmwi",
+                  "name": "fLink1",
+                  "fill": "#FAFAF5AA",
+                  "content": "Úvod",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "HrAYb",
+                  "name": "fLink2",
+                  "fill": "#FAFAF5AA",
+                  "content": "Malířské práce",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "WGxE8",
+                  "name": "fLink3",
+                  "fill": "#FAFAF5AA",
+                  "content": "Reference",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "6ie3C",
+                  "name": "fLink4",
+                  "fill": "#FAFAF5AA",
+                  "content": "Kontakty",
+                  "fontFamily": "DM Sans",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ErZXz",
+              "name": "Footer Social",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "sNDpz",
+                  "name": "fbIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "facebook",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                },
+                {
+                  "type": "icon_font",
+                  "id": "RrndR",
+                  "name": "igIcon",
+                  "width": 20,
+                  "height": 20,
+                  "iconFontName": "instagram",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FAFAF5AA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "OXFx3",
+          "name": "Bottom Divider",
+          "fill": "#FAFAF508",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "frame",
+          "id": "4ZMRx",
+          "name": "Copyright Row",
+          "width": "fill_container",
+          "padding": [
+            20,
+            120
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "nXkge",
+              "name": "copyrightText",
+              "fill": "#FAFAF540",
+              "content": "© Built for Aracolor. Created by Josef Nagy.",
+              "fontFamily": "DM Sans",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

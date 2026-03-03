@@ -1,0 +1,88 @@
+extends ../layout.pug
+
+block vars
+  -var title = "Reference | Aracolor.cz"
+  -var description = "Předkládáme malou ukázku z Naších referenčních projektů - Dekorační stěrky, koupelnové stěrky, malby, nátěry, fasády, mytí fasád a tapetování."
+  -var activePage = "reference"
+
+block index
+
+  //- Hero Section
+  section.hero-section#header
+    include ../navigation.pug
+
+    .hero__bg(style="background-image: url('resources/img/hero-reference.jpg')")
+    .hero__overlay
+    .hero__bottom-gradient
+    .hero__accent-line
+
+    .hero__content
+      .hero__tagline
+        span.hero__tagline-dash
+        span.hero__tagline-text REFERENCE
+
+      h1.hero__headline Naše Realizace
+
+      p.hero__subtext Prohlédněte si ukázky z našich referenčních projektů. Dekorační stěrky, malby, nátěry, fasády a další.
+
+    .hero__scroll
+      .hero__scroll-line
+      span.hero__scroll-text scroll
+
+  //- Reference Categories Grid
+  section.ref-overview
+    .ref-overview__inner
+      .ref-overview__header
+        .mp-tag
+          span.mp-tag__dash
+          span.mp-tag__text KATEGORIE
+          span.mp-tag__dash
+        h2.ref-overview__title Referenční projekty
+
+      .ref-overview__grid
+        a.ref-overview__card(href="ref-sterky.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/sterky/thumbs/1.jpg" alt="Dekorační stěrky")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count 199 fotografií
+          h3.ref-overview__card-name Dekorační stěrky
+
+        a.ref-overview__card(href="ref-koupelny.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/koupelny/thumbs/1.jpg" alt="Koupelnové stěrky")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count 62 fotografií
+          h3.ref-overview__card-name Koupelnové stěrky
+
+        a.ref-overview__card(href="ref-malby.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/malby/thumbs/1.jpg" alt="Malby a nátěry")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count 20 fotografií
+          h3.ref-overview__card-name Malby a nátěry
+
+        a.ref-overview__card(href="ref-fasady.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/fasady/thumbs/1.jpg" alt="Fasády")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count Zobrazit galerii
+          h3.ref-overview__card-name Fasády
+
+        a.ref-overview__card(href="ref-myti.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/myti_fasad/thumbs/1.jpg" alt="Mytí fasád")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count Zobrazit galerii
+          h3.ref-overview__card-name Mytí fasád
+
+        a.ref-overview__card(href="ref-tapety.html")
+          .ref-overview__card-img
+            img(src="resources/img/ref/tapety/thumbs/1.jpg" alt="Tapetování")
+            .ref-overview__card-overlay
+              span.ref-overview__card-count Zobrazit galerii
+          h3.ref-overview__card-name Tapetování
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="resources/js/script.js")

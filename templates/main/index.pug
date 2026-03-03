@@ -1,0 +1,329 @@
+extends ../layout.pug
+
+block vars
+  -var title = "Radek Tlach | Dekorační stěrky, malby, nátěry | Aracolor.cz"
+  -var description = "Luxusní dekorační interiérové stěrky, originální design i maximální odolnost, neomezené množství dekorů a barevných kombinací."
+  -var activePage = "index"
+
+block index
+
+  //- Hero Section
+  section.hero-section#header
+    include ../navigation.pug
+
+    .hero__bg(style="background-image: url('resources/img/hero-sterky.png')")
+    .hero__overlay
+    .hero__bottom-gradient
+    .hero__accent-line
+
+    .hero__content
+      .hero__tagline
+        span.hero__tagline-dash
+        span.hero__tagline-text DEKORAČNÍ STĚRKY &amp; MALÍŘSKÉ PRÁCE
+
+      h1.hero__headline Luxusní povrchy,<br>které inspirují
+
+      p.hero__subtext Originální design a řemeslná preciznost. Dekorační stěrky,<br>benátské štuky a unikátní povrchové úpravy pro váš interiér.
+
+      .hero__cta
+        a.hero__btn.hero__btn--primary.scroll-js(href="#kontakty")
+          i.ion-ios-email-outline.hero__btn-icon
+          | Kontaktujte nás
+        a.hero__btn.hero__btn--secondary(href="reference.html")
+          i.ion-images.hero__btn-icon
+          | Naše reference
+
+    .hero__stats
+      .hero__stat
+        span.hero__stat-value 15+
+        span.hero__stat-label let zkušeností
+      .hero__stat-divider
+      .hero__stat
+        span.hero__stat-value 500+
+        span.hero__stat-label realizací
+      .hero__stat-divider
+      .hero__stat
+        span.hero__stat-value 100%
+        span.hero__stat-label spokojenost
+
+    .hero__scroll
+      .hero__scroll-line
+      span.hero__scroll-text scroll
+
+  //- Products Section
+  section.section-products
+    .row
+      .products__header
+        .products__tag
+          span.products__tag-dash
+          span.products__tag-text NAŠE SPECIALIZACE
+          span.products__tag-dash
+        h2.products__title Druhy povrchů, které umíme
+        p.products__subtitle Každý povrch je originál — vytvořený s precizností a vášní pro detail
+
+    //- 01 - Betonové stěrky
+    .product-card
+      .product-card__image-wrap(data-category="concrete")
+        a(href="#")
+          img(src="" alt="Betonová stěrka")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 01
+        h3.product-card__name Betonové stěrky
+        p.product-card__desc Betonová stěrka neboli imitace pohledového betonu, se postupně stala nepostradatelným prvkem moderní architektury. Dá se nanést na stěnu, podlahu i strop. Použití je možné i do koupelny či na fasády budov.
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 02 - Arte Viva
+    .product-card.product-card--reverse
+      .product-card__image-wrap(data-category="arteviva")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Arte Viva")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 02
+        h3.product-card__name Arte Viva
+        p.product-card__desc Systém ARTE VIVA představuje dokonalé spojení všestranosti a přizpůsobitelnosti jakýmkoli požadavkům, prostředí, vybavení a nabízí možnost vytvářet umělecké a dekorativní efekty. Proto je ideálním řešením pro jedinečnou a originální úpravu soukromích i veřejných prostorů, obchodů, kanceláří, koupelen, sprchových koutů a podlah.
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="https://www.resinaarteviva.it/cs/" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 03 - Aureum
+    .product-card
+      .product-card__image-wrap(data-category="aureum")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Aureum OIKOS")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 03
+        h3.product-card__name Aureum
+        p.product-card__desc AUREUM je prestižní dekorativní materiál, který vytváří nádherný efekt "zlatého mramoru". Jeho barevnost vychází ze zemitých odstínů a teplých přírodních tónů. Konečný efekt je navíc znásoben zlatými odlesky, které prozařují stěnu a vzbuzují intenzivní pocity hedvábného doteku. AUREUM představuje jedinečné spojení lehkosti a elegance vzhledu přírodního hedvábí s odolností a pevností mramorového povrchu. Aureum je nabízeno v osmi odstínech.
+        .product-card__variants
+          figure
+            a(href="resources/img/color-au-16-melia.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-au-16-melia.jpg" alt="Au 16 Melia")
+            figcaption Au 16 Melia
+          figure
+            a(href="resources/img/color-au-24-gea.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-au-24-gea.jpg" alt="Au 34 Gea")
+            figcaption Au 34 Gea
+          figure
+            a(href="resources/img/color-au-32-arcadia.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-au-32-arcadia.jpg" alt="Au 32 Arcadia")
+            figcaption Au 32 Arcadia
+          figure
+            a(href="resources/img/color-au-40-rea.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-au-40-rea.jpg" alt="Au 40 Rea")
+            figcaption Au 40 Rea
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="/resources/files/aureum.pdf" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 81 100")
+              use(xlink:href="#pdf-icon")
+          a.product-card__icon-link(href="http://www.oikos-group.it/en/p/aureum" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 04 - Encanto
+    .product-card.product-card--reverse
+      .product-card__image-wrap(data-category="encanto")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Encanto OIKOS")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 04
+        h3.product-card__name Encanto
+        p.product-card__desc ENCANTO je dekorativní metalický nátěr, který umožňuje vytvořit fascinující povrchové úpravy. Kreativní materiál vytváří magický efekt hry světla a metalických odlesků v nepřeberném množství odstínů ve třech základních bázích Gold, Silver a Grey a nově v dalších čtyřech bázích Oro, Rosso, Bianco a Nero. Encanto je jednoduchým a efektivním řešením pro dosažení jedinečných sofistikovaných dekorací. Snadnou aplikací moderního materiálu dosáhnete rychle elegantního vzhledu metalického povrchu. Vyniká na velkých plochách i v členitých interiérech, v soukromém nebo komerčním prostředí.
+        .product-card__variants
+          figure
+            a(href="resources/img/color-en-gold-.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-en-gold-.jpg" alt="Gold-")
+            figcaption Gold-
+          figure
+            a(href="resources/img/color-en-gold01.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-en-gold01.jpg" alt="Gold01")
+            figcaption Gold01
+          figure
+            a(href="resources/img/color-en-gold02.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-en-gold02.jpg" alt="Gold02")
+            figcaption Gold02
+          figure
+            a(href="resources/img/color-en-gold03.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-en-gold03.jpg" alt="Gold03")
+            figcaption Gold03
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="/resources/files/encanto.pdf" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 81 100")
+              use(xlink:href="#pdf-icon")
+          a.product-card__icon-link(href="http://www.oikos-group.it/en/p/encanto" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 05 - Ottocento
+    .product-card
+      .product-card__image-wrap(data-category="ottocento")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Ottocento OIKOS")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 05
+        h3.product-card__name Ottocento
+        p.product-card__desc OTTOCENTO je dekorační malba umožňující velmi specifický dekorační efekt, který odrážením světla v různých úhlech napodobuje sametový vzhled. Výsledné střídání kontrastních matových a lesklých ploch napodobuje vzácné hedvábně sametové tapety používané v období evropské renesance.
+        .product-card__variants
+          figure
+            a(href="resources/img/color-ot-an750.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-ot-an750.jpg" alt="AN750")
+            figcaption AN750
+          figure
+            a(href="resources/img/color-ot-an751.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-ot-an751.jpg" alt="AN751")
+            figcaption AN751
+          figure
+            a(href="resources/img/color-ot-an752.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-ot-an752.jpg" alt="AN752")
+            figcaption AN752
+          figure
+            a(href="resources/img/color-ot-an753.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-ot-an753.jpg" alt="AN753")
+            figcaption AN753
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="/resources/files/ottocento.pdf" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 81 100")
+              use(xlink:href="#pdf-icon")
+          a.product-card__icon-link(href="http://www.oikos-group.it/en/p/ottocento" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 06 - Travertino Romano
+    .product-card.product-card--reverse
+      .product-card__image-wrap(data-category="travertino-romano")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Travertino Romano OIKOS")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 06
+        h3.product-card__name Travertino Romano
+        p.product-card__desc TRAVERTINO ROMANO v základní podobě nabízí devět odstínů typických pro přírodní Travertin. Umožňuje vytvářet nádherné efekty s granulací pískovce, lávového kamene nebo v podobě stavebních kvádrů, dokonale imituje strukturu přírodního kamene. V dalších barevných úpravách pro interiér vytváří nádherné variace od polotransparentních sametových efektů až po kovové a perleťové efekty. Travertino Romano je moderní výrobek, který spojuje přírodní vzhled s elegancí zpracování.
+        .product-card__variants
+          figure
+            a(href="resources/img/color-tr-beige.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-tr-beige.jpg" alt="Beige")
+            figcaption Beige
+          figure
+            a(href="resources/img/color-tr-black.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-tr-black.jpg" alt="Black")
+            figcaption Black
+          figure
+            a(href="resources/img/color-tr-grey.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-tr-grey.jpg" alt="Grey")
+            figcaption Grey
+          figure
+            a(href="resources/img/color-tr-red.jpg" data-featherlight="image")
+              img.color__img(src="resources/img/color-tr-red.jpg" alt="Red")
+            figcaption Red
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="/resources/files/travertino-romano.pdf" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 81 100")
+              use(xlink:href="#pdf-icon")
+          a.product-card__icon-link(href="http://www.oikos-group.it/en/p/travertinoromanodesign" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 07 - Zero
+    .product-card
+      .product-card__image-wrap(data-category="zero")
+        a(href="#")
+          img(src="" alt="Dekorační Barva Zero")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 07
+        h3.product-card__name Zero
+        p.product-card__desc Výjimečně odolná interiérová a fasádní exkluzivní dekorativní špachtlovací hmota se sametovým povrchem s efekty kovu, perleti nebo zlata.
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="http://www.zerobarvy.cz/cz/magictouch" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+    .product-divider
+      .product-divider__line
+
+    //- 08 - Marmolino
+    .product-card.product-card--reverse
+      .product-card__image-wrap(data-category="marmolino")
+        a(href="#")
+          img(src="" alt="Dekorační stěrka Marmolino")
+        .decor-img__overlay
+          p.decor-img__text Otevřít Galerii
+      .product-card__content
+        span.product-card__number 08
+        h3.product-card__name Marmolino
+        p.product-card__desc Marmorino Naturale je dekorativní stěrková hmota na bázi hašeného vápna a mramorové moučky, která vytváří elegantní povrch s efektem leštěného mramoru. Díky svému přírodnímu složení je vhodná pro interiéry i exteriéry a nabízí širokou škálu barevných odstínů a povrchových úprav od jemně hladkých až po výrazně strukturované.
+        .product-card__accent
+        .product-card__icons
+          a.product-card__icon-link.product-card__gallery-trigger(href="#")
+            svg(width="100%" height="100%" viewbox="0 0 90 69")
+              use(xlink:href="#gallery-icon")
+          a.product-card__icon-link(href="https://www.oikos-paint.cz/textured-decoratives/marmorinonaturale" target="_blank")
+            svg(width="100%" height="100%" viewbox="0 0 31 31")
+              use(xlink:href="#website-icon")
+
+  include ../contacts.pug
+
+  include ../footer.pug
+
+  script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="vendors/js/featherlight.gallery.min.js")
+  script(src="resources/js/script.js")
