@@ -1,11 +1,23 @@
-# Dependency directories
+# Dependencies
 node_modules/
+client/node_modules/
+
+# Environment
+.env
+.DS_Store
+
+# Firebase
 .firebase/
 
-# forward slash / means its root directory
-/img/
-source_images/
-
-# Generated files - HTML from Pug, CSS from Sass
+# Build output
 public/*.html
 public/resources/css/style.css
+dist/
+
+# Runtime data
+data/
+
+# Large assets
+source_images/
+img/
+public/archive/

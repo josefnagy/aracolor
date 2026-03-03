@@ -1,40 +1,57 @@
 {
   "name": "aracolor",
   "version": "1.0.0",
-  "description": "aracolor static website",
-  "main": "index.html",
+  "private": true,
+  "description": "Aracolor — static website + image management admin",
+  "main": "src/server.js",
   "scripts": {
+    "dev": "concurrently --names web,api,vue -c blue,green,magenta \"npm run dev:web\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:web": "concurrently --kill-others \"npm run build:html\" \"npm run build:css\" \"browser-sync start --config bs-config.js\"",
+    "dev:server": "nodemon src/server.js",
+    "dev:client": "cd client && npm run dev",
     "build:css": "sass sass/main.scss:public/resources/css/style.css --watch --no-source-map --silence-deprecation=import",
     "build:css:once": "sass sass/main.scss:public/resources/css/style.css --no-source-map --silence-deprecation=import",
     "build:html": "pug templates/main --out public -w -P",
     "build:html:once": "pug templates/main --out public -P",
-    "dev": "concurrently --kill-others \"npm run build:html\" \"npm run build:css\" \"browser-sync start --server public --files 'public/**/*'\"",
-    "build": "npm run build:css:once && npm run build:html:once",
-    "deploy": "npx firebase-tools deploy --only hosting",
+    "build:web": "npm run build:css:once && npm run build:html:once",
+    "build:client": "cd client && npm run build",
+    "build": "npm run build:web && npm run build:client",
+    "start": "node src/server.js",
+    "deploy": "./deploy.sh --all",
+    "deploy:web": "./deploy.sh --web",
+    "deploy:data": "./deploy.sh --data",
+    "deploy:backend": "./deploy.sh --backend",
+    "deploy:frontend": "./deploy.sh --frontend",
+    "deploy:firebase": "npx firebase-tools deploy --only hosting",
     "process:images": "node js/processImages.js",
-    "deploy-vm": "rsync -avz --delete public/ jnagy@84.247.162.208:/var/www/aracolor/"
+    "hash-password": "node scripts/hashPassword.js",
+    "migrate": "node scripts/migrate.js",
+    "postinstall": "[ -d client ] && cd client && npm install || true"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/josefnagy/aracolor.git"
   },
-  "keywords": [
-    "aracolor"
-  ],
   "author": "Josef Nagy",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/josefnagy/aracolor/issues"
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.34.0"
   },
-  "homepage": "https://github.com/josefnagy/aracolor#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "chalk": "^4.1.2",
     "concurrently": "^9.1.0",
+    "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.83.0",
-    "sharp": "^0.34.0"
+    "sass": "^1.83.0"
   }
 }

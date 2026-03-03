@@ -2,54 +2,60 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Project Structure
 
-Aracolor is a static website for a Czech house painting and decorating company. It uses Pug templates, Sass for styling, and jQuery for interactivity.
+Aracolor is a flat single-project repo combining a static marketing site with an image management admin.
 
-## Development Commands
-
-```bash
-# Start development server (compiles Pug + Sass with live reload)
-npm run dev
-
-# Build CSS only (with watch)
-npm run build:css
-
-# Build HTML only (with watch)
-npm run build:html
-
-# Deploy to Firebase hosting
-npm run deploy
+```
+aracolor/
+├── public/          # Web root — BrowserSync serves this, deployed to Firebase/VM
+├── data/            # Runtime data (images.json) — outside public/, not deployed
+├── templates/       # Pug templates → compiled to public/*.html
+├── sass/            # Sass source (7-1 pattern) → compiled to public/resources/css/style.css
+├── src/             # Express admin backend (server.js, routes/, services/)
+├── client/          # Vue 3 admin SPA (own package.json, Vite)
+├── dist/            # Built Vue SPA output (gitignored)
+├── config/          # Admin config (categories.json, users.json)
+├── scripts/         # Admin utility scripts (hashPassword, migrate)
+├── js/              # Web image processing scripts
+├── bs-config.js     # BrowserSync config — maps /data → data/ (no symlinks)
+├── package.json     # Single root package.json with all deps
+└── firebase.json    # Firebase Hosting config
 ```
 
-## Architecture
+## Commands
 
-### Build Pipeline
-- **Pug templates** (`templates/`) → compiled to HTML in `public/`
-- **Sass** (`sass/main.scss`) → compiled to `public/resources/css/style.css`
-- Static assets served from `public/`
+```bash
+# Install all dependencies (cascades to client/ via postinstall)
+npm install
 
-### Template Structure
-- `templates/layout.pug` - Base layout with head, analytics, SVG icons, and block placeholders
-- `templates/navigation.pug` - Site navigation component
-- `templates/footer.pug` - Footer component
-- `templates/main/*.pug` - Individual pages (index, cisteni, dekoracni-sterky, ref-*.pug for references, etc.)
+# Start all dev servers concurrently
+npm run dev          # web on :3001, Express on :3000, Vite on :5173
 
-### Sass Organization (7-1 pattern)
-- `sass/abstract/` - Variables, mixins, grid, featherlight config
-- `sass/base/` - Base styles, typography, animations, utilities
-- `sass/components/` - Reusable components (back-to-top, scrolldown buttons)
-- `sass/layout/` - Header, navigation, footer
-- `sass/pages/` - Page-specific styles
+# Start individual servers
+npm run dev:web      # BrowserSync + Pug + Sass watchers
+npm run dev:server   # Express backend only (nodemon)
+npm run dev:client   # Vue SPA only (Vite)
 
-### Key Vendor Libraries
-- jQuery 3.2.1
-- Featherlight (lightbox gallery)
-- Masonry (grid layout)
-- Ionicons (icon font)
-- Animate.css
-- Node 18+ for builds and development
+# Build everything
+npm run build        # Pug + Sass + Vue SPA
 
-## Deployment
+# Deploy
+npm run deploy           # Build + rsync web + backend + frontend to VM
+npm run deploy:firebase  # Firebase Hosting only
+```
 
-Hosted on Firebase. The `public/` directory is deployed; `cleanUrls: true` strips .html extensions.
+## Data Flow
+
+- Admin backend (`src/`) writes image metadata to `data/images.json`
+- Admin uploads processed images to `public/resources/img/bs/`
+- BrowserSync `routes` config maps `/data` → `data/` for local dev (no symlinks)
+- Pug templates in `templates/main/` compile to `public/*.html`
+- Sass in `sass/main.scss` compiles to `public/resources/css/style.css`
+
+## Key Architecture Notes
+
+- **No symlinks** — BrowserSync routes handle `/data` mapping
+- **`client/` has its own `package.json`** — Vue/Vite tooling stays separate
+- **`data/` is outside `public/`** — not deployed to Firebase, not rsynced with web assets
+- **`dist/`** — Vue SPA build output, deployed to VM at `/var/www/aracolor/admin/`
