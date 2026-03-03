@@ -3,13 +3,14 @@
     <draggable
       v-model="localImages"
       item-key="id"
-      class="gallery-grid"
+      :class="viewMode === 'list' ? 'gallery-list' : 'gallery-grid'"
       ghost-class="ghost"
       @end="onDragEnd"
     >
       <template #item="{ element }">
         <ImageCard
           :image="element"
+          :view-mode="viewMode"
           @set-hero="$emit('set-hero', $event)"
           @delete="$emit('delete', $event)"
         />
@@ -31,6 +32,7 @@ import ImageCard from './ImageCard.vue';
 const props = defineProps({
   images: { type: Array, required: true },
   category: { type: String, required: true },
+  viewMode: { type: String, default: 'grid' },
 });
 
 const emit = defineEmits(['reorder', 'set-hero', 'delete']);
@@ -60,6 +62,12 @@ function onDragEnd() {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .ghost {

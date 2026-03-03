@@ -5,6 +5,7 @@ const fs = require('fs');
 const dataStore = require('../services/dataStore');
 const { processImage } = require('../services/imageProcessor');
 const { generateId } = require('../utils/idGenerator');
+const configStore = require('../services/configStore');
 
 const router = express.Router();
 
@@ -31,11 +32,10 @@ const upload = multer({
 const WEBROOT = process.env.WEBROOT || path.join(__dirname, '../../public');
 const ARCHIVE_DIR = process.env.ARCHIVE_DIR || path.join(WEBROOT, 'archive');
 
-const categoryConfig = require(path.join(__dirname, '../../config/categories.json'));
-
 router.post('/upload', upload.array('files', 50), async (req, res) => {
   const { category } = req.body;
 
+  const categoryConfig = configStore.readCategories();
   if (!category || !categoryConfig[category]) {
     return res.status(400).json({ error: 'Invalid category' });
   }
@@ -71,13 +71,19 @@ router.post('/upload', upload.array('files', 50), async (req, res) => {
       writtenFiles.push(outputPath);
 
       const src = `/resources/img/bs/${category}/${id}.jpg`;
-      await dataStore.addImage(id, category, src);
+      await dataStore.addImage(id, category, src, {
+        size: result.size,
+        width: result.width,
+        height: result.height,
+      });
 
       results.push({
         id,
         src,
         size: result.size,
         quality: result.quality,
+        width: result.width,
+        height: result.height,
       });
     }
 

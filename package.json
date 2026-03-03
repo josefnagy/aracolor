@@ -26,6 +26,7 @@
     "process:images": "node js/processImages.js",
     "hash-password": "node scripts/hashPassword.js",
     "migrate": "node scripts/migrate.js",
+    "backfill": "node scripts/backfillMetadata.js",
     "postinstall": "[ -d client ] && cd client && npm install || true"
   },
   "repository": {

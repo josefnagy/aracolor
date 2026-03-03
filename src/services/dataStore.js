@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const configStore = require('./configStore');
 
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, '../../data');
 const DATA_FILE = path.join(DATA_DIR, 'images.json');
@@ -43,11 +44,13 @@ async function atomicWrite() {
   fs.renameSync(tmpFile, DATA_FILE);
 }
 
-async function addImage(id, category, src) {
+async function addImage(id, category, src, metadata = {}) {
   const cat = data.categories[category];
   if (!cat) {
+    const config = configStore.readCategories();
+    const displayTitle = config[category]?.title || category;
     data.categories[category] = {
-      title: category,
+      title: displayTitle,
       heroImageId: id,
       imageIds: [id],
     };
@@ -64,6 +67,9 @@ async function addImage(id, category, src) {
     src,
     order: 0,
     uploadedAt: new Date().toISOString(),
+    size: metadata.size || null,
+    width: metadata.width || null,
+    height: metadata.height || null,
   };
 
   // Recalculate order values

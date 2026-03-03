@@ -4,12 +4,14 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
 const dataStore = require('./services/dataStore');
+const configStore = require('./services/configStore');
 const { authMiddleware } = require('./middleware/auth');
 
 const authRoutes = require('./routes/auth');
 const categoriesRoutes = require('./routes/categories');
 const uploadRoutes = require('./routes/upload');
 const imagesRoutes = require('./routes/images');
+const settingsRoutes = require('./routes/settings');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,9 +25,23 @@ app.use(express.json());
 const WEBROOT = process.env.WEBROOT || path.join(__dirname, '../public');
 app.use('/resources', express.static(path.join(WEBROOT, 'resources')));
 
-// Public image data for the marketing site
+// Public image data for the marketing site (merges titles from categories config)
 app.get('/api/images', (req, res) => {
-  res.json(dataStore.getData());
+  const data = dataStore.getData();
+  const categoryConfig = configStore.readCategories();
+
+  const categories = {};
+  // Merge config titles into data categories, include config-only (empty) categories
+  for (const [slug, config] of Object.entries(categoryConfig)) {
+    const catData = data.categories[slug] || { heroImageId: null, imageIds: [] };
+    categories[slug] = { ...catData, title: config.title, description: config.description || '' };
+  }
+  // Include any data-only categories not in config (safety fallback)
+  for (const [slug, catData] of Object.entries(data.categories)) {
+    if (!categories[slug]) categories[slug] = catData;
+  }
+
+  res.json({ ...data, categories });
 });
 
 // Public auth routes (login)
@@ -35,6 +51,7 @@ app.use('/api', authRoutes);
 app.use('/api', authMiddleware, categoriesRoutes);
 app.use('/api', authMiddleware, uploadRoutes);
 app.use('/api', authMiddleware, imagesRoutes);
+app.use('/api', authMiddleware, settingsRoutes);
 
 // Serve Vue SPA from dist/
 const distPath = path.join(__dirname, '..', 'dist');

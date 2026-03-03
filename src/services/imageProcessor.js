@@ -2,18 +2,34 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const MAX_DIMENSION = 1600;
-const MAX_FILE_SIZE = 1024 * 1024; // 1MB
-const INITIAL_QUALITY = 80;
-const QUALITY_STEP = 5;
+const PROCESSING_FILE = path.join(__dirname, '../../config/processing.json');
+
+const DEFAULTS = {
+  maxDimension: 1600,
+  maxFileSizeKB: 1024,
+  initialQuality: 80,
+  qualityStep: 5,
+};
+
+function getConfig() {
+  try {
+    if (fs.existsSync(PROCESSING_FILE)) {
+      const raw = fs.readFileSync(PROCESSING_FILE, 'utf-8');
+      return { ...DEFAULTS, ...JSON.parse(raw) };
+    }
+  } catch {
+    // fall through to defaults
+  }
+  return DEFAULTS;
+}
 
 /**
  * Process an image buffer: auto-rotate, resize, compress to JPEG.
- * Iteratively reduces quality until file is under MAX_FILE_SIZE.
+ * Iteratively reduces quality until file is under max file size.
  *
  * @param {Buffer} inputBuffer - Raw image buffer from multer
  * @param {string} outputPath - Destination path for processed JPEG
- * @returns {Promise<{size: number, quality: number}>}
+ * @returns {Promise<{size: number, quality: number, width: number, height: number}>}
  */
 async function processImage(inputBuffer, outputPath) {
   // Ensure output directory exists
@@ -22,21 +38,23 @@ async function processImage(inputBuffer, outputPath) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let quality = INITIAL_QUALITY;
+  const config = getConfig();
+  const maxFileSize = config.maxFileSizeKB * 1024;
+  let quality = config.initialQuality;
 
   while (quality > 0) {
-    const buffer = await sharp(inputBuffer)
+    const { data: buffer, info } = await sharp(inputBuffer)
       .rotate()
-      .resize(MAX_DIMENSION, MAX_DIMENSION, { fit: 'inside', withoutEnlargement: true })
+      .resize(config.maxDimension, config.maxDimension, { fit: 'inside', withoutEnlargement: true })
       .jpeg({ quality })
-      .toBuffer();
+      .toBuffer({ resolveWithObject: true });
 
-    if (buffer.length <= MAX_FILE_SIZE || quality <= 10) {
+    if (buffer.length <= maxFileSize || quality <= 10) {
       fs.writeFileSync(outputPath, buffer);
-      return { size: buffer.length, quality };
+      return { size: buffer.length, quality, width: info.width, height: info.height };
     }
 
-    quality -= QUALITY_STEP;
+    quality -= config.qualityStep;
   }
 }
 

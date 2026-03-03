@@ -11,6 +11,7 @@ export function useImages() {
     return Object.entries(categories.value).map(([slug, cat]) => ({
       slug,
       title: cat.title,
+      description: cat.description || '',
       count: cat.imageIds ? cat.imageIds.length : 0,
       heroImageId: cat.heroImageId,
     }));
@@ -89,6 +90,17 @@ export function useImages() {
     await loadData();
   }
 
+  const totalStorageBytes = computed(() => {
+    return Object.values(images.value).reduce((sum, img) => sum + (img.size || 0), 0);
+  });
+
+  const weeklyUploadCount = computed(() => {
+    const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    return Object.values(images.value).filter(
+      img => img.uploadedAt && new Date(img.uploadedAt).getTime() >= weekAgo
+    ).length;
+  });
+
   return {
     categories,
     images,
@@ -96,6 +108,8 @@ export function useImages() {
     loading,
     categoryList,
     currentImages,
+    totalStorageBytes,
+    weeklyUploadCount,
     loadData,
     uploadImages,
     reorderImages,

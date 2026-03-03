@@ -1,10 +1,34 @@
 {
-  "arteviva": { "title": "Arteviva" },
-  "aureum": { "title": "Aureum" },
-  "concrete": { "title": "Concrete" },
-  "encanto": { "title": "Encanto" },
-  "marmolino": { "title": "Marmolino" },
-  "ottocento": { "title": "Ottocento" },
-  "travertino-romano": { "title": "Travertino Romano" },
-  "zero": { "title": "Zero" }
+  "concrete": {
+    "title": "Betonová stěrka",
+    "description": "Betonová stěrka neboli imitace pohledového betonu, se postupně stala nepostradatelným prvkem moderní architektury. Dá se nanést na stěnu, podlahu i strop. Použití je možné i do koupelny či na fasády budov."
+  },
+  "arteviva": {
+    "title": "Arte Viva",
+    "description": "Systém ARTE VIVA představuje dokonalé spojení všestranosti a přizpůsobitelnosti jakýmkoli požadavkům, prostředí, vybavení a nabízí možnost vytvářet umělecké a dekorativní efekty. Proto je ideálním řešením pro jedinečnou a originální úpravu soukromích i veřejných prostorů, obchodů, kanceláří, koupelen, sprchových koutů a podlah."
+  },
+  "aureum": {
+    "title": "Aureum",
+    "description": "AUREUM je prestižní dekorativní materiál, který vytváří nádherný efekt \"zlatého mramoru\". Jeho barevnost vychází ze zemitých odstínů a teplých přírodních tónů. Konečný efekt je navíc znásoben zlatými odlesky, které prozařují stěnu a vzbuzují intenzivní pocity hedvábného doteku. AUREUM představuje jedinečné spojení lehkosti a elegance vzhledu přírodního hedvábí s odolností a pevností mramorového povrchu. Aureum je nabízeno v osmi odstínech."
+  },
+  "encanto": {
+    "title": "Encanto",
+    "description": "ENCANTO je dekorativní metalický nátěr, který umožňuje vytvořit fascinující povrchové úpravy. Kreativní materiál vytváří magický efekt hry světla a metalických odlesků v nepřeberném množství odstínů ve třech základních bázích Gold, Silver a Grey a nově v dalších čtyřech bázích Oro, Rosso, Bianco a Nero. Encanto je jednoduchým a efektivním řešením pro dosažení jedinečných sofistikovaných dekorací. Snadnou aplikací moderního materiálu dosáhnete rychle elegantního vzhledu metalického povrchu. Vyniká na velkých plochách i v členitých interiérech, v soukromém nebo komerčním prostředí."
+  },
+  "ottocento": {
+    "title": "Ottocento",
+    "description": "OTTOCENTO je dekorační malba umožňující velmi specifický dekorační efekt, který odrážením světla v různých úhlech napodobuje sametový vzhled. Výsledné střídání kontrastních matových a lesklých ploch napodobuje vzácné hedvábně sametové tapety používané v období evropské renesance."
+  },
+  "travertino-romano": {
+    "title": "Travertino Romano",
+    "description": "TRAVERTINO ROMANO v základní podobě nabízí devět odstínů typických pro přírodní Travertin. Umožňuje vytvářet nádherné efekty s granulací pískovce, lávového kamene nebo v podobě stavebních kvádrů, dokonale imituje strukturu přírodního kamene. V dalších barevných úpravách pro interiér vytváří nádherné variace od polotransparentních sametových efektů až po kovové a perleťové efekty. Travertino Romano je moderní výrobek, který spojuje přírodní vzhled s elegancí zpracování."
+  },
+  "zero": {
+    "title": "Zero",
+    "description": "Výjimečně odolná interiérová a fasádní exkluzivní dekorativní špachtlovací hmota se sametovým povrchem s efekty kovu, perleti nebo zlata."
+  },
+  "marmolino": {
+    "title": "Marmolino",
+    "description": "Marmorino Naturale je dekorativní stěrková hmota na bázi hašeného vápna a mramorové moučky, která vytváří elegantní povrch s efektem leštěného mramoru. Díky svému přírodnímu složení je vhodná pro interiéry i exteriéry a nabízí širokou škálu barevných odstínů a povrchových úprav od jemně hladkých až po výrazně strukturované."
+  }
 }

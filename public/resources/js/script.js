@@ -137,11 +137,27 @@ function loadImagesFromJSON() {
   return fetch('/api/images')
     .then(function(response) { return response.json(); })
     .then(function(data) {
+      var handledCategories = {};
+
       $('.product-card__image-wrap[data-category]').each(function() {
         var $wrap = $(this);
         var category = $wrap.data('category');
+        handledCategories[category] = true;
         var catData = data.categories[category];
         if (!catData) return;
+
+        // Update the product card title from API
+        var $card = $wrap.closest('.product-card');
+        var $name = $card.find('.product-card__name');
+        if ($name.length && catData.title) {
+          $name.text(catData.title);
+        }
+
+        // Update the product card description from API
+        var $desc = $card.find('.product-card__desc');
+        if ($desc.length && catData.description) {
+          $desc.text(catData.description);
+        }
 
         // Get images sorted by order
         var sortedImages = catData.imageIds
@@ -172,6 +188,105 @@ function loadImagesFromJSON() {
         for (var i = 1; i < orderedImages.length; i++) {
           $wrap.append('<a href="' + orderedImages[i].src + '" alt="' + altText + '"></a>');
         }
+      });
+
+      // Create dynamic cards for categories not in the Pug template
+      var $dynamicContainer = $('#dynamic-products');
+      if (!$dynamicContainer.length) return;
+
+      var dynamicIndex = 0;
+      Object.keys(data.categories).forEach(function(slug) {
+        if (handledCategories[slug]) return;
+        var catData = data.categories[slug];
+        if (!catData || !catData.imageIds || catData.imageIds.length === 0) return;
+
+        var sortedImages = catData.imageIds
+          .map(function(id) { return data.images[id]; })
+          .filter(Boolean)
+          .sort(function(a, b) { return a.order - b.order; });
+
+        if (sortedImages.length === 0) return;
+
+        var heroId = catData.heroImageId;
+        var heroImage = data.images[heroId] || sortedImages[0];
+        var title = catData.title || slug;
+        var reverseClass = dynamicIndex % 2 === 1 ? ' product-card--reverse' : '';
+
+        // Build gallery links HTML
+        var galleryLinks = '';
+        var orderedImages = [heroImage];
+        sortedImages.forEach(function(img) {
+          if (img.src !== heroImage.src) orderedImages.push(img);
+        });
+        for (var i = 1; i < orderedImages.length; i++) {
+          galleryLinks += '<a href="' + orderedImages[i].src + '" alt="' + title + '"></a>';
+        }
+
+        var descHtml = catData.description ? '<p class="product-card__desc">' + catData.description + '</p>' : '';
+
+        var cardHtml =
+          '<div class="product-divider"><div class="product-divider__line"></div></div>' +
+          '<div class="product-card' + reverseClass + '">' +
+            '<div class="product-card__image-wrap" data-category="' + slug + '">' +
+              '<a href="' + heroImage.src + '"><img src="' + heroImage.src + '" alt="' + title + '"></a>' +
+              '<div class="decor-img__overlay"><p class="decor-img__text">Otevřít Galerii</p></div>' +
+              galleryLinks +
+            '</div>' +
+            '<div class="product-card__content">' +
+              '<h3 class="product-card__name">' + title + '</h3>' +
+              descHtml +
+              '<div class="product-card__accent"></div>' +
+              '<div class="product-card__icons">' +
+                '<a class="product-card__icon-link product-card__gallery-trigger" href="#">' +
+                  '<svg width="100%" height="100%" viewBox="0 0 90 69"><use xlink:href="#gallery-icon"></use></svg>' +
+                '</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        $dynamicContainer.append(cardHtml);
+        dynamicIndex++;
+      });
+
+      // Reorder DOM to match categories order from API
+      var $section = $('.section-products');
+      if (!$section.length) return;
+
+      // Build map of slug -> card element (includes hardcoded + dynamic)
+      var cardsBySlug = {};
+      $section.find('.product-card').each(function() {
+        var $c = $(this);
+        var slug = $c.find('.product-card__image-wrap[data-category]').data('category');
+        if (slug) cardsBySlug[slug] = $c;
+      });
+
+      // Detach all product cards and dividers (but not the header or #dynamic-products)
+      $section.find('.product-card, .product-divider').detach();
+
+      // Re-append in API order before #dynamic-products
+      var $dynContainer = $section.find('#dynamic-products');
+      var cardIndex = 0;
+      Object.keys(data.categories).forEach(function(slug) {
+        var $c = cardsBySlug[slug];
+        if (!$c) return;
+
+        // Add divider between cards (not before first)
+        if (cardIndex > 0) {
+          $dynContainer.before('<div class="product-divider"><div class="product-divider__line"></div></div>');
+        }
+
+        // Update number
+        var num = String(cardIndex + 1).padStart(2, '0');
+        $c.find('.product-card__number').text(num);
+
+        // Update reverse class (odd-indexed = reverse)
+        $c.removeClass('product-card--reverse');
+        if (cardIndex % 2 === 1) {
+          $c.addClass('product-card--reverse');
+        }
+
+        $dynContainer.before($c);
+        cardIndex++;
       });
     });
 }
