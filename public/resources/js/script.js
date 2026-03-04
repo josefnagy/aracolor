@@ -92,6 +92,11 @@ $(document).ready(function() {
       initProductGalleries(); // still init with whatever is in HTML
     });
 
+  // Load pricelist from JSON (malirske-prace page)
+  if (document.getElementById('price-grid')) {
+    loadPricelistFromJSON();
+  }
+
   $(".scroll-js").click(function (event) {
     var href = $(this).attr('href');
     var currentPage = location.pathname.split('/').pop() || 'index.html';
@@ -425,4 +430,54 @@ function initProductGalleries() {
       }
     }, { passive: true });
   });
+}
+
+function loadPricelistFromJSON() {
+  fetch('/api/pricelist')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      var $left = $('#price-grid-left');
+      var $right = $('#price-grid-right');
+      if (!$left.length || !$right.length) return;
+
+      var categories = (data.categories || []).slice().sort(function(a, b) {
+        return a.order - b.order;
+      });
+
+      categories.forEach(function(cat) {
+        var items = (cat.items || []).slice().sort(function(a, b) {
+          return a.order - b.order;
+        });
+
+        var itemsHtml = '';
+        items.forEach(function(item) {
+          var noteHtml = item.note ? '<span class="mp-price-item__note">' + item.note + '</span>' : '';
+          itemsHtml +=
+            '<div class="mp-price-item">' +
+              '<span class="mp-price-item__name">' + item.name + '</span>' +
+              noteHtml +
+              '<span class="mp-price-item__price">' + item.price + '</span>' +
+            '</div>';
+        });
+
+        var cardHtml =
+          '<div class="mp-price-card">' +
+            '<div class="mp-price-header">' +
+              '<h3 class="mp-price-header__title">' + cat.title + '</h3>' +
+            '</div>' +
+            '<div class="mp-price-card__body">' +
+              itemsHtml +
+            '</div>' +
+          '</div>';
+
+        if (cat.column === 'left') {
+          $left.append(cardHtml);
+        } else {
+          $right.append(cardHtml);
+        }
+      });
+    })
+    .catch(function(err) {
+      console.error('Failed to load pricelist:', err);
+    });
 }

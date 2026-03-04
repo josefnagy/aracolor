@@ -169,7 +169,7 @@ block index
           p.mp-service-card__desc Likvidace řas, plísní, lišejníků, mechů a odstranění smogových nečistot z fasád a chodníků.
           a.mp-service-card__link(href="cisteni.html") Více informací →
 
-  //- Price List Section
+  //- Price List Section (loaded dynamically from /api/pricelist)
   section#cenik.mp-section
     .mp-section__inner
       .mp-section-header
@@ -178,105 +178,9 @@ block index
           span.mp-tag__text CENÍK
           span.mp-tag__dash
         h2.mp-section-title Ceník služeb
-
-      .mp-price-grid
-        .mp-price-grid__left
-          .mp-price-card
-            .mp-price-header
-              h3.mp-price-header__title Standardní interiérové barvy
-            .mp-price-card__body
-              .mp-price-item
-                span.mp-price-item__name Jupol Classic
-                span.mp-price-item__price 35–45 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Jupol Citro
-                span.mp-price-item__price 40–50 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Jupol Gold
-                span.mp-price-item__price 50–100 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Jupol Brilliant
-                span.mp-price-item__price 70–120 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Jupol Latex
-                span.mp-price-item__note (omyvatelná)
-                span.mp-price-item__price 120 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Hetmal
-                span.mp-price-item__price 30–40 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Het Klasik
-                span.mp-price-item__price 50 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Het Brillant
-                span.mp-price-item__price 90 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Primalex Standard
-                span.mp-price-item__price 30–40 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Primalex Plus
-                span.mp-price-item__price 50 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Primalex Polar
-                span.mp-price-item__price 45–60 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Dulux Classic White
-                span.mp-price-item__price 50–75 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Dulux Trade Vinyl Matt
-                span.mp-price-item__price 120 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Dulux EasyCare
-                span.mp-price-item__note (omyvatelná)
-                span.mp-price-item__price 65–100 Kč / m#[sup 2]
-
-        .mp-price-grid__right
-          .mp-price-card
-            .mp-price-header
-              h3.mp-price-header__title Fasádní barvy
-            .mp-price-card__body
-              .mp-price-item
-                span.mp-price-item__name Caparol Muresko
-                span.mp-price-item__price 110–150 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Caparol Amphisilan
-                span.mp-price-item__price 100–140 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Caparol Sylitol Fassadenfarbe
-                span.mp-price-item__price 120–160 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Akrylcolor
-                span.mp-price-item__price 120–150 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Jubizol
-                span.mp-price-item__price 160–190 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Tikkurila Silicone Protect
-                span.mp-price-item__price 200–300 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Nanoporcolor
-                span.mp-price-item__price 180–220 Kč / m#[sup 2]
-
-          .mp-price-card
-            .mp-price-header
-              h3.mp-price-header__title Penetrace
-            .mp-price-card__body
-              .mp-price-item
-                span.mp-price-item__name Penetrace běžná (Primalex / Jukol apod.)
-                span.mp-price-item__price 20 Kč / m#[sup 2]
-
-          .mp-price-card
-            .mp-price-header
-              h3.mp-price-header__title Prémiové interiérové barvy
-            .mp-price-card__body
-              .mp-price-item
-                span.mp-price-item__name Tikkurila OPTIVA 3 CERAMIC
-                span.mp-price-item__note (jemná, super matná, odolná)
-                span.mp-price-item__price 100–130 Kč / m#[sup 2]
-              .mp-price-item
-                span.mp-price-item__name Flügger Dekso 20 H2O
-                span.mp-price-item__note (vysoce omyvatelná)
-                span.mp-price-item__price 100–150 Kč / m#[sup 2]
+      .mp-price-grid#price-grid
+        .mp-price-grid__left#price-grid-left
+        .mp-price-grid__right#price-grid-right
 
   include ../contacts.pug
 

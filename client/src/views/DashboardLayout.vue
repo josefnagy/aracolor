@@ -27,6 +27,14 @@
         </router-link>
         <router-link
           class="nav-item"
+          :to="{ name: 'Pricelist' }"
+          active-class="active"
+        >
+          <ListOrderedIcon :size="18" />
+          <span>Pricelist</span>
+        </router-link>
+        <router-link
+          class="nav-item"
           :to="{ name: 'Uploads' }"
           active-class="active"
         >
@@ -81,6 +89,7 @@ import {
   Upload as UploadIcon,
   Settings as SettingsIcon,
   LogOut as LogOutIcon,
+  ListOrdered as ListOrderedIcon,
 } from 'lucide-vue-next';
 
 const router = useRouter();

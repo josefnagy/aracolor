@@ -21,3 +21,6 @@ data/
 source_images/
 img/
 public/archive/
+
+# Config
+config/users.json
