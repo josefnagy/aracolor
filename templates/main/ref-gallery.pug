@@ -9,20 +9,47 @@ block index
   header#header.header.rg
     include ../navigation.pug
 
-    // hero box
-    .header__hero-box.rg
-      .heading__wrap
-        h1#ref-gallery-title.header__heading Reference
+    .ref-hero__overlay
 
-    a.decor__link(href="#")
-      i.ion-ios-arrow-up
+    .ref-hero__content
+      .ref-hero__breadcrumb
+        span.ref-hero__breadcrumb-parent REFERENCE
+        span.ref-hero__breadcrumb-sep /
+        span.ref-hero__breadcrumb-current#ref-gallery-breadcrumb
+      h1.ref-hero__title#ref-gallery-title
+      p.ref-hero__desc#ref-gallery-desc
+      a.ref-hero__back(href="reference.html")
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+          line(x1="19" y1="12" x2="5" y2="12")
+          polyline(points="12 19 5 12 12 5")
+        span Zpět na reference
 
-  section.ref-gallery__photo
+    .ref-hero__badge#ref-gallery-badge
+      svg(xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+        rect(x="3" y="3" width="18" height="18" rx="2" ry="2")
+        circle(cx="8.5" cy="8.5" r="1.5")
+        polyline(points="21 15 16 10 5 21")
+      span#ref-gallery-badge-text
+
+  section.ref-gallery
+    .ref-gallery__header
+      .ref-gallery__header-left
+        span.ref-gallery__label GALERIE
+        h2.ref-gallery__title Fotografie realizací
+
+    .ref-gallery__divider
 
     .grid#ref-gallery-grid
       .grid-sizer
 
     p#ref-gallery-loading.ref-gallery__loading Načítání...
+
+    .ref-gallery__load-more#ref-gallery-load-more(style="display:none")
+      button.ref-gallery__load-more-btn#ref-gallery-load-more-btn
+        span Načíst další fotografie
+        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+          polyline(points="6 9 12 15 18 9")
+      p.ref-gallery__count#ref-gallery-count
 
   include ../footer.pug
 

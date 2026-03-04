@@ -622,6 +622,7 @@ function loadReferencesFromJSON() {
 }
 
 function loadRefGallery() {
+  var BATCH_SIZE = 18;
   var params = new URLSearchParams(window.location.search);
   var catSlug = params.get('cat');
   if (!catSlug) {
@@ -638,12 +639,33 @@ function loadRefGallery() {
         return;
       }
 
-      // Update page title
+      // Update hero content
+      var catTitle = cat.title || catSlug;
       var titleEl = document.getElementById('ref-gallery-title');
       if (titleEl) {
-        titleEl.textContent = 'Reference: ' + (cat.title || catSlug);
+        titleEl.textContent = catTitle;
       }
-      document.title = (cat.title || catSlug) + ' | Reference | Aracolor.cz';
+      document.title = catTitle + ' | Reference | Aracolor.cz';
+
+      var breadcrumbEl = document.getElementById('ref-gallery-breadcrumb');
+      if (breadcrumbEl) {
+        breadcrumbEl.textContent = catTitle.toUpperCase();
+      }
+
+      var descEl = document.getElementById('ref-gallery-desc');
+      if (descEl && cat.description) {
+        descEl.textContent = cat.description;
+      } else if (descEl) {
+        descEl.style.display = 'none';
+      }
+
+      // Set hero background image from category
+      if (cat.heroImage) {
+        var headerEl = document.querySelector('.header.rg');
+        if (headerEl) {
+          headerEl.style.backgroundImage = 'url(' + cat.heroImage + ')';
+        }
+      }
 
       // Get all images sorted by order
       var sortedImages = cat.imageIds
@@ -651,48 +673,102 @@ function loadRefGallery() {
         .filter(function(item) { return item.data; })
         .sort(function(a, b) { return a.data.order - b.data.order; });
 
+      // Update hero badge with total count
+      var badgeText = document.getElementById('ref-gallery-badge-text');
+      if (badgeText) {
+        badgeText.textContent = sortedImages.length + ' fotografií';
+      }
+
       var $grid = $('#ref-gallery-grid');
+      var masonryInstance = null;
+      var shownCount = 0;
+      var totalCount = sortedImages.length;
 
-      sortedImages.forEach(function(item) {
-        var img = item.data;
-        var thumbSrc = img.thumb || img.src;
-        var fullSrc = img.src;
+      var $loadMore = $('#ref-gallery-load-more');
+      var $loadMoreBtn = $('#ref-gallery-load-more-btn');
+      var $count = $('#ref-gallery-count');
 
-        $grid.append(
-          '<div class="grid-item">' +
-            '<a class="ref-gallery__link-js" href="' + fullSrc + '">' +
-              '<img class="ref-gallery__photo--img" src="' + thumbSrc + '" alt="' + (cat.title || catSlug) + '" loading="lazy">' +
-            '</a>' +
-          '</div>'
-        );
-      });
+      function updateCount() {
+        $count.text('Zobrazeno ' + shownCount + ' z ' + totalCount + ' fotografií');
+      }
+
+      function initFeatherlight() {
+        if (typeof $.fn.featherlightGallery !== 'undefined') {
+          // Unbind previous instances
+          $('.ref-gallery__link-js').off('click.featherlight');
+          $('.ref-gallery__link-js').featherlightGallery({
+            previousIcon: '«',
+            nextIcon: '»',
+            galleryFadeIn: 300,
+            closeOnEsc: false,
+            openSpeed: 300,
+          });
+        }
+      }
+
+      function appendBatch() {
+        var batch = sortedImages.slice(shownCount, shownCount + BATCH_SIZE);
+        if (batch.length === 0) return;
+
+        var $items = $();
+        batch.forEach(function(item) {
+          var img = item.data;
+          var thumbSrc = img.thumb || img.src;
+          var fullSrc = img.src;
+
+          var $el = $(
+            '<div class="grid-item">' +
+              '<a class="ref-gallery__link-js" href="' + fullSrc + '">' +
+                '<img class="ref-gallery__photo--img" src="' + thumbSrc + '" alt="' + (cat.title || catSlug) + '" loading="lazy">' +
+              '</a>' +
+            '</div>'
+          );
+          $items = $items.add($el);
+        });
+
+        $grid.append($items);
+        shownCount += batch.length;
+        updateCount();
+
+        // Show/hide load more
+        if (shownCount >= totalCount) {
+          $loadMore.hide();
+        } else {
+          $loadMore.show();
+        }
+
+        // Layout masonry after images load
+        var gridEl = $grid[0];
+        if (gridEl && typeof imagesLoaded !== 'undefined' && typeof Masonry !== 'undefined') {
+          imagesLoaded(gridEl, function() {
+            if (masonryInstance) {
+              masonryInstance.appended($items.toArray());
+              masonryInstance.layout();
+            } else {
+              masonryInstance = new Masonry(gridEl, {
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',
+                percentPosition: true,
+              });
+            }
+            initFeatherlight();
+          });
+        } else {
+          initFeatherlight();
+        }
+      }
 
       // Remove loading text
       var loadingEl = document.getElementById('ref-gallery-loading');
       if (loadingEl) loadingEl.remove();
 
-      // Initialize Featherlight gallery
-      if (typeof $.fn.featherlightGallery !== 'undefined') {
-        $('.ref-gallery__link-js').featherlightGallery({
-          previousIcon: '«',
-          nextIcon: '»',
-          galleryFadeIn: 300,
-          closeOnEsc: false,
-          openSpeed: 300,
-        });
-      }
+      // Load first batch
+      appendBatch();
 
-      // Initialize Masonry after images load
-      var grid = document.querySelector('.grid');
-      if (grid && typeof imagesLoaded !== 'undefined' && typeof Masonry !== 'undefined') {
-        imagesLoaded(grid, function() {
-          new Masonry(grid, {
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true,
-          });
-        });
-      }
+      // Load more on button click
+      $loadMoreBtn.on('click', function() {
+        appendBatch();
+      });
     })
     .catch(function(err) {
       console.error('Failed to load ref gallery:', err);

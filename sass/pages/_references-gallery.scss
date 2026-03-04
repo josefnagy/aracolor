@@ -1,41 +1,309 @@
+// Hero section overrides for ref-gallery page
+.header.rg {
+  position: relative;
+  height: 500px;
+}
 
-.ref-gallery__showcase {
-  list-style: none;
+.ref-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba($color-bg-hero, 0.25) 0%,
+    rgba($color-bg-hero, 0.8) 50%,
+    $color-bg-hero 100%
+  );
+  z-index: 1;
 }
 
-.ref-gallery__list {
-  display: block;
-  float: left;
-  width: 16.6%;
-  height: auto;
-  overflow: hidden;
+.ref-hero__content {
+  position: absolute;
+  left: 80px;
+  top: 200px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+.ref-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.ref-hero__breadcrumb-parent {
+  color: rgba($color-gold, 0.5);
+}
+
+.ref-hero__breadcrumb-sep {
+  color: rgba($color-gold, 0.3);
+  letter-spacing: 0;
+}
+
+.ref-hero__breadcrumb-current {
+  color: $color-gold;
+}
+
+.ref-hero__title {
+  color: $color-offwhite;
+  font-family: "Fraunces", serif;
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  text-transform: none;
+  margin: 0;
+}
+
+.ref-hero__desc {
+  color: rgba($color-offwhite, 0.67);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0;
+}
+
+.ref-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1.2rem 2.4rem;
+  background-color: transparent;
+  border: 1px solid rgba($color-gold, 0.4) !important;
+  border-radius: 0.6rem;
+  color: $color-gold;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s;
+  align-self: flex-start;
+
+  svg {
+    stroke: $color-gold;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &:hover, &:active {
+    background-color: rgba($color-gold, 0.1);
+    border: 1px solid $color-gold !important;
+  }
+
+  &:link, &:visited {
+    border: 1px solid rgba($color-gold, 0.4) !important;
+    padding-bottom: 1.2rem;
+  }
+}
+
+.ref-hero__badge {
+  position: absolute;
+  right: 80px;
+  bottom: 60px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: rgba($color-bg-hero, 0.8);
+  border: 1px solid rgba($color-gold, 0.19);
+  border-radius: 20px;
+  color: rgba($color-offwhite, 0.8);
+  font-size: 12px;
+  font-weight: 500;
+
+  svg {
+    stroke: $color-gold;
+  }
+}
+
+// Gallery section
+.ref-gallery {
+  background-color: $color-bg-hero;
+  padding: 60px 80px 40px;
+}
+
+.ref-gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.ref-gallery__header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ref-gallery__label {
+  color: $color-gold;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ref-gallery__title {
+  color: $color-offwhite;
+  font-family: "Fraunces", serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-transform: none;
+  margin: 0;
+  text-align: left;
+
+  &:after {
+    display: none;
+  }
+}
+
+.ref-gallery__divider {
+  height: 1px;
+  background-color: rgba($color-offwhite, 0.06);
+  margin-bottom: 40px;
+}
+
+.ref-gallery__loading {
+  color: rgba($color-offwhite, 0.5);
+  text-align: center;
+  padding: 40px 0;
+}
+
+// Masonry grid
 .grid:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* ---- .grid-item ---- */
-
 .grid-sizer,
 .grid-item {
-  width: 25%;
+  width: 33.333%;
 }
 
 .grid-item {
   float: left;
+  padding: 8px;
 }
 
 .grid-item img {
   display: block;
   max-width: 100%;
+  border-radius: 8px;
 }
-
 
 .ref-gallery__photo--img:hover {
   opacity: 0.7;
-  // transform: scale(1.03);
+}
+
+// Load more section
+.ref-gallery__load-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0 40px;
+}
+
+.ref-gallery__load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background-color: rgba($color-offwhite, 0.03);
+  border: 1px solid rgba($color-offwhite, 0.12);
+  border-radius: 8px;
+  color: rgba($color-offwhite, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  svg {
+    stroke: $color-gold;
+  }
+
+  &:hover {
+    background-color: rgba($color-offwhite, 0.06);
+    border-color: rgba($color-offwhite, 0.2);
+  }
+}
+
+.ref-gallery__count {
+  color: rgba($color-offwhite, 0.3);
+  font-size: 12px;
+  margin: 0;
+}
+
+// Responsive
+@media (max-width: 1023px) {
+  .ref-hero__content {
+    left: 40px;
+  }
+
+  .ref-hero__badge {
+    right: 40px;
+  }
+
+  .ref-gallery {
+    padding: 40px 40px 30px;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header.rg {
+    height: 420px;
+  }
+
+  .ref-hero__content {
+    left: 20px;
+    top: 160px;
+    right: 20px;
+  }
+
+  .ref-hero__title {
+    font-size: 32px;
+  }
+
+  .ref-hero__desc {
+    font-size: 14px;
+  }
+
+  .ref-hero__badge {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .ref-gallery {
+    padding: 32px 20px 24px;
+  }
+
+  .ref-gallery__title {
+    font-size: 20px;
+  }
+
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+
+  .ref-gallery__load-more-btn {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
 }
