@@ -6,6 +6,8 @@ const path = require('path');
 const dataStore = require('./services/dataStore');
 const configStore = require('./services/configStore');
 const pricelistStore = require('./services/pricelistStore');
+const refDataStore = require('./services/refDataStore');
+const refConfigStore = require('./services/refConfigStore');
 const { authMiddleware } = require('./middleware/auth');
 
 const authRoutes = require('./routes/auth');
@@ -14,6 +16,9 @@ const uploadRoutes = require('./routes/upload');
 const imagesRoutes = require('./routes/images');
 const settingsRoutes = require('./routes/settings');
 const pricelistRoutes = require('./routes/pricelist');
+const refCategoriesRoutes = require('./routes/ref-categories');
+const refUploadRoutes = require('./routes/ref-upload');
+const refImagesRoutes = require('./routes/ref-images');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -51,6 +56,23 @@ app.get('/api/pricelist', (req, res) => {
   res.json(pricelistStore.getData());
 });
 
+// Public references data for the marketing site
+app.get('/api/references', (req, res) => {
+  const data = refDataStore.getData();
+  const categoryConfig = refConfigStore.readCategories();
+
+  const categories = {};
+  for (const [slug, config] of Object.entries(categoryConfig)) {
+    const catData = data.categories[slug] || { heroImageId: null, imageIds: [] };
+    categories[slug] = { ...catData, title: config.title, description: config.description || '' };
+  }
+  for (const [slug, catData] of Object.entries(data.categories)) {
+    if (!categories[slug]) categories[slug] = catData;
+  }
+
+  res.json({ ...data, categories });
+});
+
 // Public auth routes (login)
 app.use('/api', authRoutes);
 
@@ -60,6 +82,9 @@ app.use('/api', authMiddleware, uploadRoutes);
 app.use('/api', authMiddleware, imagesRoutes);
 app.use('/api', authMiddleware, settingsRoutes);
 app.use('/api', authMiddleware, pricelistRoutes);
+app.use('/api', authMiddleware, refCategoriesRoutes);
+app.use('/api', authMiddleware, refUploadRoutes);
+app.use('/api', authMiddleware, refImagesRoutes);
 
 // Serve Vue SPA from dist/
 const distPath = path.join(__dirname, '..', 'dist');
@@ -69,7 +94,7 @@ app.get('/admin/*', (req, res) => {
 });
 
 // Start server after loading data
-Promise.all([dataStore.load(), pricelistStore.load()]).then(() => {
+Promise.all([dataStore.load(), pricelistStore.load(), refDataStore.load()]).then(() => {
   app.listen(PORT, () => {
     console.log(`aracolor-admin running on port ${PORT}`);
   });

@@ -1,0 +1,26 @@
+{
+  "sterky": {
+    "title": "Dekorační stěrky",
+    "description": "Luxusní dekorační stěrky dodávají interiéru jedinečný charakter. Nabízíme širokou škálu povrchových úprav od jemných po výrazné textury."
+  },
+  "koupelny": {
+    "title": "Koupelnové stěrky",
+    "description": "Voděodolné stěrky speciálně navržené pro koupelny a mokré prostory. Bezešvý luxusní povrch odolný vlhkosti."
+  },
+  "malby": {
+    "title": "Malby a nátěry",
+    "description": "Profesionální malby a nátěry pro dokonalý vzhled vašeho interiéru. Precizní práce s důrazem na detail a kvalitní materiály."
+  },
+  "fasady": {
+    "title": "Fasády",
+    "description": "Kompletní řešení fasád od zateplení po finální povrchovou úpravu. Moderní technologie pro dlouhodobou ochranu a estetiku."
+  },
+  "myti_fasad": {
+    "title": "Mytí fasád",
+    "description": "Profesionální čištění a mytí fasád. Šetrné technologie pro obnovu původního vzhledu vaší budovy bez poškození povrchu."
+  },
+  "tapety": {
+    "title": "Tapetování",
+    "description": "Profesionální tapetování od klasických vzorů po moderní designové tapety. Precizní aplikace pro bezchybný výsledek."
+  }
+}

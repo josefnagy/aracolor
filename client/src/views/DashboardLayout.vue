@@ -8,43 +8,71 @@
       </div>
 
       <nav class="nav-section">
-        <span class="nav-label">MENU</span>
-        <router-link
-          class="nav-item"
-          :to="{ name: 'Images' }"
-          active-class="active"
-        >
-          <ImageIcon :size="18" />
-          <span>Images</span>
-        </router-link>
+        <span class="nav-label">ÚVOD</span>
         <router-link
           class="nav-item"
           :to="{ name: 'Categories' }"
-          active-class="active"
+          exact-active-class="active"
         >
           <FolderIcon :size="18" />
           <span>Categories</span>
         </router-link>
         <router-link
           class="nav-item"
-          :to="{ name: 'Pricelist' }"
-          active-class="active"
-        >
-          <ListOrderedIcon :size="18" />
-          <span>Pricelist</span>
-        </router-link>
-        <router-link
-          class="nav-item"
           :to="{ name: 'Uploads' }"
-          active-class="active"
+          exact-active-class="active"
         >
           <UploadIcon :size="18" />
           <span>Uploads</span>
         </router-link>
         <router-link
           class="nav-item"
+          :to="{ name: 'Images' }"
+          exact-active-class="active"
+        >
+          <ImageIcon :size="18" />
+          <span>Images</span>
+        </router-link>
+      </nav>
+
+      <nav class="nav-section">
+        <span class="nav-label">MALÍŘSKÉ PRÁCE</span>
+        <router-link
+          class="nav-item"
+          :to="{ name: 'Pricelist' }"
+          exact-active-class="active"
+        >
+          <ListOrderedIcon :size="18" />
+          <span>Pricelist</span>
+        </router-link>
+      </nav>
+
+      <nav class="nav-section">
+        <span class="nav-label">REFERENCE</span>
+        <router-link
+          class="nav-item"
+          :to="{ name: 'RefImages' }"
+          exact-active-class="active"
+        >
+          <CameraIcon :size="18" />
+          <span>Images</span>
+        </router-link>
+        <router-link
+          class="nav-item"
+          :to="{ name: 'RefCategories' }"
+          exact-active-class="active"
+        >
+          <FolderIcon :size="18" />
+          <span>Categories</span>
+        </router-link>
+      </nav>
+
+      <nav class="nav-section">
+        <span class="nav-label">OSTATNÍ</span>
+        <router-link
+          class="nav-item"
           :to="{ name: 'Settings' }"
-          active-class="active"
+          exact-active-class="active"
         >
           <SettingsIcon :size="18" />
           <span>Settings</span>
@@ -83,6 +111,7 @@ import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuth } from '../composables/useAuth.js';
 import { useImages } from '../composables/useImages.js';
+import { useRefImages } from '../composables/useRefImages.js';
 import {
   Image as ImageIcon,
   Folder as FolderIcon,
@@ -90,18 +119,22 @@ import {
   Settings as SettingsIcon,
   LogOut as LogOutIcon,
   ListOrdered as ListOrderedIcon,
+  Camera as CameraIcon,
 } from 'lucide-vue-next';
 
 const router = useRouter();
 const { username, checkAuth, logout } = useAuth();
 const { totalStorageBytes, loadData } = useImages();
+const { totalStorageBytes: refStorageBytes, loadData: loadRefData } = useRefImages();
 
 const userInitial = computed(() =>
   username.value ? username.value.charAt(0).toUpperCase() : 'A'
 );
 
+const combinedStorageBytes = computed(() => totalStorageBytes.value + refStorageBytes.value);
+
 const storageUsed = computed(() => {
-  const bytes = totalStorageBytes.value;
+  const bytes = combinedStorageBytes.value;
   if (!bytes) return '0 B';
   if (bytes < 1024) return bytes + ' B';
   if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(0) + ' KB';
@@ -111,7 +144,7 @@ const storageUsed = computed(() => {
 
 const TEN_GB = 10 * 1024 * 1024 * 1024;
 const storagePercent = computed(() => {
-  return Math.min((totalStorageBytes.value / TEN_GB) * 100, 100);
+  return Math.min((combinedStorageBytes.value / TEN_GB) * 100, 100);
 });
 
 onMounted(async () => {
@@ -120,7 +153,7 @@ onMounted(async () => {
     router.push('/');
     return;
   }
-  await loadData();
+  await Promise.all([loadData(), loadRefData()]);
 });
 </script>
 
@@ -139,7 +172,7 @@ onMounted(async () => {
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   height: 100vh;
   position: sticky;
   top: 0;

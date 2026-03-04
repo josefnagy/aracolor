@@ -6,6 +6,8 @@ import CategoriesView from '../views/CategoriesView.vue';
 import UploadsView from '../views/UploadsView.vue';
 import SettingsView from '../views/SettingsView.vue';
 import PricelistView from '../views/PricelistView.vue';
+import RefImagesView from '../views/RefImagesView.vue';
+import RefCategoriesView from '../views/RefCategoriesView.vue';
 
 const routes = [
   { path: '/', name: 'Login', component: LoginView },
@@ -18,6 +20,8 @@ const routes = [
       { path: 'uploads', name: 'Uploads', component: UploadsView },
       { path: 'pricelist', name: 'Pricelist', component: PricelistView },
       { path: 'settings', name: 'Settings', component: SettingsView },
+      { path: 'ref-images', name: 'RefImages', component: RefImagesView },
+      { path: 'ref-categories', name: 'RefCategories', component: RefCategoriesView },
     ],
   },
 ];

@@ -29,34 +29,9 @@ block index
       .hero__scroll-line
       span.hero__scroll-text scroll
 
-  //- Reference Category Sections
-  -
-    var categories = [
-      { num: '01', title: 'Dekorační stěrky', folder: 'sterky', count: 20, link: 'ref-sterky.html', desc: 'Luxusní dekorační stěrky dodávají interiéru jedinečný charakter. Nabízíme širokou škálu povrchových úprav od jemných po výrazné textury.' },
-      { num: '02', title: 'Koupelnové stěrky', folder: 'koupelny', count: 20, link: 'ref-koupelny.html', desc: 'Voděodolné stěrky speciálně navržené pro koupelny a mokré prostory. Bezešvý luxusní povrch odolný vlhkosti.' },
-      { num: '03', title: 'Malby a nátěry', folder: 'malby', count: 20, link: 'ref-malby.html', desc: 'Profesionální malby a nátěry pro dokonalý vzhled vašeho interiéru. Precizní práce s důrazem na detail a kvalitní materiály.' },
-      { num: '04', title: 'Fasády', folder: 'fasady', count: 3, link: 'ref-fasady.html', desc: 'Kompletní řešení fasád od zateplení po finální povrchovou úpravu. Moderní technologie pro dlouhodobou ochranu a estetiku.' },
-      { num: '05', title: 'Mytí fasád', folder: 'myti_fasad', count: 10, link: 'ref-myti.html', desc: 'Profesionální čištění a mytí fasád. Šetrné technologie pro obnovu původního vzhledu vaší budovy bez poškození povrchu.' },
-      { num: '06', title: 'Tapetování', folder: 'tapety', count: 2, link: 'ref-tapety.html', desc: 'Profesionální tapetování od klasických vzorů po moderní designové tapety. Precizní aplikace pro bezchybný výsledek.' }
-    ]
-
-  each cat, idx in categories
-    section.ref-section(class=idx % 2 === 1 ? 'ref-section--reverse' : '')
-      .ref-section__inner
-        .ref-section__text
-          span.ref-section__number= cat.num
-          h3.ref-section__title= cat.title
-          p.ref-section__desc= cat.desc
-          a.ref-section__cta(href=cat.link) Zobrazit galerii
-        .ref-section__carousel(data-category=cat.folder)
-          .ref-section__carousel-track
-            - for (var i = 1; i <= cat.count; i++)
-              a(href='resources/img/ref/' + cat.folder + '/thumbs/' + i + '.jpg' data-featherlight='image')
-                img(src='resources/img/ref/' + cat.folder + '/thumbs/' + i + '.jpg' alt=cat.title + ' ' + i loading='lazy')
-          button.ref-section__carousel-prev(aria-label='Předchozí')
-          button.ref-section__carousel-next(aria-label='Další')
-    if idx < categories.length - 1
-      .ref-section__divider
+  //- Reference Category Sections (loaded dynamically from API)
+  #ref-sections-container
+    p.ref-loading Načítání referencí...
 
   include ../footer.pug
 

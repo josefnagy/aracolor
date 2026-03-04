@@ -1,7 +1,7 @@
 extends ../layout.pug
 
 block vars
-  -var title = "Reference Dekoračních stěrek, maleb, nátěrů | Aracolor.cz"
+  -var title = "Reference | Aracolor.cz"
   -var description = "Předkládáme malou úkázku z Naších referenčních projektů pro firmy i instituce- Dekorační stěrky, exteriérové a interiérové malby, nátěry a úkázky čištění fasád."
 
 block index
@@ -12,22 +12,17 @@ block index
     // hero box
     .header__hero-box.rg
       .heading__wrap
-        h1.header__heading Reference fasád
+        h1#ref-gallery-title.header__heading Reference
 
     a.decor__link(href="#")
       i.ion-ios-arrow-up
 
   section.ref-gallery__photo
 
-    - var n = 3
-    - var counter = 1
-
-    .grid
+    .grid#ref-gallery-grid
       .grid-sizer
-      while counter <= n
-        .grid-item
-          a(class="ref-gallery__link-js" href="resources/img/ref/fasady/" + counter + ".jpg")
-            img(class="ref-gallery__photo--img" src="resources/img/ref/fasady/thumbs/" + counter++ + ".jpg" alt="zzReference fasád " + counter)
+
+    p#ref-gallery-loading.ref-gallery__loading Načítání...
 
   include ../footer.pug
 
@@ -39,14 +34,4 @@ block index
   script(src="resources/js/script.js")
 
   script.
-    var grid = document.querySelector('.grid');
-    var msnry;
-
-    imagesLoaded( grid, function() {
-      // init Isotope after all images have loaded
-      msnry = new Masonry( grid, {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
-      });
-    });
+    loadRefGallery();

@@ -97,8 +97,13 @@ $(document).ready(function() {
     loadPricelistFromJSON();
   }
 
-  // Initialize reference page carousels
-  initRefCarousels();
+  // Load references from API (overview page)
+  if (document.getElementById('ref-sections-container')) {
+    loadReferencesFromJSON();
+  } else {
+    // Initialize reference page carousels (static fallback)
+    initRefCarousels();
+  }
 
   $(".scroll-js").click(function (event) {
     var href = $(this).attr('href');
@@ -548,5 +553,149 @@ function loadPricelistFromJSON() {
     })
     .catch(function(err) {
       console.error('Failed to load pricelist:', err);
+    });
+}
+
+function loadReferencesFromJSON() {
+  var $container = $('#ref-sections-container');
+  if (!$container.length) return;
+
+  fetch('/api/references')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      $container.empty();
+
+      var slugs = Object.keys(data.categories);
+      slugs.forEach(function(slug, idx) {
+        var cat = data.categories[slug];
+        if (!cat || !cat.imageIds || cat.imageIds.length === 0) return;
+
+        var num = String(idx + 1).padStart(2, '0');
+        var reverseClass = idx % 2 === 1 ? ' ref-section--reverse' : '';
+
+        // Get carousel images (sorted by order)
+        var carouselImages = cat.imageIds
+          .map(function(id) { return data.images[id]; })
+          .filter(function(img) { return img && img.carousel; })
+          .sort(function(a, b) { return a.order - b.order; });
+
+        // Build carousel track HTML
+        var trackHtml = '';
+        carouselImages.forEach(function(img, i) {
+          var thumbSrc = img.thumb || img.src;
+          var fullSrc = img.thumb || img.src;
+          trackHtml += '<a href="' + fullSrc + '" data-featherlight="image">' +
+            '<img src="' + thumbSrc + '" alt="' + (cat.title || slug) + ' ' + (i + 1) + '" loading="lazy">' +
+            '</a>';
+        });
+
+        var sectionHtml =
+          '<section class="ref-section' + reverseClass + '">' +
+            '<div class="ref-section__inner">' +
+              '<div class="ref-section__text">' +
+                '<span class="ref-section__number">' + num + '</span>' +
+                '<h3 class="ref-section__title">' + (cat.title || slug) + '</h3>' +
+                '<p class="ref-section__desc">' + (cat.description || '') + '</p>' +
+                '<a class="ref-section__cta" href="ref-gallery.html?cat=' + slug + '">Zobrazit galerii</a>' +
+              '</div>' +
+              '<div class="ref-section__carousel" data-category="' + slug + '">' +
+                '<div class="ref-section__carousel-track">' + trackHtml + '</div>' +
+                '<button class="ref-section__carousel-prev" aria-label="Předchozí"></button>' +
+                '<button class="ref-section__carousel-next" aria-label="Další"></button>' +
+              '</div>' +
+            '</div>' +
+          '</section>';
+
+        if (idx > 0) {
+          $container.append('<div class="ref-section__divider"></div>');
+        }
+        $container.append(sectionHtml);
+      });
+
+      // Initialize carousels for dynamically added sections
+      initRefCarousels();
+    })
+    .catch(function(err) {
+      console.error('Failed to load references:', err);
+      $container.html('<p class="ref-loading">Nepodařilo se načíst reference.</p>');
+    });
+}
+
+function loadRefGallery() {
+  var params = new URLSearchParams(window.location.search);
+  var catSlug = params.get('cat');
+  if (!catSlug) {
+    document.getElementById('ref-gallery-loading').textContent = 'Kategorie nebyla zadána.';
+    return;
+  }
+
+  fetch('/api/references')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      var cat = data.categories[catSlug];
+      if (!cat || !cat.imageIds || cat.imageIds.length === 0) {
+        document.getElementById('ref-gallery-loading').textContent = 'V této kategorii nejsou žádné obrázky.';
+        return;
+      }
+
+      // Update page title
+      var titleEl = document.getElementById('ref-gallery-title');
+      if (titleEl) {
+        titleEl.textContent = 'Reference: ' + (cat.title || catSlug);
+      }
+      document.title = (cat.title || catSlug) + ' | Reference | Aracolor.cz';
+
+      // Get all images sorted by order
+      var sortedImages = cat.imageIds
+        .map(function(id) { return { id: id, data: data.images[id] }; })
+        .filter(function(item) { return item.data; })
+        .sort(function(a, b) { return a.data.order - b.data.order; });
+
+      var $grid = $('#ref-gallery-grid');
+
+      sortedImages.forEach(function(item) {
+        var img = item.data;
+        var thumbSrc = img.thumb || img.src;
+        var fullSrc = img.src;
+
+        $grid.append(
+          '<div class="grid-item">' +
+            '<a class="ref-gallery__link-js" href="' + fullSrc + '">' +
+              '<img class="ref-gallery__photo--img" src="' + thumbSrc + '" alt="' + (cat.title || catSlug) + '" loading="lazy">' +
+            '</a>' +
+          '</div>'
+        );
+      });
+
+      // Remove loading text
+      var loadingEl = document.getElementById('ref-gallery-loading');
+      if (loadingEl) loadingEl.remove();
+
+      // Initialize Featherlight gallery
+      if (typeof $.fn.featherlightGallery !== 'undefined') {
+        $('.ref-gallery__link-js').featherlightGallery({
+          previousIcon: '«',
+          nextIcon: '»',
+          galleryFadeIn: 300,
+          closeOnEsc: false,
+          openSpeed: 300,
+        });
+      }
+
+      // Initialize Masonry after images load
+      var grid = document.querySelector('.grid');
+      if (grid && typeof imagesLoaded !== 'undefined' && typeof Masonry !== 'undefined') {
+        imagesLoaded(grid, function() {
+          new Masonry(grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-sizer',
+            percentPosition: true,
+          });
+        });
+      }
+    })
+    .catch(function(err) {
+      console.error('Failed to load ref gallery:', err);
+      document.getElementById('ref-gallery-loading').textContent = 'Nepodařilo se načíst galerii.';
     });
 }
