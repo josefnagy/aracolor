@@ -181,7 +181,8 @@
               "fill": "$text-primary",
               "content": "Value",
               "fontFamily": "Plus Jakarta Sans",
-              "fontSize": 14
+              "fontSize": 14,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -297,7 +298,8 @@
               "fill": "$text-tertiary",
               "content": "Note text",
               "fontFamily": "Plus Jakarta Sans",
-              "fontSize": 12
+              "fontSize": 12,
+              "fontWeight": "normal"
             }
           ]
         },
@@ -2414,7 +2416,8 @@
                           "width": "fill_container",
                           "content": "včetně penetrace",
                           "fontFamily": "Plus Jakarta Sans",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -2661,7 +2664,8 @@
                   "lineHeight": 1.5,
                   "textAlign": "center",
                   "fontFamily": "Plus Jakarta Sans",
-                  "fontSize": 14
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "frame",
@@ -2897,6 +2901,20 @@
           ]
         }
       ]
+    },
+    {
+      "type": "rectangle",
+      "id": "mJACT",
+      "x": -1,
+      "y": 1905,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "CleanShot 2026-03-04 at 18.18.37@2x.png",
+        "mode": "fill"
+      },
+      "width": 2810,
+      "height": 3687
     }
   ],
   "variables": {

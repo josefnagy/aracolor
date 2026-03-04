@@ -29,60 +29,38 @@ block index
       .hero__scroll-line
       span.hero__scroll-text scroll
 
-  //- Reference Categories Grid
-  section.ref-overview
-    .ref-overview__inner
-      .ref-overview__header
-        .mp-tag
-          span.mp-tag__dash
-          span.mp-tag__text KATEGORIE
-          span.mp-tag__dash
-        h2.ref-overview__title Referenční projekty
+  //- Reference Category Sections
+  -
+    var categories = [
+      { num: '01', title: 'Dekorační stěrky', folder: 'sterky', count: 20, link: 'ref-sterky.html', desc: 'Luxusní dekorační stěrky dodávají interiéru jedinečný charakter. Nabízíme širokou škálu povrchových úprav od jemných po výrazné textury.' },
+      { num: '02', title: 'Koupelnové stěrky', folder: 'koupelny', count: 20, link: 'ref-koupelny.html', desc: 'Voděodolné stěrky speciálně navržené pro koupelny a mokré prostory. Bezešvý luxusní povrch odolný vlhkosti.' },
+      { num: '03', title: 'Malby a nátěry', folder: 'malby', count: 20, link: 'ref-malby.html', desc: 'Profesionální malby a nátěry pro dokonalý vzhled vašeho interiéru. Precizní práce s důrazem na detail a kvalitní materiály.' },
+      { num: '04', title: 'Fasády', folder: 'fasady', count: 3, link: 'ref-fasady.html', desc: 'Kompletní řešení fasád od zateplení po finální povrchovou úpravu. Moderní technologie pro dlouhodobou ochranu a estetiku.' },
+      { num: '05', title: 'Mytí fasád', folder: 'myti_fasad', count: 10, link: 'ref-myti.html', desc: 'Profesionální čištění a mytí fasád. Šetrné technologie pro obnovu původního vzhledu vaší budovy bez poškození povrchu.' },
+      { num: '06', title: 'Tapetování', folder: 'tapety', count: 2, link: 'ref-tapety.html', desc: 'Profesionální tapetování od klasických vzorů po moderní designové tapety. Precizní aplikace pro bezchybný výsledek.' }
+    ]
 
-      .ref-overview__grid
-        a.ref-overview__card(href="ref-sterky.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/sterky/thumbs/1.jpg" alt="Dekorační stěrky")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count 199 fotografií
-          h3.ref-overview__card-name Dekorační stěrky
-
-        a.ref-overview__card(href="ref-koupelny.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/koupelny/thumbs/1.jpg" alt="Koupelnové stěrky")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count 62 fotografií
-          h3.ref-overview__card-name Koupelnové stěrky
-
-        a.ref-overview__card(href="ref-malby.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/malby/thumbs/1.jpg" alt="Malby a nátěry")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count 20 fotografií
-          h3.ref-overview__card-name Malby a nátěry
-
-        a.ref-overview__card(href="ref-fasady.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/fasady/thumbs/1.jpg" alt="Fasády")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count Zobrazit galerii
-          h3.ref-overview__card-name Fasády
-
-        a.ref-overview__card(href="ref-myti.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/myti_fasad/thumbs/1.jpg" alt="Mytí fasád")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count Zobrazit galerii
-          h3.ref-overview__card-name Mytí fasád
-
-        a.ref-overview__card(href="ref-tapety.html")
-          .ref-overview__card-img
-            img(src="resources/img/ref/tapety/thumbs/1.jpg" alt="Tapetování")
-            .ref-overview__card-overlay
-              span.ref-overview__card-count Zobrazit galerii
-          h3.ref-overview__card-name Tapetování
+  each cat, idx in categories
+    section.ref-section(class=idx % 2 === 1 ? 'ref-section--reverse' : '')
+      .ref-section__inner
+        .ref-section__text
+          span.ref-section__number= cat.num
+          h3.ref-section__title= cat.title
+          p.ref-section__desc= cat.desc
+          a.ref-section__cta(href=cat.link) Zobrazit galerii
+        .ref-section__carousel(data-category=cat.folder)
+          .ref-section__carousel-track
+            - for (var i = 1; i <= cat.count; i++)
+              a(href='resources/img/ref/' + cat.folder + '/thumbs/' + i + '.jpg' data-featherlight='image')
+                img(src='resources/img/ref/' + cat.folder + '/thumbs/' + i + '.jpg' alt=cat.title + ' ' + i loading='lazy')
+          button.ref-section__carousel-prev(aria-label='Předchozí')
+          button.ref-section__carousel-next(aria-label='Další')
+    if idx < categories.length - 1
+      .ref-section__divider
 
   include ../footer.pug
 
   script(src="vendors/js/jquery-3.2.1.min.js")
+  script(src="vendors/js/featherlight.min.js")
+  script(src="vendors/js/featherlight.gallery.min.js")
   script(src="resources/js/script.js")

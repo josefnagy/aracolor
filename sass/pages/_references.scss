@@ -231,3 +231,245 @@
     font-size: 3.2rem;
   }
 }
+
+
+/*------------------------ Reference Category Sections ----------------------- */
+
+.ref-section {
+  padding: 8rem 0;
+  position: relative;
+
+  &:nth-child(odd) {
+    background-color: #1A1714;
+  }
+
+  &:nth-child(even) {
+    background-color: #1E1B17;
+  }
+}
+
+.ref-section__inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+
+  .ref-section--reverse & {
+    flex-direction: row-reverse;
+  }
+}
+
+.ref-section__text {
+  flex: 0 0 300px;
+  min-width: 0;
+}
+
+.ref-section__number {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: rgba($color-gold, 0.15);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.ref-section__title {
+  font-family: "Fraunces", serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: $color-offwhite;
+  margin-bottom: 1.6rem;
+  text-transform: none;
+  letter-spacing: -0.02rem;
+
+  &:after {
+    display: none;
+  }
+}
+
+.ref-section__desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: rgba($color-offwhite, 0.6);
+  margin-bottom: 2.4rem;
+}
+
+.ref-section__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: $color-gold;
+  border: 1px solid rgba($color-gold, 0.4) !important;
+  border-radius: 0.6rem;
+  padding: 1.2rem 2.4rem;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s;
+  line-height: 1;
+
+  &:hover, &:active {
+    background-color: rgba($color-gold, 0.1);
+    border: 1px solid $color-gold !important;
+  }
+
+  &:link, &:visited {
+    border: 1px solid rgba($color-gold, 0.4) !important;
+    padding-bottom: 1.2rem;
+  }
+}
+
+.ref-section__carousel {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ref-section__carousel-track {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0.4rem 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  a, a:link, a:visited, a:hover, a:active {
+    border: none !important;
+    text-decoration: none;
+  }
+
+  img {
+    flex: 0 0 auto;
+    height: 36rem;
+    width: auto;
+    border-radius: 1.2rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+  }
+}
+
+.ref-section__carousel-prev,
+.ref-section__carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba($color-black, 0.6);
+  color: $color-offwhite;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.3s, opacity 0.3s;
+  opacity: 0;
+
+  .ref-section__carousel:hover & {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: rgba($color-black, 0.85);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-top: 2px solid $color-offwhite;
+    border-right: 2px solid $color-offwhite;
+  }
+}
+
+.ref-section__carousel-prev {
+  left: 1.2rem;
+
+  &::after {
+    transform: rotate(-135deg);
+    margin-left: 0.3rem;
+  }
+}
+
+.ref-section__carousel-next {
+  right: 1.2rem;
+
+  &::after {
+    transform: rotate(45deg);
+    margin-right: 0.3rem;
+  }
+}
+
+.ref-section__divider {
+  height: 1px;
+  background-color: rgba($color-white, 0.08);
+}
+
+// Responsive
+@media only screen and (max-width: 900px) {
+  .ref-section__inner {
+    flex-direction: column;
+    gap: 3rem;
+
+    .ref-section--reverse & {
+      flex-direction: column;
+    }
+  }
+
+  .ref-section__text {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ref-section__number {
+    font-size: 5rem;
+  }
+
+  .ref-section__carousel-track img {
+    height: 28rem;
+  }
+
+  .ref-section {
+    padding: 5rem 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .ref-section__carousel-track img {
+    height: 22rem;
+  }
+
+  .ref-section__title {
+    font-size: 2.2rem;
+  }
+
+  .ref-section__carousel-prev,
+  .ref-section__carousel-next {
+    opacity: 1;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+}

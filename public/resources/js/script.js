@@ -97,6 +97,9 @@ $(document).ready(function() {
     loadPricelistFromJSON();
   }
 
+  // Initialize reference page carousels
+  initRefCarousels();
+
   $(".scroll-js").click(function (event) {
     var href = $(this).attr('href');
     var currentPage = location.pathname.split('/').pop() || 'index.html';
@@ -430,6 +433,72 @@ function initProductGalleries() {
       }
     }, { passive: true });
   });
+}
+
+function initRefCarousels() {
+  var carousels = document.querySelectorAll('.ref-section__carousel');
+  if (!carousels.length) return;
+
+  carousels.forEach(function(carousel) {
+    var track = carousel.querySelector('.ref-section__carousel-track');
+    var prevBtn = carousel.querySelector('.ref-section__carousel-prev');
+    var nextBtn = carousel.querySelector('.ref-section__carousel-next');
+    if (!track) return;
+
+    function getScrollAmount() {
+      var img = track.querySelector('img');
+      return img ? img.offsetWidth + 16 : 300;
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+    }
+
+    // Touch swipe
+    var touchStartX = 0;
+    track.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', function(e) {
+      var diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        track.scrollBy({ left: diff < 0 ? getScrollAmount() : -getScrollAmount(), behavior: 'smooth' });
+      }
+    }, { passive: true });
+
+    // Keyboard navigation when carousel is focused/hovered
+    carousel.setAttribute('tabindex', '0');
+    carousel.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Featherlight gallery for each carousel section
+  if (typeof $.fn.featherlightGallery !== 'undefined') {
+    $('.ref-section__carousel-track').each(function() {
+      $(this).find('a[data-featherlight]').featherlightGallery({
+        previousIcon: '«',
+        nextIcon: '»',
+        galleryFadeIn: 300,
+        openSpeed: 300,
+      });
+    });
+  }
 }
 
 function loadPricelistFromJSON() {
