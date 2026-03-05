@@ -3,13 +3,13 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Pricelist</h1>
-        <p class="page-subtitle">Manage pricelist categories and items</p>
+        <h1 class="page-title">Ceník</h1>
+        <p class="page-subtitle">Správa kategorií a položek ceníku</p>
       </div>
       <div class="actions">
         <button class="btn-primary" @click="showNewCatForm = true">
           <PlusIcon :size="16" />
-          <span>New Category</span>
+          <span>Nová kategorie</span>
         </button>
       </div>
     </div>
@@ -22,7 +22,7 @@
         </div>
         <div class="stat-text">
           <span class="stat-value">{{ categories.length }}</span>
-          <span class="stat-label">Categories</span>
+          <span class="stat-label">Kategorie</span>
         </div>
       </div>
       <div class="stat-card">
@@ -31,7 +31,7 @@
         </div>
         <div class="stat-text">
           <span class="stat-value">{{ totalItems }}</span>
-          <span class="stat-label">Total Items</span>
+          <span class="stat-label">Celkem položek</span>
         </div>
       </div>
       <div class="stat-card">
@@ -40,7 +40,7 @@
         </div>
         <div class="stat-text">
           <span class="stat-value">{{ leftCount }}</span>
-          <span class="stat-label">Left Column</span>
+          <span class="stat-label">Levý sloupec</span>
         </div>
       </div>
       <div class="stat-card">
@@ -49,7 +49,7 @@
         </div>
         <div class="stat-text">
           <span class="stat-value">{{ rightCount }}</span>
-          <span class="stat-label">Right Column</span>
+          <span class="stat-label">Pravý sloupec</span>
         </div>
       </div>
     </div>
@@ -60,27 +60,27 @@
         ref="newCatTitleInput"
         v-model="newCatTitle"
         type="text"
-        placeholder="Category title..."
+        placeholder="Název kategorie..."
         class="form-input"
         @keyup.enter="handleCreateCategory"
         @keyup.escape="cancelNewCat"
       />
       <span class="slug-preview">{{ newCatSlug }}</span>
       <select v-model="newCatColumn" class="form-input form-select">
-        <option value="left">Left</option>
-        <option value="right">Right</option>
+        <option value="left">Levý</option>
+        <option value="right">Pravý</option>
       </select>
       <button class="btn-primary btn-sm" :disabled="!newCatTitle.trim() || creatingCat" @click="handleCreateCategory">
-        {{ creatingCat ? 'Creating...' : 'Add' }}
+        {{ creatingCat ? 'Vytvářím...' : 'Přidat' }}
       </button>
-      <button class="btn-secondary btn-sm" @click="cancelNewCat">Cancel</button>
+      <button class="btn-secondary btn-sm" @click="cancelNewCat">Zrušit</button>
       <p v-if="newCatError" class="error-text">{{ newCatError }}</p>
     </div>
 
     <!-- Two-column layout -->
     <div class="price-columns">
       <div class="price-column">
-        <h2 class="column-heading">Left Column</h2>
+        <h2 class="column-heading">Levý sloupec</h2>
         <div class="category-list">
           <template v-for="(cat, idx) in leftCategories" :key="cat.id">
             <CategoryCard
@@ -110,12 +110,12 @@
               @cancel-new-item="cancelNewItem"
             />
           </template>
-          <p v-if="!leftCategories.length" class="empty-text">No categories in left column.</p>
+          <p v-if="!leftCategories.length" class="empty-text">Žádné kategorie v levém sloupci.</p>
         </div>
       </div>
 
       <div class="price-column">
-        <h2 class="column-heading">Right Column</h2>
+        <h2 class="column-heading">Pravý sloupec</h2>
         <div class="category-list">
           <template v-for="(cat, idx) in rightCategories" :key="cat.id">
             <CategoryCard
@@ -145,7 +145,7 @@
               @cancel-new-item="cancelNewItem"
             />
           </template>
-          <p v-if="!rightCategories.length" class="empty-text">No categories in right column.</p>
+          <p v-if="!rightCategories.length" class="empty-text">Žádné kategorie v pravém sloupci.</p>
         </div>
       </div>
     </div>
@@ -158,8 +158,8 @@
       <div class="modal" style="max-width: 480px">
         <div class="modal-header">
           <div>
-            <h2 class="modal-title">Edit Category</h2>
-            <p class="modal-subtitle">Update category details</p>
+            <h2 class="modal-title">Upravit kategorii</h2>
+            <p class="modal-subtitle">Aktualizovat údaje kategorie</p>
           </div>
           <button class="btn-icon" @click="cancelEditCat">
             <XIcon :size="18" />
@@ -167,7 +167,7 @@
         </div>
         <div class="modal-body">
           <div class="modal-field">
-            <label class="modal-field-label">Category Name</label>
+            <label class="modal-field-label">Název kategorie</label>
             <input v-model="editCatTitle" type="text" class="modal-input" @keyup.enter="saveEditCat" />
           </div>
           <div class="modal-field">
@@ -178,22 +178,22 @@
             </div>
           </div>
           <div class="modal-field">
-            <label class="modal-field-label">Column</label>
+            <label class="modal-field-label">Sloupec</label>
             <div class="column-toggle">
               <button :class="{ active: editCatColumn === 'left' }" @click="editCatColumn = 'left'">
                 <PanelLeftIcon :size="16" />
-                <span>Left</span>
+                <span>Levý</span>
               </button>
               <button :class="{ active: editCatColumn === 'right' }" @click="editCatColumn = 'right'">
                 <PanelRightIcon :size="16" />
-                <span>Right</span>
+                <span>Pravý</span>
               </button>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn-secondary" @click="cancelEditCat">Cancel</button>
-          <button class="btn-primary" :disabled="!editCatTitle.trim()" @click="saveEditCat">Save Changes</button>
+          <button class="btn-secondary" @click="cancelEditCat">Zrušit</button>
+          <button class="btn-primary" :disabled="!editCatTitle.trim()" @click="saveEditCat">Uložit změny</button>
         </div>
       </div>
     </div>
@@ -203,8 +203,8 @@
       <div class="modal" style="max-width: 480px">
         <div class="modal-header">
           <div>
-            <h2 class="modal-title">Edit Item</h2>
-            <p class="modal-subtitle">Update item details</p>
+            <h2 class="modal-title">Upravit položku</h2>
+            <p class="modal-subtitle">Aktualizovat údaje položky</p>
           </div>
           <button class="btn-icon" @click="cancelEditItem">
             <XIcon :size="18" />
@@ -216,25 +216,25 @@
             <span class="row-badge count-badge">{{ editingItemCatTitle }}</span>
           </div>
           <div class="modal-field">
-            <label class="modal-field-label">Item Name</label>
+            <label class="modal-field-label">Název položky</label>
             <input v-model="editItemName" type="text" class="modal-input" @keyup.enter="saveEditItem" />
           </div>
           <div class="modal-field">
-            <label class="modal-field-label">Price</label>
+            <label class="modal-field-label">Cena</label>
             <div class="price-input-wrap">
               <input v-model="editItemPrice" type="text" class="modal-input" @keyup.enter="saveEditItem" />
               <span class="price-suffix">Kč / m²</span>
             </div>
           </div>
           <div class="modal-field">
-            <label class="modal-field-label">Note</label>
+            <label class="modal-field-label">Poznámka</label>
             <textarea v-model="editItemNote" class="modal-textarea" rows="3"></textarea>
-            <span class="modal-helper-text">Optional additional details</span>
+            <span class="modal-helper-text">Volitelné doplňující informace</span>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn-secondary" @click="cancelEditItem">Cancel</button>
-          <button class="btn-primary" :disabled="!editItemName.trim()" @click="saveEditItem">Save Item</button>
+          <button class="btn-secondary" @click="cancelEditItem">Zrušit</button>
+          <button class="btn-primary" :disabled="!editItemName.trim()" @click="saveEditItem">Uložit položku</button>
         </div>
       </div>
     </div>
@@ -246,21 +246,21 @@
           <div class="delete-icon-circle">
             <TriangleAlertIcon :size="24" />
           </div>
-          <h2 class="modal-title">Delete Category?</h2>
-          <p class="modal-description">This action cannot be undone. The category and all its items will be permanently removed.</p>
+          <h2 class="modal-title">Smazat kategorii?</h2>
+          <p class="modal-description">Tuto akci nelze vrátit zpět. Kategorie a všechny její položky budou trvale odstraněny.</p>
           <div class="delete-highlight">{{ deletingCat.title }}</div>
           <div v-if="deletingCat.items.length" class="delete-items-list">
             <div v-for="item in deletingCat.items.slice(0, 3)" :key="item.id" class="delete-items-list__item">
               {{ item.name }}
             </div>
             <div v-if="deletingCat.items.length > 3" class="delete-items-list__more">
-              and {{ deletingCat.items.length - 3 }} more
+              a {{ deletingCat.items.length - 3 }} {{ deletingCat.items.length - 3 === 1 ? 'další' : 'dalších' }}
             </div>
           </div>
         </div>
         <div class="modal-footer modal-footer--center">
-          <button class="btn-secondary" @click="cancelDeleteCat">Cancel</button>
-          <button class="btn-danger-solid" @click="confirmDeleteCategory">Delete Category</button>
+          <button class="btn-secondary" @click="cancelDeleteCat">Zrušit</button>
+          <button class="btn-danger-solid" @click="confirmDeleteCategory">Smazat kategorii</button>
         </div>
       </div>
     </div>
@@ -327,21 +327,21 @@ const CategoryCard = {
         </div>
 
         <div class="cat-header__right" @click.stop>
-          <span class="row-badge column-badge" :class="'column-badge--' + cat.column" @click="$emit('toggleColumn', cat.id)">{{ cat.column === 'left' ? 'Left Column' : 'Right Column' }}</span>
-          <span class="row-badge count-badge">{{ cat.items.length }} {{ cat.items.length === 1 ? 'item' : 'items' }}</span>
+          <span class="row-badge column-badge" :class="'column-badge--' + cat.column" @click="$emit('toggleColumn', cat.id)">{{ cat.column === 'left' ? 'Levý sloupec' : 'Pravý sloupec' }}</span>
+          <span class="row-badge count-badge">{{ cat.items.length }} {{ cat.items.length === 1 ? 'položka' : cat.items.length >= 2 && cat.items.length <= 4 ? 'položky' : 'položek' }}</span>
 
           <div class="row-order">
-            <button class="btn-icon btn-icon--sm" title="Move up" :disabled="idx === 0" @click="$emit('moveCategory', cat.id, -1)">
+            <button class="btn-icon btn-icon--sm" title="Posunout nahoru" :disabled="idx === 0" @click="$emit('moveCategory', cat.id, -1)">
               <ChevronUpIcon :size="14" />
             </button>
-            <button class="btn-icon btn-icon--sm" title="Move down" :disabled="idx === total - 1" @click="$emit('moveCategory', cat.id, 1)">
+            <button class="btn-icon btn-icon--sm" title="Posunout dolů" :disabled="idx === total - 1" @click="$emit('moveCategory', cat.id, 1)">
               <ChevronDownIcon :size="14" />
             </button>
           </div>
-          <button class="btn-icon" title="Edit" @click="$emit('startEditCat', cat)">
+          <button class="btn-icon" title="Upravit" @click="$emit('startEditCat', cat)">
             <PencilIcon :size="16" />
           </button>
-          <button class="btn-icon btn-icon--danger" title="Delete" @click="$emit('deleteCategory', cat)">
+          <button class="btn-icon btn-icon--danger" title="Smazat" @click="$emit('deleteCategory', cat)">
             <Trash2Icon :size="16" />
           </button>
         </div>
@@ -355,17 +355,17 @@ const CategoryCard = {
           <span class="item-price">{{ item.price }}</span>
           <div class="item-actions">
             <div class="row-order">
-              <button class="btn-icon btn-icon--sm" title="Move up" :disabled="iIdx === 0" @click="$emit('moveItem', cat.id, iIdx, -1)">
+              <button class="btn-icon btn-icon--sm" title="Posunout nahoru" :disabled="iIdx === 0" @click="$emit('moveItem', cat.id, iIdx, -1)">
                 <ChevronUpIcon :size="14" />
               </button>
-              <button class="btn-icon btn-icon--sm" title="Move down" :disabled="iIdx === cat.items.length - 1" @click="$emit('moveItem', cat.id, iIdx, 1)">
+              <button class="btn-icon btn-icon--sm" title="Posunout dolů" :disabled="iIdx === cat.items.length - 1" @click="$emit('moveItem', cat.id, iIdx, 1)">
                 <ChevronDownIcon :size="14" />
               </button>
             </div>
-            <button class="btn-icon" title="Edit" @click="$emit('startEditItem', item, cat.id)">
+            <button class="btn-icon" title="Upravit" @click="$emit('startEditItem', item, cat.id)">
               <PencilIcon :size="16" />
             </button>
-            <button class="btn-icon btn-icon--danger" title="Delete" @click="$emit('deleteItem', cat.id, item.id)">
+            <button class="btn-icon btn-icon--danger" title="Smazat" @click="$emit('deleteItem', cat.id, item.id)">
               <Trash2Icon :size="16" />
             </button>
           </div>
@@ -378,7 +378,7 @@ const CategoryCard = {
             @input="$emit('update:newItemName', $event.target.value)"
             type="text"
             class="form-input form-input--inline"
-            placeholder="Name"
+            placeholder="Název"
             @keyup.enter="$emit('addItem', cat.id)"
             @keyup.escape="$emit('cancelNewItem')"
           />
@@ -387,7 +387,7 @@ const CategoryCard = {
             @input="$emit('update:newItemPrice', $event.target.value)"
             type="text"
             class="form-input form-input--inline form-input--price"
-            placeholder="Price"
+            placeholder="Cena"
             @keyup.enter="$emit('addItem', cat.id)"
           />
           <input
@@ -395,20 +395,20 @@ const CategoryCard = {
             @input="$emit('update:newItemNote', $event.target.value)"
             type="text"
             class="form-input form-input--inline form-input--note"
-            placeholder="Note"
+            placeholder="Poznámka"
             @keyup.enter="$emit('addItem', cat.id)"
           />
-          <button class="btn-icon" title="Add" :disabled="addingItem" @click="$emit('addItem', cat.id)">
+          <button class="btn-icon" title="Přidat" :disabled="addingItem" @click="$emit('addItem', cat.id)">
             <CheckIcon :size="16" />
           </button>
-          <button class="btn-icon" title="Cancel" @click="$emit('cancelNewItem')">
+          <button class="btn-icon" title="Zrušit" @click="$emit('cancelNewItem')">
             <XIcon :size="16" />
           </button>
         </div>
 
         <button v-else class="btn-add-item" @click="$emit('startNewItem', cat.id)">
           <PlusIcon :size="14" />
-          <span>Add item</span>
+          <span>Přidat položku</span>
         </button>
       </div>
     </div>
@@ -461,7 +461,7 @@ async function handleCreateCategory() {
     newCatColumn.value = 'left';
     showNewCatForm.value = false;
   } catch (err) {
-    newCatError.value = err.response?.data?.error || 'Failed to create category';
+    newCatError.value = err.response?.data?.error || 'Nepodařilo se vytvořit kategorii';
   } finally {
     creatingCat.value = false;
   }
@@ -496,7 +496,7 @@ async function saveEditCat() {
     await updateCategory(editingCat.value.id, { title, column: editCatColumn.value });
     editingCat.value = null;
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to save');
+    alert(err.response?.data?.error || 'Nepodařilo se uložit');
   }
 }
 
@@ -508,7 +508,7 @@ async function toggleColumn(catId) {
   try {
     await updateCategory(catId, { column: newCol });
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to toggle column');
+    alert(err.response?.data?.error || 'Nepodařilo se přepnout sloupec');
   }
 }
 
@@ -535,7 +535,7 @@ async function moveCategory(catId, direction) {
   try {
     await reorderCategories(allIds);
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to reorder');
+    alert(err.response?.data?.error || 'Nepodařilo se změnit pořadí');
   }
 }
 
@@ -555,7 +555,7 @@ async function confirmDeleteCategory() {
     await deleteCategory(deletingCat.value.id);
     deletingCat.value = null;
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to delete');
+    alert(err.response?.data?.error || 'Nepodařilo se smazat');
   }
 }
 
@@ -587,7 +587,7 @@ async function handleAddItem(catId) {
     newItemPrice.value = '';
     newItemNote.value = '';
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to add item');
+    alert(err.response?.data?.error || 'Nepodařilo se přidat položku');
   } finally {
     addingItem.value = false;
   }
@@ -633,7 +633,7 @@ async function saveEditItem() {
     });
     editingItem.value = null;
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to save');
+    alert(err.response?.data?.error || 'Nepodařilo se uložit');
   }
 }
 
@@ -648,17 +648,17 @@ async function moveItem(catId, idx, direction) {
   try {
     await reorderItems(catId, ids);
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to reorder');
+    alert(err.response?.data?.error || 'Nepodařilo se změnit pořadí');
   }
 }
 
 // ── Delete item ──
 async function handleDeleteItem(catId, itemId) {
-  if (!confirm('Delete this item?')) return;
+  if (!confirm('Smazat tuto položku?')) return;
   try {
     await deleteItem(catId, itemId);
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to delete');
+    alert(err.response?.data?.error || 'Nepodařilo se smazat');
   }
 }
 

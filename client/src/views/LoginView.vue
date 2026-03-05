@@ -5,34 +5,34 @@
         <div class="logo-dot"></div>
         <span class="logo-text">Aracolor</span>
       </div>
-      <p class="login-subtitle">Sign in to admin panel</p>
+      <p class="login-subtitle">Přihlášení do administrace</p>
 
       <form @submit.prevent="handleLogin">
         <div class="field">
-          <label for="username">Username</label>
+          <label for="username">Uživatelské jméno</label>
           <input
             id="username"
             v-model="user"
             type="text"
             autocomplete="username"
-            placeholder="Enter username"
+            placeholder="Zadejte uživatelské jméno"
             required
           />
         </div>
         <div class="field">
-          <label for="password">Password</label>
+          <label for="password">Heslo</label>
           <input
             id="password"
             v-model="password"
             type="password"
             autocomplete="current-password"
-            placeholder="Enter password"
+            placeholder="Zadejte heslo"
             required
           />
         </div>
         <p v-if="error" class="error">{{ error }}</p>
         <button type="submit" :disabled="submitting">
-          {{ submitting ? 'Signing in...' : 'Sign in' }}
+          {{ submitting ? 'Přihlašování...' : 'Přihlásit se' }}
         </button>
       </form>
     </div>
@@ -63,7 +63,7 @@ async function handleLogin() {
   try {
     await login(user.value, password.value);
   } catch (err) {
-    error.value = err.response?.data?.error || 'Login failed';
+    error.value = err.response?.data?.error || 'Přihlášení se nezdařilo';
   } finally {
     submitting.value = false;
   }

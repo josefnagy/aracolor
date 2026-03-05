@@ -18,8 +18,8 @@
     </draggable>
 
     <div v-if="images.length === 0" class="empty">
-      <p class="empty-text">No images in this category</p>
-      <p class="empty-hint">Upload some images to get started.</p>
+      <p class="empty-text">V této kategorii nejsou žádné obrázky</p>
+      <p class="empty-hint">Nahrajte obrázky pro začátek.</p>
     </div>
   </div>
 </template>

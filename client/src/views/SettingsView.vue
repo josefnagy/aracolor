@@ -3,17 +3,17 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Settings</h1>
-        <p class="page-subtitle">Manage your account and configuration</p>
+        <h1 class="page-title">Nastavení</h1>
+        <p class="page-subtitle">Správa účtu a konfigurace</p>
       </div>
     </div>
 
     <!-- Change Password Card -->
     <div class="settings-card">
-      <h2 class="card-title">Change Password</h2>
+      <h2 class="card-title">Změna hesla</h2>
       <form class="card-form" @submit.prevent="handleChangePassword">
         <div class="field">
-          <label class="field-label">Current Password</label>
+          <label class="field-label">Současné heslo</label>
           <input
             v-model="currentPassword"
             type="password"
@@ -22,7 +22,7 @@
           />
         </div>
         <div class="field">
-          <label class="field-label">New Password</label>
+          <label class="field-label">Nové heslo</label>
           <input
             v-model="newPassword"
             type="password"
@@ -31,7 +31,7 @@
           />
         </div>
         <div class="field">
-          <label class="field-label">Confirm New Password</label>
+          <label class="field-label">Potvrzení nového hesla</label>
           <input
             v-model="confirmPassword"
             type="password"
@@ -42,19 +42,19 @@
         <p v-if="passwordError" class="error-text">{{ passwordError }}</p>
         <p v-if="passwordSuccess" class="success-text">{{ passwordSuccess }}</p>
         <button type="submit" class="btn-primary" :disabled="savingPassword">
-          {{ savingPassword ? 'Updating...' : 'Update Password' }}
+          {{ savingPassword ? 'Ukládám...' : 'Změnit heslo' }}
         </button>
       </form>
     </div>
 
     <!-- Image Processing Card -->
     <div class="settings-card">
-      <h2 class="card-title">Image Processing</h2>
-      <p class="card-hint">These settings affect future uploads only.</p>
+      <h2 class="card-title">Zpracování obrázků</h2>
+      <p class="card-hint">Tato nastavení ovlivní pouze budoucí nahrávání.</p>
       <form class="card-form" @submit.prevent="handleSaveProcessing">
         <div class="field-grid">
           <div class="field">
-            <label class="field-label">Max Dimension (px)</label>
+            <label class="field-label">Max. rozměr (px)</label>
             <input
               v-model.number="processing.maxDimension"
               type="number"
@@ -64,7 +64,7 @@
             />
           </div>
           <div class="field">
-            <label class="field-label">Max File Size (KB)</label>
+            <label class="field-label">Max. velikost souboru (KB)</label>
             <input
               v-model.number="processing.maxFileSizeKB"
               type="number"
@@ -74,7 +74,7 @@
             />
           </div>
           <div class="field">
-            <label class="field-label">Initial Quality</label>
+            <label class="field-label">Počáteční kvalita</label>
             <input
               v-model.number="processing.initialQuality"
               type="number"
@@ -84,7 +84,7 @@
             />
           </div>
           <div class="field">
-            <label class="field-label">Quality Step</label>
+            <label class="field-label">Krok kvality</label>
             <input
               v-model.number="processing.qualityStep"
               type="number"
@@ -97,23 +97,23 @@
         <p v-if="processingError" class="error-text">{{ processingError }}</p>
         <p v-if="processingSuccess" class="success-text">{{ processingSuccess }}</p>
         <button type="submit" class="btn-primary" :disabled="savingProcessing">
-          {{ savingProcessing ? 'Saving...' : 'Save Settings' }}
+          {{ savingProcessing ? 'Ukládám...' : 'Uložit nastavení' }}
         </button>
       </form>
     </div>
 
     <!-- Data & Backup Card -->
     <div class="settings-card">
-      <h2 class="card-title">Data & Backup</h2>
-      <p class="card-hint">Download your data files for backup or migration.</p>
+      <h2 class="card-title">Data a záloha</h2>
+      <p class="card-hint">Stáhněte si datové soubory pro zálohu nebo migraci.</p>
       <div class="export-actions">
         <a :href="exportUrl('images')" class="btn-secondary" download>
           <DownloadIcon :size="16" />
-          <span>Download images.json</span>
+          <span>Stáhnout images.json</span>
         </a>
         <a :href="exportUrl('categories')" class="btn-secondary" download>
           <DownloadIcon :size="16" />
-          <span>Download categories.json</span>
+          <span>Stáhnout categories.json</span>
         </a>
       </div>
     </div>
@@ -163,27 +163,27 @@ async function handleChangePassword() {
   passwordSuccess.value = '';
 
   if (!currentPassword.value || !newPassword.value) {
-    passwordError.value = 'All fields are required';
+    passwordError.value = 'Všechna pole jsou povinná';
     return;
   }
   if (newPassword.value !== confirmPassword.value) {
-    passwordError.value = 'New passwords do not match';
+    passwordError.value = 'Nová hesla se neshodují';
     return;
   }
   if (newPassword.value.length < 6) {
-    passwordError.value = 'Password must be at least 6 characters';
+    passwordError.value = 'Heslo musí mít alespoň 6 znaků';
     return;
   }
 
   savingPassword.value = true;
   try {
     await changePassword(currentPassword.value, newPassword.value);
-    passwordSuccess.value = 'Password updated successfully';
+    passwordSuccess.value = 'Heslo bylo úspěšně změněno';
     currentPassword.value = '';
     newPassword.value = '';
     confirmPassword.value = '';
   } catch (err) {
-    passwordError.value = err.response?.data?.error || 'Failed to change password';
+    passwordError.value = err.response?.data?.error || 'Nepodařilo se změnit heslo';
   } finally {
     savingPassword.value = false;
   }
@@ -195,9 +195,9 @@ async function handleSaveProcessing() {
   savingProcessing.value = true;
   try {
     await saveProcessingConfig(processing.value);
-    processingSuccess.value = 'Settings saved';
+    processingSuccess.value = 'Nastavení uloženo';
   } catch (err) {
-    processingError.value = err.response?.data?.error || 'Failed to save settings';
+    processingError.value = err.response?.data?.error || 'Nepodařilo se uložit nastavení';
   } finally {
     savingProcessing.value = false;
   }

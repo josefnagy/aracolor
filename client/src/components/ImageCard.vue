@@ -2,20 +2,20 @@
   <div class="image-card" :class="{ hero: image.isHero, list: viewMode === 'list' }">
     <div class="thumb-wrap">
       <img :src="image.src" :alt="image.id" loading="lazy" />
-      <span v-if="image.isHero" class="hero-badge">Hero</span>
+      <span v-if="image.isHero" class="hero-badge">Hlavní</span>
     </div>
     <div class="card-actions">
       <button
         class="btn-action btn-star"
         :class="{ active: image.isHero }"
-        :title="image.isHero ? 'Current hero' : 'Set as hero'"
+        :title="image.isHero ? 'Aktuální hlavní' : 'Nastavit jako hlavní'"
         @click.stop="$emit('set-hero', image.id)"
       >
         <StarIcon :size="14" />
       </button>
       <button
         class="btn-action btn-delete"
-        title="Delete image"
+        title="Smazat obrázek"
         @click.stop="$emit('delete', image.id)"
       >
         <Trash2Icon :size="14" />
@@ -24,7 +24,7 @@
     <div class="card-info">
       <span class="card-name">
         {{ image.id }}
-        <span v-if="image.isHero && viewMode === 'list'" class="hero-label">Hero</span>
+        <span v-if="image.isHero && viewMode === 'list'" class="hero-label">Hlavní</span>
       </span>
       <div class="card-meta">
         <span>{{ formatSize(image.size) }}</span>
@@ -83,7 +83,7 @@ function formatDate(iso) {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ── Hero highlight ── */
+/* ── Hlavní highlight ── */
 .image-card.hero {
   border-color: #f59e0b;
   border-left: 3px solid #f59e0b;

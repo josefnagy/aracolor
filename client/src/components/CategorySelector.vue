@@ -1,6 +1,6 @@
 <template>
   <div class="category-selector">
-    <label for="category-select">Category</label>
+    <label for="category-select">Kategorie</label>
     <select
       id="category-select"
       :value="modelValue"

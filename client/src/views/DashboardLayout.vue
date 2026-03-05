@@ -15,7 +15,7 @@
           exact-active-class="active"
         >
           <FolderIcon :size="18" />
-          <span>Categories</span>
+          <span>Kategorie</span>
         </router-link>
         <router-link
           class="nav-item"
@@ -23,7 +23,7 @@
           exact-active-class="active"
         >
           <UploadIcon :size="18" />
-          <span>Uploads</span>
+          <span>Nahrávání</span>
         </router-link>
         <router-link
           class="nav-item"
@@ -31,7 +31,7 @@
           exact-active-class="active"
         >
           <ImageIcon :size="18" />
-          <span>Images</span>
+          <span>Obrázky</span>
         </router-link>
       </nav>
 
@@ -43,7 +43,7 @@
           exact-active-class="active"
         >
           <ListOrderedIcon :size="18" />
-          <span>Pricelist</span>
+          <span>Ceník</span>
         </router-link>
       </nav>
 
@@ -55,7 +55,7 @@
           exact-active-class="active"
         >
           <CameraIcon :size="18" />
-          <span>Images</span>
+          <span>Obrázky</span>
         </router-link>
         <router-link
           class="nav-item"
@@ -63,7 +63,7 @@
           exact-active-class="active"
         >
           <FolderIcon :size="18" />
-          <span>Categories</span>
+          <span>Kategorie</span>
         </router-link>
       </nav>
 
@@ -75,27 +75,27 @@
           exact-active-class="active"
         >
           <SettingsIcon :size="18" />
-          <span>Settings</span>
+          <span>Nastavení</span>
         </router-link>
       </nav>
 
       <div class="spacer"></div>
 
       <div class="storage-card">
-        <span class="storage-label">Storage</span>
+        <span class="storage-label">Úložiště</span>
         <div class="storage-bar-bg">
           <div class="storage-bar-fill" :style="{ width: storagePercent + '%' }"></div>
         </div>
-        <span class="storage-text">{{ storageUsed }} of 10 GB used</span>
+        <span class="storage-text">{{ storageUsed }} z 10 GB využito</span>
       </div>
 
       <div class="user-section">
         <div class="user-avatar">{{ userInitial }}</div>
         <div class="user-info">
           <span class="user-name">{{ username }}</span>
-          <span class="user-role">Administrator</span>
+          <span class="user-role">Administrátor</span>
         </div>
-        <button class="btn-logout" title="Log out" @click="logout">
+        <button class="btn-logout" title="Odhlásit se" @click="logout">
           <LogOutIcon :size="16" />
         </button>
       </div>

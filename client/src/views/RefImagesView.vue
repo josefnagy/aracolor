@@ -10,8 +10,8 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Reference Images</h1>
-        <p class="page-subtitle">Manage reference gallery images and carousels</p>
+        <h1 class="page-title">Referenční obrázky</h1>
+        <p class="page-subtitle">Správa obrázků referenční galerie a karuselů</p>
       </div>
       <div class="actions">
         <div class="search-box">
@@ -19,12 +19,12 @@
           <input
             v-model="searchQuery"
             type="text"
-            placeholder="Search images..."
+            placeholder="Hledat obrázky..."
           />
         </div>
         <button class="btn-upload" :disabled="!selectedCategory" @click="uploadCategory = selectedCategory; showUploadModal = true">
           <PlusIcon :size="16" />
-          <span>Upload</span>
+          <span>Nahrát</span>
         </button>
       </div>
     </div>
@@ -32,22 +32,22 @@
     <!-- Stats Row -->
     <div class="stats-row">
       <div class="stat-card">
-        <span class="stat-label">Total Images</span>
+        <span class="stat-label">Celkem obrázků</span>
         <span class="stat-value">{{ totalImages }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Categories</span>
+        <span class="stat-label">Kategorie</span>
         <span class="stat-value">{{ categoryList.length }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">This Week</span>
+        <span class="stat-label">Tento týden</span>
         <span class="stat-value stat-value--green">
           +{{ weeklyCount }}
           <TrendingUpIcon :size="18" />
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Storage Used</span>
+        <span class="stat-label">Využité úložiště</span>
         <span class="stat-value">{{ storageUsed }}</span>
       </div>
     </div>
@@ -60,7 +60,7 @@
           :class="{ active: selectedCategory === '' }"
           @click="selectedCategory = ''"
         >
-          All
+          Vše
         </button>
         <button
           v-for="cat in categoryList"
@@ -104,20 +104,20 @@
           <div class="image-card" :class="{ carousel: element.carousel, list: viewMode === 'list' }">
             <div class="thumb-wrap">
               <img :src="element.thumb || element.src" :alt="element.id" loading="lazy" />
-              <span v-if="element.carousel" class="carousel-badge">Carousel</span>
+              <span v-if="element.carousel" class="carousel-badge">Karusel</span>
             </div>
             <div class="card-actions">
               <button
                 class="btn-action btn-carousel"
                 :class="{ active: element.carousel }"
-                :title="element.carousel ? 'Remove from carousel' : 'Add to carousel'"
+                :title="element.carousel ? 'Odebrat z karuselu' : 'Přidat do karuselu'"
                 @click.stop="handleToggleCarousel(element)"
               >
                 <FilmIcon :size="14" />
               </button>
               <button
                 class="btn-action btn-delete"
-                title="Delete image"
+                title="Smazat obrázek"
                 @click.stop="handleDelete(element.id)"
               >
                 <Trash2Icon :size="14" />
@@ -126,7 +126,7 @@
             <div class="card-info">
               <span class="card-name">
                 {{ element.id }}
-                <span v-if="element.carousel && viewMode === 'list'" class="carousel-label">Carousel</span>
+                <span v-if="element.carousel && viewMode === 'list'" class="carousel-label">Karusel</span>
               </span>
               <div class="card-meta">
                 <span>{{ formatSize(element.size) }}</span>
@@ -139,25 +139,25 @@
       </draggable>
 
       <div v-if="filteredImages.length === 0 && !loading" class="empty">
-        <p class="empty-text">No images in this category</p>
-        <p class="empty-hint">Upload some images to get started.</p>
+        <p class="empty-text">V této kategorii nejsou žádné obrázky</p>
+        <p class="empty-hint">Nahrajte obrázky pro začátek.</p>
       </div>
     </div>
 
-    <p v-if="loading" class="loading">Loading...</p>
+    <p v-if="loading" class="loading">Načítání...</p>
 
     <!-- Upload Modal -->
     <div v-if="showUploadModal && selectedCategory" class="modal-overlay" @click.self="showUploadModal = false">
       <div class="modal">
         <div class="modal-header">
-          <h2 class="modal-title">Upload Reference Images</h2>
+          <h2 class="modal-title">Nahrát referenční obrázky</h2>
           <button class="btn-close" @click="showUploadModal = false">
             <XIcon :size="18" />
           </button>
         </div>
         <div class="modal-body">
           <div class="field">
-            <label class="field-label">Category</label>
+            <label class="field-label">Kategorie</label>
             <select v-model="uploadCategory" class="field-select">
               <option v-for="cat in categoryList" :key="cat.slug" :value="cat.slug">
                 {{ cat.title }}
@@ -182,12 +182,12 @@
             />
             <div v-if="uploading" class="upload-progress">
               <UploadCloudIcon :size="32" class="uploading-icon" />
-              <p class="progress-text">Uploading {{ uploadFileCount }} file{{ uploadFileCount > 1 ? 's' : '' }}...</p>
+              <p class="progress-text">Nahrávám {{ uploadFileCount }} {{ uploadFileCount === 1 ? 'soubor' : uploadFileCount <= 4 ? 'soubory' : 'souborů' }}...</p>
             </div>
             <div v-else class="upload-prompt">
               <UploadCloudIcon :size="32" class="prompt-icon" />
-              <p class="prompt-main">Drop images here or click to select</p>
-              <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20MB each</p>
+              <p class="prompt-main">Přetáhněte obrázky sem nebo klikněte pro výběr</p>
+              <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20 MB na soubor</p>
             </div>
           </div>
           <p v-if="uploadError" class="upload-error">{{ uploadError }}</p>
@@ -278,7 +278,7 @@ function onDragEnd() {
 }
 
 async function handleDelete(imageId) {
-  if (!confirm('Delete this image? The processed file will be removed.')) return;
+  if (!confirm('Smazat tento obrázek? Zpracovaný soubor bude odstraněn.')) return;
   await deleteImage(imageId);
 }
 
@@ -286,7 +286,7 @@ async function handleToggleCarousel(image) {
   try {
     await toggleCarousel(image.id, !image.carousel);
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to toggle carousel');
+    alert(err.response?.data?.error || 'Nepodařilo se přepnout karusel');
   }
 }
 
@@ -304,7 +304,7 @@ async function processUploadFiles(files) {
     await uploadImages(uploadCategory.value || selectedCategory.value, files);
     showUploadModal.value = false;
   } catch (err) {
-    uploadError.value = err.response?.data?.error || 'Upload failed';
+    uploadError.value = err.response?.data?.error || 'Nahrávání se nezdařilo';
   } finally {
     uploading.value = false;
     uploadFileCount.value = 0;

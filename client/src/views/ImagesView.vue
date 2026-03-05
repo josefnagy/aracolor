@@ -10,8 +10,8 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Image Manager</h1>
-        <p class="page-subtitle">Manage and organize your website images</p>
+        <h1 class="page-title">Správce obrázků</h1>
+        <p class="page-subtitle">Správa a organizace obrázků na webu</p>
       </div>
       <div class="actions">
         <div class="search-box">
@@ -19,12 +19,12 @@
           <input
             v-model="searchQuery"
             type="text"
-            placeholder="Search images..."
+            placeholder="Hledat obrázky..."
           />
         </div>
         <button class="btn-upload" :disabled="!selectedCategory" @click="showUploadModal = true">
           <PlusIcon :size="16" />
-          <span>Upload</span>
+          <span>Nahrát</span>
         </button>
       </div>
     </div>
@@ -32,22 +32,22 @@
     <!-- Stats Row -->
     <div class="stats-row">
       <div class="stat-card">
-        <span class="stat-label">Total Images</span>
+        <span class="stat-label">Celkem obrázků</span>
         <span class="stat-value">{{ totalImages }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Categories</span>
+        <span class="stat-label">Kategorie</span>
         <span class="stat-value">{{ categoryList.length }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">This Week</span>
+        <span class="stat-label">Tento týden</span>
         <span class="stat-value stat-value--green">
           +{{ weeklyCount }}
           <TrendingUpIcon :size="18" />
         </span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Storage Used</span>
+        <span class="stat-label">Využité úložiště</span>
         <span class="stat-value">{{ storageUsed }}</span>
       </div>
     </div>
@@ -60,7 +60,7 @@
           :class="{ active: selectedCategory === '' }"
           @click="selectedCategory = ''"
         >
-          All
+          Vše
         </button>
         <button
           v-for="cat in categoryList"
@@ -100,7 +100,7 @@
       @delete="handleDelete"
     />
 
-    <p v-if="loading" class="loading">Loading...</p>
+    <p v-if="loading" class="loading">Načítání...</p>
 
     <!-- Upload Modal -->
     <UploadDropzone
@@ -182,7 +182,7 @@ async function handleSetHero(imageId) {
 }
 
 async function handleDelete(imageId) {
-  if (!confirm('Delete this image? The processed file will be removed.')) return;
+  if (!confirm('Smazat tento obrázek? Zpracovaný soubor bude odstraněn.')) return;
   await deleteImage(imageId);
 }
 

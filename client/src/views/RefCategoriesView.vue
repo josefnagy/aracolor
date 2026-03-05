@@ -3,13 +3,13 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Reference Categories</h1>
-        <p class="page-subtitle">Manage reference image categories</p>
+        <h1 class="page-title">Referenční kategorie</h1>
+        <p class="page-subtitle">Správa kategorií referenčních obrázků</p>
       </div>
       <div class="actions">
         <button class="btn-primary" @click="showNewForm = true">
           <PlusIcon :size="16" />
-          <span>New Category</span>
+          <span>Nová kategorie</span>
         </button>
       </div>
     </div>
@@ -17,15 +17,15 @@
     <!-- Stats Row -->
     <div class="stats-row">
       <div class="stat-card">
-        <span class="stat-label">Total Categories</span>
+        <span class="stat-label">Celkem kategorií</span>
         <span class="stat-value">{{ categoryList.length }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Total Images</span>
+        <span class="stat-label">Celkem obrázků</span>
         <span class="stat-value">{{ totalImages }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Avg per Category</span>
+        <span class="stat-label">Průměr na kategorii</span>
         <span class="stat-value">{{ avgPerCategory }}</span>
       </div>
     </div>
@@ -36,16 +36,16 @@
         ref="newTitleInput"
         v-model="newTitle"
         type="text"
-        placeholder="Category title..."
+        placeholder="Název kategorie..."
         class="form-input"
         @keyup.enter="createCategory"
         @keyup.escape="cancelNew"
       />
       <span class="slug-preview">{{ newSlug }}</span>
       <button class="btn-primary btn-sm" :disabled="!newTitle.trim() || creating" @click="createCategory">
-        {{ creating ? 'Creating...' : 'Add' }}
+        {{ creating ? 'Vytvářím...' : 'Přidat' }}
       </button>
-      <button class="btn-secondary btn-sm" @click="cancelNew">Cancel</button>
+      <button class="btn-secondary btn-sm" @click="cancelNew">Zrušit</button>
       <p v-if="newError" class="error-text">{{ newError }}</p>
     </div>
 
@@ -59,7 +59,7 @@
         <div class="row-order">
           <button
             class="btn-icon btn-icon--sm"
-            title="Move up"
+            title="Posunout nahoru"
             :disabled="idx === 0"
             @click="moveCategory(idx, -1)"
           >
@@ -67,7 +67,7 @@
           </button>
           <button
             class="btn-icon btn-icon--sm"
-            title="Move down"
+            title="Posunout dolů"
             :disabled="idx === categoryList.length - 1"
             @click="moveCategory(idx, 1)"
           >
@@ -99,7 +99,7 @@
             <textarea
               v-model="editDescription"
               class="form-input form-textarea"
-              placeholder="Description (optional)..."
+              placeholder="Popis (volitelné)..."
               rows="3"
             />
           </template>
@@ -110,25 +110,25 @@
           </template>
         </div>
 
-        <span class="row-badge">{{ cat.count }} {{ cat.count === 1 ? 'image' : 'images' }}</span>
-        <span class="row-badge row-badge--carousel">{{ carouselCountByCategory[cat.slug] || 0 }}/20 carousel</span>
+        <span class="row-badge">{{ cat.count }} {{ cat.count === 1 ? 'obrázek' : cat.count >= 2 && cat.count <= 4 ? 'obrázky' : 'obrázků' }}</span>
+        <span class="row-badge row-badge--carousel">{{ carouselCountByCategory[cat.slug] || 0 }}/20 karusel</span>
 
         <div class="row-actions">
           <template v-if="editingSlug === cat.slug">
-            <button class="btn-icon" title="Save" @click="saveRename(cat.slug)">
+            <button class="btn-icon" title="Uložit" @click="saveRename(cat.slug)">
               <CheckIcon :size="16" />
             </button>
-            <button class="btn-icon" title="Cancel" @click="cancelEdit">
+            <button class="btn-icon" title="Zrušit" @click="cancelEdit">
               <XIcon :size="16" />
             </button>
           </template>
           <template v-else>
-            <button class="btn-icon" title="Edit" @click="startEdit(cat)">
+            <button class="btn-icon" title="Upravit" @click="startEdit(cat)">
               <PencilIcon :size="16" />
             </button>
             <button
               class="btn-icon btn-icon--danger"
-              title="Delete"
+              title="Smazat"
               :disabled="cat.count > 0"
               @click="handleDelete(cat.slug)"
             >
@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <p v-if="!categoryList.length" class="empty-text">No categories yet. Create one to get started.</p>
+      <p v-if="!categoryList.length" class="empty-text">Zatím žádné kategorie. Vytvořte první.</p>
     </div>
   </main>
 </template>
@@ -220,7 +220,7 @@ async function createCategory() {
     newTitle.value = '';
     showNewForm.value = false;
   } catch (err) {
-    newError.value = err.response?.data?.error || 'Failed to create category';
+    newError.value = err.response?.data?.error || 'Nepodařilo se vytvořit kategorii';
   } finally {
     creating.value = false;
   }
@@ -253,7 +253,7 @@ async function saveRename(slug) {
     await loadData();
     editingSlug.value = '';
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to save');
+    alert(err.response?.data?.error || 'Nepodařilo se uložit');
   }
 }
 
@@ -266,17 +266,17 @@ async function moveCategory(idx, direction) {
     await reorderCats(slugs);
     await loadData();
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to reorder');
+    alert(err.response?.data?.error || 'Nepodařilo se změnit pořadí');
   }
 }
 
 async function handleDelete(slug) {
-  if (!confirm('Delete this category? This cannot be undone.')) return;
+  if (!confirm('Smazat tuto kategorii? Tuto akci nelze vrátit zpět.')) return;
   try {
     await deleteCat(slug);
     await loadData();
   } catch (err) {
-    alert(err.response?.data?.error || 'Failed to delete');
+    alert(err.response?.data?.error || 'Nepodařilo se smazat');
   }
 }
 

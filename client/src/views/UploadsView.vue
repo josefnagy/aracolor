@@ -3,23 +3,23 @@
     <!-- Top Bar -->
     <div class="top-bar">
       <div class="title-area">
-        <h1 class="page-title">Uploads</h1>
-        <p class="page-subtitle">Upload images and view recent activity</p>
+        <h1 class="page-title">Nahrávání</h1>
+        <p class="page-subtitle">Nahrávejte obrázky a sledujte nedávnou aktivitu</p>
       </div>
     </div>
 
     <!-- Stats Row -->
     <div class="stats-row">
       <div class="stat-card">
-        <span class="stat-label">Uploaded Today</span>
+        <span class="stat-label">Nahráno dnes</span>
         <span class="stat-value">{{ todayCount }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">This Week</span>
+        <span class="stat-label">Tento týden</span>
         <span class="stat-value">{{ weeklyCount }}</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">Total Storage</span>
+        <span class="stat-label">Celkové úložiště</span>
         <span class="stat-value">{{ storageUsed }}</span>
       </div>
     </div>
@@ -27,9 +27,9 @@
     <!-- Upload Zone -->
     <div class="upload-section">
       <div class="field">
-        <label class="field-label">Category</label>
+        <label class="field-label">Kategorie</label>
         <select v-model="uploadCategory" class="field-select">
-          <option value="" disabled>Select a category...</option>
+          <option value="" disabled>Vyberte kategorii...</option>
           <option v-for="cat in categoryList" :key="cat.slug" :value="cat.slug">
             {{ cat.title }}
           </option>
@@ -55,7 +55,7 @@
 
         <div v-if="uploading" class="upload-progress">
           <UploadCloudIcon :size="36" class="uploading-icon" />
-          <p class="progress-text">Uploading {{ fileCount }} file{{ fileCount > 1 ? 's' : '' }}...</p>
+          <p class="progress-text">Nahrávám {{ fileCount }} {{ fileCount === 1 ? 'soubor' : fileCount <= 4 ? 'soubory' : 'souborů' }}...</p>
           <div class="progress-bar">
             <div class="progress-fill"></div>
           </div>
@@ -63,9 +63,9 @@
         <div v-else class="upload-prompt">
           <UploadCloudIcon :size="36" class="prompt-icon" />
           <p class="prompt-text">
-            {{ uploadCategory ? 'Drop images here or click to select' : 'Select a category first' }}
+            {{ uploadCategory ? 'Přetáhněte obrázky sem nebo klikněte pro výběr' : 'Nejprve vyberte kategorii' }}
           </p>
-          <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20MB each</p>
+          <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20 MB na soubor</p>
         </div>
       </div>
 
@@ -74,9 +74,9 @@
 
     <!-- Recent Uploads Timeline -->
     <div class="timeline-section">
-      <h2 class="section-title">Recent Uploads</h2>
+      <h2 class="section-title">Nedávné nahrávání</h2>
 
-      <div v-if="!groupedUploads.length" class="empty-text">No uploads yet.</div>
+      <div v-if="!groupedUploads.length" class="empty-text">Zatím žádné nahrávání.</div>
 
       <div v-for="group in groupedUploads" :key="group.date" class="timeline-group">
         <div class="timeline-date">{{ group.label }}</div>
@@ -171,8 +171,8 @@ const groupedUploads = computed(() => {
       yesterday.setDate(yesterday.getDate() - 1);
 
       let label = date;
-      if (d.toDateString() === today.toDateString()) label = 'Today';
-      else if (d.toDateString() === yesterday.toDateString()) label = 'Yesterday';
+      if (d.toDateString() === today.toDateString()) label = 'Dnes';
+      else if (d.toDateString() === yesterday.toDateString()) label = 'Včera';
 
       groups[date] = { date, label, images: [] };
     }
@@ -193,7 +193,7 @@ async function processFiles(files) {
     await uploadImages(uploadCategory.value, files);
     await loadData();
   } catch (err) {
-    uploadError.value = err.response?.data?.error || 'Upload failed';
+    uploadError.value = err.response?.data?.error || 'Nahrávání se nezdařilo';
   } finally {
     uploading.value = false;
     fileCount.value = 0;

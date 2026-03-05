@@ -2,7 +2,7 @@
   <div class="modal-overlay" @click.self="$emit('close')">
     <div class="modal">
       <div class="modal-header">
-        <h2 class="modal-title">Upload Images</h2>
+        <h2 class="modal-title">Nahrát obrázky</h2>
         <button class="btn-close" @click="$emit('close')">
           <XIcon :size="18" />
         </button>
@@ -10,7 +10,7 @@
 
       <div class="modal-body">
         <div class="field">
-          <label class="field-label">Category</label>
+          <label class="field-label">Kategorie</label>
           <select v-model="uploadCategory" class="field-select">
             <option v-for="cat in categories" :key="cat.slug" :value="cat.slug">
               {{ cat.title }}
@@ -37,15 +37,15 @@
 
           <div v-if="uploading" class="upload-progress">
             <UploadCloudIcon :size="32" class="uploading-icon" />
-            <p class="progress-text">Uploading {{ fileCount }} file{{ fileCount > 1 ? 's' : '' }}...</p>
+            <p class="progress-text">Nahrávám {{ fileCount }} {{ fileCount === 1 ? 'soubor' : fileCount <= 4 ? 'soubory' : 'souborů' }}...</p>
             <div class="progress-bar">
               <div class="progress-fill"></div>
             </div>
           </div>
           <div v-else class="upload-prompt">
             <UploadCloudIcon :size="32" class="prompt-icon" />
-            <p class="prompt-text">Drop images here or click to select</p>
-            <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20MB each</p>
+            <p class="prompt-text">Přetáhněte obrázky sem nebo klikněte pro výběr</p>
+            <p class="prompt-hint">JPG, PNG, WebP, HEIC — max 20 MB na soubor</p>
           </div>
         </div>
 
@@ -87,7 +87,7 @@ async function processFiles(files) {
     await uploadImages(uploadCategory.value, files);
     emit('uploaded');
   } catch (err) {
-    error.value = err.response?.data?.error || 'Upload failed';
+    error.value = err.response?.data?.error || 'Nahrávání se nezdařilo';
   } finally {
     uploading.value = false;
     fileCount.value = 0;
