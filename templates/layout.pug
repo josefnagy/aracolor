@@ -15,6 +15,26 @@ html(lang='cs')
     meta(name='description', content=description)
     meta(name='author' content='Josef Nagy - www.josefnagy.cz')
 
+    //- Canonical URL
+    if canonical
+      link(rel='canonical', href=canonical)
+
+    //- Open Graph
+    meta(property='og:title', content=title)
+    meta(property='og:description', content=description)
+    meta(property='og:type', content='website')
+    meta(property='og:locale', content='cs_CZ')
+    meta(property='og:site_name', content='Aracolor.cz')
+    if canonical
+      meta(property='og:url', content=canonical)
+    meta(property='og:image', content=(ogImage ? ogImage : 'https://www.aracolor.cz/resources/img/logo-v5.png'))
+
+    //- Twitter Card
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:title', content=title)
+    meta(name='twitter:description', content=description)
+    meta(name='twitter:image', content=(ogImage ? ogImage : 'https://www.aracolor.cz/resources/img/logo-v5.png'))
+
     link(rel='apple-touch-icon', sizes='180x180', href='/resources/favicons/apple-touch-icon.png')
     link(rel='icon', type='image/png', sizes='32x32', href='/resources/favicons/favicon-32x32.png')
     link(rel='icon', type='image/png', sizes='16x16', href='/resources/favicons/favicon-16x16.png')
@@ -37,10 +57,10 @@ html(lang='cs')
 
     script(type="application/ld+json").
       {
-        "@context": "http://schema.org",
-        "@type": "HousePainter",
-        "url": "http://www.aracolor.cz",
-        "logo": "http://www.aracolor.cz/resources/img/logo-v5.png",
+        "@context": "https://schema.org",
+        "@type": ["HousePainter", "LocalBusiness"],
+        "url": "https://www.aracolor.cz",
+        "logo": "https://www.aracolor.cz/resources/img/logo-v5.png",
         "name": "Aracolor",
         "email": "tlachr@seznam.cz",
         "location": {
@@ -49,7 +69,8 @@ html(lang='cs')
             "@type": "PostalAddress",
             "addressLocality": "Bolatice",
             "postalCode": "74 723",
-            "streetAddress": "Opavská 386/24"
+            "streetAddress": "Opavská 386/24",
+            "addressCountry": "CZ"
           }
         },
         "contactPoint": {
@@ -57,7 +78,17 @@ html(lang='cs')
           "telephone": "+420 608 741 218",
           "contactType": "customer service"
         },
-        "image": "http://www.aracolor.cz/resources/img/logo-v5.png"
+        "image": "https://www.aracolor.cz/resources/img/logo-v5.png",
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "Country",
+          "name": "CZ"
+        },
+        "sameAs": [
+          "https://www.facebook.com/radek.tlach.9",
+          "https://www.instagram.com/tlachradek/",
+          "https://cz.pinterest.com/Tlach1/"
+        ]
       }
 
     title #{title}

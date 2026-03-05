@@ -3,6 +3,8 @@ extends ../layout.pug
 block vars
   -var title = "Malířské práce | Radek Tlach | Aracolor.cz"
   -var description = "To co je pro ostatní problém, je pro Nás výzva, a proto se nezaleknem žádné zakázky, ať už se jedná o natření plotu nebo o vymalování výrobní haly."
+  -var canonical = "https://www.aracolor.cz/malirske-prace"
+  -var ogImage = "https://www.aracolor.cz/resources/img/hero-malirske-prace-2.jpg"
   -var activePage = "malirske-prace"
 
 block index
@@ -101,22 +103,22 @@ block index
     .mp-gallery
       .mp-gallery__row
         .mp-gallery__item
-          img(src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky")
+          img(src="resources/img/galerie-1.jpg" alt="Ukázka dekorační stěrky" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky")
+          img(src="resources/img/galerie-2.jpg" alt="Ukázka dekorační stěrky" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby")
+          img(src="resources/img/galerie-3.jpg" alt="Detail koupelnové dekorační malby" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje")
+          img(src="resources/img/galerie-4.jpg" alt="Interiérová malba z obývacího pokoje" loading="lazy")
       .mp-gallery__row
         .mp-gallery__item
-          img(src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice")
+          img(src="resources/img/galerie-5.jpg" alt="Interiérová malba z ložnice" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby")
+          img(src="resources/img/galerie-6.jpg" alt="Ukázka interiérové malby" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby")
+          img(src="resources/img/galerie-7.jpg" alt="Ukázka interiérové malby" loading="lazy")
         .mp-gallery__item
-          img(src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby")
+          img(src="resources/img/galerie-8.jpg" alt="Ukázka interiérové malby" loading="lazy")
 
   //- Services Section
   section#sluzby.mp-section

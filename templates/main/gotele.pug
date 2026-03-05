@@ -3,6 +3,8 @@ extends ../layout.pug
 block vars
   -var title = "Radek Tlach | Vzorník nástřiků GOTELE | Aracolor.cz"
   -var description = "Ukázka vzorníku Španělského nástřiku GOTELE"
+  -var canonical = "https://www.aracolor.cz/gotele"
+  -var ogImage = "https://www.aracolor.cz/resources/img/gotele/gotele-1.jpg"
 
 block index
 
@@ -34,7 +36,7 @@ block index
           li.gotele-gallery__list
             figure.gotele-gallery__photo
               a(data-featherlight="resources/img/gotele/gotele-" + counter + ".jpg")
-                img(class="gotele-gallery__photo--img" src="resources/img/gotele/gotele-" + counter++ + ".jpg" alt="Gotele vzor " + counter)
+                img(class="gotele-gallery__photo--img" src="resources/img/gotele/gotele-" + counter++ + ".jpg" alt="Gotele vzor " + counter loading="lazy")
 
 
   include ../footer.pug
