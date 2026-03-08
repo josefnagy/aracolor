@@ -454,6 +454,12 @@
 
   .ref-section {
     padding: 5rem 0;
+    overflow: hidden;
+  }
+
+  .ref-section__carousel {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
