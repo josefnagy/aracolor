@@ -32,6 +32,11 @@ app.use(express.json());
 const WEBROOT = process.env.WEBROOT || path.join(__dirname, '../public');
 app.use('/resources', express.static(path.join(WEBROOT, 'resources')));
 
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', uptime: process.uptime() });
+});
+
 // Public image data for the marketing site (merges titles from categories config)
 app.get('/api/images', (req, res) => {
   const data = dataStore.getData();
